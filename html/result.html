@@ -1,0 +1,3019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <!--header-->
+    <header>
+        <!--top-->
+        <div class="top">
+            <!--button-->
+            <div class="btnBox">
+                <button class="conversionBtn">盤口對照表</button>
+                <button class="controlBtn">設定</button>
+            </div>
+            <!--marquee-->
+            <div class="marqueeBox">
+                <i class="fas fa-volume-up"></i>
+                <marquee>
+                    <a href="#">★敬請注意★帳務日期01月01日其他籃球-摩洛哥籃球聯賽(AREH哈吉VSFUS拉巴特)因資訊源無上半場比分，故(全場,上半場)以退組計算，敬請會員留意，謝謝。</a>
+                </marquee>
+            </div>
+            <!--time-->
+            <span class="time"></span>
+        </div>
+        <!--article-->
+        <article>
+            <!--logo-->
+            <div class="logo"></div>
+            <!--headerList-->
+            <ul class="headerList">
+                <li>
+                    <a href="./market.html">市場列表</a>
+                </li>
+                <li>
+                    <a href="./liveStream.html">直播</a>
+                </li>
+                <li class="active">
+                    <a href="./result.html">比賽結果</a>
+                </li>
+                <li>
+                    <a href="./teach.html">盤口教程</a>
+                </li>
+                <li>
+                    <a href="./score.html">比分</a>
+                </li>
+                <li>
+                    <a href="./instantBet.html">即時投注</a>
+                </li>
+                <li>
+                    <a href="./betRecord.html">投注紀錄</a>
+                </li>
+                <li>
+                    <a href="https://www.gal168.net/NB_rule/newRule/index.html?lang=zh-tw#/zh-tw/index" target="_blank">相關規則</a>
+                </li>
+                <li>
+                    <a href="./mine.html">
+                        <i class="fas fa-user"></i>
+                        我的
+                    </a>
+                </li>
+            </ul>
+            <!--loggedBox-->
+            <div class="loggedBox">
+                <p>
+                    帳戶名稱:
+                    <span>ppp123</span>
+                </p>
+                <p class="quota">
+                    今日可用額度:
+                    <span>1000000</span>
+                    元
+                </p>
+                <p class="quota">
+                    昨日可用額度:
+                    <span>1000000</span>
+                    元
+                </p>
+                <button onclick="window.location.href='../index.html'">登出</button>
+            </div>
+        </article>
+    </header>
+    <!--mainArea-->
+    <main class="mainArea">
+        <article class="innerSide">
+            <!--left-->
+            <section class="left inner">
+                <ul>
+                    <li class="active">
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-futbol"></i>
+                                足球
+                            </div>
+                            <div>
+                                <div class="live display">LIVE</div>
+                                <div class="total">582</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-basketball-ball"></i>
+                                美國職籃
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">264</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-basketball-ball"></i>
+                                其他籃球
+                            </div>
+                            <div>
+                                <div class="live display">LIVE</div>
+                                <div class="total">192</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                美國職棒
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                中華職棒
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                日本職棒
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                其他棒球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-football-ball"></i>
+                                美式足球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fad fa-horse-head"></i>
+                                賽馬賽狗
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">423</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-keyboard"></i>
+                                電競
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-signal"></i>
+                                指數
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">24</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-ticket-alt"></i>
+                                彩球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">42</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-hockey-puck"></i>
+                                冰球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">234</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-boxing-glove"></i>
+                                拳擊格鬥
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-racquet"></i>
+                                羽球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fad fa-volleyball-ball"></i>
+                                排球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-table-tennis"></i>
+                                桌球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-cricket"></i>
+                                板球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-ball-pile"></i>
+                                撞球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-volleyball-ball"></i>
+                                手球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-futbol"></i>
+                                世界盃
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!--center-->
+            <div class="center display">
+                <!--topfix-->
+                <div class="topfix">
+                    <ul>
+                        <!--timeSelect-->
+                        <ol> 
+                            <li class="timeSelect">
+                                <div class="dateBox">
+                                    <div class="turnBtn prev"></div>
+                                    <div class="date">
+                                        <span>01/11 (三)</span>
+                                        <div class="total">
+                                            <span>13</span>
+                                        </div>
+                                        <span class="arrow"></span>
+                                    </div>
+                                    <div class="turnBtn next"></div>
+                                </div>
+                                <button>前日</button>
+                                <button>昨日</button>
+                                <button>今日</button>
+                            </li>
+                        </ol>
+                        <!--rightList-->
+                        <ol class="rightList"> <!--20230103_新增外層ol_L-->
+                            <!--選擇聯盟-->
+                            <li class="chooseLeague">
+                                <span>選擇聯盟</span>
+                                <i class="arrow"></i> <!--20230104_新增arrow_L-->
+                            </li>
+                            <!--排序-->
+                            <li class="sort">
+                                <select>
+                                    <option value="">場次排序</option>
+                                    <option value="">時間排序</option>
+                                </select>
+                                <i class="arrow"></i> <!--20230104_新增arrow_L-->
+                            </li>
+                        </ol>
+                    </ul>
+                </div>
+                <!--選擇聯盟-->
+                <div class="chleague">
+                    <ul>
+                        <li>
+                            <span class="cube"></span>
+                            <p>選取/取消所有聯盟</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>球會友誼賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>英格蘭超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>希臘超級聯賽甲組</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>摩洛哥甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>南非甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>土耳其超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>意大利甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>墨西哥甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>塞浦路斯甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>埃及超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>意大利丁組聯賽盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>中國足協盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>西班牙盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>卡塔爾甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>突尼斯乙組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>阿曼聯合盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>英格蘭挑戰盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>葡萄牙聯賽U23</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>沙特甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>夢幻對壘</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>肯尼亞超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>希臘超級乙組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>巴林聯合盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>以色列國家盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>伊朗超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>埃及乙組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>聖保羅青年盃U20</p>
+                        </li>
+                    </ul>
+                    <button>確認</button>
+                </div>
+                <!--主區塊-->
+                <section class="middle">
+                    <!--result-->
+                    <div class="result soccer display">
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>足球 - 中國足協盃</p>
+                                </th>
+                                <th colspan="3">
+                                    <p>2023/01/04 - 2023/01/05</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>半場</p>
+                                </th>
+                                <th>
+                                    <p>全場</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>14:00</p>
+                                </td>
+                                <td>
+                                    <p>中國足協盃</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>山東魯能泰山</span>
+                                        <span>武漢三鎮</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>1</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>3</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>16:30</p>
+                                </td>
+                                <td>
+                                    <p>中國足協盃</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>上海綠地申花</span>
+                                        <span>滄州雄獅</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>5</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>16:30</p>
+                                </td>
+                                <td>
+                                    <p>中國足協盃</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>上海申花-角球數</span>
+                                        <span>滄州雄獅-角球數</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>8</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>10</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>16:30</p>
+                                </td>
+                                <td>
+                                    <p>中國足協盃</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>浙江</span>
+                                        <span>濟南興洲</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>1</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>3</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>足球 - 肯尼亞超級聯賽</p>
+                                </th>
+                                <th colspan="3">
+                                    <p>2023/01/04</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>半場</p>
+                                </th>
+                                <th>
+                                    <p>全場</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>18:00</p>
+                                </td>
+                                <td>
+                                    <p>肯尼亞超級聯賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>索伐帕卡</span>
+                                        <span>特蘭大</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>1</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>1</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>20:00</p>
+                                </td>
+                                <td>
+                                    <p>肯尼亞超級聯賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>卡卡梅加紅波茲</span>
+                                        <span>卡里奧班高鯊魚</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>1</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>20:15</p>
+                                </td>
+                                <td>
+                                    <p>肯尼亞超級聯賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>肯尼亞警察</span>
+                                        <span>瓦茲伊特</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>3</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>4</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result basketball USA">
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>美國職籃 - NBA 美國職業籃球</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/09 - 2023/01/10</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>04:05</p>
+                                </td>
+                                <td>
+                                    <p>NBA 美國職業籃球</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>TOR 暴龍</span>
+                                        <span>POR 拓荒者</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>111</span>
+                                        <span>123</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result basketball else">
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>其他籃球 - 日本女子籃球聯賽</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/09 - 2023/01/10</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>13:00</p>
+                                </td>
+                                <td>
+                                    <p>日本女子籃球聯賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>愛信AW翅膀(女)</span>
+                                        <span>香頌V魔術(女)</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>93</span>
+                                        <span>61</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>15:30</p>
+                                </td>
+                                <td>
+                                    <p>日本女子籃球聯賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>日立美洲獅(女)</span>
+                                        <span>山梨女王蜂(女)</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>90</span>
+                                        <span>70</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>其他籃球 - 中國全國男籃聯賽</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/09 - 2023/01/10</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>13:30</p>
+                                </td>
+                                <td>
+                                    <p>中國全國男籃聯賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>江蘇鹽南蘇科</span>
+                                        <span>長沙灣田勇勝</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>101</span>
+                                        <span>120</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>15:30</p>
+                                </td>
+                                <td>
+                                    <p>中國全國男籃聯賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>武漢錕鵬</span>
+                                        <span>廣西威壯</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>91</span>
+                                        <span>94</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>16:30</p>
+                                </td>
+                                <td>
+                                    <p>中國全國男籃聯賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>福建風之子</span>
+                                        <span>佛山功夫小子</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>71</span>
+                                        <span>109</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result baseball USA">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result baseball China">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result baseball Japan">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result baseball else">
+                        <table>
+                            <tr>
+                                <th colspan="3">
+                                    <p>其他棒球 - ABL 澳洲棒球</p>
+                                </th>
+                                <th colspan="11">
+                                    <p>2023/01/06</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>1</p>
+                                </th>
+                                <th>
+                                    <p>2</p>
+                                </th>
+                                <th>
+                                    <p>3</p>
+                                </th>
+                                <th>
+                                    <p>4</p>
+                                </th>
+                                <th>
+                                    <p>5</p>
+                                </th>
+                                <th>
+                                    <p>6</p>
+                                </th>
+                                <th>
+                                    <p>7</p>
+                                </th>
+                                <th>
+                                    <p>8</p>
+                                </th>
+                                <th>
+                                    <p>9</p>
+                                </th>
+                                <th>
+                                    <p>OT</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>16:25</p>
+                                </td>
+                                <td>
+                                    <p>ABL 澳洲棒球</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>阿德萊德巨人</span>
+                                        <span>布里斯本俠盜</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>17:00</p>
+                                </td>
+                                <td>
+                                    <p>ABL 澳洲棒球</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>伯斯熱火</span>
+                                        <span>吉朗韓國</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>0</span>
+                                        <span>2</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result football">
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>美式足球 - NCAA 美國大學美式足球</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/10</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>08:30</p>
+                                </td>
+                                <td>
+                                    <p>NCAA 美國大學美式足球</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>喬治亞鬥牛犬</span>
+                                        <span>德州基督角蛙</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>65</span>
+                                        <span>7</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result horse">
+                        <table>
+                            <tr>
+                                <th colspan="7">
+                                    <p>賽馬賽狗 - 日本賽馬-中山 - 第一名小數點後一位</p>
+                                </th>
+                                <th colspan="8">
+                                    <p>2023/01/09</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>狀態</p>
+                                </th>
+                                <th>
+                                    <p>場次</p>
+                                </th>
+                                <th>
+                                    <p>第一場</p>
+                                </th>
+                                <th>
+                                    <p>第二場</p>
+                                </th>
+                                <th>
+                                    <p>第三場</p>
+                                </th>
+                                <th>
+                                    <p>第四場</p>
+                                </th>
+                                <th>
+                                    <p>第五場</p>
+                                </th>
+                                <th>
+                                    <p>第六場</p>
+                                </th>
+                                <th>
+                                    <p>第七場</p>
+                                </th>
+                                <th>
+                                    <p>第八場</p>
+                                </th>
+                                <th>
+                                    <p>第九場</p>
+                                </th>
+                                <th>
+                                    <p>第十場</p>
+                                </th>
+                                <th>
+                                    <p>第十一</p>
+                                </th>
+                                <th>
+                                    <p>第十二</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>08:30</p>
+                                </td>
+                                <td>
+                                    <p>已完賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>開賽時間</span>
+                                        <span>比賽結果</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>12:14</span>
+                                        <span>6</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>12:49</span>
+                                        <span>4</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>13:24</span>
+                                        <span>7</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>13:59</span>
+                                        <span>8</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>14:34</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>15:09</span>
+                                        <span>0</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result esport">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result stock">
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>指數 - 指數-亞洲股票指數</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/10 - 2023/01/11</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>5</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>5</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>澳洲股票指數 (AORD)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>6</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/11(二)</span>
+                                        <span>06:55</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>日經指數 (N225)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>6</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/11(三)</span>
+                                        <span>08:55</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>臺灣加權指數(TWII)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/11(三)</span>
+                                        <span>08:55</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>新加坡海峽時報指數 (STI)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>5</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>5</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>5</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>5</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>5</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>5</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>指數 - 指數-歐洲股票指數</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/10 - 2023/01/11</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>2</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>4</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>8</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>12:20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>印度孟買30指數 (BSESN)</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <p>2</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result ticket">
+                        <table>
+                            <tr>
+                                <th colspan="5">
+                                    <p>彩球 - 台灣 三星彩</p>
+                                </th>
+                                <th colspan="5">
+                                    <p>2023/01/10 - 2023/01/11</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開獎時間</p>
+                                </th>
+                                <th>
+                                    <p>期數</p>
+                                </th>
+                                <th colspan="7">
+                                    <p>獎號</p>
+                                </th>
+                                <th>
+                                    <p>綜合</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>20:25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>第 122246 期</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>開場順序</span>
+                                        <span>大小順序</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>3</span>
+                                        <span>2</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>3</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>8</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/11(三)</span>
+                                        <span>20:25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>第 122278 期</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>開場順序</span>
+                                        <span>大小順序</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>11</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>9</span>
+                                        <span>9</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>9</span>
+                                        <span>9</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>8</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="hk">
+                            <tr>
+                                <th colspan="5">
+                                    <p>彩球 - 香港 六合彩</p>
+                                </th>
+                                <th colspan="6">
+                                    <p>2023/01/10 - 2023/01/11</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開獎時間</p>
+                                </th>
+                                <th>
+                                    <p>期數</p>
+                                </th>
+                                <th colspan="8">
+                                    <p>獎號</p>
+                                </th>
+                                <th>
+                                    <p>特別號</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>20:25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>第 122246 期</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>29</span>
+                                        <span>22</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>21</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>24</span>
+                                        <span>24</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>35</span>
+                                        <span>29</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>21</span>
+                                        <span>35</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>47</span>
+                                        <span>47</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>18</p>
+                                </td>
+                                <td>
+                                    <p>158</p>
+                                </td>
+                                <td>
+                                    <p>176</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="5">
+                                    <p>彩球 - 台灣 三星彩</p>
+                                </th>
+                                <th colspan="5">
+                                    <p>2023/01/10 - 2023/01/11</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開獎時間</p>
+                                </th>
+                                <th>
+                                    <p>期數</p>
+                                </th>
+                                <th colspan="7">
+                                    <p>獎號</p>
+                                </th>
+                                <th>
+                                    <p>綜合</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/10(二)</span>
+                                        <span>20:25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>第 122246 期</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>開場順序</span>
+                                        <span>大小順序</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>3</span>
+                                        <span>2</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>3</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>8</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>2023/01/11(三)</span>
+                                        <span>20:25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>第 122278 期</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>開場順序</span>
+                                        <span>大小順序</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>1</span>
+                                        <span>1</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>9</span>
+                                        <span>9</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>9</span>
+                                        <span>9</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>8</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result hockey">
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>冰球 - VHL 大陸冰球聯賽-不包括加時賽與點球賽</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/10 - 2023/01/12</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>冰球 - VHL 大陸冰球聯賽-不包括加時賽與點球賽</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/10 - 2023/01/12</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="2">
+                                    <p>冰球 - VHL 大陸冰球聯賽-不包括加時賽與點球賽</p>
+                                </th>
+                                <th colspan="2">
+                                    <p>2023/01/10 - 2023/01/12</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>VHL 大陸冰球聯賽-</span>
+                                        <span>不包括加時賽與點球賽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>葉爾馬克</span>
+                                        <span>奔薩柴油</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="result boxing">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result tennis">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result volleyball">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result tableTennis">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result cricket">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result ballPile">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result handBall">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                    <div class="result wordcup">
+                        <p class="none">目前暫無紀錄</p>
+                    </div>
+                </section>
+            </div>
+            <!--right-->
+            <section class="right">
+                <!--即時資訊-->
+                <div class="statusWindow">
+                    <div class="title">
+                        <p>即時資訊</p>
+                        <span class="stNumber">0</span>
+                    </div>
+                    <ul class="ST_Window">
+                        <li>
+                            <div>
+                                10:17:19
+                                <span>足球-獨贏</span>
+                            </div>
+                            <span class="betAmount">
+                                下注100
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!--直播-->
+                <div class="liveWindow">
+                    <p class="title">
+                        體育直播
+                        <a href="#" class="liveJumpBtn">展開</a>
+                    </p>
+                    <div class="teamWindow">
+                        <div class="leftTeam">
+                            <p></p>
+                        </div>
+                        <div class="score">
+                            <p>
+                                <span>vs</span>
+                            </p>
+                        </div>
+                        <div class="rightTeam">
+                            <p></p>
+                        </div>
+                    </div>
+                    <video class="video-style liveShow" src="" controls></video>
+                </div>
+                <!--下半-->
+                <div class="room">
+                    <div class="twobut">
+                        <button class="liveBtn active">直播賽事</button>
+                        <button class="StatusBtn">即時注單</button>
+                    </div>
+                    <!--賽事直播-->
+                    <div class="liveListBox display">
+                        <div class="livelist soccer display">
+                            <div class="liveTitle">
+                                <p class="gameName">足球</p>
+                                <p class="games">27
+                                    <i class="arrow"></i>
+                                </p>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">孟加拉國聯合盃<span class="situation onLive"></span></p>
+                                <p>2023-01-03 16:45</p>
+                                <p class="teamA">孟加拉警察</p>
+                                <p class="teamB">阿壩漢尼度哈卡</p>
+                                <button>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">沙特甲組聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:35</p>
+                                <p class="teamA">阿爾歐魯巴赫塞卡凱</p>
+                                <p class="teamB">阿利雅德</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">沙特甲組聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:35</p>
+                                <p class="teamA">查巴萊</p>
+                                <p class="teamB">哈哲爾</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">埃及超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:45</p>
+                                <p class="teamA">阿拉伯建築</p>
+                                <p class="teamB">哈伊赫多</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">埃及超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:45</p>
+                                <p class="teamA">加斯馬哈拉</p>
+                                <p class="teamB">切拉米卡克里奧帕特拉</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">土耳其超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 22:00</p>
+                                <p class="teamA">尤姆尼耶士邦</p>
+                                <p class="teamB">哈塔斯堡</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">希臘超級聯賽甲組<span class="situation onLive"></span></p>
+                                <p>2023-01-03 22:30</p>
+                                <p class="teamA">OFI克雷迪</p>
+                                <p class="teamB">沃羅斯</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                        </div>
+                        <div class="livelist basketball">
+                            <div class="liveTitle">
+                                <p class="gameName">籃球</p>
+                                <p class="games">12
+                                    <span class="arrow"></span>
+                                </p>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 08:05</p>
+                                <p class="teamA">PHI 七六人</p>
+                                <p class="teamB">IND 溜馬</p>
+                                <button>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 08:35</p>
+                                <p class="teamA">NYK 尼克</p>
+                                <p class="teamB">SAN 馬刺</p>
+                                <button disabled>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 08:35</p>
+                                <p class="teamA">TOR 暴龍</p>
+                                <p class="teamB">MIL-公鹿</p>
+                                <button disabled>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 09:05</p>
+                                <p class="teamA">CHI 公牛</p>
+                                <p class="teamB">BK 籃網</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 09:05</p>
+                                <p class="teamA">MIN 灰狼</p>
+                                <p class="teamB">POR-拓荒者</p>
+                                <button disabled>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 09:05</p>
+                                <p class="teamA">NO 鵜鶘</p>
+                                <p class="teamB">HOU 火箭</p>
+                                <button disabled>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 11:05</p>
+                                <p class="teamA">SAC 國王</p>
+                                <p class="teamB">ATL 老鷹</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                        </div>
+                        <div class="livelist otherBasketball">
+                            <div class="liveTitle">
+                                <p class="gameName">其他籃球</p>
+                                <p class="games">16
+                                    <span class="arrow"></span>
+                                </p>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">NCAA 美國大學籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 09:00</p>
+                                <p class="teamA">阿拉巴馬農工鬥牛犬</p>
+                                <p class="teamB">密西西比河谷州立三角洲魔鬼</p>
+                                <button>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">沙特甲組聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:35</p>
+                                <p class="teamA">阿爾歐魯巴赫塞卡凱</p>
+                                <p class="teamB">阿利雅德</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">沙特甲組聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:35</p>
+                                <p class="teamA">查巴萊</p>
+                                <p class="teamB">哈哲爾</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">埃及超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:45</p>
+                                <p class="teamA">阿拉伯建築</p>
+                                <p class="teamB">哈伊赫多</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">埃及超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:45</p>
+                                <p class="teamA">加斯馬哈拉</p>
+                                <p class="teamB">切拉米卡克里奧帕特拉</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">土耳其超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 22:00</p>
+                                <p class="teamA">尤姆尼耶士邦</p>
+                                <p class="teamB">哈塔斯堡</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <p class="gTitle">希臘超級聯賽甲組<span class="situation onLive"></span></p>
+                                <p>2023-01-03 22:30</p>
+                                <p class="teamA">OFI克雷迪</p>
+                                <p class="teamB">沃羅斯</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--即時注單-->
+                    <div class="bettingStatus">
+                        <table class="bettingBoard">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="waiting">等待中...</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="bettingBoard">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="sus">下注成功</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="bettingBoard fail">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="wating">等待中...</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="bettingBoard">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="sus">下注成功</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="bettingBoard fail">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="sus">下注成功</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <!--jumpWindow-->
+    <div class="filter">
+        <!--盤口對照表-->
+        <div class="jumpWindow conversionWindow">
+            <div class="title">
+                <p>盤口對照表</p>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <p>球頭換算法</p>
+                </div>
+                <div class="calcBox">
+                    <table>
+                        <tr>
+                            <td rowspan="2">
+                                <p>讓分</p>
+                            </td>
+                            <td>
+                                <p>足球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    平手 /
+                                    <br>
+                                    半球
+                                </p>
+                            </td>
+                            <td>
+                                <p>半球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    半球 /
+                                    <br>
+                                    1 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>1 球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    1 球 /
+                                    <br>
+                                    1 球半
+                                </p>
+                            </td>
+                            <td>
+                                <p>1 球半</p>
+                            </td>
+                            <td>
+                                <p>
+                                    1 球半 /
+                                    <br>
+                                    2 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>2 球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    2 球 /
+                                    <br>
+                                    2 球半
+                                </p>
+                            </td>
+                            <td>
+                                <p>2 球半</p>
+                            </td>
+                            <td>
+                                <p>
+                                    2 球半 /
+                                    <br>
+                                    3 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>3 球</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>棒球</p>
+                            </td>
+                            <td>
+                                <p>PK</p>
+                            </td>
+                            <td>
+                                <p>0-50</p>
+                            </td>
+                            <td>
+                                <p>0 輸</p>
+                            </td>
+                            <td>
+                                <p>1+50</p>
+                            </td>
+                            <td>
+                                <p>1 平</p>
+                            </td>
+                            <td>
+                                <p>1-50</p>
+                            </td>
+                            <td>
+                                <p>1 輸</p>
+                            </td>
+                            <td>
+                                <p>2+50</p>
+                            </td>
+                            <td>
+                                <p>2 平</p>
+                            </td>
+                            <td>
+                                <p>2-50</p>
+                            </td>
+                            <td>
+                                <p>2 輸</p>
+                            </td>
+                            <td>
+                                <p>3+50</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td rowspan="2">
+                                <p>大小</p>
+                            </td>
+                            <td>
+                                <p>足球</p>
+                            </td>
+                            <td>
+                                <p>0.5</p>
+                            </td>
+                            <td>
+                                <p>0.5/1</p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>1/1.5</p>
+                            </td>
+                            <td>
+                                <p>1.5</p>
+                            </td>
+                            <td>
+                                <p>1.5/2</p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>2/2.5</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                            <td>
+                                <p>2.5/3</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>3/3.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>棒球</p>
+                            </td>
+                            <td>
+                                <p>0 輸</p>
+                            </td>
+                            <td>
+                                <p>1+50</p>
+                            </td>
+                            <td>
+                                <p>1平</p>
+                            </td>
+                            <td>
+                                <p>1-50</p>
+                            </td>
+                            <td>
+                                <p>1 輸</p>
+                            </td>
+                            <td>
+                                <p>2+50</p>
+                            </td>
+                            <td>
+                                <p>2 平</p>
+                            </td>
+                            <td>
+                                <p>2-50</p>
+                            </td>
+                            <td>
+                                <p>2 輸</p>
+                            </td>
+                            <td>
+                                <p>3+50</p>
+                            </td>
+                            <td>
+                                <p>3 平</p>
+                            </td>
+                            <td>
+                                <p>3-50</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button class="close"></button>
+        </div>
+        <!--設定-->
+        <div class="jumpWindow controlWindow">
+            <div class="title">
+                <p>設定</p>
+            </div>
+            <div class="content">
+                <div class="box">
+                    <div class="smallTitle">
+                        <p>版面設定</p>
+                    </div>
+                    <div class="innerBox">
+                        <div class="rowBox">
+                            <p>專業版</p>
+                            <div class="row">
+                                <p>開啟</p>
+                                <p>關閉</p>
+                                <div class="cnt"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="smallTitle">
+                        <p>籌碼快捷設定</p>
+                    </div>
+                    <div class="innerBox">
+                        <div class="betBox">
+                            <p>設定下注</p>
+                            <input type="text" value="100">
+                            <input type="text" value="200">
+                            <input type="text" value="300">
+                            <input type="text" value="400">
+                            <input type="text" value="500">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="versionBox">
+                        <p>版本資訊</p>
+                        <div>
+                            <p>
+                                V4.2.11
+                                <span>目前為最新版本</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="close"></button>
+        </div>
+    </div>
+</body>
+</html>

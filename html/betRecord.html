@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.25"/>
+    <title>Sport</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <!--header-->
+    <header>
+      	<!--top-->
+      	<div class="top">
+			<!--button-->
+			<div class="btnBox">
+				<button class="conversionBtn">盤口對照表</button>
+				<button class="controlBtn">設定</button>
+			</div>
+			<!--marquee-->
+			<div class="marqueeBox">
+				<i class="fas fa-volume-up"></i>
+				<marquee>
+					<a href="#">★敬請注意★帳務日期01月01日其他籃球-摩洛哥籃球聯賽(AREH哈吉VSFUS拉巴特)因資訊源無上半場比分，故(全場,上半場)以退組計算，敬請會員留意，謝謝。</a>
+				</marquee>
+			</div>
+			<!--time-->
+			<span class="time"></span>
+      	</div>
+		<!--article-->
+		<article>
+			<!--logo-->
+			<div class="logo"></div>
+			<!--headerList-->
+			<ul class="headerList">
+				<li>
+					<a href="./market.html">市場列表</a>
+				</li>
+				<li>
+					<a href="./liveStream.html">直播</a>
+				</li>
+				<li>
+					<a href="./result.html">比賽結果</a>
+				</li>
+				<li>
+					<a href="./teach.html">盤口教程</a>
+				</li>
+				<li>
+					<a href="./score.html">比分</a>
+				</li>
+				<li>
+					<a href="./instantBet.html">即時投注</a>
+				</li>
+				<li class="active">
+					<a href="./betRecord.html">投注紀錄</a>
+				</li>
+				<li>
+					<a href="https://www.gal168.net/NB_rule/newRule/index.html?lang=zh-tw#/zh-tw/index" target="_blank">相關規則</a>
+				</li>
+				<li>
+					<a href="./mine.html">
+						<i class="fas fa-user"></i>
+						我的
+					</a>
+				</li>
+			</ul>
+        <!--loggedBox-->
+        <div class="loggedBox">
+			<p>
+				帳戶名稱:
+				<span>ppp123</span>
+			</p>
+			<p class="quota">
+				今日可用額度:
+				<span>1000000</span>
+				元
+			</p>
+			<p class="quota">
+				昨日可用額度:
+				<span>1000000</span>
+				元
+			</p>
+			<button onclick="window.location.href='../index.html'">登出</button>
+        </div>
+      	</article>
+    </header>
+    <!--mainArea-->
+    <main class="mainArea">
+      	<article class="innerSide">
+			<!--left-->
+			<section class="left inner">
+          		<ul class="mine">
+					<div class="profile">
+						<div class="sticker"></div>
+						<p class="account">ppp123</p>
+						<p class="joinday">加入第 11 年 247 天</p>
+					</div>
+					<li>
+						<a href="./mine.html">
+							<i class="fas fa-id-card"></i>
+							個人資料
+						</a>
+					</li>
+					<li>
+						<a href="./instantBet.html">
+							<i class="fas fa-money-bill-wave"></i>
+							即時注單
+							<span class="live display">3</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="./betRecord.html">
+							<i class="fas fa-clipboard"></i>
+							投注紀錄
+							<div class="live display">3</div>
+						</a>
+					</li>
+					<li>
+						<a href="./history.html">
+							<i class="fas fa-clipboard"></i>
+							娛樂場帳戶歷史
+						</a>
+					</li>
+					<li>
+						<a href="https://www.gal168.net/NB_rule/newRule/index.html?lang=zh-tw#/zh-tw/index" target="_blank">
+							<i class="fas fa-question-circle"></i>
+							幫助中心
+						</a>
+					</li>
+					<li>
+						<a href="./contact.html">
+							<i class="fas fa-phone"></i>
+							聯繫我們
+						</a>
+					</li>
+					<li>
+						<a href="./message.html">
+							<i class="fas fa-comment-dots"></i>
+							消息中心
+							<div class="live display">73</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="controlBtn">
+							<i class="fas fa-cog"></i>
+							設定
+						</a>
+					</li>
+					<li>
+						<a href="http://localhost:1111/app/GoldClass/index.php" target="_blank">
+							<i class="fas fa-video"></i>
+							影城
+						</a>
+					</li>
+				</ul>
+			</section>
+			<!--mine-->
+			<div class="mine">
+				<!--topfix-->
+				<div class="topfix">
+					<div class="topbar">
+					<p class="leftword">投注紀錄</p>
+					<div class="midword">
+						<p>筆數
+							<span>4</span>
+						</p>
+						<p>投注金額
+							<span>450</span>
+						</p>
+						<p>有效投注
+							<span>300</span>
+						</p>
+						<p>結果
+							<span>45.00</span>
+						</p>
+					</div>
+					</div>
+					<div class="fixbar">
+						<div class="dateBox"> <!--新增dateBox 20230111_S-->
+							<i class="date"></i>
+							<input type="date" value="2023-01-12">
+							<span class="dash">-</span>
+							<i class="date"></i>
+							<input type="date" value="2023-01-12">
+							<button class="timesearchbut">查詢</button>
+						</div>
+						<div class="dateBox">
+							<button>雙週</button>
+							<button>本週</button>
+							<button>上週</button>
+						</div>
+					</div>
+				</div>
+				<!--主區塊-->
+				<section class="middle inner">
+					<!--即時注單-->
+					<div class="betRecord">
+						<div class="itemName"> <!--floatName改itemName 2023/01/11_S-->
+							<div class="time">
+								<p>時間</p>
+							</div>
+							<div class="betcount">
+								<p>筆數</p>
+							</div>
+							<div class="amount">
+								<p>金額/有效下注</p>
+							</div>
+							<div class="result">
+								<p>結果</p>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-15</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-14</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-13</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-12</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-11</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-10</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-09</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="itemName">
+							<div class="time">
+								<p>時間 (上週)</p>
+							</div>
+							<div class="betcount">
+								<p>筆數</p>
+							</div>
+							<div class="amount">
+								<p>金額/有效下注</p>
+							</div>
+							<div class="result">
+								<p>結果</p>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-08</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-07</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-06</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+								<div>
+									<p>0</p>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-05</p>
+									<span class="remind">3</span>
+								</div>
+								<div>
+									<p>3</p>
+								</div>
+								<div>
+									<p>350</p>
+								</div>
+								<div>
+									<p class="win">145</p>
+								</div>
+							</div>
+							<div class="recordbox">
+								<table>
+									<tbody>
+										<tr>
+											<th colspan="6">
+												<p>足球-全場-獨贏</p>
+												<p>未開獎</p>
+												<p>2020-05-27&nbsp;&nbsp;16:26:07</p>
+												<span class="arrow"></span>
+											</th>
+										</tr>
+										<tr>
+											<td>
+												<p>投注選項</p>
+											</td>
+											<td>
+												<p>
+													<span class="teamName">維羅納</span>
+													<span class="separate">＠</span>
+													<span class="point">1.95</span>
+												</p>
+											</td>
+											<td>
+												<p>投注賽事</p>
+											</td>
+											<td colspan="3">
+												<p>義大利甲組連賽</p>
+												<p class="teamName">
+													<span>橫濱灣星</span>
+													<span class="point">2+50</span>
+													<span class="vs">VS</span>
+													<span>維羅納</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>下注時間</p>
+											</td>
+											<td>
+												<p>2020-05-27&nbsp;16:16:07</p>
+											</td>
+											<td>
+												<p>比賽時間</p>
+											</td>
+											<td>
+												<p>2020-05-27 16:16:07</p>
+											</td>
+											<td>
+												<p>賽事編號</p>
+											</td>
+											<td>
+												<p>FT2112226</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>注單編號</p>
+											</td>
+											<td colspan="5">
+												<p>R120210348</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>投注金額</p>
+											</td>
+											<td>
+												<p>100</p>
+											</td>
+											<td>
+												<p>有效下注</p>
+											</td>
+											<td>
+												<p>100</p>
+											</td>
+											<td>
+												<p>結果</p>
+											</td>
+											<td>
+												<p>-100.00</p>
+											</td>
+										</tr>
+										<tr class="active">
+											<td>
+												<p>投注選項</p>
+											</td>
+											<td>
+												<p>
+													<span class="teamName">維羅納</span>
+													<span class="separate">＠</span>
+													<span class="point">1.95</span>
+												</p>
+											</td>
+											<td>
+												<p>賠率</p>
+											</td>
+											<td>
+												<p>0.96</p>
+											</td>
+											<td>
+												<p>投注金額</p>
+											</td>
+											<td>
+												<p>1000</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<tbody>
+										<tr>
+											<th colspan="6">
+												<p>足球-全場-獨贏</p>
+												<p>未開獎</p>
+												<p>2020-05-27&nbsp;&nbsp;16:26:07</p>
+												<span class="arrow"></span>
+											</th>
+										</tr>
+										<tr>
+											<td>
+												<p>投注選項</p>
+											</td>
+											<td>
+												<p>
+													<span class="teamName">維羅納</span>
+													<span class="separate">＠</span>
+													<span class="point">1.95</span>
+												</p>
+											</td>
+											<td>
+												<p>投注賽事</p>
+											</td>
+											<td colspan="3">
+												<p>義大利甲組連賽</p>
+												<p class="teamName">
+													<span>橫濱灣星</span>
+													<span class="point">2+50</span>
+													<span class="vs">VS</span>
+													<span>維羅納</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>下注時間</p>
+											</td>
+											<td>
+												<p>2020-05-27&nbsp;16:16:07</p>
+											</td>
+											<td>
+												<p>比賽時間</p>
+											</td>
+											<td>
+												<p>2020-05-27 16:16:07</p>
+											</td>
+											<td>
+												<p>賽事編號</p>
+											</td>
+											<td>
+												<p>FT2112226</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>注單編號</p>
+											</td>
+											<td colspan="5">
+												<p>R120210348</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>投注金額</p>
+											</td>
+											<td>
+												<p>100</p>
+											</td>
+											<td>
+												<p>有效下注</p>
+											</td>
+											<td>
+												<p>100</p>
+											</td>
+											<td>
+												<p>結果</p>
+											</td>
+											<td>
+												<p>-100.00</p>
+											</td>
+										</tr>
+										<tr class="active">
+											<td>
+												<p>投注選項</p>
+											</td>
+											<td>
+												<p>
+													<span class="teamName">維羅納</span>
+													<span class="separate">＠</span>
+													<span class="point">1.95</span>
+												</p>
+											</td>
+											<td>
+												<p>賠率</p>
+											</td>
+											<td>
+												<p>0.96</p>
+											</td>
+											<td>
+												<p>投注金額</p>
+											</td>
+											<td>
+												<p>1000</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<tbody>
+										<tr>
+											<th colspan="6">
+												<p>足球-全場-獨贏</p>
+												<p>未開獎</p>
+												<p>2020-05-27&nbsp;&nbsp;16:26:07</p>
+												<span class="arrow"></span>
+											</th>
+										</tr>
+										<tr>
+											<td>
+												<p>投注選項</p>
+											</td>
+											<td>
+												<p>
+													<span class="teamName">維羅納</span>
+													<span class="separate">＠</span>
+													<span class="point">1.95</span>
+												</p>
+											</td>
+											<td>
+												<p>投注賽事</p>
+											</td>
+											<td colspan="3">
+												<p>義大利甲組連賽</p>
+												<p class="teamName">
+													<span>橫濱灣星</span>
+													<span class="point">2+50</span>
+													<span class="vs">VS</span>
+													<span>維羅納</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>下注時間</p>
+											</td>
+											<td>
+												<p>2020-05-27&nbsp;16:16:07</p>
+											</td>
+											<td>
+												<p>比賽時間</p>
+											</td>
+											<td>
+												<p>2020-05-27 16:16:07</p>
+											</td>
+											<td>
+												<p>賽事編號</p>
+											</td>
+											<td>
+												<p>FT2112226</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>注單編號</p>
+											</td>
+											<td colspan="5">
+												<p>R120210348</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>投注金額</p>
+											</td>
+											<td>
+												<p>100</p>
+											</td>
+											<td>
+												<p>有效下注</p>
+											</td>
+											<td>
+												<p>100</p>
+											</td>
+											<td>
+												<p>結果</p>
+											</td>
+											<td>
+												<p>-100.00</p>
+											</td>
+										</tr>
+										<tr class="active">
+											<td>
+												<p>投注選項</p>
+											</td>
+											<td>
+												<p>
+													<span class="teamName">維羅納</span>
+													<span class="separate">＠</span>
+													<span class="point">1.95</span>
+												</p>
+											</td>
+											<td>
+												<p>賠率</p>
+											</td>
+											<td>
+												<p>0.96</p>
+											</td>
+											<td>
+												<p>投注金額</p>
+											</td>
+											<td>
+												<p>1000</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="underList">
+									<ul>
+										<li>
+											<p>投注總計</p>
+										</li>
+										<li>
+											<p>100.00</p>
+										</li>
+										<li>
+											<p>有效下注</p>
+										</li>
+										<li>
+											<p>100.00</p>
+										</li>
+										<li>
+											<p>結果</p>
+										</li>
+										<li>
+											<p>-100.00</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="detaBox">
+							<div class="firstLine">
+								<div>
+									<p>2023-01-04</p>
+									<span class="remind">1</span>
+								</div>
+								<div>
+									<p>1</p>
+								</div>
+								<div>
+									<p>100</p>
+								</div>
+								<div>
+									<p class="lose">-100</p>
+								</div>
+							</div>
+							<div class="recordbox">
+								<table>
+									<tbody>
+										<tr>
+											<th colspan="6">
+												<p>足球-全場-獨贏</p>
+												<p>未開獎</p>
+												<p>2020-05-27&nbsp;&nbsp;16:26:07</p>
+												<span class="arrow"></span>
+											</th>
+										</tr>
+										<tr>
+											<td>
+												<p>投注選項</p>
+											</td>
+											<td>
+												<p>
+													<span class="teamName">維羅納</span>
+													<span class="separate">＠</span>
+													<span class="point">1.95</span>
+												</p>
+											</td>
+											<td>
+												<p>投注賽事</p>
+											</td>
+											<td colspan="3">
+												<p>義大利甲組連賽</p>
+												<p class="teamName">
+													<span>橫濱灣星</span>
+													<span class="point">2+50</span>
+													<span class="vs">VS</span>
+													<span>維羅納</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>下注時間</p>
+											</td>
+											<td>
+												<p>2020-05-27&nbsp;16:16:07</p>
+											</td>
+											<td>
+												<p>比賽時間</p>
+											</td>
+											<td>
+												<p>2020-05-27 16:16:07</p>
+											</td>
+											<td>
+												<p>賽事編號</p>
+											</td>
+											<td>
+												<p>FT2112226</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>注單編號</p>
+											</td>
+											<td colspan="5">
+												<p>R120210348</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>投注金額</p>
+											</td>
+											<td>
+												<p>100</p>
+											</td>
+											<td>
+												<p>有效下注</p>
+											</td>
+											<td>
+												<p>100</p>
+											</td>
+											<td>
+												<p>結果</p>
+											</td>
+											<td>
+												<p>-100.00</p>
+											</td>
+										</tr>
+										<tr class="active">
+											<td>
+												<p>投注選項</p>
+											</td>
+											<td>
+												<p>
+													<span class="teamName">維羅納</span>
+													<span class="separate">＠</span>
+													<span class="point">1.95</span>
+												</p>
+											</td>
+											<td>
+												<p>賠率</p>
+											</td>
+											<td>
+												<p>0.96</p>
+											</td>
+											<td>
+												<p>投注金額</p>
+											</td>
+											<td>
+												<p>1000</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="underList">
+									<ul>
+										<li>
+											<p>投注總計</p>
+										</li>
+										<li>
+											<p>100.00</p>
+										</li>
+										<li>
+											<p>有效下注</p>
+										</li>
+										<li>
+											<p>100.00</p>
+										</li>
+										<li>
+											<p>結果</p>
+										</li>
+										<li>
+											<p>-100.00</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+      	</article>
+    </main>
+	<!--jumpWindow-->
+    <div class="filter">
+        <!--盤口對照表-->
+        <div class="jumpWindow conversionWindow">
+            <div class="title">
+                <p>盤口對照表</p>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <p>球頭換算法</p>
+                </div>
+                <div class="calcBox">
+                    <table>
+                        <tr>
+                            <td rowspan="2">
+                                <p>讓分</p>
+                            </td>
+                            <td>
+                                <p>足球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    平手 /
+                                    <br>
+                                    半球
+                                </p>
+                            </td>
+                            <td>
+                                <p>半球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    半球 /
+                                    <br>
+                                    1 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>1 球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    1 球 /
+                                    <br>
+                                    1 球半
+                                </p>
+                            </td>
+                            <td>
+                                <p>1 球半</p>
+                            </td>
+                            <td>
+                                <p>
+                                    1 球半 /
+                                    <br>
+                                    2 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>2 球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    2 球 /
+                                    <br>
+                                    2 球半
+                                </p>
+                            </td>
+                            <td>
+                                <p>2 球半</p>
+                            </td>
+                            <td>
+                                <p>
+                                    2 球半 /
+                                    <br>
+                                    3 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>3 球</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>棒球</p>
+                            </td>
+                            <td>
+                                <p>PK</p>
+                            </td>
+                            <td>
+                                <p>0-50</p>
+                            </td>
+                            <td>
+                                <p>0 輸</p>
+                            </td>
+                            <td>
+                                <p>1+50</p>
+                            </td>
+                            <td>
+                                <p>1 平</p>
+                            </td>
+                            <td>
+                                <p>1-50</p>
+                            </td>
+                            <td>
+                                <p>1 輸</p>
+                            </td>
+                            <td>
+                                <p>2+50</p>
+                            </td>
+                            <td>
+                                <p>2 平</p>
+                            </td>
+                            <td>
+                                <p>2-50</p>
+                            </td>
+                            <td>
+                                <p>2 輸</p>
+                            </td>
+                            <td>
+                                <p>3+50</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td rowspan="2">
+                                <p>大小</p>
+                            </td>
+                            <td>
+                                <p>足球</p>
+                            </td>
+                            <td>
+                                <p>0.5</p>
+                            </td>
+                            <td>
+                                <p>0.5/1</p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>1/1.5</p>
+                            </td>
+                            <td>
+                                <p>1.5</p>
+                            </td>
+                            <td>
+                                <p>1.5/2</p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>2/2.5</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                            <td>
+                                <p>2.5/3</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>3/3.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>棒球</p>
+                            </td>
+                            <td>
+                                <p>0 輸</p>
+                            </td>
+                            <td>
+                                <p>1+50</p>
+                            </td>
+                            <td>
+                                <p>1平</p>
+                            </td>
+                            <td>
+                                <p>1-50</p>
+                            </td>
+                            <td>
+                                <p>1 輸</p>
+                            </td>
+                            <td>
+                                <p>2+50</p>
+                            </td>
+                            <td>
+                                <p>2 平</p>
+                            </td>
+                            <td>
+                                <p>2-50</p>
+                            </td>
+                            <td>
+                                <p>2 輸</p>
+                            </td>
+                            <td>
+                                <p>3+50</p>
+                            </td>
+                            <td>
+                                <p>3 平</p>
+                            </td>
+                            <td>
+                                <p>3-50</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button class="close"></button>
+        </div>
+        <!--設定-->
+        <div class="jumpWindow controlWindow">
+            <div class="title">
+                <p>設定</p>
+            </div>
+            <div class="content">
+                <div class="box">
+                    <div class="smallTitle">
+                        <p>版面設定</p>
+                    </div>
+                    <div class="innerBox">
+                        <div class="rowBox">
+                            <p>專業版</p>
+                            <div class="row">
+                                <p>開啟</p>
+                                <p>關閉</p>
+                                <div class="cnt"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="smallTitle">
+                        <p>籌碼快捷設定</p>
+                    </div>
+                    <div class="innerBox">
+                        <div class="betBox">
+                            <p>設定下注</p>
+                            <input type="text" value="100">
+                            <input type="text" value="200">
+                            <input type="text" value="300">
+                            <input type="text" value="400">
+                            <input type="text" value="500">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="versionBox">
+                        <p>版本資訊</p>
+                        <div>
+                            <p>
+                                V4.2.11
+                                <span>目前為最新版本</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="close"></button>
+        </div>
+    </div>
+</body>
+</html>

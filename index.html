@@ -1,0 +1,2487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <!--header-->
+    <header>
+        <!--top-->
+        <div class="top">
+            <!--button-->
+            <div class="btnBox"> <!--20230103_新增外層btnBox_L-->
+                <button class="conversionBtn">盤口對照表</button>
+            </div>
+            <!--time-->
+            <span class="time"></span> <!--20230103_span新增class_L-->
+        </div>
+        <!--article-->
+        <article>
+            <!--logo-->
+            <div class="logo"></div>
+            <!--loginBox-->
+            <div class="loginBox"> <!--20230103_div修改class_L-->
+                <div class="inputBox">
+                    <input type="text" placeholder="用戶帳號">
+                    <p class="remember">
+                        <span class="cube"></span>
+                        記住密碼
+                    </p>
+                </div>
+                <div class="inputBox">
+                    <input type="text" placeholder="用戶密碼">
+                </div>
+                <button class="loginBtn" onclick="window.location.href='./html/market.html'">登入</button>
+            </div>
+        </article>
+    </header>
+    <!--mainArea-->
+    <main class="mainArea"> <!--20230103_main新增class_L-->
+        <article class="outSide"> <!--20230103_article修改class_L-->
+            <!--left-->
+            <section class="left">
+                <ul>
+                    <li class="active">
+                        <a href="javascript:;">
+                            <div> <!--20230104_新增結構div_L-->
+                                <i class="fas fa-futbol"></i>
+                                足球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-basketball-ball"></i>
+                                美國職籃
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-basketball-ball"></i>
+                                其他籃球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                美國職棒
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                中華職棒
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                日本職棒
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                其他棒球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-football-ball"></i>
+                                美式足球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-keyboard"></i>
+                                電競
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-hockey-puck"></i>
+                                冰球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-boxing-glove"></i>
+                                拳擊格鬥
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-racquet"></i>
+                                羽球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fad fa-volleyball-ball"></i>
+                                排球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-table-tennis"></i>
+                                桌球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-cricket"></i>
+                                板球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-ball-pile"></i>
+                                撞球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-volleyball-ball"></i>
+                                手球
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div>
+                                <i class="fas fa-futbol"></i>
+                                世界盃
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!--center-->
+            <div class="center display">
+                <!--topfix-->
+                <div class="topfix">
+                    <ul>
+                        <!--timeSelect-->
+                        <ol> <!--20230103_新增外層ol_L-->
+                            <li class="timeSelect"> <!--20230103_修改框架為li_L-->
+                                <div class="dateBox"> <!--20230103_新增外層dateBox_L-->
+                                    <div class="turnBtn prev"></div>
+                                    <div class="date">
+                                        <span>01/02 (一)</span>
+                                        <div class="total">
+                                            <span>53</span>
+                                        </div>
+                                        <span class="arrow"></span>
+                                    </div>
+                                    <div class="turnBtn next"></div>
+                                </div>
+                                <button>前日</button>
+                                <button>昨日</button>
+                                <button>今日</button>
+                            </li>
+                        </ol>
+                        <!--rightList-->
+                        <ol class="rightList"> <!--20230103_新增外層ol_L-->
+                            <!--選擇聯盟-->
+                            <li class="chooseLeague">
+                                <span>選擇聯盟</span>
+                                <i class="arrow"></i> <!--20230104_新增arrow_L-->
+                            </li>
+                            <!--排序-->
+                            <li class="sort">
+                                <select>
+                                    <option value="">場次排序</option>
+                                    <option value="">時間排序</option>
+                                </select>
+                                <i class="arrow"></i> <!--20230104_新增arrow_L-->
+                            </li>
+                        </ol>
+                    </ul>
+                </div>
+                <!--選擇聯盟-->
+                <div class="chleague">
+                    <ul>
+                        <li> <!--20230104_選擇聯盟結構修改_L-->
+                            <span class="cube"></span>
+                            <p>選取/取消所有聯盟</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>聖保羅青年盃U20</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>土耳其超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>塞浦路斯甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>埃及超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>摩洛哥甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>南非超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>以色列國家盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>希臘超級聯賽甲組</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>西班牙盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>夢幻對壘</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>英格蘭超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>蘇格蘭低地足球聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>威爾斯超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>英格蘭北部東部甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>日本女子大學足球錦標賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>中國足協盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>肯尼亞超級聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>葡萄牙聯賽U23</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>球會友誼賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>意大利甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>沙特甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>希臘超級乙組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>阿曼聯合盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>突尼斯乙組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>卡塔爾甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>南非甲組聯賽</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>意大利丁組聯賽盃</p>
+                        </li>
+                        <li>
+                            <span class="cube"></span>
+                            <p>巴林聯合盃</p>
+                        </li>
+                    </ul>
+                    <button>確認</button>
+                </div>
+                <!--主區塊-->
+                <section class="middle">
+                    <!--首頁訊息-->
+                    <div class="mainBox soccer display">
+                        <table>
+                            <tr>
+                                <th>
+                                    <p>聯盟</p>
+                                </th>
+                                <th>
+                                    <p>開賽時間</p>
+                                </th>
+                                <th>
+                                    <p>狀態</p>
+                                </th>
+                                <th>
+                                    <p>主隊</p>
+                                </th>
+                                <th>
+                                    <p>全場</p>
+                                </th>
+                                <th>
+                                    <p>客隊</p>
+                                </th>
+                                <th>
+                                    <p>半場</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>日本女子大學足球錦標賽</p>
+                                </td>
+                                <td>
+                                    <p>13:00</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>山梨學院大學(女)</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>日本大學(女)</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>中國足協盃</p>
+                                </td>
+                                <td>
+                                    <p>14:00</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>山東魯能泰山</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>武漢三鎮</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>中國足協盃</p>
+                                </td>
+                                <td>
+                                    <p>16:30</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>上海綠地申花</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>滄州雄獅</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>肯尼亞超級聯賽</p>
+                                </td>
+                                <td>
+                                    <p>18:00</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>上海綠地申花</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>滄州雄獅</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>葡萄牙聯賽U23</p>
+                                </td>
+                                <td>
+                                    <p>19:00</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>里奧阿維U23</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>雷克斯歐斯U23</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>球會友誼賽</p>
+                                </td>
+                                <td>
+                                    <p>19:30</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>梅西亞</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>雲達不萊梅</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>意大利甲組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>19:30</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>沙蘭力坦拿</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>AC米蘭</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>意大利甲組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>19:30</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>薩斯索羅</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>森多利亞</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>夢幻對壘</p>
+                                </td>
+                                <td>
+                                    <p>19:30</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>AC米蘭</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>薩斯索羅</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>沙特甲組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:00</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>沙希爾蓋提夫</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>艾哈斯姆</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>肯尼亞超級聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:00</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>卡卡梅加紅波茲</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>卡里奧班高鯊魚</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>肯尼亞超級聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:15</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>肯尼亞警察</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>瓦茲伊特</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>沙特甲組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>艾因巴哈</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>阿拉畢安萘哉</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>拉里薩</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>帕納辛奈科斯II隊</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>迪歐格拉斯</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>阿爾莫波斯阿里達斯</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>Iraklis Larisas</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>特斯帕羅塔斯</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>卡利地亞</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>干尼亞</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>伊利歐寶利斯</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>斯米爾尼阿波羅</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>基菲西亞</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>伊羅德霍特斯</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>耶拉派特拉</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>奧林匹亞科斯II隊</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>波羅達迪基</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>佩拿恰奇</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>希臘超級乙組聯賽</p>
+                                </td>
+                                <td>
+                                    <p>20:45</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>盧夫</p>
+                                </td>
+                                <td class="all">
+                                    <p>&ensp;</p>
+                                </td>
+                                <td>
+                                    <p>埃皮斯科皮</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>聖保羅青年盃U20</p>
+                                </td>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td>
+                                    <p>烏尼昂蘇扎諾SPU20</p>
+                                </td>
+                                <td class="all">
+                                    <p>0 - 2</p>
+                                </td>
+                                <td>
+                                    <p>甘美奧諾瓦里桑蒂諾SP U20</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>聖保羅青年盃U20</p>
+                                </td>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td>
+                                    <p>塔納比SPU20</p>
+                                </td>
+                                <td class="all">
+                                    <p>2 - 1</p>
+                                </td>
+                                <td>
+                                    <p>波圖加沙SP U20</p>
+                                </td>
+                                <td class="half">
+                                    <p>0 - 1</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>聖保羅青年盃U20</p>
+                                </td>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td>
+                                    <p>瓜魯賀斯SPU20</p>
+                                </td>
+                                <td class="all">
+                                    <p>0 - 1</p>
+                                </td>
+                                <td>
+                                    <p>法林明高SP U20</p>
+                                </td>
+                                <td class="half">
+                                    <p>0 - 1</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>聖保羅青年盃U20</p>
+                                </td>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td>
+                                    <p>圖帕SP U20</p>
+                                </td>
+                                <td class="all">
+                                    <p>1 - 2</p>
+                                </td>
+                                <td>
+                                    <p>維羅體育隊SP U20</p>
+                                </td>
+                                <td class="half">
+                                    <p>&ensp;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>聖保羅青年盃U20</p>
+                                </td>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td>
+                                    <p>利斯菲體育會PE U20</p>
+                                </td>
+                                <td class="all">
+                                    <p>2 - 0</p>
+                                </td>
+                                <td>
+                                    <p>沃爾特雷東達RJ U20</p>
+                                </td>
+                                <td class="half">
+                                    <p>1 - 0</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="mainBox basketball USA">
+                        <table>
+                            <tr>
+                                <th colspan="10">
+                                    <p>美國職籃 - NBA 美國職業籃球</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>時間</p>
+                                </th>
+                                <th>
+                                    <p>狀態</p>
+                                </th>
+                                <th>
+                                    <p>進行時間</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>1</p>
+                                </th>
+                                <th>
+                                    <p>2</p>
+                                </th>
+                                <th>
+                                    <p>3</p>
+                                </th>
+                                <th>
+                                    <p>4</p>
+                                </th>
+                                <th>
+                                    <p>OT</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>11:05</p>
+                                </td>
+                                <td>
+                                    <p>第4局</p>
+                                </td>
+                                <td class="onTime">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>LAL 湖人</span>
+                                        <span>MIA 熱火</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>32</span>
+                                        <span>23</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>20</span>
+                                        <span>25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>27</span>
+                                        <span>30</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>27</span>
+                                        <span>25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>&ensp;</span>
+                                        <span>&ensp;</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>106</span>
+                                        <span>103</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>08:05</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>ORL 魔術</span>
+                                        <span>OKC 雷霆</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>31</span>
+                                        <span>28</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>39</span>
+                                        <span>25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>25</span>
+                                        <span>35</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>31</span>
+                                        <span>27</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>126</span>
+                                        <span>115</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>08:05</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>CHA 黃蜂</span>
+                                        <span>MEM 灰熊</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>26</span>
+                                        <span>40</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>21</span>
+                                        <span>36</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>26</span>
+                                        <span>26</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>34</span>
+                                        <span>29</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>107</span>
+                                        <span>131</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>08:05</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>CLE 騎士</span>
+                                        <span>PHX 太陽</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>15</span>
+                                        <span>14</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>29</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>26</span>
+                                        <span>21</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>31</span>
+                                        <span>24</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>90</span>
+                                        <span>88</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="mainBox basketball else">
+                        <table>
+                            <tr>
+                                <th colspan="10">
+                                    <p>其他籃球 - 歐洲女子籃球聯賽</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>時間</p>
+                                </th>
+                                <th>
+                                    <p>狀態</p>
+                                </th>
+                                <th>
+                                    <p>進行時間</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>1</p>
+                                </th>
+                                <th>
+                                    <p>2</p>
+                                </th>
+                                <th>
+                                    <p>3</p>
+                                </th>
+                                <th>
+                                    <p>4</p>
+                                </th>
+                                <th>
+                                    <p>OT</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>CBK梅爾辛(女)</span>
+                                        <span>阿維尼達(女)</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>20</span>
+                                        <span>12</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>25</span>
+                                        <span>29</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>19</span>
+                                        <span>21</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>21</span>
+                                        <span>18</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>85</span>
+                                        <span>80</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>00:30</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>奧林匹亞科斯(女)</span>
+                                        <span>布爾日探戈籃球(女)</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>27</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>11</span>
+                                        <span>22</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>31</span>
+                                        <span>19</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>6</span>
+                                        <span>13</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>66</span>
+                                        <span>81</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>01:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>塞克薩德(女)</span>
+                                        <span>ZVVZ USK布拉格(女)</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>13</span>
+                                        <span>18</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>13</span>
+                                        <span>32</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>16</span>
+                                        <span>21</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>14</span>
+                                        <span>24</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>56</span>
+                                        <span>95</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>02:15</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>基羅納(女)</span>
+                                        <span>蘭德斯(女)</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>14</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>19</span>
+                                        <span>21</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>17</span>
+                                        <span>13</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>11</span>
+                                        <span>6</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>65</span>
+                                        <span>54</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="10">
+                                    <p>其他籃球 - 斯洛伐克籃球聯賽</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>時間</p>
+                                </th>
+                                <th>
+                                    <p>狀態</p>
+                                </th>
+                                <th>
+                                    <p>進行時間</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>1</p>
+                                </th>
+                                <th>
+                                    <p>2</p>
+                                </th>
+                                <th>
+                                    <p>3</p>
+                                </th>
+                                <th>
+                                    <p>4</p>
+                                </th>
+                                <th>
+                                    <p>OT</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>斯皮什騎士</span>
+                                        <span>科馬爾諾</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>27</span>
+                                        <span>15</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>22</span>
+                                        <span>31</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>18</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>26</span>
+                                        <span>22</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>93</span>
+                                        <span>86</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="10">
+                                    <p>其他籃球 - 波蘭籃球甲級聯賽</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>時間</p>
+                                </th>
+                                <th>
+                                    <p>狀態</p>
+                                </th>
+                                <th>
+                                    <p>進行時間</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>1</p>
+                                </th>
+                                <th>
+                                    <p>2</p>
+                                </th>
+                                <th>
+                                    <p>3</p>
+                                </th>
+                                <th>
+                                    <p>4</p>
+                                </th>
+                                <th>
+                                    <p>OT</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>瓦烏布日赫</span>
+                                        <span>SKS斯塔加德格但斯克</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>24</span>
+                                        <span>13</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>16</span>
+                                        <span>16</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>28</span>
+                                        <span>15</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>10</span>
+                                        <span>22</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>78</span>
+                                        <span>66</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>01:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>普隆尼亞比唐</span>
+                                        <span>德奇基</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>20</span>
+                                        <span>22</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>20</span>
+                                        <span>19</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>13</span>
+                                        <span>21</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>16</span>
+                                        <span>26</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>69</span>
+                                        <span>88</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>01:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>拉多姆</span>
+                                        <span>扎克科扎林</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>16</span>
+                                        <span>25</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>12</span>
+                                        <span>28</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>25</span>
+                                        <span>11</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>24</span>
+                                        <span>19</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>77</span>
+                                        <span>83</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>01:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>波洛尼亞華沙</span>
+                                        <span>茲戈熱萊茨</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>11</span>
+                                        <span>14</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>23</span>
+                                        <span>10</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>22</span>
+                                        <span>23</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>31</span>
+                                        <span>17</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>87</span>
+                                        <span>64</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>02:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>AZS AGH克拉科夫</span>
+                                        <span>克羅斯諾</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>26</span>
+                                        <span>14</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>10</span>
+                                        <span>27</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>24</span>
+                                        <span>18</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>14</span>
+                                        <span>14</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>74</span>
+                                        <span>73</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>03:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>波茲南籃球</span>
+                                        <span>克特威卡</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>22</span>
+                                        <span>13</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>19</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>15</span>
+                                        <span>18</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>8</span>
+                                        <span>17</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>63</span>
+                                        <span>67</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>03:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>WKK弗羅茨瓦夫</span>
+                                        <span>施拉斯克2</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>21</span>
+                                        <span>18</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>20</span>
+                                        <span>9</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>22</span>
+                                        <span>21</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>17</span>
+                                        <span>23</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>80</span>
+                                        <span>71</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="10">
+                                    <p>其他籃球 - 羅馬尼亞國家籃球聯賽</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>時間</p>
+                                </th>
+                                <th>
+                                    <p>狀態</p>
+                                </th>
+                                <th>
+                                    <p>進行時間</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>1</p>
+                                </th>
+                                <th>
+                                    <p>2</p>
+                                </th>
+                                <th>
+                                    <p>3</p>
+                                </th>
+                                <th>
+                                    <p>4</p>
+                                </th>
+                                <th>
+                                    <p>OT</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>23:30</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>SCMU克拉約瓦</span>
+                                        <span>皮特什蒂</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>&ensp;</span>
+                                        <span>&ensp;</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>23:59</p>
+                                </td>
+                                <td class="unready">
+                                    <p>未開賽</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>CSM塔古吉</span>
+                                        <span>米耶爾庫雷亞丘克</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>&ensp;</span>
+                                        <span>&ensp;</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>蒂米甚瓦拉</span>
+                                        <span>CSO沃倫塔里</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>24</span>
+                                        <span>23</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>29</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>13</span>
+                                        <span>23</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>17</span>
+                                        <span>22</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>72</span>
+                                        <span>97</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>00:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>普洛耶什蒂</span>
+                                        <span>塔古穆瑞斯</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>17</span>
+                                        <span>17</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>22</span>
+                                        <span>19</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>20</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>16</span>
+                                        <span>22</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>73</span>
+                                        <span>78</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>01:00</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>CSA布加勒斯特星</span>
+                                        <span>拉古納布加勒斯特</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>22</span>
+                                        <span>14</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>19</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>24</span>
+                                        <span>15</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>18</span>
+                                        <span>11</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>82</span>
+                                        <span>59</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="10">
+                                    <p>其他籃球 - 巴林籃球超級聯賽</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p>時間</p>
+                                </th>
+                                <th>
+                                    <p>狀態</p>
+                                </th>
+                                <th>
+                                    <p>進行時間</p>
+                                </th>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>1</p>
+                                </th>
+                                <th>
+                                    <p>2</p>
+                                </th>
+                                <th>
+                                    <p>3</p>
+                                </th>
+                                <th>
+                                    <p>4</p>
+                                </th>
+                                <th>
+                                    <p>OT</p>
+                                </th>
+                                <th>
+                                    <p>總分</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>00:30</p>
+                                </td>
+                                <td class="finish">
+                                    <p>已完賽</p>
+                                </td>
+                                <td class="over">
+                                    <p>
+                                        <i class="onTime"></i>
+                                        <i class="fas fa-times"></i>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>阿爾拿加馬</span>
+                                        <span>薩馬希</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>22</span>
+                                        <span>9</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>27</span>
+                                        <span>7</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>27</span>
+                                        <span>16</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>25</span>
+                                        <span>18</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>-</span>
+                                        <span>-</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <span>101</span>
+                                        <span>50</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
