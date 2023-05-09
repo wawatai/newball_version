@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.25"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <!--header-->
+    <header>
+      	<!--top-->
+      	<div class="top">
+			<!--button-->
+			<div class="btnBox">
+				<button class="conversionBtn">盤口對照表</button>
+				<button class="controlBtn">設定</button>
+			</div>
+			<!--marquee-->
+			<div class="marqueeBox">
+				<i class="fas fa-volume-up"></i>
+				<marquee>
+					<a href="#">★敬請注意★帳務日期01月01日其他籃球-摩洛哥籃球聯賽(AREH哈吉VSFUS拉巴特)因資訊源無上半場比分，故(全場,上半場)以退組計算，敬請會員留意，謝謝。</a>
+				</marquee>
+			</div>
+			<!--time-->
+			<span class="time"></span>
+      	</div>
+		<!--article-->
+		<article>
+			<!--logo-->
+			<div class="logo"></div>
+			<!--headerList-->
+			<ul class="headerList">
+				<li>
+					<a href="./market.html">市場列表</a>
+				</li>
+				<li>
+					<a href="./liveStream.html">直播</a>
+				</li>
+				<li>
+					<a href="./result.html">比賽結果</a>
+				</li>
+				<li>
+					<a href="./teach.html">盤口教程</a>
+				</li>
+				<li>
+					<a href="./score.html">比分</a>
+				</li>
+				<li>
+					<a href="./instantBet.html">即時投注</a>
+				</li>
+				<li>
+					<a href="./betRecord.html">投注紀錄</a>
+				</li>
+				<li>
+					<a href="https://www.gal168.net/NB_rule/newRule/index.html?lang=zh-tw#/zh-tw/index" target="_blank">相關規則</a>
+				</li>
+				<li class="active">
+					<a href="./mine.html">
+						<i class="fas fa-user"></i>
+						我的
+					</a>
+				</li>
+			</ul>
+        <!--loggedBox-->
+        <div class="loggedBox">
+			<p>
+				帳戶名稱:
+				<span>ppp123</span>
+			</p>
+			<p class="quota">
+				今日可用額度:
+				<span>1000000</span>
+				元
+			</p>
+			<p class="quota">
+				昨日可用額度:
+				<span>1000000</span>
+				元
+			</p>
+			<button onclick="window.location.href='../index.html'">登出</button>
+        </div>
+      	</article>
+    </header>
+    <!--mainArea-->
+    <main class="mainArea">
+      	<article class="innerSide">
+			<!--left-->
+			<section class="left inner">
+          		<ul class="mine">
+					<div class="profile">
+						<div class="sticker"></div>
+						<p class="account">ppp123</p>
+						<p class="joinday">加入第 11 年 247 天</p>
+					</div>
+					<li>
+						<a href="./mine.html">
+							<i class="fas fa-id-card"></i>
+							個人資料
+						</a>
+					</li>
+					<li>
+						<a href="./instantBet.html">
+							<i class="fas fa-money-bill-wave"></i>
+							即時注單
+							<span class="live display">3</span>
+						</a>
+					</li>
+					<li>
+						<a href="./betRecord.html">
+							<i class="fas fa-clipboard"></i>
+							投注紀錄
+							<span class="live display">3</span>
+						</a>
+					</li>
+					<li>
+						<a href="./history.html">
+							<i class="fas fa-clipboard"></i>
+							娛樂場帳戶歷史
+						</a>
+					</li>
+					<li>
+						<a href="https://www.gal168.net/NB_rule/newRule/index.html?lang=zh-tw#/zh-tw/index" target="_blank">
+							<i class="fas fa-question-circle"></i>
+							幫助中心
+						</a>
+					</li>
+					<li class="active">
+						<a href="./contact.html">
+							<i class="fas fa-phone"></i>
+							聯繫我們
+						</a>
+					</li>
+					<li>
+						<a href="./message.html">
+							<i class="fas fa-comment-dots"></i>
+							消息中心
+							<div class="live display">73</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="controlBtn">
+							<i class="fas fa-cog"></i>
+							設定
+						</a>
+					</li>
+					<li>
+						<a href="http://localhost:1111/app/GoldClass/index.php" target="_blank">
+							<i class="fas fa-video"></i>
+							影城
+						</a>
+					</li>
+				</ul>
+			</section>
+			<!--mine-->
+			<div class="mine">
+				<!--topfix-->
+				<div class="topfix contact">
+					<div class="topbar">
+						<p class="leftword">聯繫我們</p>
+					</div>
+					<ul class="fixbar">
+						<li class="active">意見反饋</li>
+						<li>我的反饋</li>
+					</ul>
+				</div>
+				<!--主區塊-->
+				<section class="middle inner">
+					<!--聯繫我們-->
+					<div class="contact mail display">
+						<div class="title">
+							<p>問題類型及描述</p>
+						</div>
+						<div class="content">
+							<div class="contactWay">
+								<p class="smallTitle">聯絡方式</p>
+								<textarea></textarea>
+							</div>
+							<div class="textBox">
+								<p class="smallTitle">
+									問題描述
+									<span>(內容介於20~200 字)</span>
+								</p>
+								<textarea placeholder="請輸入文字"></textarea>
+							</div>
+							<div class="btnBox">
+								<p>
+									<i class="remind"></i>
+									我們將會盡快回覆您，詳情請點選 『我的反饋』
+								</p>
+								<button>提交</button>
+							</div>
+						</div>
+					</div>
+					<div class="contact feeback">
+						<div class="questionBox">
+							<div class="title">
+								<p>轉點問題 》尚未回覆</p>
+								<p class="time">2020-05-27</p>
+							</div>
+							<div class="textBox">
+								<p>Q.請問要如何進行轉點?</p>
+							</div>
+						</div>
+						<div class="questionBox">
+							<div class="title reply">
+								<p>轉點問題 》已回覆</p>
+								<p class="time">2020-05-28</p>
+							</div>
+							<div class="textBox">
+								<p>A.您好，依照以下步驟即可進行轉點:</p>
+								<p>1.點擊網站首頁「我的」 → 2.點擊「轉點」 → 3.即可進行轉點動作</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+      	</article>
+    </main>
+	<!--jumpWindow-->
+    <div class="filter">
+        <!--盤口對照表-->
+        <div class="jumpWindow conversionWindow">
+            <div class="title">
+                <p>盤口對照表</p>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <p>球頭換算法</p>
+                </div>
+                <div class="calcBox">
+                    <table>
+                        <tr>
+                            <td rowspan="2">
+                                <p>讓分</p>
+                            </td>
+                            <td>
+                                <p>足球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    平手 /
+                                    <br>
+                                    半球
+                                </p>
+                            </td>
+                            <td>
+                                <p>半球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    半球 /
+                                    <br>
+                                    1 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>1 球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    1 球 /
+                                    <br>
+                                    1 球半
+                                </p>
+                            </td>
+                            <td>
+                                <p>1 球半</p>
+                            </td>
+                            <td>
+                                <p>
+                                    1 球半 /
+                                    <br>
+                                    2 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>2 球</p>
+                            </td>
+                            <td>
+                                <p>
+                                    2 球 /
+                                    <br>
+                                    2 球半
+                                </p>
+                            </td>
+                            <td>
+                                <p>2 球半</p>
+                            </td>
+                            <td>
+                                <p>
+                                    2 球半 /
+                                    <br>
+                                    3 球
+                                </p>
+                            </td>
+                            <td>
+                                <p>3 球</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>棒球</p>
+                            </td>
+                            <td>
+                                <p>PK</p>
+                            </td>
+                            <td>
+                                <p>0-50</p>
+                            </td>
+                            <td>
+                                <p>0 輸</p>
+                            </td>
+                            <td>
+                                <p>1+50</p>
+                            </td>
+                            <td>
+                                <p>1 平</p>
+                            </td>
+                            <td>
+                                <p>1-50</p>
+                            </td>
+                            <td>
+                                <p>1 輸</p>
+                            </td>
+                            <td>
+                                <p>2+50</p>
+                            </td>
+                            <td>
+                                <p>2 平</p>
+                            </td>
+                            <td>
+                                <p>2-50</p>
+                            </td>
+                            <td>
+                                <p>2 輸</p>
+                            </td>
+                            <td>
+                                <p>3+50</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td rowspan="2">
+                                <p>大小</p>
+                            </td>
+                            <td>
+                                <p>足球</p>
+                            </td>
+                            <td>
+                                <p>0.5</p>
+                            </td>
+                            <td>
+                                <p>0.5/1</p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>1/1.5</p>
+                            </td>
+                            <td>
+                                <p>1.5</p>
+                            </td>
+                            <td>
+                                <p>1.5/2</p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>2/2.5</p>
+                            </td>
+                            <td>
+                                <p>2.5</p>
+                            </td>
+                            <td>
+                                <p>2.5/3</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>3/3.5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>棒球</p>
+                            </td>
+                            <td>
+                                <p>0 輸</p>
+                            </td>
+                            <td>
+                                <p>1+50</p>
+                            </td>
+                            <td>
+                                <p>1平</p>
+                            </td>
+                            <td>
+                                <p>1-50</p>
+                            </td>
+                            <td>
+                                <p>1 輸</p>
+                            </td>
+                            <td>
+                                <p>2+50</p>
+                            </td>
+                            <td>
+                                <p>2 平</p>
+                            </td>
+                            <td>
+                                <p>2-50</p>
+                            </td>
+                            <td>
+                                <p>2 輸</p>
+                            </td>
+                            <td>
+                                <p>3+50</p>
+                            </td>
+                            <td>
+                                <p>3 平</p>
+                            </td>
+                            <td>
+                                <p>3-50</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button class="close"></button>
+        </div>
+        <!--設定-->
+        <div class="jumpWindow controlWindow">
+            <div class="title">
+                <p>設定</p>
+            </div>
+            <div class="content">
+                <div class="box">
+                    <div class="smallTitle">
+                        <p>版面設定</p>
+                    </div>
+                    <div class="innerBox">
+                        <div class="rowBox">
+                            <p>專業版</p>
+                            <div class="row">
+                                <p>開啟</p>
+                                <p>關閉</p>
+                                <div class="cnt"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="smallTitle">
+                        <p>籌碼快捷設定</p>
+                    </div>
+                    <div class="innerBox">
+                        <div class="betBox">
+                            <p>設定下注</p>
+                            <input type="text" value="100">
+                            <input type="text" value="200">
+                            <input type="text" value="300">
+                            <input type="text" value="400">
+                            <input type="text" value="500">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="versionBox">
+                        <p>版本資訊</p>
+                        <div>
+                            <p>
+                                V4.2.11
+                                <span>目前為最新版本</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="close"></button>
+        </div>
+    </div>
+</body>
+</html>

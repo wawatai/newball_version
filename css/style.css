@@ -1,0 +1,5728 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "微軟正黑體";
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0px;
+  font-family: "微軟正黑體";
+}
+
+select, input {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+i {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+main {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+label {
+  display: block;
+}
+
+header .logo {
+  background: url("../images/logo.png") no-repeat center;
+  background-size: contain;
+}
+
+.topfix .leftSide .search span {
+  background: url("../images/smallIcon_1.png") no-repeat;
+  background-size: 500%;
+}
+
+.center .love {
+  background: url("../images/smallIcon_2.png") no-repeat;
+  background-size: 200%;
+}
+
+.center .market.onTime .arrow {
+  background: url("../images/arrow.png") no-repeat;
+  background-size: 100%;
+}
+
+.mixpass .title .arrow {
+  background: url("../images/cal_arrow.png") no-repeat;
+  background-size: 100%;
+}
+
+.mixpass .title button {
+  background: url("../images/calculator.png") no-repeat center;
+  background-size: 100%;
+}
+
+.teach .middle .teamImg {
+  background: url("data:image/png;base64,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");
+  background-size: 200%;
+}
+
+.left ul.mine .profile .sticker {
+  background: url("data:image/png;base64,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") no-repeat center;
+  background-size: 100%;
+}
+
+.instantBet table th .arrow {
+  background: url("../images/arrow.png") no-repeat;
+  background-size: 100%;
+}
+
+.mine .fixbar i {
+  background: url("../images/date.png") no-repeat;
+  background-size: 100%;
+}
+
+.contact .btnBox .remind {
+  background: url("../images/remind.png") no-repeat center;
+  background-size: contain;
+}
+
+.message .title .arrow {
+  background: url("../images/arrow.png") no-repeat;
+  background-size: 100%;
+}
+
+.innerPage .innerBox.soccer .topImg {
+  background: url("../images/inner/inn_soccer.png") no-repeat top center;
+}
+
+.innerPage .innerBox.basketball .topImg {
+  background: url("../images/inner/inn_basketball.png") no-repeat top center;
+}
+
+.cube::before {
+  background: url("../images/cube/cubeArrow_1.png") no-repeat center;
+  background-size: contain;
+}
+
+.cube::after {
+  background: url("../images/cube/cubeArrow_2.png") no-repeat center;
+  background-size: contain;
+}
+
+html {
+  width: 100%;
+  height: auto;
+  background: #19202a;
+}
+html body {
+  width: 100%;
+  height: auto;
+}
+html body::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body header {
+  width: 100%;
+  min-width: 1100px;
+  height: auto;
+}
+html body header .top {
+  width: 100%;
+  height: 25px;
+  background: #3d5261;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2px;
+}
+html body header .top .btnBox {
+  width: auto;
+  height: auto;
+  margin-left: 15px;
+}
+html body header .top .btnBox button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+html body header .top .btnBox button:first-child {
+  margin: 0;
+}
+html body header .top span {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+html body header .top .marqueeBox {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body header .top .marqueeBox i {
+  color: #feb300;
+  font-size: 18px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body header .top .marqueeBox marquee {
+  width: 100%;
+  height: auto;
+}
+html body header .top .marqueeBox marquee a {
+  color: #b4bac8;
+  font-size: 12px;
+  font-weight: bold;
+}
+html body header article {
+  width: 100%;
+  height: 70px;
+  background: #feb300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+html body header article .logo {
+  width: 252px;
+  height: 63px;
+  margin: 40px;
+}
+html body header article .loginBox {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 20px;
+}
+html body header article .loginBox .inputBox {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  vertical-align: top;
+  margin-right: 6px;
+}
+html body header article .loginBox .inputBox input {
+  width: 130px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+}
+html body header article .loginBox .inputBox input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body header article .loginBox .inputBox input::-moz-placeholder {
+  color: #19202a;
+}
+html body header article .loginBox .inputBox input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body header article .loginBox .inputBox input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body header article .loginBox .inputBox input::placeholder {
+  color: #19202a;
+}
+html body header article .loginBox .inputBox .remember {
+  color: #1e62c5;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+html body header article .loginBox .inputBox .remember .cube {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: solid 1px #1f385c;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 6px;
+}
+html body header article .loginBox .inputBox .remember .cube.active::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+}
+html body header article .loginBox button {
+  width: auto;
+  height: 30px;
+  background: #1f385c;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2862745098);
+  padding: 0 14px 2px;
+}
+html body header article .loginBox button:hover, html body header article .loginBox button:active, html body header article .loginBox button.active {
+  background: #17478d;
+  color: #feb300;
+}
+html body header article .loggedBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 20px;
+  padding-bottom: 20px;
+}
+html body header article .loggedBox p {
+  color: #19202a;
+  font-size: 13px;
+  margin-right: 10px;
+}
+html body header article .loggedBox p.quota {
+  background: #ffffff;
+  padding: 5px 8px 6px;
+}
+html body header article .loggedBox p.quota span {
+  color: #1e62c5;
+  font-weight: bold;
+}
+html body header article .loggedBox p span {
+  padding-left: 5px;
+}
+html body header article .loggedBox button {
+  width: auto;
+  height: 30px;
+  background: #1f385c;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2862745098);
+  padding: 0 14px 2px;
+}
+html body header article .loggedBox button:hover, html body header article .loggedBox button:active, html body header article .loggedBox button.active {
+  background: #17478d;
+  color: #feb300;
+}
+html body header article .headerList {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+html body header article .headerList li {
+  width: auto;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+html body header article .headerList li::before {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #19202a;
+}
+html body header article .headerList li:hover::before, html body header article .headerList li:active::before, html body header article .headerList li.active::before {
+  display: block;
+}
+html body header article .headerList li a {
+  width: auto;
+  height: 100%;
+  color: #19202a;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+}
+html body header article .headerList li a i {
+  margin-right: 10px;
+}
+@media only screen and (max-width: 1600px) {
+  html body header article .headerList li a {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 0 10px 10px;
+  }
+}
+html body .left {
+  width: 270px;
+  height: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow-y: auto;
+  margin-right: 5px;
+}
+html body .left::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .left::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .left::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .left ul:not(.mine) {
+  width: 100%;
+  height: auto;
+  border: 1px solid #feb300;
+}
+html body .left ul:not(.mine) li {
+  width: 100%;
+  height: 45px;
+  border-bottom: solid 1px #feb300;
+  overflow: hidden;
+}
+html body .left ul:not(.mine) li:last-child {
+  border: none;
+}
+html body .left ul:not(.mine) li.active {
+  height: auto;
+}
+html body .left ul:not(.mine) li.active a {
+  background: #feb300;
+  color: #19202a;
+}
+html body .left ul:not(.mine) li.active a div .total {
+  color: #19202a;
+}
+html body .left ul:not(.mine) li a {
+  width: 100%;
+  height: 45px;
+  background: #3d5261;
+  color: #feb300;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  padding: 0 20px;
+}
+html body .left ul:not(.mine) li a:hover, html body .left ul:not(.mine) li a:active, html body .left ul:not(.mine) li a.active {
+  background: #feb300;
+  color: #19202a;
+}
+html body .left ul:not(.mine) li a:hover div .total, html body .left ul:not(.mine) li a:active div .total, html body .left ul:not(.mine) li a.active div .total {
+  color: #19202a;
+}
+html body .left ul:not(.mine) li a div {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .left ul:not(.mine) li a div i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+html body .left ul:not(.mine) li a div .live {
+  height: 18px;
+  display: none;
+  background: -webkit-gradient(linear, right top, left top, from(#0d8c31), to(#12bb26));
+  background: linear-gradient(to left, #0d8c31 0%, #12bb26 100%);
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 4px 2px;
+  margin-right: 10px;
+}
+html body .left ul:not(.mine) li a div .live.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .left ul:not(.mine) li a div .total {
+  color: #ffcc41;
+  font-size: 13px;
+  font-weight: bold;
+}
+html body .left ul:not(.mine) li .smallList {
+  width: 100%;
+  height: 30px;
+  background: #2e3f57;
+  color: #ffcf51;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  padding: 0 20px 0 30px;
+}
+html body .left ul:not(.mine) li .smallList:hover, html body .left ul:not(.mine) li .smallList:active, html body .left ul:not(.mine) li .smallList.active {
+  background: #ffcf51;
+  color: #242424;
+}
+html body .left ul:not(.mine) li .smallList span {
+  font-size: 12px;
+}
+html body .left .mine {
+  width: 100%;
+  height: 100%;
+  background: #212832;
+}
+html body .left .mine .profile {
+  width: 100%;
+  height: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .left .mine .profile .sticker {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+html body .left .mine .profile p {
+  color: #feb300;
+  font-size: 15px;
+  font-weight: bold;
+}
+html body .left .mine .profile p.account {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+html body .left .mine li {
+  width: 100%;
+  height: 45px;
+  background: #3d5261;
+}
+html body .left .mine li:hover, html body .left .mine li:active, html body .left .mine li.active {
+  background: #feb300;
+}
+html body .left .mine li:hover a, html body .left .mine li:active a, html body .left .mine li.active a {
+  color: #19202a;
+}
+html body .left .mine li:nth-of-type(6) {
+  border: solid 1px #b4bac8;
+  border-width: 1px 0;
+}
+html body .left .mine li a {
+  width: 100%;
+  height: 100%;
+  color: #feb300;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+html body .left .mine li a .live {
+  min-width: 20px;
+  height: 22px;
+  background: #19202a;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #feb300;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px 0 5px;
+  font-size: 12px;
+  padding: 0 5px;
+  margin-left: 10px;
+}
+html body .left .mine li a i {
+  font-size: 22px;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 1480px) {
+  html body .left.inner {
+    width: 18%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  html body .left.inner {
+    width: 214px;
+  }
+}
+html body .right {
+  width: 300px;
+  height: auto;
+  background: #212832;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 5px;
+}
+html body .right .statusWindow {
+  width: 100%;
+  height: auto;
+}
+html body .right .statusWindow .ST_Window {
+  width: 100%;
+  height: 80px;
+  overflow-y: auto;
+  padding: 3px 0px;
+}
+html body .right .statusWindow .ST_Window::-webkit-scrollbar {
+  width: 4.5px;
+  height: 90%;
+}
+html body .right .statusWindow .ST_Window::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+html body .right .statusWindow .ST_Window::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+html body .right .statusWindow .ST_Window li {
+  width: 97%;
+  height: auto;
+  border-bottom: 1px solid #465a79;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3px 10px 5px;
+  margin: 0 auto;
+}
+html body .right .statusWindow .ST_Window li div {
+  width: auto;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .right .statusWindow .ST_Window li div span {
+  margin-left: 15px;
+}
+html body .right .statusWindow .ST_Window li .betAmount {
+  color: #feb300;
+  font-size: 12px;
+  font-weight: bold;
+}
+html body .right .liveWindow {
+  width: 100%;
+  height: auto;
+}
+html body .right .liveWindow .teamWindow {
+  display: none;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  color: #19202a;
+  font-size: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 10px 0;
+}
+html body .right .liveWindow .teamWindow.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .right .liveWindow .teamWindow .score {
+  font-weight: bold;
+}
+html body .right .liveWindow video {
+  width: 100%;
+  height: 187px;
+}
+html body .right .room {
+  width: 100%;
+  height: auto;
+}
+html body .right .room .twobut {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .right .room .twobut button {
+  width: 50%;
+  height: auto;
+  background: #3d5261;
+  color: #feb300;
+  font-size: 14px;
+  text-align: center;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+  padding: 4px 15px;
+}
+html body .right .room .twobut button:hover, html body .right .room .twobut button:active, html body .right .room .twobut button.active {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+html body .right .room .liveListBox {
+  display: none;
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+}
+html body .right .room .liveListBox::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .right .room .liveListBox::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .right .room .liveListBox::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .right .room .liveListBox.display {
+  display: block;
+}
+html body .right .room .liveListBox .livelist {
+  width: 100%;
+  height: 34px;
+  background: #212832;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+html body .right .room .liveListBox .livelist.display {
+  height: auto;
+}
+html body .right .room .liveListBox .livelist.display .liveTitle p .arrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border-color: transparent #feb300;
+}
+html body .right .room .liveListBox .livelist .liveTitle {
+  width: 100%;
+  height: 32px;
+  background: #3d5261;
+  color: #feb300;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  padding: 0 25px;
+}
+html body .right .room .liveListBox .livelist .liveTitle .games {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+html body .right .room .liveListBox .livelist .liveTitle .games .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0px 7px 8px;
+  border-color: transparent #2f3c46;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  margin-left: 10px;
+}
+html body .right .room .liveListBox .livelist .innerList {
+  width: 95%;
+  height: auto;
+  background: #2e3f57;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px;
+  overflow: hidden;
+  position: relative;
+}
+html body .right .room .liveListBox .livelist .innerList::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #00c613 #00c613 transparent transparent;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0;
+}
+html body .right .room .liveListBox .livelist .innerList.active button {
+  background: #feb300;
+}
+html body .right .room .liveListBox .livelist .innerList.active::before {
+  opacity: 1;
+}
+html body .right .room .liveListBox .livelist .innerList .gTitle {
+  width: 100%;
+  height: auto;
+  color: #feb300;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+html body .right .room .liveListBox .livelist .innerList p {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+html body .right .room .liveListBox .livelist .innerList p:nth-last-of-type(1) {
+  margin: 0;
+}
+html body .right .room .liveListBox .livelist .innerList button {
+  width: 70px;
+  height: 30px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 5px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+html body .right .room .liveListBox .livelist .innerList button:hover, html body .right .room .liveListBox .livelist .innerList button:active, html body .right .room .liveListBox .livelist .innerList button.active {
+  background: #feb300;
+}
+html body .right .room .liveListBox .livelist .innerList button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .right .room .liveListBox .livelist:hover, html body .right .room .liveListBox .livelist:active {
+  border-color: #feb300;
+}
+html body .right .room .liveListBox .livelist:hover .liveTitle, html body .right .room .liveListBox .livelist:active .liveTitle {
+  background: #2e3f57;
+}
+html body .right .room .liveListBox .livelist:hover .liveTitle .arrow, html body .right .room .liveListBox .livelist:active .liveTitle .arrow {
+  border-color: transparent #feb300;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+html body .right .room .liveListBox .livelist.active {
+  height: auto;
+}
+html body .right .room .liveListBox .livelist.active .liveTitle {
+  background: #2e3f57;
+}
+html body .right .room .liveListBox .livelist.active .liveTitle .arrow {
+  border-color: transparent #feb300;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+html body .right .room .bettingStatus {
+  display: none;
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+}
+html body .right .room .bettingStatus::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .right .room .bettingStatus::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .right .room .bettingStatus::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .right .room .bettingStatus.display {
+  display: block;
+}
+html body .right .room .bettingStatus table {
+  width: 95%;
+  height: auto;
+  margin: 8px auto 0px;
+}
+html body .right .room .bettingStatus table tr:nth-of-type(1) td:nth-of-type(1) {
+  color: #ffcc41;
+  text-align: center;
+}
+html body .right .room .bettingStatus table tr:nth-of-type(2) td:nth-of-type(2) {
+  color: #ffcc41;
+}
+html body .right .room .bettingStatus table tr td {
+  width: 50%;
+  height: auto;
+  background: #2e3f57;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #465a79;
+  color: #feb300;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 7px;
+}
+html body .right .room .bettingStatus table tr td.waiting, html body .right .room .bettingStatus table tr td.sus {
+  color: #00c613;
+}
+html body .right .room .bettingStatus table tr td.listName .vs {
+  color: #9ec2f5;
+}
+html body .right .room .bettingStatus table tr td.listName .odds {
+  color: #b4bac8;
+}
+html body .right .room .bettingStatus table tr td.failRemind {
+  display: none;
+  background: #5c6d79;
+  text-align: center;
+  padding: 10px 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body .right .room .bettingStatus table tr td:nth-of-type(odd) {
+  border-right-width: 1px;
+}
+html body .right .room .bettingStatus table tr td:last-child {
+  border-right-width: 0px;
+}
+html body .right .room .bettingStatus table tr:nth-last-of-type(2) td {
+  border-bottom: 0;
+  word-break: keep-all;
+  text-align: center;
+  line-height: 16px;
+}
+html body .right .room .bettingStatus table.fail {
+  position: relative;
+}
+html body .right .room .bettingStatus table.fail::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5019607843);
+}
+html body .right .room .bettingStatus table.fail tr td.failRemind {
+  display: block;
+}
+html body .right .title {
+  width: 100%;
+  height: 26px;
+  background: #3d5261;
+  color: #feb300;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15px;
+}
+html body .right .title .stNumber {
+  color: #ffffff;
+  font-weight: bold;
+}
+html body .right .title a {
+  width: auto;
+  height: auto;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  font-size: 12px;
+  padding: 3px 5px;
+}
+html body .right .title a:hover, html body .right .title a:active, html body .right .title a.active {
+  background: #feb300;
+}
+html body .right .title a:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+@media only screen and (max-width: 1480px) {
+  html body .right {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  html body .right {
+    width: 240px;
+  }
+}
+html body .mainArea {
+  width: 100%;
+  min-width: 1100px;
+  height: auto;
+  margin-top: 5px;
+}
+html body .mainArea .outSide {
+  width: 1280px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+html body .mainArea .innerSide {
+  width: 1480px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1280px) {
+  html body .mainArea .outSide {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 1480px) {
+  html body .mainArea .innerSide {
+    width: 100%;
+    margin: 0;
+  }
+}
+html body .center {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+html body .center.display {
+  display: block;
+}
+html body .center .topfix {
+  width: 100%;
+  height: 50px;
+  background: #3d5261;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+  position: relative;
+  z-index: 20;
+}
+html body .center .topfix ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body .center .topfix ul ol {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .center .topfix ul ol .timeSelect {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+}
+html body .center .topfix ul ol .timeSelect .dateBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .center .topfix ul ol .timeSelect .dateBox .turnBtn {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 13px 10px 0px;
+  border-color: transparent #cacaca;
+  -webkit-transform-origin: 10px 32px;
+          transform-origin: 10px 32px;
+  cursor: pointer;
+}
+html body .center .topfix ul ol .timeSelect .dateBox .turnBtn.next {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+html body .center .topfix ul ol .timeSelect .dateBox .date {
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+html body .center .topfix ul ol .timeSelect .dateBox .date .total {
+  width: 36px;
+  height: auto;
+  background: #19202a;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #feb300;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px 0 5px;
+  margin: 0 10px;
+}
+html body .center .topfix ul ol .timeSelect .dateBox .date .arrow {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 13px 10px 0px;
+  border-color: transparent #cacaca;
+  -webkit-transform-origin: 10px 32px;
+          transform-origin: 10px 32px;
+  cursor: pointer;
+  border-width: 8px 6px 0 6px;
+  border-color: #ffffff transparent;
+  margin-top: 2px;
+}
+html body .center .topfix ul ol .timeSelect button {
+  width: 48px;
+  height: 30px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  margin-left: 6px;
+}
+html body .center .topfix ul ol .timeSelect button:hover, html body .center .topfix ul ol .timeSelect button:active, html body .center .topfix ul ol .timeSelect button.active {
+  background: #feb300;
+}
+html body .center .topfix ul ol .timeSelect button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .center .topfix ul ol .timeSelect button:nth-of-type(1) {
+  margin-left: 20px;
+}
+html body .center .topfix ul ol.leftSide {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .center .topfix ul ol.leftSide .gameName {
+  width: auto;
+  height: auto;
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-left: 12px;
+}
+html body .center .topfix ul ol.leftSide .gameName i {
+  font-size: 18px;
+  margin: 2px 6px 0 0;
+}
+html body .center .topfix ul ol.leftSide .reWeb {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 10px;
+}
+html body .center .topfix ul ol.leftSide .reWeb .selectBox {
+  width: auto;
+  height: auto;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #ffffff), color-stop(26%, #ebf0f2), color-stop(82%, #ffffff));
+  background: linear-gradient(to top, #ffffff 5%, #ebf0f2 26%, #ffffff 82%);
+  border: solid 1px #feb300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 4px 5px 5px;
+}
+html body .center .topfix ul ol.leftSide .reWeb .selectBox select {
+  background: none;
+  border: none;
+  color: #19202a;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+html body .center .topfix ul ol.leftSide .reWeb .selectBox .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #19202a transparent;
+  margin: 2px 0 0 5px;
+}
+html body .center .topfix ul ol.leftSide .reWeb .clock {
+  width: 30px;
+  height: 24px;
+  background: #19202a;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10px;
+}
+html body .center .topfix ul ol.leftSide .reWeb .clock span {
+  color: #feb300;
+  font-size: 16px;
+  font-weight: bold;
+}
+html body .center .topfix ul ol.leftSide .reWeb .reBtn {
+  width: 28px;
+  height: 28px;
+  background: #19202a;
+  border: solid 1px #feb300;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10px;
+}
+html body .center .topfix ul ol.leftSide .reWeb .reBtn i {
+  color: #feb300;
+  font-size: 14px;
+}
+html body .center .topfix ul ol.leftSide .search {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+}
+html body .center .topfix ul ol.leftSide .search .inputBox {
+  width: 50%;
+  height: 28px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #ffffff), color-stop(26%, #ebf0f2), color-stop(82%, #ffffff));
+  background: linear-gradient(to top, #ffffff 5%, #ebf0f2 26%, #ffffff 82%);
+  border: solid 1px #feb300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 4px 5px 5px;
+  border-radius: 3px;
+}
+html body .center .topfix ul ol.leftSide .search .inputBox span {
+  width: 14px;
+  height: 14px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 5px;
+}
+html body .center .topfix ul ol.leftSide .search .inputBox input {
+  width: 100%;
+  height: auto;
+  background: none;
+  border: none;
+  color: #19202a;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .center .topfix ul ol.leftSide .search .inputBox input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .center .topfix ul ol.leftSide .search .inputBox input::-moz-placeholder {
+  color: #19202a;
+}
+html body .center .topfix ul ol.leftSide .search .inputBox input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .center .topfix ul ol.leftSide .search .inputBox input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .center .topfix ul ol.leftSide .search .inputBox input::placeholder {
+  color: #19202a;
+}
+html body .center .topfix ul ol.leftSide .search button {
+  width: auto;
+  height: 30px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding: 0 10px 2px;
+  margin-left: 10px;
+}
+html body .center .topfix ul ol.leftSide .search button:hover, html body .center .topfix ul ol.leftSide .search button:active, html body .center .topfix ul ol.leftSide .search button.active {
+  background: #feb300;
+}
+html body .center .topfix ul ol.leftSide .search button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .center .topfix ul ol.rightList {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .center .topfix ul ol.rightList li {
+  width: auto;
+  height: auto;
+  background: #1f385c;
+  border: solid 1px #feb300;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2862745098);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 4px 10px 5px;
+  margin-right: 10px;
+}
+html body .center .topfix ul ol.rightList li.chooseLeague span {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+}
+html body .center .topfix ul ol.rightList li.sort select, html body .center .topfix ul ol.rightList li.kind select {
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+html body .center .topfix ul ol.rightList li.sort select option, html body .center .topfix ul ol.rightList li.kind select option {
+  background: #1f385c;
+}
+html body .center .topfix ul ol.rightList li .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #feb300 transparent;
+  margin: 2px 0 0 5px;
+}
+html body .center .topfix ul .live {
+  padding: 0 20px;
+}
+html body .center .topfix ul .live p {
+  color: #ffffff;
+}
+html body .center .chleague {
+  width: 100%;
+  height: auto;
+  display: none;
+  background: #50606d;
+  border-radius: 0 0 3px 3px;
+  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4);
+  padding-bottom: 20px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 10;
+}
+html body .center .chleague.display {
+  display: block;
+}
+html body .center .chleague ul {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px 15px 0;
+}
+html body .center .chleague ul li {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+}
+html body .center .chleague ul li:first-child {
+  -ms-grid-column: -1;
+      grid-column-start: -1;
+  grid-column-end: 1;
+}
+html body .center .chleague ul li .cube {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(34%, #ffffff), to(#e5e5e5));
+  background: linear-gradient(to top, #ffffff 34%, #e5e5e5 100%);
+  border: solid 1px #d0d0d0;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  margin: 2px 10px 0 0;
+}
+html body .center .chleague ul li .cube.active::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+}
+html body .center .chleague ul li p {
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+}
+html body .center .chleague button {
+  width: 160px;
+  height: 36px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#feb300), to(#c98000));
+  background: linear-gradient(to bottom, #feb300 0%, #c98000 100%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+  border: none;
+  color: #212832;
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  margin: 15px auto 0;
+}
+html body .center .chleague button:hover, html body .center .chleague button:active, html body .center .chleague button.active {
+  background: #feb300;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+html body .center .middle {
+  width: 100%;
+  height: auto;
+  overflow-y: overlay;
+}
+html body .center .middle::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .center .middle::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .center .middle::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .center .middle .mainBox {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .center .middle .mainBox.display {
+  display: block;
+}
+html body .center .middle .mainBox.soccer table tr th:nth-of-type(4) p, html body .center .middle .mainBox.soccer table tr th:nth-of-type(6) p {
+  text-align: left;
+}
+html body .center .middle .mainBox.soccer table tr td:nth-of-type(1) {
+  width: 20%;
+}
+html body .center .middle .mainBox.soccer table tr td:nth-of-type(2), html body .center .middle .mainBox.soccer table tr td:nth-of-type(3), html body .center .middle .mainBox.soccer table tr td:nth-of-type(5), html body .center .middle .mainBox.soccer table tr td:nth-of-type(7) {
+  min-width: 72px;
+}
+html body .center .middle .mainBox.soccer table tr td:nth-of-type(4), html body .center .middle .mainBox.soccer table tr td:nth-of-type(6) {
+  width: 40%;
+}
+html body .center .middle .mainBox.soccer table tr td:nth-of-type(4) p, html body .center .middle .mainBox.soccer table tr td:nth-of-type(6) p {
+  text-align: left;
+}
+html body .center .middle .mainBox.basketball table tr:nth-of-type(1) th:first-child p {
+  text-align: left;
+}
+html body .center .middle .mainBox.basketball table tr:nth-of-type(2) th {
+  background: #feb300;
+  top: 29px;
+}
+html body .center .middle .mainBox.basketball table tr:nth-of-type(2) th p {
+  color: #19202a;
+}
+html body .center .middle .mainBox.basketball table tr td:nth-of-type(1) {
+  min-width: 100px;
+}
+html body .center .middle .mainBox.basketball table tr td:nth-of-type(1) p {
+  line-height: 55px;
+  padding: 0;
+}
+html body .center .middle .mainBox.basketball table tr td:nth-of-type(2), html body .center .middle .mainBox.basketball table tr td:nth-of-type(3) {
+  min-width: 80px;
+}
+html body .center .middle .mainBox.basketball table tr td:nth-of-type(2) p, html body .center .middle .mainBox.basketball table tr td:nth-of-type(3) p {
+  line-height: 55px;
+  padding: 0;
+}
+html body .center .middle .mainBox.basketball table tr td:nth-of-type(4) {
+  width: 100%;
+}
+html body .center .middle .mainBox.basketball table tr td:nth-of-type(4) p {
+  text-align: left;
+  padding: 8px 20px;
+}
+html body .center .middle .mainBox.basketball table tr td:nth-of-type(5), html body .center .middle .mainBox.basketball table tr td:nth-of-type(6), html body .center .middle .mainBox.basketball table tr td:nth-of-type(7), html body .center .middle .mainBox.basketball table tr td:nth-of-type(8), html body .center .middle .mainBox.basketball table tr td:nth-of-type(9), html body .center .middle .mainBox.basketball table tr td:nth-of-type(10) {
+  min-width: 60px;
+}
+html body .center .middle .mainBox.basketball table tr td p {
+  height: 55px;
+}
+html body .center .middle .mainBox table {
+  width: 100%;
+  height: auto;
+  background: #212832;
+  border: solid 1px #feb300;
+  position: relative;
+}
+html body .center .middle .mainBox table tr:hover td, html body .center .middle .mainBox table tr:active td, html body .center .middle .mainBox table tr.active td {
+  background: #2e3f57;
+}
+html body .center .middle .mainBox table tr th {
+  width: auto;
+  max-width: 0;
+  height: auto;
+  background: #212832;
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 8px 10px;
+  z-index: 1;
+}
+html body .center .middle .mainBox table tr th p {
+  width: 100%;
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .middle .mainBox table tr td {
+  max-width: 0;
+  height: auto;
+  position: relative;
+  vertical-align: middle;
+}
+html body .center .middle .mainBox table tr td.unready p {
+  color: #ce1427;
+}
+html body .center .middle .mainBox table tr td.finish p {
+  color: #00c613;
+}
+html body .center .middle .mainBox table tr td.all p {
+  color: #ce1427;
+}
+html body .center .middle .mainBox table tr td.half p {
+  color: #0b7800;
+}
+html body .center .middle .mainBox table tr td.onTime p .onTime {
+  display: block;
+}
+html body .center .middle .mainBox table tr td.over p .fa-times {
+  display: block;
+}
+html body .center .middle .mainBox table tr td:last-child p {
+  border-right: none;
+}
+html body .center .middle .mainBox table tr td p {
+  width: 100%;
+  border: solid 1px #465a79;
+  border-width: 1px 1px 0 0;
+  border-right-color: #ffffff;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 8px 5px;
+}
+html body .center .middle .mainBox table tr td p i {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body .center .middle .mainBox table tr td p i.onTime {
+  width: 5px;
+  height: 5px;
+  background: #00c613;
+  border-radius: 50%;
+}
+html body .center .middle .mainBox table tr td p i.onTime::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #00c613;
+  border-radius: 50%;
+  -webkit-animation: onTimeRipple 1s linear 0s infinite;
+          animation: onTimeRipple 1s linear 0s infinite;
+}
+@-webkit-keyframes onTimeRipple {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+@keyframes onTimeRipple {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+html body .center .middle .mainBox table tr td p span {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .middle .mainBox table tr td p span:first-child {
+  margin-bottom: 10px;
+}
+html body .center .middle .market {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .center .middle .market.display {
+  display: block;
+}
+html body .center .middle .market.type_1 table tr th:nth-of-type(1) {
+  width: 100%;
+}
+html body .center .middle .market.type_1 table tr th:nth-of-type(1) p {
+  text-align: left;
+}
+html body .center .middle .market.type_1 table tr th:nth-of-type(2), html body .center .middle .market.type_1 table tr th:nth-of-type(3), html body .center .middle .market.type_1 table tr th:nth-of-type(4), html body .center .middle .market.type_1 table tr th:nth-of-type(5), html body .center .middle .market.type_1 table tr th:nth-of-type(6) {
+  min-width: 100px;
+}
+html body .center .middle .market.type_1 table tr th:nth-of-type(7) {
+  min-width: 55px;
+}
+html body .center .middle .market.type_1 table tr td:nth-of-type(1) div {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+html body .center .middle .market.type_2 table tr th:nth-of-type(1) {
+  width: 100%;
+}
+html body .center .middle .market.type_2 table tr th:nth-of-type(1) p {
+  text-align: left;
+}
+html body .center .middle .market.type_2 table tr th:nth-of-type(2), html body .center .middle .market.type_2 table tr th:nth-of-type(3) {
+  min-width: 128px;
+}
+html body .center .middle .market.type_2 table tr th:nth-of-type(4) {
+  min-width: 60px;
+}
+html body .center .middle .market.type_2 table tr td:nth-of-type(1) div {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+html body .center .middle .market.type_2.soccer table tr td:nth-of-type(2), html body .center .middle .market.type_2.soccer table tr td:nth-of-type(3), html body .center .middle .market.type_2.soccer table tr td:nth-of-type(4) {
+  min-width: 128px;
+}
+html body .center .middle .market.type_2.soccer table tr td:nth-of-type(5) {
+  min-width: 60px;
+}
+html body .center .middle .market.onTime table.active tr:not(:first-child) {
+  display: table-row;
+}
+html body .center .middle .market.onTime table.active tr th p i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+html body .center .middle .market.onTime table tr:first-child {
+  cursor: pointer;
+}
+html body .center .middle .market.onTime table tr:not(:first-child) {
+  display: none;
+}
+html body .center .middle .market table {
+  width: 100%;
+  height: auto;
+  background: #212832;
+  border: solid 1px #feb300;
+  border-bottom-width: 0;
+  position: relative;
+}
+html body .center .middle .market table:last-child {
+  border-bottom-width: 1px;
+}
+html body .center .middle .market table tr:hover td, html body .center .middle .market table tr:active td, html body .center .middle .market table tr.active td {
+  background: #2e3f57;
+}
+html body .center .middle .market table tr:hover td div button, html body .center .middle .market table tr:active td div button, html body .center .middle .market table tr.active td div button {
+  background: #5c6d79;
+}
+html body .center .middle .market table tr th {
+  width: auto;
+  max-width: 0;
+  height: auto;
+  background: #212832;
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 8px 10px;
+  z-index: 1;
+}
+html body .center .middle .market table tr th p {
+  width: 100%;
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .middle .market table tr th p i {
+  display: inline-block;
+  width: 6px;
+  height: 8px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin: 0 3px 1px 2px;
+}
+html body .center .middle .market table tr td {
+  width: 100%;
+  max-width: 0;
+  height: auto;
+  vertical-align: middle;
+}
+html body .center .middle .market table tr td.small div button {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+html body .center .middle .market table tr td.small div button span {
+  margin-right: 10px;
+}
+html body .center .middle .market table tr td.disable div button {
+  background: #2a323d;
+  position: relative;
+  pointer-events: none;
+}
+html body .center .middle .market table tr td.disable div button i {
+  display: block;
+}
+html body .center .middle .market table tr td:last-child div {
+  border-right-width: 0;
+}
+html body .center .middle .market table tr td div {
+  width: 100%;
+  height: 95px;
+  border: solid 1px #465a79;
+  border-width: 1px 1px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .center .middle .market table tr td div p {
+  width: 100%;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 8px 20px;
+}
+html body .center .middle .market table tr td div p.time {
+  color: #b4bac8;
+}
+html body .center .middle .market table tr td div p.time span {
+  color: #00c613;
+  margin: 0 10px;
+}
+html body .center .middle .market table tr td div button {
+  width: 100%;
+  height: 100%;
+  background: #313d4f;
+  border: none;
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: solid 1px #465a79;
+}
+html body .center .middle .market table tr td div button:hover, html body .center .middle .market table tr td div button:active, html body .center .middle .market table tr td div button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .center .middle .market table tr td div button.disable {
+  background: #2a323d;
+  position: relative;
+  pointer-events: none;
+}
+html body .center .middle .market table tr td div button.disable i {
+  display: block;
+}
+html body .center .middle .market table tr td div button:last-child {
+  border: none;
+}
+html body .center .middle .market table tr td div button:hover span, html body .center .middle .market table tr td div button:active span, html body .center .middle .market table tr td div button.active span {
+  color: #2f3f58;
+}
+html body .center .middle .market table tr td div button.mixStyle.active {
+  background: #39547f;
+  color: #ffffff;
+}
+html body .center .middle .market table tr td div button.mixStyle.active span {
+  color: #ffffff;
+}
+html body .center .middle .market table tr td div button span {
+  color: #ffcc41;
+}
+html body .center .middle .market table tr td div button i {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #5b6068;
+  font-size: 12px;
+}
+html body .center .middle .market table tr td div .love {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+html body .center .middle .market table tr td div .love:hover, html body .center .middle .market table tr td div .love:active, html body .center .middle .market table tr td div .love.active {
+  background-position-x: 100%;
+}
+html body .center .middle .market table tr td div .innerBtn {
+  color: #15ae56;
+  font-size: 12px;
+  font-weight: bold;
+}
+html body .center .middle .market ul {
+  width: 100%;
+  height: auto;
+}
+html body .center .middle .market ul ol {
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+html body .center .middle .market ul ol.active {
+  height: auto;
+}
+html body .center .middle .market ul ol.active li .title i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+html body .center .middle .market ul ol li {
+  width: 100%;
+  height: auto;
+}
+html body .center .middle .market ul ol li .title {
+  width: 100%;
+  height: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 0 10px;
+}
+html body .center .middle .market ul ol li .title.soccer {
+  background: #3361d6;
+}
+html body .center .middle .market ul ol li .title.basketball {
+  background: #d37245;
+}
+html body .center .middle .market ul ol li .title i {
+  width: 6px;
+  height: 8px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin: 2px 10px 0 0;
+  -webkit-filter: grayscale(1) brightness(10);
+          filter: grayscale(1) brightness(10);
+}
+html body .center .middle .score {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .center .middle .score.display {
+  display: block;
+}
+html body .center .middle .score.soccer table tr th:nth-of-type(4) p, html body .center .middle .score.soccer table tr th:nth-of-type(7) p {
+  text-align: left;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(1) {
+  width: 20%;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(1) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(2) {
+  min-width: 85px;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(2) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(3), html body .center .middle .score.soccer table tr td:nth-of-type(6) {
+  min-width: 70px;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(3) p, html body .center .middle .score.soccer table tr td:nth-of-type(6) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(5), html body .center .middle .score.soccer table tr td:nth-of-type(8) {
+  min-width: 70px;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(5) p span:first-child, html body .center .middle .score.soccer table tr td:nth-of-type(8) p span:first-child {
+  margin-bottom: 7px;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(4), html body .center .middle .score.soccer table tr td:nth-of-type(7) {
+  width: 40%;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(4) p, html body .center .middle .score.soccer table tr td:nth-of-type(7) p {
+  text-align: left;
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .score.soccer table tr td:nth-of-type(9) {
+  min-width: 60px;
+}
+html body .center .middle .score.basketball table tr th:nth-of-type(4) p {
+  text-align: left;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(1) {
+  min-width: 110px;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(2) {
+  min-width: 70px;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(2) p {
+  line-height: 55px;
+  padding: 0;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(3) {
+  min-width: 85px;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(3) p {
+  line-height: 55px;
+  padding: 0;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(4) {
+  width: 100%;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(4) p span {
+  text-align: left;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(5), html body .center .middle .score.basketball table tr td:nth-of-type(6), html body .center .middle .score.basketball table tr td:nth-of-type(7), html body .center .middle .score.basketball table tr td:nth-of-type(8), html body .center .middle .score.basketball table tr td:nth-of-type(9), html body .center .middle .score.basketball table tr td:nth-of-type(10) {
+  min-width: 40px;
+}
+html body .center .middle .score.basketball table tr td:nth-of-type(11) {
+  min-width: 60px;
+}
+html body .center .middle .score table {
+  width: 100%;
+  height: auto;
+  background: #212832;
+  border: solid 1px #feb300;
+  border-bottom-width: 0;
+  position: relative;
+}
+html body .center .middle .score table:last-child {
+  border-bottom-width: 1px;
+}
+html body .center .middle .score table tr:hover td, html body .center .middle .score table tr:active td, html body .center .middle .score table tr.active td {
+  background: #2e3f57;
+}
+html body .center .middle .score table tr:first-child th p {
+  text-align: left;
+}
+html body .center .middle .score table tr:nth-of-type(2) th {
+  background: #feb300;
+  top: 29px;
+}
+html body .center .middle .score table tr:nth-of-type(2) th p {
+  color: #19202a;
+}
+html body .center .middle .score table tr th {
+  width: auto;
+  max-width: 0;
+  height: auto;
+  background: #212832;
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 8px 10px;
+  z-index: 1;
+}
+html body .center .middle .score table tr th p {
+  width: 100%;
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .middle .score table tr td {
+  max-width: 0;
+  height: auto;
+  vertical-align: middle;
+}
+html body .center .middle .score table tr td.onTime p i {
+  display: inline-block;
+  margin: 0 10px 3px 0;
+}
+html body .center .middle .score table tr td:last-child p {
+  border-right: none;
+}
+html body .center .middle .score table tr td p {
+  width: 100%;
+  height: 55px;
+  border: solid 1px #465a79;
+  border-width: 1px 1px 0 0;
+  border-right-color: #ffffff;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 8px 10px;
+}
+html body .center .middle .score table tr td p .onTime {
+  display: none;
+  width: 5px;
+  height: 5px;
+  background: #00c613;
+  border-radius: 50%;
+  position: relative;
+}
+html body .center .middle .score table tr td p .onTime::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #00c613;
+  border-radius: 50%;
+  -webkit-animation: onTimeRipple 1s linear 0s infinite;
+          animation: onTimeRipple 1s linear 0s infinite;
+}
+@keyframes onTimeRipple {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+html body .center .middle .score table tr td p span {
+  display: block;
+  width: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .middle .score table tr td p span:first-child {
+  margin-bottom: 10px;
+}
+html body .center .middle .score table tr td p span i {
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  margin-right: 5px;
+}
+html body .center .middle .score table tr td p span i.redCard {
+  background: #d00b15;
+}
+html body .center .middle .score table tr td p span i.yellowCard {
+  background: #fbc319;
+}
+html body .center .middle .score table tr td p .love {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+html body .center .middle .score table tr td p .love:hover, html body .center .middle .score table tr td p .love:active, html body .center .middle .score table tr td p .love.active {
+  background-position-x: 100%;
+}
+html body .center .middle .result {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .center .middle .result.display {
+  display: block;
+}
+html body .center .middle .result.soccer table tr th:nth-of-type(3) p {
+  text-align: left;
+}
+html body .center .middle .result.soccer table tr td:nth-of-type(1) {
+  min-width: 80px;
+}
+html body .center .middle .result.soccer table tr td:nth-of-type(1) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.soccer table tr td:nth-of-type(2) {
+  width: 20%;
+}
+html body .center .middle .result.soccer table tr td:nth-of-type(2) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.soccer table tr td:nth-of-type(3) {
+  width: 80%;
+}
+html body .center .middle .result.soccer table tr td:nth-of-type(3) p span {
+  text-align: left;
+}
+html body .center .middle .result.soccer table tr td:nth-of-type(4), html body .center .middle .result.soccer table tr td:nth-of-type(5) {
+  min-width: 60px;
+}
+html body .center .middle .result.basketball table tr th:nth-of-type(3) p, html body .center .middle .result.football table tr th:nth-of-type(3) p, html body .center .middle .result.esport table tr th:nth-of-type(3) p, html body .center .middle .result.boxing table tr th:nth-of-type(3) p, html body .center .middle .result.tennis table tr th:nth-of-type(3) p, html body .center .middle .result.volleyball table tr th:nth-of-type(3) p, html body .center .middle .result.tableTennis table tr th:nth-of-type(3) p, html body .center .middle .result.cricket table tr th:nth-of-type(3) p, html body .center .middle .result.ballPile table tr th:nth-of-type(3) p, html body .center .middle .result.handBall table tr th:nth-of-type(3) p, html body .center .middle .result.wordcup table tr th:nth-of-type(3) p {
+  text-align: left;
+}
+html body .center .middle .result.basketball table tr td:nth-of-type(1), html body .center .middle .result.football table tr td:nth-of-type(1), html body .center .middle .result.esport table tr td:nth-of-type(1), html body .center .middle .result.boxing table tr td:nth-of-type(1), html body .center .middle .result.tennis table tr td:nth-of-type(1), html body .center .middle .result.volleyball table tr td:nth-of-type(1), html body .center .middle .result.tableTennis table tr td:nth-of-type(1), html body .center .middle .result.cricket table tr td:nth-of-type(1), html body .center .middle .result.ballPile table tr td:nth-of-type(1), html body .center .middle .result.handBall table tr td:nth-of-type(1), html body .center .middle .result.wordcup table tr td:nth-of-type(1) {
+  min-width: 80px;
+}
+html body .center .middle .result.basketball table tr td:nth-of-type(1) p, html body .center .middle .result.football table tr td:nth-of-type(1) p, html body .center .middle .result.esport table tr td:nth-of-type(1) p, html body .center .middle .result.boxing table tr td:nth-of-type(1) p, html body .center .middle .result.tennis table tr td:nth-of-type(1) p, html body .center .middle .result.volleyball table tr td:nth-of-type(1) p, html body .center .middle .result.tableTennis table tr td:nth-of-type(1) p, html body .center .middle .result.cricket table tr td:nth-of-type(1) p, html body .center .middle .result.ballPile table tr td:nth-of-type(1) p, html body .center .middle .result.handBall table tr td:nth-of-type(1) p, html body .center .middle .result.wordcup table tr td:nth-of-type(1) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.basketball table tr td:nth-of-type(2), html body .center .middle .result.football table tr td:nth-of-type(2), html body .center .middle .result.esport table tr td:nth-of-type(2), html body .center .middle .result.boxing table tr td:nth-of-type(2), html body .center .middle .result.tennis table tr td:nth-of-type(2), html body .center .middle .result.volleyball table tr td:nth-of-type(2), html body .center .middle .result.tableTennis table tr td:nth-of-type(2), html body .center .middle .result.cricket table tr td:nth-of-type(2), html body .center .middle .result.ballPile table tr td:nth-of-type(2), html body .center .middle .result.handBall table tr td:nth-of-type(2), html body .center .middle .result.wordcup table tr td:nth-of-type(2) {
+  width: 30%;
+}
+html body .center .middle .result.basketball table tr td:nth-of-type(2) p, html body .center .middle .result.football table tr td:nth-of-type(2) p, html body .center .middle .result.esport table tr td:nth-of-type(2) p, html body .center .middle .result.boxing table tr td:nth-of-type(2) p, html body .center .middle .result.tennis table tr td:nth-of-type(2) p, html body .center .middle .result.volleyball table tr td:nth-of-type(2) p, html body .center .middle .result.tableTennis table tr td:nth-of-type(2) p, html body .center .middle .result.cricket table tr td:nth-of-type(2) p, html body .center .middle .result.ballPile table tr td:nth-of-type(2) p, html body .center .middle .result.handBall table tr td:nth-of-type(2) p, html body .center .middle .result.wordcup table tr td:nth-of-type(2) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.basketball table tr td:nth-of-type(3), html body .center .middle .result.football table tr td:nth-of-type(3), html body .center .middle .result.esport table tr td:nth-of-type(3), html body .center .middle .result.boxing table tr td:nth-of-type(3), html body .center .middle .result.tennis table tr td:nth-of-type(3), html body .center .middle .result.volleyball table tr td:nth-of-type(3), html body .center .middle .result.tableTennis table tr td:nth-of-type(3), html body .center .middle .result.cricket table tr td:nth-of-type(3), html body .center .middle .result.ballPile table tr td:nth-of-type(3), html body .center .middle .result.handBall table tr td:nth-of-type(3), html body .center .middle .result.wordcup table tr td:nth-of-type(3) {
+  width: 70%;
+}
+html body .center .middle .result.basketball table tr td:nth-of-type(3) p span, html body .center .middle .result.football table tr td:nth-of-type(3) p span, html body .center .middle .result.esport table tr td:nth-of-type(3) p span, html body .center .middle .result.boxing table tr td:nth-of-type(3) p span, html body .center .middle .result.tennis table tr td:nth-of-type(3) p span, html body .center .middle .result.volleyball table tr td:nth-of-type(3) p span, html body .center .middle .result.tableTennis table tr td:nth-of-type(3) p span, html body .center .middle .result.cricket table tr td:nth-of-type(3) p span, html body .center .middle .result.ballPile table tr td:nth-of-type(3) p span, html body .center .middle .result.handBall table tr td:nth-of-type(3) p span, html body .center .middle .result.wordcup table tr td:nth-of-type(3) p span {
+  text-align: left;
+}
+html body .center .middle .result.basketball table tr td:nth-of-type(4), html body .center .middle .result.football table tr td:nth-of-type(4), html body .center .middle .result.esport table tr td:nth-of-type(4), html body .center .middle .result.boxing table tr td:nth-of-type(4), html body .center .middle .result.tennis table tr td:nth-of-type(4), html body .center .middle .result.volleyball table tr td:nth-of-type(4), html body .center .middle .result.tableTennis table tr td:nth-of-type(4), html body .center .middle .result.cricket table tr td:nth-of-type(4), html body .center .middle .result.ballPile table tr td:nth-of-type(4), html body .center .middle .result.handBall table tr td:nth-of-type(4), html body .center .middle .result.wordcup table tr td:nth-of-type(4) {
+  min-width: 70px;
+}
+html body .center .middle .result.baseball table tr th:nth-of-type(3) p {
+  text-align: left;
+}
+html body .center .middle .result.baseball table tr td:nth-of-type(1) {
+  min-width: 70px;
+}
+html body .center .middle .result.baseball table tr td:nth-of-type(1) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.baseball table tr td:nth-of-type(2) {
+  width: 20%;
+}
+html body .center .middle .result.baseball table tr td:nth-of-type(2) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.baseball table tr td:nth-of-type(3) {
+  width: 80%;
+}
+html body .center .middle .result.baseball table tr td:nth-of-type(3) p span {
+  text-align: left;
+}
+html body .center .middle .result.baseball table tr td:nth-of-type(4), html body .center .middle .result.baseball table tr td:nth-of-type(5), html body .center .middle .result.baseball table tr td:nth-of-type(6), html body .center .middle .result.baseball table tr td:nth-of-type(7), html body .center .middle .result.baseball table tr td:nth-of-type(8), html body .center .middle .result.baseball table tr td:nth-of-type(9), html body .center .middle .result.baseball table tr td:nth-of-type(10), html body .center .middle .result.baseball table tr td:nth-of-type(11), html body .center .middle .result.baseball table tr td:nth-of-type(12), html body .center .middle .result.baseball table tr td:nth-of-type(13) {
+  min-width: 40px;
+}
+html body .center .middle .result.baseball table tr td:nth-of-type(14) {
+  min-width: 60px;
+}
+html body .center .middle .result.horse table tr:first-child th {
+  padding: 8px 10px;
+}
+html body .center .middle .result.horse table tr th {
+  padding: 8px 0;
+}
+html body .center .middle .result.horse table tr td:nth-of-type(1), html body .center .middle .result.horse table tr td:nth-of-type(2) {
+  min-width: 70px;
+}
+html body .center .middle .result.horse table tr td:nth-of-type(1) p, html body .center .middle .result.horse table tr td:nth-of-type(2) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.horse table tr td:nth-of-type(3) {
+  min-width: 80px;
+}
+html body .center .middle .result.horse table tr td:nth-of-type(3) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.horse table tr td:nth-of-type(4), html body .center .middle .result.horse table tr td:nth-of-type(5), html body .center .middle .result.horse table tr td:nth-of-type(6), html body .center .middle .result.horse table tr td:nth-of-type(7), html body .center .middle .result.horse table tr td:nth-of-type(8), html body .center .middle .result.horse table tr td:nth-of-type(9), html body .center .middle .result.horse table tr td:nth-of-type(10), html body .center .middle .result.horse table tr td:nth-of-type(11), html body .center .middle .result.horse table tr td:nth-of-type(12), html body .center .middle .result.horse table tr td:nth-of-type(13), html body .center .middle .result.horse table tr td:nth-of-type(14), html body .center .middle .result.horse table tr td:nth-of-type(15) {
+  width: 8.2%;
+}
+html body .center .middle .result.stock table tr td {
+  width: 25%;
+}
+html body .center .middle .result.stock table tr td:not(:first-child) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.ticket table tr td:nth-of-type(1) {
+  min-width: 140px;
+}
+html body .center .middle .result.ticket table tr td:nth-of-type(2) {
+  min-width: 120px;
+}
+html body .center .middle .result.ticket table tr td:nth-of-type(2) p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.ticket table tr td:nth-of-type(3) {
+  min-width: 80px;
+}
+html body .center .middle .result.ticket table tr td:nth-of-type(4), html body .center .middle .result.ticket table tr td:nth-of-type(5), html body .center .middle .result.ticket table tr td:nth-of-type(6), html body .center .middle .result.ticket table tr td:nth-of-type(7), html body .center .middle .result.ticket table tr td:nth-of-type(8), html body .center .middle .result.ticket table tr td:nth-of-type(9) {
+  width: 12%;
+}
+html body .center .middle .result.ticket table tr td:nth-of-type(4) p, html body .center .middle .result.ticket table tr td:nth-of-type(5) p, html body .center .middle .result.ticket table tr td:nth-of-type(6) p, html body .center .middle .result.ticket table tr td:nth-of-type(7) p, html body .center .middle .result.ticket table tr td:nth-of-type(8) p, html body .center .middle .result.ticket table tr td:nth-of-type(9) p {
+  padding: 8px 0;
+}
+html body .center .middle .result.ticket table tr td:last-child {
+  width: 28%;
+}
+html body .center .middle .result.ticket table tr td:last-child p {
+  line-height: 55px;
+  padding: 0 10px;
+}
+html body .center .middle .result.ticket table.hk tr td:nth-of-type(3) {
+  min-width: unset;
+  width: 9%;
+}
+html body .center .middle .result.ticket table.hk tr td:nth-of-type(4), html body .center .middle .result.ticket table.hk tr td:nth-of-type(5), html body .center .middle .result.ticket table.hk tr td:nth-of-type(6), html body .center .middle .result.ticket table.hk tr td:nth-of-type(7), html body .center .middle .result.ticket table.hk tr td:nth-of-type(8) {
+  width: 9%;
+}
+html body .center .middle .result.ticket table.hk tr td:nth-of-type(9), html body .center .middle .result.ticket table.hk tr td:nth-of-type(10), html body .center .middle .result.ticket table.hk tr td:nth-of-type(11) {
+  width: 9%;
+}
+html body .center .middle .result.ticket table.hk tr td:nth-of-type(9) p, html body .center .middle .result.ticket table.hk tr td:nth-of-type(10) p, html body .center .middle .result.ticket table.hk tr td:nth-of-type(11) p {
+  line-height: 55px;
+  padding: 0px 10px;
+}
+html body .center .middle .result.hockey table tr td {
+  width: 25%;
+}
+html body .center .middle .result.hockey table tr td:nth-of-type(1) {
+  width: 20%;
+}
+html body .center .middle .result.hockey table tr td:nth-of-type(1) p {
+  line-height: 55px;
+  padding: 0px 10px;
+}
+html body .center .middle .result.hockey table tr td:nth-of-type(2) {
+  width: 30%;
+}
+html body .center .middle .result table {
+  width: 100%;
+  height: auto;
+  background: #212832;
+  border: solid 1px #feb300;
+  border-bottom-width: 0;
+  position: relative;
+}
+html body .center .middle .result table:last-child {
+  border-bottom-width: 1px;
+}
+html body .center .middle .result table tr:hover td, html body .center .middle .result table tr:active td, html body .center .middle .result table tr.active td {
+  background: #2e3f57;
+}
+html body .center .middle .result table tr:first-child th:first-child p {
+  text-align: left;
+}
+html body .center .middle .result table tr:first-child th:last-child p {
+  text-align: right;
+}
+html body .center .middle .result table tr:nth-of-type(2) th {
+  background: #feb300;
+  top: 29px;
+}
+html body .center .middle .result table tr:nth-of-type(2) th p {
+  color: #19202a;
+}
+html body .center .middle .result table tr th {
+  width: auto;
+  max-width: 0;
+  height: auto;
+  background: #212832;
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 8px 10px;
+  z-index: 1;
+}
+html body .center .middle .result table tr th p {
+  width: 100%;
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .middle .result table tr td {
+  max-width: 0;
+  height: auto;
+  vertical-align: middle;
+}
+html body .center .middle .result table tr td:last-child p {
+  border-right: none;
+}
+html body .center .middle .result table tr td p {
+  width: 100%;
+  height: 55px;
+  border: solid 1px #465a79;
+  border-width: 1px 1px 0 0;
+  border-right-color: #ffffff;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 8px 10px;
+}
+html body .center .middle .result table tr td p span {
+  display: block;
+  width: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .middle .result table tr td p span:first-child {
+  margin-bottom: 10px;
+}
+html body .center .middle .liveStream {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .center .middle .liveStream.display {
+  display: block;
+}
+html body .center .middle .liveStream.type_1 table tr th:nth-of-type(1) {
+  width: 100%;
+  padding-left: 25px;
+}
+html body .center .middle .liveStream.type_1 table tr th:nth-of-type(1) p {
+  text-align: left;
+}
+html body .center .middle .liveStream.type_1 table tr th:nth-of-type(2) {
+  min-width: 60px;
+}
+html body .center .middle .liveStream.type_1 table tr th:nth-of-type(3), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(4), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(5), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(6), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(7) {
+  min-width: 100px;
+}
+html body .center .middle .liveStream.type_1 table tr td:nth-of-type(1) div {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+html body .center .middle .liveStream.type_1 table tr td:nth-of-type(1) div p {
+  text-align: left;
+}
+html body .center .middle .liveStream video {
+  width: 100%;
+  height: 510px;
+  border: 2px solid #19202a;
+  margin-bottom: 10px;
+}
+html body .center .middle .liveStream video:hover, html body .center .middle .liveStream video:active {
+  border-color: #ffffff;
+}
+html body .center .middle .liveStream table {
+  width: 100%;
+  height: auto;
+  background: #212832;
+  border: solid 1px #feb300;
+  position: relative;
+  margin-bottom: 5px;
+}
+html body .center .middle .liveStream table tr:hover td, html body .center .middle .liveStream table tr:active td, html body .center .middle .liveStream table tr.active td {
+  background: #2e3f57;
+}
+html body .center .middle .liveStream table tr:hover td div button, html body .center .middle .liveStream table tr:active td div button, html body .center .middle .liveStream table tr.active td div button {
+  background: #5c6d79;
+}
+html body .center .middle .liveStream table tr th {
+  width: auto;
+  max-width: 0;
+  height: auto;
+  background: #212832;
+  padding: 12px 10px;
+  z-index: 1;
+}
+html body .center .middle .liveStream table tr th p {
+  width: 100%;
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .middle .liveStream table tr td {
+  width: 100%;
+  max-width: 0;
+  height: auto;
+  vertical-align: middle;
+}
+html body .center .middle .liveStream table tr td.small div button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  pointer-events: none;
+}
+html body .center .middle .liveStream table tr td.small div button span {
+  display: none;
+}
+html body .center .middle .liveStream table tr td.disable div button {
+  background: #2a323d;
+  position: relative;
+  pointer-events: none;
+}
+html body .center .middle .liveStream table tr td.disable div button i {
+  display: block;
+}
+html body .center .middle .liveStream table tr td:last-child div, html body .center .middle .liveStream table tr td:first-child div {
+  border-right-width: 0;
+}
+html body .center .middle .liveStream table tr td div {
+  width: 100%;
+  height: 95px;
+  border: solid 1px #465a79;
+  border-width: 1px 1px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .center .middle .liveStream table tr td div p {
+  width: 100%;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 8px 20px;
+}
+html body .center .middle .liveStream table tr td div p.time {
+  color: #b4bac8;
+}
+html body .center .middle .liveStream table tr td div p.time span {
+  color: #00c613;
+  margin: 0 10px 0 0;
+}
+html body .center .middle .liveStream table tr td div button {
+  width: 100%;
+  height: 100%;
+  background: #313d4f;
+  border: none;
+  color: #feb300;
+  font-size: 13px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: solid 1px #465a79;
+}
+html body .center .middle .liveStream table tr td div button:hover, html body .center .middle .liveStream table tr td div button:active, html body .center .middle .liveStream table tr td div button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .center .middle .liveStream table tr td div button.disable {
+  background: #2a323d;
+  position: relative;
+  pointer-events: none;
+}
+html body .center .middle .liveStream table tr td div button.disable i {
+  display: block;
+}
+html body .center .middle .liveStream table tr td div button:last-child {
+  border: none;
+}
+html body .center .middle .liveStream table tr td div button:hover span, html body .center .middle .liveStream table tr td div button:active span, html body .center .middle .liveStream table tr td div button.active span {
+  color: #2f3f58;
+}
+html body .center .middle .liveStream table tr td div button span {
+  color: #ffcc41;
+}
+html body .center .middle .liveStream table tr td div button i {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #5b6068;
+  font-size: 12px;
+}
+html body .center .middle .liveStream ul {
+  width: 100%;
+  height: auto;
+  background: #3d5261;
+  border: solid 1px #ffffff;
+}
+html body .center .middle .liveStream ul li {
+  height: 40px;
+  border-bottom: solid 1px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .center .middle .liveStream ul li:first-child {
+  height: 28px;
+  background: #2e3f57;
+}
+html body .center .middle .liveStream ul li:last-child {
+  border: none;
+}
+html body .center .middle .liveStream ul li div {
+  width: 36px;
+  height: 100%;
+  border-right: solid 1px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .center .middle .liveStream ul li div:first-child {
+  width: 100%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 20px;
+}
+html body .center .middle .liveStream ul li div:last-child {
+  width: 50px;
+  border: none;
+}
+html body .center .middle .liveStream ul li div p {
+  color: #ffffff;
+  font-size: 14px;
+}
+html body .center .middle .liveStream ul li div p span {
+  display: inline-block;
+  background: #ce1427;
+  border-radius: 3px;
+  padding: 3px 3px 4px;
+  margin-right: 10px;
+}
+html body .center .middle .liveStream ul li div p span.sub {
+  background: #1e62c5;
+}
+html body .center .middle .none {
+  width: 100%;
+  color: #feb300;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 0;
+}
+@media only screen and (max-width: 1360px) {
+  html body .center .middle .market.type_1 table tr th:nth-of-type(2), html body .center .middle .market.type_1 table tr th:nth-of-type(3), html body .center .middle .market.type_1 table tr th:nth-of-type(4), html body .center .middle .market.type_1 table tr th:nth-of-type(5), html body .center .middle .market.type_1 table tr th:nth-of-type(6) {
+    min-width: 80px;
+  }
+  html body .center .middle .market.type_1 table tr th:nth-of-type(7) {
+    min-width: 55px;
+  }
+  html body .center .middle .liveStream.type_1 table tr th:nth-of-type(2), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(3), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(4), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(5), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(6), html body .center .middle .liveStream.type_1 table tr th:nth-of-type(7) {
+    min-width: 80px;
+  }
+}
+html body .center .mixpass {
+  display: none;
+  width: 580px;
+  height: auto;
+  position: absolute;
+  bottom: -5px;
+  right: 30px;
+  z-index: 10;
+}
+html body .center .mixpass.display {
+  display: block;
+}
+html body .center .mixpass.active .title .arrow {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+html body .center .mixpass .title {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #feb300;
+  border-radius: 10px 10px 0 0;
+  padding: 0 30px;
+  position: relative;
+  cursor: pointer;
+}
+html body .center .mixpass .title p {
+  color: #19202a;
+  font-size: 16px;
+}
+html body .center .mixpass .title p span {
+  background: #2e3f57;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 3px 5px;
+  margin-right: 10px;
+}
+html body .center .mixpass .title button {
+  width: 22px;
+  height: 30px;
+  position: absolute;
+  right: 90px;
+}
+html body .center .mixpass .title .arrow {
+  width: 8px;
+  height: 11px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+html body .center .mixpass .content {
+  width: 100%;
+  height: 0;
+  background: #212832;
+  border: solid 2px #feb300;
+  border-width: 0 2px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+html body .center .mixpass .content .countingBox {
+  width: 100%;
+  max-height: 270px;
+  padding: 10px;
+  overflow-y: auto;
+}
+html body .center .mixpass .content .countingBox::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .center .mixpass .content .countingBox::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .center .mixpass .content .countingBox::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .center .mixpass .content .countingBox table {
+  width: 100%;
+  -webkit-box-shadow: 0 0 0 1px #feb300;
+          box-shadow: 0 0 0 1px #feb300;
+  border-radius: 5px;
+}
+html body .center .mixpass .content .countingBox table:not(:first-child) {
+  margin-top: 10px;
+}
+html body .center .mixpass .content .countingBox table tr th {
+  max-width: 0;
+  height: auto;
+  padding: 8px 10px 9px;
+}
+html body .center .mixpass .content .countingBox table tr th p {
+  color: #ffffff;
+  font-size: 12px;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .mixpass .content .countingBox table tr td {
+  max-width: 0;
+  vertical-align: middle;
+  padding: 2px 8px;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(1) {
+  width: 10%;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(1) p {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(1) p span {
+  color: #ffffff;
+  margin-left: 5px;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(2) {
+  width: 45%;
+  border-right: 1px solid #ffffff;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(2) p {
+  color: #feb300;
+  font-size: 14px;
+  text-align: center;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(2) p span.point {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(3) {
+  width: 45%;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(3) p {
+  width: 100%;
+  color: #feb300;
+  font-size: 12px;
+  line-height: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(3) p.vs {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+}
+html body .center .mixpass .content .countingBox table tr td:nth-of-type(3) p span {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+html body .center .mixpass .content .moneyBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #2e3f57;
+  margin-top: 5px;
+}
+html body .center .mixpass .content .moneyBox div {
+  width: 33.3333333333%;
+  height: 100%;
+  padding: 0 10px;
+  border-right: 1px solid #ffffff;
+}
+html body .center .mixpass .content .moneyBox div:last-child {
+  border: none;
+}
+html body .center .mixpass .content .moneyBox div p {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 45px;
+}
+html body .center .mixpass .content .moneyBox div p span {
+  color: #feb300;
+  font-weight: bold;
+  margin-left: 5px;
+}
+html body .center .mixpass .content .betbox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+html body .center .mixpass .content .betbox .tit {
+  color: #feb300;
+  font-size: 14px;
+  border-left: 3px solid #feb300;
+  padding-left: 5px;
+}
+html body .center .mixpass .content .betbox .tit span.num {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 3px 0 20px;
+}
+html body .center .mixpass .content .betbox .calculate {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+html body .center .mixpass .content .betbox .calculate div {
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5px 1fr 5px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding-left: 5px;
+}
+html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button {
+  width: 100%;
+  height: 30px;
+  background: #2e3f57;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:hover, html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:active, html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button.active {
+  background: #feb300;
+}
+html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:last-child {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: 2;
+  grid-column-end: 4;
+}
+html body .center .mixpass .content .betbox .calculate div label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body .center .mixpass .content .betbox .calculate div label:not(:first-child) {
+  margin-top: 5px;
+}
+html body .center .mixpass .content .betbox .calculate div label:not(:first-child) input {
+  color: #ce1427;
+}
+html body .center .mixpass .content .betbox .calculate div label p {
+  color: #feb300;
+  font-size: 14px;
+  margin-right: 10px;
+}
+html body .center .mixpass .content .betbox .calculate div label input {
+  height: 30px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+}
+html body .center .mixpass .content .betbox .calculate div label input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .center .mixpass .content .betbox .calculate div label input::-moz-placeholder {
+  color: #19202a;
+}
+html body .center .mixpass .content .betbox .calculate div label input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .center .mixpass .content .betbox .calculate div label input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .center .mixpass .content .betbox .calculate div label input::placeholder {
+  color: #19202a;
+}
+@media only screen and (max-width: 1260px) {
+  html body .center .topfix ul ol.leftSide .search {
+    display: none;
+  }
+}
+html body .innerPage {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .innerPage.display {
+  display: block;
+}
+html body .innerPage .innerBox {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .innerPage .innerBox.display {
+  display: block;
+}
+html body .innerPage .innerBox .topImg {
+  width: 100%;
+  height: 134px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-bottom: 5px;
+}
+html body .innerPage .innerBox .topImg .league {
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 20px;
+}
+html body .innerPage .innerBox .topImg .league p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+html body .innerPage .innerBox .topImg .league p:last-child {
+  margin: 0;
+}
+html body .innerPage .innerBox .topImg .teamBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .innerPage .innerBox .topImg .teamBox .scoreBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .innerPage .innerBox .topImg .teamBox .scoreBox p:first-child {
+  margin-bottom: 20px;
+}
+html body .innerPage .innerBox .topImg .teamBox .scoreBox p:first-child span {
+  margin: 0 20px;
+}
+html body .innerPage .innerBox .topImg .teamBox p {
+  color: #ffffff;
+  font-size: 16px;
+}
+html body .innerPage .innerBox .topfix {
+  width: 100%;
+  height: 50px;
+  background: #3d5261;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  margin-bottom: 5px;
+}
+html body .innerPage .innerBox .topfix button {
+  width: auto;
+  height: 32px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px 2px;
+  margin-right: 20px;
+}
+html body .innerPage .innerBox .topfix button:hover, html body .innerPage .innerBox .topfix button:active, html body .innerPage .innerBox .topfix button.active {
+  background: #feb300;
+}
+html body .innerPage .innerBox .topfix button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .innerPage .innerBox .topfix button i {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 8px 7px 0;
+  border-color: transparent #19202a;
+  margin: 2px 5px 0 0;
+}
+html body .innerPage .innerBox .topfix ul {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .innerPage .innerBox .topfix ul li {
+  width: 80px;
+  height: 100%;
+  border-bottom: solid 2px transparent;
+  color: #feb300;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+html body .innerPage .innerBox .topfix ul li:hover, html body .innerPage .innerBox .topfix ul li:active, html body .innerPage .innerBox .topfix ul li.active {
+  border-color: #feb300;
+}
+html body .innerPage .innerBox .topfix ul li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1px;
+  height: 50%;
+  background: #feb300;
+}
+html body .innerPage .innerBox .topfix ul li:last-child::before {
+  display: none;
+}
+html body .innerPage .innerBox .innerBetBox {
+  width: 100%;
+  height: auto;
+  overflow-y: overlay;
+}
+html body .innerPage .innerBox .innerBetBox::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .innerPage .innerBox .innerBetBox::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .innerPage .innerBox .innerBetBox::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .innerPage .innerBox .innerBetBox ul {
+  width: 100%;
+  height: auto;
+  background: #2e3f57;
+  border: solid 1px #feb300;
+  position: relative;
+}
+html body .innerPage .innerBox .innerBetBox ul li {
+  width: 100%;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  padding: 0 5px;
+}
+html body .innerPage .innerBox .innerBetBox ul li.three {
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+html body .innerPage .innerBox .innerBetBox ul li.four {
+  -ms-grid-columns: 15% 1fr 15% 1fr;
+  grid-template-columns: 15% 1fr 15% 1fr;
+}
+html body .innerPage .innerBox .innerBetBox ul li.title {
+  height: 28px;
+  background: #212832;
+}
+html body .innerPage .innerBox .innerBetBox ul li.title p {
+  color: #feb300;
+  font-size: 14px;
+}
+html body .innerPage .innerBox .innerBetBox ul li button {
+  width: auto;
+  height: 28px;
+  background: #5c6d79;
+  border-radius: 3px;
+  border: none;
+  color: #feb300;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .innerPage .innerBox .innerBetBox ul li button:hover, html body .innerPage .innerBox .innerBetBox ul li button:active, html body .innerPage .innerBox .innerBetBox ul li button.active {
+  background: #feb300;
+  color: #19202a;
+}
+html body .innerPage .innerBox .innerBetBox ul li button:hover span, html body .innerPage .innerBox .innerBetBox ul li button:active span, html body .innerPage .innerBox .innerBetBox ul li button.active span {
+  color: #19202a;
+}
+html body .innerPage .innerBox .innerBetBox ul li button.word {
+  color: #ffffff;
+  background: none;
+  pointer-events: none;
+}
+html body .innerPage .innerBox .innerBetBox ul li button span {
+  color: #ffcc41;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 1280px) {
+  html body .innerPage .innerBox .topfix ul li {
+    width: auto;
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+html body .mine {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+html body .mine .topfix {
+  width: 100%;
+  height: 125px;
+  background: #3d5261;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 5px;
+  z-index: 20;
+}
+html body .mine .topfix .topbar {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+html body .mine .topfix .topbar p {
+  font-weight: bold;
+}
+html body .mine .topfix .topbar .midword {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body .mine .topfix .topbar .midword p {
+  min-width: 45px;
+  text-align: center;
+  margin: 0 15px;
+}
+html body .mine .topfix .topbar .midword p span {
+  display: block;
+  font-family: fantasy;
+  font-weight: normal;
+  margin-top: 10px;
+}
+html body .mine .topfix .fixbar {
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  background: #2e3f57;
+}
+html body .mine .topfix .fixbar div {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body .mine .topfix .fixbar div p {
+  font-size: 15px;
+  margin-right: 15px;
+}
+html body .mine .topfix .fixbar div p span {
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "微軟正黑體";
+  margin-left: 3px;
+}
+html body .mine .topfix .fixbar div input {
+  width: 95px;
+  height: 24px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  cursor: default;
+}
+html body .mine .topfix .fixbar div input:nth-of-type(2) {
+  margin-right: 10px;
+}
+html body .mine .topfix .fixbar div .date {
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+html body .mine .topfix .fixbar div .dash {
+  color: #feb300;
+  font-size: 16px;
+  font-family: fantasy;
+  margin: 0 10px;
+}
+html body .mine .topfix .fixbar button {
+  height: 30px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding: 1px 7px 0px;
+  margin-right: 10px;
+}
+html body .mine .topfix .fixbar button:hover, html body .mine .topfix .fixbar button:active, html body .mine .topfix .fixbar button.active {
+  background: #feb300;
+}
+html body .mine .topfix .fixbar button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .mine .topfix .fixbar button:last-child {
+  margin: 0;
+}
+html body .mine .topfix ul.fixbar {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
+}
+html body .mine .topfix ul.fixbar li {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #feb300;
+  font-size: 15px;
+  padding: 0 40px;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+html body .mine .topfix ul.fixbar li:hover, html body .mine .topfix ul.fixbar li:active, html body .mine .topfix ul.fixbar li.active {
+  border-color: #feb300;
+}
+html body .mine .topfix p {
+  color: #feb300;
+}
+html body .mine .middle {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: overlay;
+}
+html body .mine .middle::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .mine .middle::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .mine .middle::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .mine .middle .mineHome {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 5px 50%;
+  grid-template-columns: repeat(2, 50%);
+  gap: 5px;
+}
+html body .mine .middle .mineHome table {
+  width: 100%;
+  height: auto;
+}
+html body .mine .middle .mineHome table tr {
+  background: #2e3f57;
+}
+html body .mine .middle .mineHome table tr:nth-of-type(odd) {
+  background: #212832;
+}
+html body .mine .middle .mineHome table tr:nth-of-type(1) th {
+  background: #2e3f57;
+}
+html body .mine .middle .mineHome table tr:nth-of-type(1) th p {
+  color: #ffffff;
+}
+html body .mine .middle .mineHome table tr:nth-of-type(2) th {
+  background: #feb300;
+  top: 28px;
+}
+html body .mine .middle .mineHome table tr th {
+  height: 28px;
+  vertical-align: middle;
+  position: sticky;
+  top: 0;
+  padding: 0 10px 2px;
+  z-index: 10;
+}
+html body .mine .middle .mineHome table tr th p {
+  color: #19202a;
+  font-size: 13px;
+}
+html body .mine .middle .mineHome table tr td {
+  width: 33.3%;
+  padding: 10px 0px;
+}
+html body .mine .middle .mineHome table tr td p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+}
+html body .mine .middle .instantBet {
+  width: 100%;
+  height: auto;
+}
+html body .mine .middle .instantBet table {
+  width: 100%;
+  height: auto;
+  background: #2e3f57;
+  border: 1px solid #feb300;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+html body .mine .middle .instantBet table.active tr {
+  display: table-row;
+}
+html body .mine .middle .instantBet table.active tr:last-child {
+  display: none;
+}
+html body .mine .middle .instantBet table.active tr th .arrow {
+  top: 40%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+html body .mine .middle .instantBet table tr {
+  display: none;
+  border-bottom: 1px solid #feb300;
+}
+html body .mine .middle .instantBet table tr:first-child, html body .mine .middle .instantBet table tr:last-child {
+  display: table-row;
+}
+html body .mine .middle .instantBet table tr:nth-of-type(2) td:last-child p {
+  line-height: 20px;
+}
+html body .mine .middle .instantBet table tr:nth-of-type(5) td:nth-of-type(1), html body .mine .middle .instantBet table tr:nth-of-type(5) td:nth-of-type(3), html body .mine .middle .instantBet table tr:nth-of-type(5) td:nth-of-type(5), html body .mine .middle .instantBet table tr:last-child td:nth-of-type(1), html body .mine .middle .instantBet table tr:last-child td:nth-of-type(3), html body .mine .middle .instantBet table tr:last-child td:nth-of-type(5) {
+  width: 10%;
+}
+html body .mine .middle .instantBet table tr:nth-of-type(5) td:nth-of-type(2), html body .mine .middle .instantBet table tr:last-child td:nth-of-type(2) {
+  width: 40%;
+}
+html body .mine .middle .instantBet table tr:nth-of-type(5) td:nth-of-type(4), html body .mine .middle .instantBet table tr:nth-of-type(5) td:nth-of-type(6), html body .mine .middle .instantBet table tr:last-child td:nth-of-type(4), html body .mine .middle .instantBet table tr:last-child td:nth-of-type(6) {
+  width: 15%;
+}
+html body .mine .middle .instantBet table tr th {
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+html body .mine .middle .instantBet table tr th p {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 8px 12px;
+  position: relative;
+}
+html body .mine .middle .instantBet table tr th p::after {
+  content: "";
+  width: 1px;
+  height: 45%;
+  background: #feb300;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+html body .mine .middle .instantBet table tr th p:nth-last-of-type(1)::after {
+  display: none;
+}
+html body .mine .middle .instantBet table tr th .arrow {
+  width: 6px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+html body .mine .middle .instantBet table tr td {
+  max-width: 0;
+  height: 100%;
+  border-right: 1px solid #ffffff;
+  padding: 7px 10px 8px;
+  vertical-align: middle;
+}
+html body .mine .middle .instantBet table tr td p {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: left;
+}
+html body .mine .middle .instantBet table tr td p span.point {
+  color: #feb300;
+  font-weight: bold;
+}
+html body .mine .middle .instantBet table tr td p span.vs {
+  color: #9ec2f5;
+  font-weight: bold;
+  margin: 0 10px;
+}
+html body .mine .middle .instantBet table tr td:nth-of-type(odd) p {
+  color: #ffcc41;
+  font-size: 14px;
+  text-align: center;
+}
+html body .mine .middle .instantBet table tr td:last-child {
+  border: none;
+}
+html body .mine .middle .contact {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .mine .middle .contact.display {
+  display: block;
+}
+html body .mine .middle .contact > .title {
+  width: 100%;
+  height: 28px;
+  background: #3d5261;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px 2px;
+}
+html body .mine .middle .contact > .title p {
+  color: #feb300;
+  font-size: 13px;
+}
+html body .mine .middle .contact .content {
+  width: 100%;
+  height: auto;
+  background: #2e3f57;
+  padding: 10px;
+}
+html body .mine .middle .contact .content .contactWay {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #feb300;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+html body .mine .middle .contact .content .contactWay textArea {
+  width: 100%;
+  height: 28px;
+  background: none;
+  border: none;
+  resize: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .mine .middle .contact .content .textBox {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #feb300;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+html body .mine .middle .contact .content .textBox textarea {
+  width: 100%;
+  height: 200px;
+  background: #19202a;
+  border: solid 1px #feb300;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  resize: none;
+}
+html body .mine .middle .contact .content .btnBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body .mine .middle .contact .content .btnBox p {
+  color: #feb300;
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .mine .middle .contact .content .btnBox p i {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+}
+html body .mine .middle .contact .content .btnBox button {
+  width: 220px;
+  height: 36px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#feb300), to(#c98000));
+  background: linear-gradient(to bottom, #feb300 0%, #c98000 100%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+  border: none;
+  color: #212832;
+  font-size: 17px;
+  font-weight: bold;
+}
+html body .mine .middle .contact .content .btnBox button:hover, html body .mine .middle .contact .content .btnBox button:active, html body .mine .middle .contact .content .btnBox button.active {
+  background: #feb300;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+html body .mine .middle .contact .content .smallTitle {
+  width: 100%;
+  color: #feb300;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+html body .mine .middle .contact .content .smallTitle span {
+  color: #b4bac8;
+  font-size: 13px;
+  margin-left: 5px;
+}
+html body .mine .middle .contact .questionBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+html body .mine .middle .contact .questionBox .title {
+  width: 100%;
+  height: 45px;
+  background: #3d5261;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 0 50px 0 15px;
+  z-index: 1;
+}
+html body .mine .middle .contact .questionBox .title.reply {
+  background: #feb300;
+}
+html body .mine .middle .contact .questionBox .title.reply p {
+  color: #19202a;
+}
+html body .mine .middle .contact .questionBox .title.reply p.time {
+  color: #19202a;
+}
+html body .mine .middle .contact .questionBox .title p {
+  color: #feb300;
+  font-size: 15px;
+}
+html body .mine .middle .contact .questionBox .title p.time {
+  color: #ffffff;
+  font-weight: bold;
+}
+html body .mine .middle .contact .questionBox .textBox {
+  width: 100%;
+  height: auto;
+  background: #2e3f57;
+  border-radius: 5px;
+  border: solid 1px #feb300;
+  padding-top: 25px;
+  margin-top: -5px;
+}
+html body .mine .middle .contact .questionBox .textBox p {
+  color: #ffffff;
+  font-size: 14px;
+  padding: 0 15px 15px;
+}
+html body .mine .middle .message {
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+}
+html body .mine .middle .message::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .mine .middle .message::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .mine .middle .message::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .mine .middle .message .questionBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+html body .mine .middle .message .questionBox .title {
+  width: 100%;
+  height: 45px;
+  background: #3d5261;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  padding: 0 15px;
+  z-index: 1;
+}
+html body .mine .middle .message .questionBox .title:hover, html body .mine .middle .message .questionBox .title:active {
+  background: #feb300;
+}
+html body .mine .middle .message .questionBox .title:hover p, html body .mine .middle .message .questionBox .title:active p {
+  color: #19202a;
+}
+html body .mine .middle .message .questionBox .title:hover p i, html body .mine .middle .message .questionBox .title:active p i {
+  background-position-y: 100%;
+}
+html body .mine .middle .message .questionBox .title.active {
+  background: #feb300;
+}
+html body .mine .middle .message .questionBox .title.active p {
+  color: #19202a;
+}
+html body .mine .middle .message .questionBox .title.active p i {
+  background-position-y: 100%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+html body .mine .middle .message .questionBox .title p {
+  color: #feb300;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .mine .middle .message .questionBox .title p i {
+  width: 6px;
+  height: 8px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-left: 10px;
+}
+html body .mine .middle .message .questionBox .title p.time {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 20px;
+}
+html body .mine .middle .message .questionBox .textBox {
+  width: 100%;
+  height: 0;
+  background: #2e3f57;
+  border-radius: 5px;
+  border: solid 1px #feb300;
+  padding-top: 0;
+  margin-top: -5px;
+  overflow: hidden;
+}
+html body .mine .middle .message .questionBox .textBox.active {
+  height: auto;
+  padding-top: 25px;
+}
+html body .mine .middle .message .questionBox .textBox p {
+  color: #ffffff;
+  font-size: 14px;
+  padding: 0 15px 15px;
+}
+html body .mine .middle .betRecord {
+  width: 100%;
+  height: auto;
+}
+html body .mine .middle .betRecord .detaBox {
+  width: 100%;
+  height: auto;
+  background: #2e3f57;
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+html body .mine .middle .betRecord .detaBox:hover, html body .mine .middle .betRecord .detaBox:active {
+  border-color: #feb300;
+}
+html body .mine .middle .betRecord .detaBox:hover .firstLine, html body .mine .middle .betRecord .detaBox:active .firstLine {
+  background: #212832;
+}
+html body .mine .middle .betRecord .detaBox.active .firstLine {
+  background: #feb300;
+}
+html body .mine .middle .betRecord .detaBox.active .firstLine p {
+  color: #19202a;
+  border-color: #19202a;
+}
+html body .mine .middle .betRecord .detaBox.active .firstLine .remind {
+  background: #212832;
+  color: #feb300;
+}
+html body .mine .middle .betRecord .detaBox.active .recordbox {
+  display: block;
+}
+html body .mine .middle .betRecord .detaBox .recordbox {
+  display: none;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table {
+  width: 100%;
+  height: auto;
+  background: #2e3f57;
+  border: 1px solid #5c6d79;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table:last-child {
+  margin: 0;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table.active tr {
+  display: table-row;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table.active tr:last-child {
+  display: none;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table.active tr th .arrow {
+  top: 40%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr {
+  display: none;
+  background: #212832;
+  border-bottom: 1px solid #5c6d79;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr:first-child, html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child {
+  display: table-row;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-last-of-type(2), html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child {
+  border: none;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-of-type(2) td:last-child p {
+  line-height: 20px;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-of-type(5) td:nth-of-type(1), html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-of-type(5) td:nth-of-type(3), html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-of-type(5) td:nth-of-type(5), html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child td:nth-of-type(1), html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child td:nth-of-type(3), html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child td:nth-of-type(5) {
+  width: 10%;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-of-type(5) td:nth-of-type(2), html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child td:nth-of-type(2) {
+  width: 40%;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-of-type(5) td:nth-of-type(4), html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-of-type(5) td:nth-of-type(6), html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child td:nth-of-type(4), html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child td:nth-of-type(6) {
+  width: 15%;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr th {
+  width: 100%;
+  background: #2e3f57;
+  text-align: left;
+  position: relative;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr th p {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 8px 12px;
+  position: relative;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr th p::after {
+  content: "";
+  width: 1px;
+  height: 45%;
+  background: #ffffff;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr th p:nth-last-of-type(1)::after {
+  display: none;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr th .arrow {
+  width: 6px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr td {
+  max-width: 0;
+  height: 100%;
+  border-right: 1px solid #ffffff;
+  padding: 7px 10px 8px;
+  vertical-align: middle;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr td p {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: left;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr td p span.point {
+  color: #feb300;
+  font-weight: bold;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr td p span.vs {
+  color: #9ec2f5;
+  font-weight: bold;
+  margin: 0 10px;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr td:nth-of-type(odd) p {
+  color: #ffcc41;
+  font-size: 14px;
+  text-align: center;
+}
+html body .mine .middle .betRecord .detaBox .recordbox table tr td:last-child {
+  border: none;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList {
+  width: 100%;
+  height: 36px;
+  background: #feb300;
+  border-radius: 5px;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList ul li {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(1), html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(3), html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(5) {
+  width: 10%;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(2) {
+  width: 40%;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(4), html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(6) {
+  width: 15%;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:last-child p {
+  border: none;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList ul li p {
+  width: 100%;
+  border-right: solid 1px #19202a;
+  color: #19202a;
+  font-size: 15px;
+  text-align: center;
+}
+html body .mine .middle .betRecord .detaBox .firstLine {
+  width: 100%;
+  height: auto;
+  background: #3d5261;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 0;
+}
+html body .mine .middle .betRecord .detaBox .firstLine div {
+  width: 25%;
+  margin: 0;
+  position: relative;
+}
+html body .mine .middle .betRecord .detaBox .firstLine div:last-child p {
+  border: none;
+}
+html body .mine .middle .betRecord .detaBox .firstLine div p {
+  color: #feb300;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-right: 1px solid #ffffff;
+}
+html body .mine .middle .betRecord .detaBox .firstLine div p.win {
+  color: #00c613;
+}
+html body .mine .middle .betRecord .detaBox .firstLine div p.lose {
+  color: #ce1427;
+}
+html body .mine .middle .betRecord .detaBox .firstLine div .remind {
+  background: #ce1427;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 3px 5px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+html body .mine .middle .betRecord .itemName {
+  width: 100%;
+  height: auto;
+  background: #3d5261;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3px;
+}
+html body .mine .middle .betRecord .itemName div {
+  width: 25%;
+  height: auto;
+  padding: 8px 0;
+}
+html body .mine .middle .betRecord .itemName div:nth-last-of-type(1) p {
+  border: none;
+}
+html body .mine .middle .betRecord .itemName div p {
+  color: #ffffff;
+  font-size: 16px;
+  border-right: 1px solid #19202a;
+  text-align: center;
+}
+html body .teach {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+html body .teach .topfix {
+  width: 100%;
+  height: 50px;
+  background: #3d5261;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 5px;
+  z-index: 20;
+}
+html body .teach .topfix ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .teach .topfix ul li {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  position: relative;
+  cursor: pointer;
+}
+html body .teach .topfix ul li::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #feb300;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+html body .teach .topfix ul li:last-child::before {
+  display: none;
+}
+html body .teach .topfix ul li:hover, html body .teach .topfix ul li:active, html body .teach .topfix ul li.active {
+  border-color: #feb300;
+}
+html body .teach .topfix ul li p {
+  color: #feb300;
+  font-size: 15px;
+  margin: 0 10px;
+}
+html body .teach .middle {
+  width: 100%;
+  height: auto;
+  overflow-y: overlay;
+}
+html body .teach .middle::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .teach .middle::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .teach .middle::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .teach .middle .teachContent {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+html body .teach .middle .teachContent.display {
+  display: block;
+}
+html body .teach .middle .teachContent .teachBoard {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+html body .teach .middle .teachContent .teachBoard::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #465a79;
+  position: absolute;
+  bottom: 10px;
+}
+html body .teach .middle .teachContent .teachBoard:last-child::before {
+  display: none;
+}
+html body .teach .middle .teachContent .teachBoard .techTitle {
+  width: 100%;
+  height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #3d5261;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 0 10px 2px;
+  border-bottom: 1px solid #feb300;
+  z-index: 1;
+}
+html body .teach .middle .teachContent .teachBoard .techTitle p {
+  color: #feb300;
+  font-size: 13px;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine {
+  width: 100%;
+  height: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border-bottom: 1px solid #465a79;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .team {
+  width: 200px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .team:nth-of-type(2) {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .team:nth-of-type(2) .teamImg {
+  background-position-x: 100%;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .team div p {
+  color: #feb300;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  margin: 10px 0;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .team div p span {
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 5px;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .team .teamImg {
+  width: 35px;
+  height: 29px;
+  background-position-x: 0%;
+  margin: 0 20px;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .vs {
+  color: #9ec2f5;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 10px;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .midText {
+  width: 160px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #5c6d79;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 0;
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo {
+  width: 100%;
+  height: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #465a79;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box {
+  width: 310px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #ffffff;
+  border-radius: 80px;
+  padding: 0 5px;
+  margin-bottom: 30px;
+  position: relative;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox {
+  width: 40%;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.win, html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.lose {
+  color: #ce1427;
+  font-weight: bold;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.win span, html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.lose span {
+  font-family: sans-serif;
+  margin: 0 2px;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p:last-child {
+  margin-bottom: 0px;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .midBox {
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #2e3f57;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .midBox p {
+  font-weight: bold;
+  white-space: nowrap;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .midBox p:first-child {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .midBox p:last-child {
+  color: #feb300;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .flexWrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .flexWrap .explain {
+  width: auto;
+  height: auto;
+  color: #feb300;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 20px;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .flexWrap .explain:first-child {
+  text-align: right;
+  margin-right: 130px;
+}
+@media only screen and (max-width: 1160px) {
+  html body .teach .topfix ul li p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  html body .teach .topfix ul li p {
+    font-size: 13px;
+  }
+}
+html body .filter {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5019607843);
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+}
+html body .filter.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .filter .jumpWindow {
+  display: none;
+  width: auto;
+  height: auto;
+  background: #212832;
+  border-radius: 5px;
+  border: solid 1px #feb300;
+  position: relative;
+}
+html body .filter .jumpWindow.display {
+  display: block;
+}
+html body .filter .jumpWindow.conversionWindow {
+  width: auto;
+}
+html body .filter .jumpWindow.conversionWindow .content {
+  width: auto;
+  height: auto;
+  background: #2e3f57;
+  border-radius: 0 0 3px 3px;
+  padding: 30px;
+}
+html body .filter .jumpWindow.conversionWindow .content .calcBox {
+  width: auto;
+  height: auto;
+  background: #212832;
+  padding: 20px;
+}
+html body .filter .jumpWindow.conversionWindow .content .calcBox table {
+  width: auto;
+  height: auto;
+  border: solid 1px #19202a;
+  margin-bottom: 10px;
+}
+html body .filter .jumpWindow.conversionWindow .content .calcBox table:last-child {
+  margin: 0;
+}
+html body .filter .jumpWindow.conversionWindow .content .calcBox table tr:first-child td:first-child {
+  width: 65px;
+  background: #feb300;
+}
+html body .filter .jumpWindow.conversionWindow .content .calcBox table tr td {
+  width: 50px;
+  height: 50px;
+  background: #f8f8f8;
+  border: solid 1px #19202a;
+  vertical-align: middle;
+}
+html body .filter .jumpWindow.conversionWindow .content .calcBox table tr td p {
+  color: #19202a;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .filter .jumpWindow.controlWindow {
+  width: 600px;
+}
+html body .filter .jumpWindow.controlWindow .content {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+html body .filter .jumpWindow.controlWindow .content .box {
+  width: 100%;
+  height: auto;
+  background: #2e3f57;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+html body .filter .jumpWindow.controlWindow .content .box:last-child {
+  margin: 0;
+}
+html body .filter .jumpWindow.controlWindow .content .box .smallTitle {
+  width: 100%;
+  height: 36px;
+  border-bottom: solid 1px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+}
+html body .filter .jumpWindow.controlWindow .content .box .smallTitle p {
+  color: #feb300;
+  font-size: 14px;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox {
+  width: 100%;
+  height: auto;
+  padding: 10px 30px;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox > p {
+  color: #feb300;
+  font-size: 14px;
+  margin-right: 20px;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox .row {
+  width: 120px;
+  height: 35px;
+  background: #212832;
+  border-radius: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox .row p {
+  width: 50%;
+  height: 100%;
+  color: #cacaca;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  z-index: 1;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox .row p:first-child {
+  color: #19202a;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox .row .cnt {
+  width: 50%;
+  height: 100%;
+  background: #feb300;
+  border-radius: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox .row.turn p:first-child {
+  color: #cacaca;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox .row.turn p:nth-of-type(2) {
+  color: #19202a;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .rowBox .row.turn .cnt {
+  left: 50%;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox p {
+  color: #feb300;
+  font-size: 14px;
+  margin-right: 20px;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input {
+  width: 80px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input::-moz-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input::placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input:last-child {
+  margin: 0;
+}
+html body .filter .jumpWindow.controlWindow .content .box .versionBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 30px;
+}
+html body .filter .jumpWindow.controlWindow .content .box .versionBox > p {
+  color: #feb300;
+  font-size: 14px;
+  margin-right: 40px;
+}
+html body .filter .jumpWindow.controlWindow .content .box .versionBox div {
+  width: auto;
+  height: auto;
+}
+html body .filter .jumpWindow.controlWindow .content .box .versionBox div p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.controlWindow .content .box .versionBox div p span {
+  color: #feb300;
+  font-size: 12px;
+  margin-left: 10px;
+}
+html body .filter .jumpWindow.betWindow, html body .filter .jumpWindow.checkWindow, html body .filter .jumpWindow.checkMixWindow {
+  width: 580px;
+}
+html body .filter .jumpWindow.betWindow .content, html body .filter .jumpWindow.checkWindow .content, html body .filter .jumpWindow.checkMixWindow .content {
+  width: 100%;
+  height: auto;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow, html body .filter .jumpWindow.checkWindow .content .topWindow, html body .filter .jumpWindow.checkMixWindow .content .topWindow {
+  width: 100%;
+  height: auto;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow:not(:first-child) .smallTitle, html body .filter .jumpWindow.checkWindow .content .topWindow:not(:first-child) .smallTitle, html body .filter .jumpWindow.checkMixWindow .content .topWindow:not(:first-child) .smallTitle {
+  border-top: solid 1px #465a79;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle, html body .filter .jumpWindow.checkWindow .content .topWindow .smallTitle, html body .filter .jumpWindow.checkMixWindow .content .topWindow .smallTitle {
+  width: 100%;
+  height: 28px;
+  border-bottom: solid 1px #465a79;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px 2px;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle p, html body .filter .jumpWindow.checkWindow .content .topWindow .smallTitle p, html body .filter .jumpWindow.checkMixWindow .content .topWindow .smallTitle p {
+  color: #feb300;
+  font-size: 13px;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide {
+  width: 45%;
+  height: auto;
+  border-right: solid 1px #465a79;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide .team, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide .team, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide .team {
+  width: 100%;
+  color: #feb300;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide p:not(.team), html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide p:not(.team), html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide p:not(.team) {
+  color: #ce1427;
+  font-size: 14px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide p:not(.team) span, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide p:not(.team) span, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide p:not(.team) span {
+  color: #ffffff;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide {
+  width: 60%;
+  height: auto;
+  padding: 15px 10px;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p {
+  color: #feb300;
+  font-size: 1px;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p:last-child, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p:last-child, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p:last-child {
+  margin-top: 8px;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p span, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p span, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p span {
+  color: #ffffff;
+}
+html body .filter .jumpWindow.betWindow .content .mixBox, html body .filter .jumpWindow.checkWindow .content .mixBox, html body .filter .jumpWindow.checkMixWindow .content .mixBox {
+  width: 100%;
+  height: auto;
+  max-height: 270px;
+  overflow-y: overlay;
+}
+html body .filter .jumpWindow.betWindow .content .mixBox::-webkit-scrollbar, html body .filter .jumpWindow.checkWindow .content .mixBox::-webkit-scrollbar, html body .filter .jumpWindow.checkMixWindow .content .mixBox::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .filter .jumpWindow.betWindow .content .mixBox::-webkit-scrollbar-thumb, html body .filter .jumpWindow.checkWindow .content .mixBox::-webkit-scrollbar-thumb, html body .filter .jumpWindow.checkMixWindow .content .mixBox::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .filter .jumpWindow.betWindow .content .mixBox::-webkit-scrollbar-track, html body .filter .jumpWindow.checkWindow .content .mixBox::-webkit-scrollbar-track, html body .filter .jumpWindow.checkMixWindow .content .mixBox::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .filter .jumpWindow.betWindow .content .moneyBox, html body .filter .jumpWindow.checkWindow .content .moneyBox, html body .filter .jumpWindow.checkMixWindow .content .moneyBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .filter .jumpWindow.betWindow .content .moneyBox div, html body .filter .jumpWindow.checkWindow .content .moneyBox div, html body .filter .jumpWindow.checkMixWindow .content .moneyBox div {
+  width: 34%;
+  height: auto;
+  background: #2e3f57;
+  border: solid 1px #465a79;
+  border-left: none;
+  padding: 15px 10px;
+}
+html body .filter .jumpWindow.betWindow .content .moneyBox div:last-child, html body .filter .jumpWindow.checkWindow .content .moneyBox div:last-child, html body .filter .jumpWindow.checkMixWindow .content .moneyBox div:last-child {
+  border-right: none;
+}
+html body .filter .jumpWindow.betWindow .content .moneyBox div p, html body .filter .jumpWindow.checkWindow .content .moneyBox div p, html body .filter .jumpWindow.checkMixWindow .content .moneyBox div p {
+  color: #ffffff;
+  font-size: 14px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox, html body .filter .jumpWindow.checkWindow .content .betBox, html body .filter .jumpWindow.checkMixWindow .content .betBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide {
+  width: 49%;
+  height: auto;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-bottom: 10px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox p, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox p, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox p {
+  color: #feb300;
+  font-size: 14px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input {
+  width: 160px;
+  height: 35px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-webkit-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-webkit-input-placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-moz-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-moz-placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input::-moz-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input:-ms-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input:-ms-input-placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-ms-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-ms-input-placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input::placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox span, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox span, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox span {
+  color: #19202a;
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .check {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check .cube, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .check .cube {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(34%, #ffffff), to(#e5e5e5));
+  background: linear-gradient(to top, #ffffff 34%, #e5e5e5 100%);
+  border: solid 1px #d0d0d0;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube.active::after, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check .cube.active::after, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .check .cube.active::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check p, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check p, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .check p {
+  color: #feb300;
+  font-size: 16px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide {
+  width: 50%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 8px 1fr 8px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button {
+  width: auto;
+  height: 35px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  font-size: 18px;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button.active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button.active, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button.active {
+  background: #feb300;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:disabled, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:disabled, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:last-child, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:last-child, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:last-child {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
+  grid-column-end: 3;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox, html body .filter .jumpWindow.checkWindow .content .checkBox, html body .filter .jumpWindow.checkMixWindow .content .checkBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 15px;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox .leftSide, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide {
+  width: 50%;
+  height: auto;
+  border-right: solid 1px #465a79;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox .leftSide i, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide i, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide i {
+  width: 20px;
+  height: 20px;
+  background: #00c613;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox .leftSide i::before, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide i::before, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide i::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 8px;
+  border: solid 3px #ffffff;
+  border-width: 0px 2px 2px 0px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  top: 48%;
+  left: 50%;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox .leftSide p, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide p, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide p {
+  color: #00c613;
+  font-size: 16px;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox .rightSide, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide {
+  width: 50%;
+  height: auto;
+  padding: 0 10px;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide p {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p:last-child, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p:last-child, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide p:last-child {
+  margin: 0;
+}
+html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p span, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p span, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide p span {
+  color: #feb300;
+  margin-left: 10px;
+}
+html body .filter .jumpWindow.changePwWindow {
+  width: 390px;
+}
+html body .filter .jumpWindow.changePwWindow .content {
+  width: 100%;
+  padding: 20px 40px;
+}
+html body .filter .jumpWindow.changePwWindow .content .inputBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+html body .filter .jumpWindow.changePwWindow .content .inputBox p {
+  color: #feb300;
+  font-size: 14px;
+}
+html body .filter .jumpWindow.changePwWindow .content .inputBox input {
+  width: 217px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+}
+html body .filter .jumpWindow.changePwWindow .content .inputBox input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.changePwWindow .content .inputBox input::-moz-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.changePwWindow .content .inputBox input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.changePwWindow .content .inputBox input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.changePwWindow .content .inputBox input::placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.changePwWindow .content .btnBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+html body .filter .jumpWindow.changePwWindow .content .btnBox button {
+  width: 48%;
+  height: 36px;
+}
+html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child {
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child:hover, html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child:active, html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child.active {
+  background: #feb300;
+}
+html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child {
+  background: -webkit-gradient(linear, left top, left bottom, from(#feb300), to(#c98000));
+  background: linear-gradient(to bottom, #feb300 0%, #c98000 100%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+  border: none;
+  color: #212832;
+  font-size: 17px;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child:hover, html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child:active, html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child.active {
+  background: #feb300;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+html body .filter .jumpWindow.calcWindow {
+  width: 715px;
+}
+html body .filter .jumpWindow.calcWindow .content {
+  width: 100%;
+  height: auto;
+  padding: 0 30px 30px;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox p {
+  color: #ffffff;
+  font-size: 16px;
+  margin-right: 5px;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input {
+  width: 80px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input::-moz-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input::placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle button {
+  width: 60px;
+  height: 28px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding: 0;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle button:hover, html body .filter .jumpWindow.calcWindow .content .inputTitle button:active, html body .filter .jumpWindow.calcWindow .content .inputTitle button.active {
+  background: #feb300;
+}
+html body .filter .jumpWindow.calcWindow .content .inputTitle button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .filter .jumpWindow.calcWindow .content ul {
+  width: 100%;
+  height: auto;
+  border: solid 1px #feb300;
+  border-radius: 5px;
+  overflow: hidden;
+}
+html body .filter .jumpWindow.calcWindow .content ul li {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .filter .jumpWindow.calcWindow .content ul li:nth-of-type(even) {
+  background: #2e3f57;
+}
+html body .filter .jumpWindow.calcWindow .content ul li.smallTitle {
+  background: #feb300;
+}
+html body .filter .jumpWindow.calcWindow .content ul li.smallTitle div {
+  border: none;
+}
+html body .filter .jumpWindow.calcWindow .content ul li.smallTitle div p {
+  color: #19202a;
+  font-size: 14px;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: solid 1px #465a79;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 0;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(1), html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(4) {
+  width: 8%;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2), html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) {
+  width: 12%;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input {
+  width: 55px;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+  text-align: center;
+  padding: 0;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input::-webkit-input-placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input::-moz-placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input::-moz-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input:-ms-input-placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input::-ms-input-placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input::placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input::placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3), html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) {
+  width: 30%;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) .selectBox, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) .selectBox {
+  width: auto;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) .selectBox select, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) .selectBox select {
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
+  color: #19202a;
+  font-size: 14px;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) .selectBox i, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) .selectBox i {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #19202a transparent;
+  border-width: 5px 4px 0 4px;
+  margin-left: 5px;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) input {
+  width: 42px;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+  border: none;
+  text-align: center;
+  padding: 0;
+  margin: 0 5px;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input::-webkit-input-placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input::-moz-placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) input::-moz-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input:-ms-input-placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input::-ms-input-placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input::placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) input::placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div:last-child {
+  border: none;
+}
+html body .filter .jumpWindow.calcWindow .content ul li div p {
+  color: #feb300;
+  font-size: 16px;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox p {
+  color: #feb300;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox input {
+  width: 115px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #1f385c;
+  color: #19202a;
+  font-size: 14px;
+  padding-left: 5px;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox input::-webkit-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox input::-moz-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox input:-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox input::-ms-input-placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox input::placeholder {
+  color: #19202a;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox button {
+  width: 260px;
+  height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#feb300), to(#c98000));
+  background: linear-gradient(to bottom, #feb300 0%, #c98000 100%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+  border: none;
+  color: #212832;
+  font-size: 17px;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox button:hover, html body .filter .jumpWindow.calcWindow .content .calcBox button:active, html body .filter .jumpWindow.calcWindow .content .calcBox button.active {
+  background: #feb300;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+html body .filter .jumpWindow.calcWindow .content .remindBox {
+  width: 100%;
+  height: auto;
+  background: #2e3f57;
+  border: solid 1px #feb300;
+  padding: 0 10px;
+}
+html body .filter .jumpWindow.calcWindow .content .remindBox .smallTitle {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #feb300;
+  padding: 10px 0;
+}
+html body .filter .jumpWindow.calcWindow .content .remindBox .smallTitle p {
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
+html body .filter .jumpWindow.calcWindow .content .remindBox .textBox {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+}
+html body .filter .jumpWindow.calcWindow .content .remindBox .textBox p {
+  color: #feb300;
+  font-size: 14px;
+  line-height: 20px;
+}
+html body .filter .jumpWindow .title {
+  width: 100%;
+  height: 50px;
+  background: #feb300;
+  border-radius: 3px 3px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+html body .filter .jumpWindow .title p {
+  color: #19202a;
+  font-size: 16px;
+  font-weight: bold;
+}
+html body .filter .jumpWindow .close {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: solid 3px #19202a;
+  -webkit-box-shadow: 0 0 0 5px #ffffff;
+          box-shadow: 0 0 0 5px #ffffff;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+}
+html body .filter .jumpWindow .close::before, html body .filter .jumpWindow .close::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  background: #19202a;
+  left: 50%;
+  top: 50%;
+}
+html body .filter .jumpWindow .close::before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .filter .jumpWindow .close::after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}

@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <!--header-->
+    <header>
+        <!--top-->
+        <div class="top">
+            <!--button-->
+            <div class="btnBox">
+                <button class="conversionBtn">盤口對照表</button>
+                <button class="controlBtn">設定</button>
+            </div>
+            <!--marquee-->
+            <div class="marqueeBox">
+                <i class="fas fa-volume-up"></i>
+                <marquee>
+                    <a href="#">★敬請注意★帳務日期01月01日其他籃球-摩洛哥籃球聯賽(AREH哈吉VSFUS拉巴特)因資訊源無上半場比分，故(全場,上半場)以退組計算，敬請會員留意，謝謝。</a>
+                </marquee>
+            </div>
+            <!--time-->
+            <span class="time"></span>
+        </div>
+        <!--article-->
+        <article>
+            <!--logo-->
+            <div class="logo"></div>
+            <!--headerList-->
+            <ul class="headerList">
+                <li>
+                    <a href="./market.html">市場列表</a>
+                </li>
+                <li class="active">
+                    <a href="./liveStream.html">直播</a>
+                </li>
+                <li>
+                    <a href="./result.html">比賽結果</a>
+                </li>
+                <li>
+                    <a href="./teach.html">盤口教程</a>
+                </li>
+                <li>
+                    <a href="./score.html">比分</a>
+                </li>
+                <li>
+                    <a href="./instantBet.html">即時投注</a>
+                </li>
+                <li>
+                    <a href="./betRecord.html">投注紀錄</a>
+                </li>
+                <li>
+                    <a href="https://www.gal168.net/NB_rule/newRule/index.html?lang=zh-tw#/zh-tw/index" target="_blank">相關規則</a>
+                </li>
+                <li>
+                    <a href="./mine.html">
+                        <i class="fas fa-user"></i>
+                        我的
+                    </a>
+                </li>
+            </ul>
+            <!--loggedBox-->
+            <div class="loggedBox"> <!--20230104_修改loggedInClass名稱_L-->
+                <p>
+                    帳戶名稱:
+                    <span>ppp123</span>
+                </p>
+                <p class="quota">
+                    今日可用額度:
+                    <span>1000000</span>
+                    元
+                </p>
+                <p class="quota">
+                    昨日可用額度:
+                    <span>1000000</span>
+                    元
+                </p>
+                <button onclick="window.location.href='../index.html'">登出</button>
+            </div>
+        </article>
+    </header>
+    <!--mainArea-->
+    <main class="mainArea"> <!--20230103_main新增class_L-->
+        <article class="innerSide"> <!--20230103_article修改class_L-->
+            <!--left-->
+            <section class="left">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-heart"></i>
+                                我的最愛
+                            </div>
+                            <div>
+                                <div class="total">0</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fab fa-hotjar"></i>
+                                滾球中心
+                            </div>
+                            <div>
+                                <div class="total">0</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-play-circle"></i>
+                                即將開賽
+                            </div>
+                            <div>
+                                <div class="total">8</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-futbol"></i>
+                                足球
+                            </div>
+                            <div> <!--20230104_新增結構div_L-->
+                                <div class="live display">LIVE</div>
+                                <div class="total">582</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>582</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>3</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>100</span>
+                        </div>
+                        <div class="smallList">
+                            <p>波膽</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-basketball-ball"></i>
+                                美國職籃
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">264</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>264</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>25</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-basketball-ball"></i>
+                                其他籃球
+                            </div>
+                            <div>
+                                <div class="live display">LIVE</div>
+                                <div class="total">192</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>192</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>12</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>61</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                美國職棒
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                中華職棒
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                日本職棒
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-baseball-ball"></i>
+                                其他棒球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-football-ball"></i>
+                                美式足球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fad fa-horse-head"></i>
+                                賽馬賽狗
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">423</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>423</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-keyboard"></i>
+                                電競
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-signal"></i>
+                                指數
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">24</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>24</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-ticket-alt"></i>
+                                彩球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">42</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>42</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-hockey-puck"></i>
+                                冰球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">234</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>234</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>30</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-boxing-glove"></i>
+                                拳擊格鬥
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-racquet"></i>
+                                羽球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fad fa-volleyball-ball"></i>
+                                排球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-table-tennis"></i>
+                                桌球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-cricket"></i>
+                                板球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-ball-pile"></i>
+                                撞球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-volleyball-ball"></i>
+                                手球
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fas fa-futbol"></i>
+                                世界盃
+                            </div>
+                            <div>
+                                <div class="live">LIVE</div>
+                                <div class="total">&ensp;</div>
+                            </div>
+                        </a>
+                        <div class="smallList active">
+                            <p>讓分大小</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>滾球盤</p>
+                            <span>0</span>
+                        </div>
+                        <div class="smallList">
+                            <p>混合過關</p>
+                            <span>0</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!--center-->
+            <div class="center display">
+                <!--topfix-->
+                <div class="topfix">
+                    <ul>
+                       <li class="live">
+                            <p>視訊直播</p>
+                       </li>
+                    </ul>
+                </div>
+                <!--主區塊-->
+                <section class="middle">
+                    <div class="liveStream type_1 display">
+                        <video class="video-style liveShow" src="" controls></video>
+                        <table>
+                            <tr>
+                                <th>
+                                    <p>主客隊伍</p>
+                                </th>
+                                <th>
+                                    <p>比分</p>
+                                </th>
+                                <th>
+                                    <p>獨贏</p>
+                                </th>
+                                <th>
+                                    <p>讓球</p>
+                                </th>
+                                <th>
+                                    <p>大小</p>
+                                </th>
+                                <th>
+                                    <p>上半讓球</p>
+                                </th>
+                                <th>
+                                    <p>上半大小</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>主隊</p>
+                                        <p>客隊</p>
+                                        <p class="time">
+                                            <span>滾球</span>
+                                            12:34
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="small">
+                                    <div>
+                                        <button>
+                                            <span></span>
+                                            1
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                        <button>
+                                            <span></span>
+                                            1
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                        <button>
+                                            <span></span>
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <button>
+                                            <span>0</span>
+                                            1234
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                        <button>
+                                            <span>1</span>
+                                            5.678
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <button>
+                                            <span>1</span>
+                                            1.234
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                        <button>
+                                            <span>2</span>
+                                            5.678
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <button>
+                                            <span>2</span>
+                                            1.234
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                        <button>
+                                            <span>3</span>
+                                            5.678
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <button>
+                                            <span>3</span>
+                                            1.234
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                        <button>
+                                            <span>4</span>
+                                            5.678
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <button>
+                                            <span>4</span>
+                                            1.234
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                        <button>
+                                            <span>5</span>
+                                            5.678
+                                            <i class="fas fa-lock"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>
+                                <div>
+                                    <p>主客隊伍</p>
+                                </div>
+                                <div>
+                                    <p>1</p>
+                                </div>
+                                <div>
+                                    <p>2</p>
+                                </div>
+                                <div>
+                                    <p>3</p>
+                                </div>
+                                <div>
+                                    <p>4</p>
+                                </div>
+                                <div>
+                                    <p>總分</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>
+                                        <span>主</span>
+                                        主隊名稱
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>11</p>
+                                </div>
+                                <div>
+                                    <p>22</p>
+                                </div>
+                                <div>
+                                    <p>33</p>
+                                </div>
+                                <div>
+                                    <p>44</p>
+                                </div>
+                                <div>
+                                    <p>77</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>
+                                        <span class="sub">客</span>
+                                        客隊名稱
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>11</p>
+                                </div>
+                                <div>
+                                    <p>22</p>
+                                </div>
+                                <div>
+                                    <p>33</p>
+                                </div>
+                                <div>
+                                    <p>44</p>
+                                </div>
+                                <div>
+                                    <p>77</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <!--inner-->
+            <div class="innerPage">
+                <div class="innerBox soccer">
+                    <div class="topImg">
+                        <div class="league">
+                            <p>2023-01-10 19:00</p>
+                            <p>球會友誼賽</p>
+                        </div>
+                        <div class="teamBox">
+                            <p class="leftTeam">霍芬海姆</p>
+                            <div class="scoreBox">
+                                <p>
+                                    <span class="leftScore">0</span>
+                                    vs
+                                    <span class="rightScore">0</span>
+                                </p>
+                                <p class="status">未開賽</p>
+                            </div>
+                            <p class="rightTeam">塞維特</p>
+                        </div>
+                    </div>
+                    <div class="topfix">
+                        <button>
+                            <i class="arrow"></i>
+                            返回
+                        </button>
+                        <ul>
+                            <li class="active">
+                                <p>所有盤口</p>
+                            </li>
+                            <li>
+                                <p>讓球/大小</p>
+                            </li>
+                            <li>
+                                <p>波膽</p>
+                            </li>
+                            <li>
+                                <p>角球</p>
+                            </li>
+                            <li>
+                                <p>進球</p>
+                            </li>
+                            <li>
+                                <p>上半場</p>
+                            </li>
+                            <li>
+                                <p>15分鐘</p>
+                            </li>
+                            <li>
+                                <p>特殊投注</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="innerBetBox">
+                        <ul>
+                            <li class="title">
+                                <p>獨贏</p>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>主</span>
+                                    0.3
+                                </button>
+                                <button>
+                                    <span>和</span>
+                                    3.25
+                                </button>
+                                <button>
+                                    <span>客</span>
+                                    3.15
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>讓分</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>主</p>
+                                </button>
+                                <button>
+                                    <span>1平</span>
+                                    0.84
+                                </button>
+                                <button class="word">
+                                    <p>客</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.94
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>大小</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>大</p>
+                                </button>
+                                <button>
+                                    <span>3.5</span>
+                                    0.91
+                                </button>
+                                <button class="word">
+                                    <p>小</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.94
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>單雙</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>單</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.95
+                                </button>
+                                <button class="word">
+                                    <p>雙</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.95
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>上半讓分</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>主</p>
+                                </button>
+                                <button>
+                                    <span>0.5</span>
+                                    1.01
+                                </button>
+                                <button class="word">
+                                    <p>客</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.77
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>上半大小</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>大</p>
+                                </button>
+                                <button>
+                                    <span>1.5</span>
+                                    0.99
+                                </button>
+                                <button class="word">
+                                    <p>小</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.79
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>波膽</p>
+                            </li>
+                            <li class="three">
+                                <button class="word">
+                                    <p>主</p>
+                                </button>
+                                <button class="word">
+                                    <p>和</p>
+                                </button>
+                                <button class="word">
+                                    <p>客</p>
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>1 - 0</span>
+                                    11
+                                </button>
+                                <button>
+                                    <span>0 - 0</span>
+                                    30
+                                </button>
+                                <button>
+                                    <span>0 - 1</span>
+                                    20
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>2 - 0</span>
+                                    9
+                                </button>
+                                <button>
+                                    <span>1 - 1</span>
+                                    8.4
+                                </button>
+                                <button>
+                                    <span>0 - 2</span>
+                                    35
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>2 - 1</span>
+                                    7
+                                </button>
+                                <button>
+                                    <span>2 - 2</span>
+                                    11.5
+                                </button>
+                                <button>
+                                    <span>1 - 2</span>
+                                    14
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>3 - 0</span>
+                                    12
+                                </button>
+                                <button>
+                                    <span>3 - 3</span>
+                                    35
+                                </button>
+                                <button>
+                                    <span>0 - 3</span>
+                                    75
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>3 - 1</span>
+                                    9
+                                </button>
+                                <button>
+                                    <span>4 - 4</span>
+                                    150
+                                </button>
+                                <button>
+                                    <span>1 - 3</span>
+                                    35
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>3 - 2</span>
+                                    14.5
+                                </button>
+                                <button class="word">
+                                    <p>&ensp;</p>
+                                </button>
+                                <button>
+                                    <span>2 - 3</span>
+                                    30
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>4 - 0</span>
+                                    20
+                                </button>
+                                <button class="word">
+                                    <p>&ensp;</p>
+                                </button>
+                                <button>
+                                    <span>0 - 4</span>
+                                    150
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>4 - 1</span>
+                                    16
+                                </button>
+                                <button class="word">
+                                    <p>&ensp;</p>
+                                </button>
+                                <button>
+                                    <span>1 - 4</span>
+                                    95
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>4 - 2</span>
+                                    25
+                                </button>
+                                <button class="word">
+                                    <p>&ensp;</p>
+                                </button>
+                                <button>
+                                    <span>2 - 4</span>
+                                    80
+                                </button>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>4 - 3</span>
+                                    55
+                                </button>
+                                <button class="word">
+                                    <p>&ensp;</p>
+                                </button>
+                                <button>
+                                    <span>3 - 4</span>
+                                    100
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="innerBox basketball USA">
+                    <div class="topImg">
+                        <div class="league">
+                            <p>2023-01-11 08:05</p>
+                            <p>NBA 美國職業籃球</p>
+                        </div>
+                        <div class="teamBox">
+                            <p class="leftTeam">PHI 七六人</p>
+                            <div class="scoreBox">
+                                <p>
+                                    <span class="leftScore">0</span>
+                                    vs
+                                    <span class="rightScore">0</span>
+                                </p>
+                                <p class="status">未開賽</p>
+                            </div>
+                            <p class="rightTeam">DET 活塞</p>
+                        </div>
+                    </div>
+                    <div class="topfix">
+                        <button>
+                            <i class="arrow"></i>
+                            返回
+                        </button>
+                        <ul>
+                            <li class="active">
+                                <p>所有盤口</p>
+                            </li>
+                            <li>
+                                <p>讓球/大小</p>
+                            </li>
+                            <li>
+                                <p>上半場</p>
+                            </li>
+                            <li>
+                                <p>特殊投注</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="innerBetBox">
+                        <ul>
+                            <li class="title">
+                                <p>單雙</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>單</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.93
+                                </button>
+                                <button class="word">
+                                    <p>雙</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.95
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>上半單雙</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>單</p>
+                                </button>
+                                <button>
+                                    <span>3.5</span>
+                                    0.93
+                                </button>
+                                <button class="word">
+                                    <p>雙</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.95
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="innerBox basketball else">
+                    <div class="topImg">
+                        <div class="league">
+                            <p>2023-01-11 08:05</p>
+                            <p>FIBA 籃球冠軍聯賽</p>
+                        </div>
+                        <div class="teamBox">
+                            <p class="leftTeam">珀里斯特拉</p>
+                            <div class="scoreBox">
+                                <p>
+                                    <span class="leftScore">0</span>
+                                    vs
+                                    <span class="rightScore">0</span>
+                                </p>
+                                <p class="status">未開賽</p>
+                            </div>
+                            <p class="rightTeam">JDA迪安</p>
+                        </div>
+                    </div>
+                    <div class="topfix">
+                        <button>
+                            <i class="arrow"></i>
+                            返回
+                        </button>
+                        <ul>
+                            <li class="active">
+                                <p>所有盤口</p>
+                            </li>
+                            <li>
+                                <p>讓球/大小</p>
+                            </li>
+                            <li>
+                                <p>上半場</p>
+                            </li>
+                            <li>
+                                <p>特殊投注</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="innerBetBox">
+                        <ul>
+                            <li class="title">
+                                <p>獨贏</p>
+                            </li>
+                            <li class="three">
+                                <button>
+                                    <span>主</span>
+                                    0.641
+                                </button>
+                                <button>
+                                    <span>和</span>
+                                    &ensp;
+                                </button>
+                                <button>
+                                    <span>客</span>
+                                    1.26
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>讓分</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>主</p>
+                                </button>
+                                <button>
+                                    <span>3+50</span>
+                                    0.92
+                                </button>
+                                <button class="word">
+                                    <p>客</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.92
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>大小</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>大</p>
+                                </button>
+                                <button>
+                                    <span>159.5</span>
+                                    0.9
+                                </button>
+                                <button class="word">
+                                    <p>小</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.9
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>單雙</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>單</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.94
+                                </button>
+                                <button class="word">
+                                    <p>雙</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.94
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>單雙</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>單</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.94
+                                </button>
+                                <button class="word">
+                                    <p>雙</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.94
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>上半讓分</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>主</p>
+                                </button>
+                                <button>
+                                    <span>1-50</span>
+                                    0.91
+                                </button>
+                                <button class="word">
+                                    <p>客</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.91
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>上半大小</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>大</p>
+                                </button>
+                                <button>
+                                    <span>79-50</span>
+                                    0.88
+                                </button>
+                                <button class="word">
+                                    <p>小</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.88
+                                </button>
+                            </li>
+                            <li class="title">
+                                <p>上半單雙</p>
+                            </li>
+                            <li class="four">
+                                <button class="word">
+                                    <p>單</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.93
+                                </button>
+                                <button class="word">
+                                    <p>雙</p>
+                                </button>
+                                <button>
+                                    <span></span>
+                                    0.93
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--right-->
+            <section class="right"> <!--20230105_移除外層right_in_L-->
+                <!--即時資訊-->
+                <div class="statusWindow">
+                    <div class="title"> <!-- 新增".title" 2023/01/04_S -->
+                        <p>即時資訊</p>
+                        <span class="stNumber">0</span>
+                    </div>
+                    <ul class="ST_Window">
+                        <li>
+                            <div> <!-- "新增外層div 2023/01/03_S -->
+                                10:17:19
+                                <span>足球-獨贏</span> <!-- "投注名"新增<span> 2023/01/03_S -->
+                            </div>
+                            <span class="betAmount">
+                                下注100
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!--直播-->
+                <div class="liveWindow">
+                    <p class="title">
+                        體育直播
+                        <a href="#" class="liveJumpBtn">展開</a> <!--20230105_移除外層span_L-->
+                    </p>
+                    <div class="teamWindow">
+                        <div class="leftTeam">
+                            <p></p>
+                        </div>
+                        <div class="score">
+                            <p>
+                                <span>vs</span>
+                            </p>
+                        </div>
+                        <div class="rightTeam">
+                            <p></p>
+                        </div>
+                    </div>
+                    <video class="video-style liveShow" src="" controls></video>
+                </div>
+                <!--下半-->
+                <div class="room">
+                    <div class="twobut">
+                        <button class="liveBtn active">直播賽事</button>
+                        <!--20230105_移除line_L-->
+                        <button class="StatusBtn">即時注單</button>
+                    </div>
+                    <!--賽事直播-->
+                    <div class="liveListBox display"> <!--20230105_新增liveListBox_L-->
+                        <div class="livelist soccer display">  <!--20230105_移除<ul><li>結構改<div class="livelist">_S-->
+                            <!-- 標題文字包到"liveTitle"裡 2023/01/04_S-->
+                            <div class="liveTitle">
+                                <p class="gameName">足球</p>
+                                <p class="games">27
+                                    <i class="arrow"></i>
+                                </p>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 新增className 2023/01/03_S-->
+                                <p class="gTitle">孟加拉國聯合盃<span class="situation onLive"></span></p>
+                                <p>2023-01-03 16:45</p>
+                                <p class="teamA">孟加拉警察</p>
+                                <p class="teamB">阿壩漢尼度哈卡</p>
+                                <button>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">沙特甲組聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:35</p>
+                                <p class="teamA">阿爾歐魯巴赫塞卡凱</p>
+                                <p class="teamB">阿利雅德</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">沙特甲組聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:35</p>
+                                <p class="teamA">查巴萊</p>
+                                <p class="teamB">哈哲爾</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">埃及超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:45</p>
+                                <p class="teamA">阿拉伯建築</p>
+                                <p class="teamB">哈伊赫多</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">埃及超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:45</p>
+                                <p class="teamA">加斯馬哈拉</p>
+                                <p class="teamB">切拉米卡克里奧帕特拉</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">土耳其超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 22:00</p>
+                                <p class="teamA">尤姆尼耶士邦</p>
+                                <p class="teamB">哈塔斯堡</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">希臘超級聯賽甲組<span class="situation onLive"></span></p>
+                                <p>2023-01-03 22:30</p>
+                                <p class="teamA">OFI克雷迪</p>
+                                <p class="teamB">沃羅斯</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                        </div>
+                        <div class="livelist basketball">
+                            <!-- 標題文字包到"liveTitle"裡 2023/01/04_S-->
+                            <div class="liveTitle">
+                                <p class="gameName">籃球</p>
+                                <p class="games">12
+                                    <span class="arrow"></span>
+                                </p>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 新增className 2023/01/03_S-->
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 08:05</p>
+                                <p class="teamA">PHI 七六人</p>
+                                <p class="teamB">IND 溜馬</p>
+                                <button>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 08:35</p>
+                                <p class="teamA">NYK 尼克</p>
+                                <p class="teamB">SAN 馬刺</p>
+                                <button disabled>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 08:35</p>
+                                <p class="teamA">TOR 暴龍</p>
+                                <p class="teamB">MIL-公鹿</p>
+                                <button disabled>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 09:05</p>
+                                <p class="teamA">CHI 公牛</p>
+                                <p class="teamB">BK 籃網</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 09:05</p>
+                                <p class="teamA">MIN 灰狼</p>
+                                <p class="teamB">POR-拓荒者</p>
+                                <button disabled>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 09:05</p>
+                                <p class="teamA">NO 鵜鶘</p>
+                                <p class="teamB">HOU 火箭</p>
+                                <button disabled>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">NBA 美國職業籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 11:05</p>
+                                <p class="teamA">SAC 國王</p>
+                                <p class="teamB">ATL 老鷹</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                        </div>
+                        <div class="livelist otherBasketball">
+                            <!-- 標題文字包到"liveTitle"裡 2023/01/04_S-->
+                            <div class="liveTitle">
+                                <p class="gameName">其他籃球</p>
+                                <p class="games">16
+                                    <span class="arrow"></span>
+                                </p>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 新增className 2023/01/03_S-->
+                                <p class="gTitle">NCAA 美國大學籃球<span class="situation onLive"></span></p>
+                                <p>2023-01-05 09:00</p>
+                                <p class="teamA">阿拉巴馬農工鬥牛犬</p>
+                                <p class="teamB">密西西比河谷州立三角洲魔鬼</p>
+                                <button>LIVE</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">沙特甲組聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:35</p>
+                                <p class="teamA">阿爾歐魯巴赫塞卡凱</p>
+                                <p class="teamB">阿利雅德</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">沙特甲組聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:35</p>
+                                <p class="teamA">查巴萊</p>
+                                <p class="teamB">哈哲爾</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">埃及超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:45</p>
+                                <p class="teamA">阿拉伯建築</p>
+                                <p class="teamB">哈伊赫多</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">埃及超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 20:45</p>
+                                <p class="teamA">加斯馬哈拉</p>
+                                <p class="teamB">切拉米卡克里奧帕特拉</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">土耳其超級聯賽<span class="situation onLive"></span></p>
+                                <p>2023-01-03 22:00</p>
+                                <p class="teamA">尤姆尼耶士邦</p>
+                                <p class="teamB">哈塔斯堡</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                            <div class="innerList">
+                                <!-- 每個文字都包<p> 2023/01/03_S-->
+                                <p class="gTitle">希臘超級聯賽甲組<span class="situation onLive"></span></p>
+                                <p>2023-01-03 22:30</p>
+                                <p class="teamA">OFI克雷迪</p>
+                                <p class="teamB">沃羅斯</p>
+                                <button disabled>未開賽</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--即時注單-->
+                    <div class="bettingStatus">
+                        <table class="bettingBoard">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="waiting">等待中...</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="bettingBoard">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="sus">下注成功</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="bettingBoard fail">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="wating">等待中...</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="bettingBoard">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="sus">下注成功</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="bettingBoard fail">
+                            <tbody>
+                                <tr>
+                                    <td>2023/01/04 14:30:08</td>
+                                    <td class="sus">下注成功</td>
+                                </tr>
+                                <tr>
+                                    <td>M58755837</td>
+                                    <td>單式 足球-獨贏</td>
+                                </tr>
+                                <tr>
+                                    <td>投注 : 100</td>
+                                    <td>可贏 : 450</td>
+                                </tr>
+                                <tr>
+                                    <td class="listName" colspan="2">
+                                        布咸美恩斯 1905[主]
+                                        <span class="vs">vs</span>
+                                        布拉格斯拉維亞 B @ 
+                                        <span class="odds">4.5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="failRemind">下注失敗，此單無效</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

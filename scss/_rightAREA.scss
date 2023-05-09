@@ -1,0 +1,416 @@
+.right {
+    width: 300px;
+    height: auto;
+    background: $mainBG_2;
+    flex-shrink: 0;
+    margin-left: 5px;
+
+    //即時資訊
+    .statusWindow {
+        width: 100%;
+        height: auto;
+        
+        .ST_Window {
+            width: 100%;
+            height: 80px;
+            overflow-y: auto;
+            @include scrollBarStyle_2;
+            padding: 3px 0px;
+
+            li {
+                width: 97%;
+                height: auto;
+                border-bottom: 1px solid $mainColor_4;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 3px 10px 5px;
+                margin: 0 auto;
+
+                div {
+                    width: auto;
+                    color: $mainColor_2;
+                    font-size: 14px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    @include textHidden;
+
+                    span {
+                        margin-left: 15px;
+                    }
+                }
+
+                .betAmount {
+                    color: $mainColor_1;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    //直播
+    .liveWindow {
+        width: 100%;
+        height: auto;
+
+        .teamWindow {
+            display: none;
+            width: 100%;
+            height: auto;
+            background: $mainBG_5;
+            color: $mainColor_3;
+            font-size: 12px;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px 0;
+            
+            &.display {
+                display: flex;
+            }
+
+            .score {
+                font-weight: bold;
+            }
+        }
+
+        video {
+            width: 100%;
+            height: 187px;
+        }
+    }
+
+    //下半
+    .room {
+        width: 100%;
+        height: auto;
+
+        .twobut {
+            width: 100%;
+            height: auto;
+            display: flex;
+
+            button {
+                width: 50%;
+                height: auto;
+                background: $mainBG_1;
+                color: $mainColor_1;
+                font-size: 14px;
+                text-align: center;
+                filter: brightness(1.2);
+                padding: 4px 15px;
+
+                &:hover,&:active,&.active {
+                    filter: brightness(1);
+                }
+            }
+        }
+
+        //直播賽事
+        .liveListBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            overflow-y: auto;
+            @include scrollBarStyle_1;
+
+            &.display {
+                display: block;
+            }
+
+            .livelist {
+                width: 100%;
+                height: 34px;
+                background: $mainBG_2;
+                border: 1px solid transparent;
+                overflow: hidden;
+    
+                &.display {
+                    height: auto;
+                    
+                    .liveTitle {
+                        
+                        p {
+
+                            .arrow {
+                                transform: rotate(90deg);
+                                border-color: transparent $mainColor_1;
+                            }
+                        }
+                    }
+                }   
+    
+                .liveTitle {
+                    width: 100%;
+                    height: 32px;
+                    background: $mainBG_1;
+                    color: $mainColor_1;
+                    font-size: 13px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    cursor: pointer;
+                    padding: 0 25px;
+                    
+                    .games {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        font-weight: bold;
+
+                        .arrow {
+                            @include liveList_Arrow;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+    
+                .innerList {
+                    width: 95%;
+                    height: auto;
+                    background: $mainBG_3;
+                    border-radius: 4px;
+                    padding: 8px;
+                    margin: 8px;
+                    overflow: hidden;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        @include liveList_remindCorner;
+                    }
+
+                    &.active {
+
+                        button {
+                            background: $mainBG_4;
+                        }
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    .gTitle {
+                        width: 100%;
+                        height: auto;
+                        color: $mainColor_1;
+                        font-size: 12px;
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        color: $mainColor_2;
+                        font-size: 12px;
+                        font-weight: bold;
+                        @include textHidden;
+                        margin-bottom: 4px;
+
+                        &:nth-last-of-type(1) {
+                            margin: 0;
+                        }
+                    }
+
+                    button {
+                        width: 70px;
+                        height: 30px;
+                        @include mainBtn_1;
+                        font-size: 14px;
+                        font-weight: bold;
+                        padding: 0 5px;
+                        position: absolute;
+                        right: 8px;
+                        bottom: 8px;
+                    }
+                }
+
+                &:hover,&:active {
+                    border-color: $mainColor_1;
+
+                    .liveTitle {
+                        background: $mainBG_3;
+
+                        .arrow {
+                            border-color: transparent $mainColor_1;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                &.active {
+                    height: auto;
+                    
+                    .liveTitle {
+                        background: $mainBG_3;
+
+                        .arrow {
+                            border-color: transparent $mainColor_1;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        //即時注單
+        .bettingStatus {
+            display: none;
+            width: 100%;
+            height: auto;
+            overflow-y: auto;
+            @include scrollBarStyle_1;
+
+            &.display {
+                display: block;
+            }
+
+            table {
+                width: 95%;
+                height: auto;
+                margin: 8px auto 0px;
+
+                tr {
+
+                    &:nth-of-type(1) {
+
+                        td {
+
+                            &:nth-of-type(1) {
+                                color: $subColor_2;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+
+                        td {
+
+                            &:nth-of-type(2) {
+                                color: $subColor_2;
+                            }
+                        }
+                    }
+
+                    td {
+                        width: 50%;
+                        height: auto;
+                        background: $mainBG_3;
+                        border-style: solid;
+                        border-width: 0px 0px 1px 0px;
+                        border-color: $mainColor_4;
+                        color: $mainColor_1;
+                        font-size: 12px;
+                        font-weight: bold;
+                        vertical-align: middle;
+                        padding: 7px;
+                        
+                        &.waiting,
+                        &.sus {
+                            color: $otherColor_2;
+                        }
+
+                        &.listName {
+
+                            .vs {
+                                color: $otherColor_3;
+                            }
+                            
+                            .odds {
+                                color: $subColor_1;
+                            }
+                        }
+
+                        &.failRemind {
+                            display: none;
+                            background: $tableBtn_ActiveBG;
+                            text-align: center;
+                            padding: 10px 0px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+
+                        &:nth-of-type(odd) {
+                            border-right-width: 1px;
+                        }
+
+                        &:last-child {
+                            border-right-width: 0px;
+                        }
+                    }
+
+                    &:nth-last-of-type(2) {
+                        
+                        td {
+                            border-bottom: 0;
+                            word-break: keep-all;
+                            text-align: center;
+                            line-height: 16px;
+                        }
+                    }
+                }
+
+                &.fail {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: $mainShadow_2;
+                    }
+
+                    tr {
+                        
+                        td {
+
+                            &.failRemind {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .title {
+        width: 100%;
+        height: 26px;
+        background: $mainBG_1;
+        color: $mainColor_1;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+
+        .stNumber {
+            color: $mainColor_2;
+            font-weight: bold;
+        }
+
+        a {
+            width: auto;
+            height: auto;
+            @include mainBtn_1;
+            font-size: 12px;
+            padding: 3px 5px;
+        }
+    }
+
+    @media only screen and (max-width: 1480px) {
+        width: 20%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        width: 240px;
+    }
+}
