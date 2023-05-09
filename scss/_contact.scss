@@ -1,0 +1,119 @@
+.contactWrap {
+    width: 100%;
+    height: 100%;
+
+    .top,
+    .bottom {
+        width: 100%;
+        height: auto;
+        background: $mainBG_3;
+        margin-top: 2vw;
+        padding: 0 3vw 2vw;
+
+        .title {
+            width: 100%;
+            height: 9vw;
+            display: flex;
+            align-items: center;
+            color: $title_1;
+            font-size: 3.7vw;
+            font-weight: bold;
+        }
+
+        .box {
+            width: 100%;
+            height: auto;
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 15vw;
+                    display: flex;
+                    border-bottom: solid 1px $Border_2;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    .left {
+                        width: 22vw;
+                        height: 100%;
+                        flex-shrink: 0;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            right: 0;
+                            width: 1px;
+                            height: 60%;
+                            background: $Border_2;
+                        }
+
+                        div {
+                            width: 8vw;
+                            height: 9vw;
+
+                            &.qq_ic {
+                                background-position-x: 25%;
+                            }
+                            &.skype_ic {
+                                background-position-x: 50%;
+                            }
+                            &.sugram_ic {
+                                background-position-x: 75%;
+                            }
+                        }
+                    }
+
+                    .right {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-left: 4vw;
+
+                        .textBox {
+                            width: auto;
+                            height: auto;
+
+                            .smallTitle {
+                                color: $title_1;
+                                margin-bottom: 2vw;
+                                font-size: 3.7vw;
+                                font-weight: bold;
+                            }
+
+                            .cnt {
+                                color: $title_3;
+                                font-size: 3.7vw;
+                                font-weight: bold;
+                            }
+                        }
+
+                        button {
+                            width: auto;
+                            height: auto;
+                            @include listBtn;
+                            padding: 1vw 2vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .check {
+        width: 96%;
+        height: 11vw;
+        @include setMenuBtn;
+        margin: 2vw auto;
+    }
+}

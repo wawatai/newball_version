@@ -1,0 +1,7218 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "微軟正黑體";
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0px;
+  font-family: "微軟正黑體";
+}
+
+select, input {
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+main {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+i {
+  display: block;
+}
+
+.loginWrap {
+  background: url("../images/login_BG.jpg") no-repeat;
+  background-size: cover;
+}
+
+.loginWrap .inputBox i {
+  background: url("../images/icon/login_ic.png") no-repeat;
+  background-size: 100%;
+}
+
+.loginWrap .slip .bar::before {
+  background: url("../images/icon/login_arrow.png") no-repeat;
+  background-size: contain;
+}
+
+header .msg_ic {
+  background: url("../images/icon/header_msg.png") no-repeat;
+  background-size: contain;
+}
+
+header .backArrow {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+header .money_ic {
+  background: url("../images/icon/header_money.png") no-repeat;
+  background-size: contain;
+}
+
+header .search_ic {
+  background: url("../images/icon/header_search.png") no-repeat;
+  background-size: contain;
+}
+
+header .ques_ic {
+  background: url("../images/icon/question_ic2.png") no-repeat;
+  background-size: contain;
+}
+
+footer i {
+  background: url("../images/icon/footer_ic.png") no-repeat;
+  background-size: 500%;
+}
+
+footer.inner i {
+  background: url("../images/icon/footer_ic2.png") no-repeat;
+  background-size: 500%;
+}
+
+.marqueeWrap .marquee_ic {
+  background: url("../images/icon/marquee_ic.png") no-repeat center;
+  background-size: 88%;
+}
+
+.marqueeWrap .chart_ic {
+  background: url("../images/icon/chart_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.operate .question_ic {
+  background: url("../images/icon/question_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.operate .btnBox i {
+  background: url("../images/icon/operate_ic.png") no-repeat;
+  background-size: 300%;
+}
+
+.mainList .gameBox a::after {
+  background: url("../images/gameBox_word.png") no-repeat;
+  background-size: 300%;
+}
+
+.mainList .gameBox .img {
+  background: url("../images/gameBox_img.png") no-repeat;
+  background-size: 300%;
+}
+
+.chartWrap li .arrow_ic {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.chartWrap li.active .arrow_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.innerTopList i {
+  background: url("../images/icon/topList_ic.png") no-repeat;
+  background-size: 500%;
+}
+
+.gameWrap .titleTime i {
+  background: url("../images/icon/mainGame_timeIC.png") no-repeat;
+  background-size: 200%;
+}
+
+.gameWrap .listBox i {
+  background: url("../images/icon/arrow_o.png") no-repeat;
+  background-size: contain;
+}
+
+.gameWrap .team i {
+  background: url("../images/icon/mainGame_teamIC.png") no-repeat;
+  background-size: 200%;
+}
+
+.gameWrap .liveBox i {
+  background: url("../images/icon/mainGame_liveIC.png") no-repeat;
+  background-size: 200%;
+}
+
+.mainWrap .emptyImg {
+  background: url("../images/empty_1.png") no-repeat;
+  background-size: contain;
+}
+
+.searchWrap .search_ic {
+  background: url("../images/icon/search_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.teachWrap .teachList i {
+  background: url("../images/icon/teach_ball.png") no-repeat;
+  background-size: 300%;
+}
+
+.teachWrap .nameBox i {
+  background: url("../images/icon/teach_team.png") no-repeat;
+  background-size: 200%;
+}
+
+.multiWrap .calcBtn {
+  background: url("../images/icon/calc.png") no-repeat;
+  background-size: contain;
+}
+
+.multiWrap .title .arrow_ic {
+  background: url("../images/icon/dbArrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.recordWrap .emptyBox div {
+  background: url("../images/empty_2.png") no-repeat;
+  background-size: contain;
+}
+
+.recordWrap .bettingBox .arrow_ic {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.recordWrap .bettingBox.active .arrow_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.recordWrap .bettingBox.active .box .arrow_ic {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.recordWrap .bettingBox.active .box.active .arrow_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.memberWrap .sticker div {
+  background: url("../images/sticker.png") no-repeat;
+  background-size: cover;
+}
+
+.memberWrap .linkBox .link::before {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.memberWrap .btnBox i {
+  background: url("../images/icon/member_ic.png") no-repeat;
+  background-size: 300%;
+}
+
+.memberWrap .bottom li i {
+  background: url("../images/icon/member_ic2.png") no-repeat;
+  background-size: 500%;
+}
+
+.memberWrap .bottom .arrow_ic {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.infoWrap .header .cancel_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.infoWrap .sticker div {
+  background: url("../images/sticker.png") no-repeat;
+  background-size: cover;
+}
+
+.infoWrap .sticker .edit_ic {
+  background: url("../images/icon/edit_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.innerWrap .top {
+  background: url("../images/inner_BG.jpg") no-repeat;
+  background-size: cover;
+}
+
+.innerWrap .top .arrow_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.innerWrap .live_ic {
+  background: url("../images/icon/live_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.innerWrap .update_ic {
+  background: url("../images/icon/update_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.postWrap .post_ic {
+  background: url("../images/icon/post_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.controlWrap .arrow_ic {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.passwordWrap .cancel_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.serviceWrap .icBox .sticker {
+  background: url("../images/sticker.png") no-repeat;
+  background-size: cover;
+}
+
+.serviceWrap .icBox .service_ic {
+  background: url("../images/icon/service_ic.png") no-repeat;
+  background-size: 200%;
+}
+
+.optionWrap .cancel_ic,
+.mineOptionWrap .cancel_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.optionWrap .bottom .btnBox button::before {
+  background: url("../images/icon/img_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.amountWrap li .arrow_ic {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.amountWrap li.active .arrow_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.ruleWrap li .arrow_ic {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.ruleWrap li.active .arrow_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+.depositWrap .listBox i {
+  background: url("../images/icon/deposit_ic.png") no-repeat;
+  background-size: 900%;
+}
+
+.depositWrap .listBox li.active::after {
+  background: url("../images/icon/arrow_check.png") no-repeat;
+  background-size: contain;
+}
+
+.transferWrap .title .reset_ic {
+  background: url("../images/icon/refresh_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.transferWrap .smallTitle i {
+  background: url("../images/icon/transfer_ic.png") no-repeat;
+  background-size: 200%;
+}
+
+.transferWrap .top .dbarrow_ic {
+  background: url("../images/icon/dbArrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.cardWrap .plusBtn {
+  background: url("../images/icon/cardAdd_ic.png") no-repeat;
+  background-size: contain;
+}
+
+.cardWrap .ready {
+  background: url("../images/icon/cardReady_ic.png") no-repeat;
+  background-size: cover;
+}
+
+.contactWrap .left div {
+  background: url("../images/icon/contact_ic.png") no-repeat;
+  background-size: 500%;
+}
+
+.jumpWindow .bettingBox .arrow_ic {
+  background: url("../images/icon/arrow_y.png") no-repeat;
+  background-size: contain;
+}
+
+.jumpWindow .bettingBox.active .arrow_ic {
+  background: url("../images/icon/arrow_b.png") no-repeat;
+  background-size: contain;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: #19202a;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+html body main {
+  width: 100%;
+  height: 100%;
+  padding: 10.5vw 0 13.8vw;
+  box-sizing: border-box;
+}
+html body main.innerIndex {
+  display: flex;
+  flex-direction: column;
+}
+html body .loginWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 9vw;
+}
+html body .loginWrap .logo {
+  margin: 21vw 0 16.5vw;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 7vw;
+}
+html body .loginWrap .inputBox {
+  width: 100%;
+  height: auto;
+}
+html body .loginWrap .inputBox .btnBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+html body .loginWrap .inputBox .btnBox button {
+  width: 22vw;
+  height: 6.5vw;
+}
+html body .loginWrap .inputBox .btnBox button.goPC {
+  background: #d4dbe6;
+  border-radius: 1vw;
+  border: solid 1px #ffffff;
+  color: #31425b;
+  font-size: 3.2vw;
+  font-weight: bold;
+}
+html body .loginWrap .inputBox .btnBox button.record {
+  background: #3b73c2;
+  border-radius: 1vw;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  font-size: 3.2vw;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+html body .loginWrap .inputBox label {
+  display: block;
+  position: relative;
+  margin-bottom: 2vw;
+}
+html body .loginWrap .inputBox label.checkBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8vw;
+}
+html body .loginWrap .inputBox label.checkBox .check {
+  width: 4.5vw;
+  height: 4.5vw;
+}
+html body .loginWrap .inputBox label.checkBox p {
+  padding-left: 2vw;
+  font-size: 2vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ff8207;
+}
+html body .loginWrap .inputBox label i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2.5vw;
+  width: 5vw;
+  height: 5.3vw;
+}
+html body .loginWrap .inputBox label i.acc_ic {
+  background-position-y: 0;
+}
+html body .loginWrap .inputBox label i.pass_ic {
+  background-position-y: 100%;
+}
+html body .loginWrap .inputBox label input:not(.check) {
+  width: 100%;
+  height: 11vw;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+  padding-left: 9vw;
+}
+html body .loginWrap .inputBox label input:not(.check)::placeholder {
+  color: #a8b0be;
+}
+html body .loginWrap .slip {
+  width: 100%;
+  height: 11vw;
+  border-radius: 1.5vw;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5vw;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, #ffcc41 0%, #feb300 100%);
+}
+html body .loginWrap .slip p {
+  color: #212832;
+}
+html body .loginWrap .slip .bar {
+  background: linear-gradient(to right, #ffcc41 0%, #feb300 100%);
+  box-shadow: 3px 0 10px 0 #0000003f;
+}
+html body .loginWrap .slip p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+  font-weight: bold;
+  z-index: 10;
+}
+html body .loginWrap .slip .bar {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1.5vw;
+}
+html body .loginWrap .slip .bar::before {
+  content: "";
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2vw;
+}
+html body header {
+  width: 100%;
+  height: 10.5vw;
+  background: #feb300;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 5vw 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  z-index: 100;
+}
+html body header .logo {
+  width: auto;
+  height: auto;
+  font-size: 5vw;
+  font-weight: bold;
+  color: #212832;
+}
+html body header .iconBox {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+html body header .iconBox i {
+  width: 5vw;
+  height: 5vw;
+}
+html body header .iconBox i.msg_ic {
+  width: 4.5vw;
+  height: 4.5vw;
+  position: relative;
+}
+html body header .iconBox i.msg_ic.active::before {
+  content: "";
+  position: absolute;
+  width: 1.7vw;
+  height: 1.7vw;
+  background: #b500f0;
+  border-radius: 1vw;
+  right: -1.5vw;
+  top: -1.5vw;
+}
+html body header .iconBox i.search_ic {
+  margin-left: 4.5vw;
+}
+html body header .iconBox i a {
+  width: 100%;
+  height: 100%;
+}
+html body header .btnBox {
+  width: auto;
+  height: auto;
+}
+html body header .btnBox a {
+  width: auto;
+  height: auto;
+  background: #3b73c2;
+  border-radius: 1vw;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  font-size: 3.2vw;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding: 2vw 1vw;
+}
+html body header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #212832;
+  font-size: 5vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+html body header .title .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 4px 0 4px;
+  border-color: #212832 transparent;
+  margin-left: 2vw;
+}
+html body header .backArrow {
+  width: 3vw;
+  height: 4vw;
+}
+html body .operate {
+  width: 100%;
+  height: auto;
+  margin-top: 3vw;
+  padding: 0 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+html body .operate .user {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+html body .operate .user .userName {
+  font-size: 3.7vw;
+  font-weight: bold;
+  color: #feb300;
+  margin-bottom: 2vw;
+}
+html body .operate .user .amount {
+  font-size: 5vw;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+html body .operate .user .amount i {
+  width: 4vw;
+  height: 4vw;
+  margin-left: 2vw;
+}
+html body .operate .btnBox {
+  width: auto;
+  height: auto;
+}
+html body .operate .btnBox ul {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+html body .operate .btnBox ul li {
+  width: auto;
+  height: auto;
+  margin: 0 3vw;
+}
+html body .operate .btnBox ul li:last-child {
+  margin-right: 1vw;
+}
+html body .operate .btnBox ul li a {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html body .operate .btnBox ul li a i {
+  width: 8vw;
+  height: 9vw;
+  margin-bottom: 1.5vw;
+}
+html body .operate .btnBox ul li a i.deposit_ic {
+  background-position-x: 0;
+}
+html body .operate .btnBox ul li a i.transfer_ic {
+  background-position-x: 50%;
+}
+html body .operate .btnBox ul li a i.withdrawal_ic {
+  background-position-x: 100%;
+}
+html body .operate .btnBox ul li a p {
+  font-size: 3.7vw;
+  font-weight: bold;
+  color: #feb300;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .mainList {
+  width: 100%;
+  height: calc(100% - 72.5vw);
+  display: flex;
+  padding: 0 3.5vw;
+  margin-top: 5vw;
+}
+html body .mainList .list {
+  width: 17.5vw;
+  height: 100%;
+  margin-right: 2vw;
+  flex-shrink: 0;
+}
+html body .mainList .list ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html body .mainList .list ul li {
+  width: 100%;
+  height: 25%;
+  margin-bottom: 2.5vw;
+  border-radius: 2vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #3d5261;
+  border: solid 1px #feb300;
+}
+html body .mainList .list ul li:active, html body .mainList .list ul li.active {
+  border-color: transparent;
+  padding-bottom: 1vw;
+  background: linear-gradient(to right, #e47100 0%, #fe8f00 13%, #feb300 30%, #ffcf3c 50%, #feb300 70%, #fe8f00 87%, #e47100 100%);
+}
+html body .mainList .list ul li:active::before, html body .mainList .list ul li.active::before {
+  background: linear-gradient(to top, #feb300 0%, #ffcc41 100%);
+}
+html body .mainList .list ul li:active .title,
+html body .mainList .list ul li:active .num, html body .mainList .list ul li.active .title,
+html body .mainList .list ul li.active .num {
+  color: #212832;
+}
+html body .mainList .list ul li .title {
+  color: #feb300;
+}
+html body .mainList .list ul li .num {
+  color: #ffcc41;
+}
+html body .mainList .list ul li:active::before, html body .mainList .list ul li.active::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 2px);
+  height: 100%;
+  left: -1px;
+  bottom: 1vw;
+  border-radius: 2vw;
+}
+html body .mainList .list ul li .title {
+  font-size: 3.2vw;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1vw;
+}
+html body .mainList .list ul li .num {
+  font-size: 4.3vw;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+html body .mainList .gameBox {
+  width: 75vw;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .mainList .gameBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .mainList .gameBox ul li {
+  width: 100%;
+  height: 27vw;
+  margin-bottom: 2.5vw;
+  position: relative;
+}
+html body .mainList .gameBox ul li:last-child {
+  margin-bottom: 4vw;
+}
+html body .mainList .gameBox ul li.goSoccer .img {
+  background-position-x: 0;
+}
+html body .mainList .gameBox ul li.goSoccer a::after {
+  background-position-x: 0;
+}
+html body .mainList .gameBox ul li.goBasketball .img {
+  background-position-x: 50%;
+}
+html body .mainList .gameBox ul li.goBasketball a::after {
+  background-position-x: 50%;
+}
+html body .mainList .gameBox ul li.goEsports .img {
+  background-position-x: 100%;
+}
+html body .mainList .gameBox ul li.goEsports a::after {
+  background-position-x: 100%;
+}
+html body .mainList .gameBox ul li a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #feb300;
+  border-radius: 2vw;
+  background: linear-gradient(to top, #28354b 0%, #3a4b67 100%);
+}
+html body .mainList .gameBox ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 75%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to top, #394b67 0%, #28354b 100%);
+  -webkit-clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
+          clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
+}
+html body .mainList .gameBox ul li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44vw;
+  height: 10vw;
+}
+html body .mainList .gameBox ul li a .top,
+html body .mainList .gameBox ul li a .bottom {
+  width: 14vw;
+  height: 14vw;
+  position: absolute;
+  top: -7vw;
+  left: -7vw;
+  transform: rotate(45deg);
+  background: linear-gradient(-45deg, #394b67 0%, #506687 100%);
+  border: solid 1px #feb300;
+}
+html body .mainList .gameBox ul li a .top::before {
+  content: "";
+  position: absolute;
+  right: 1.5vw;
+  bottom: 5.5vw;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 7vw;
+  transform: rotate(-45deg);
+  background: linear-gradient(to top, #feb300 0%, #ffcc41 100%);
+  box-shadow: 0 2px 5px 0 #00000080;
+}
+html body .mainList .gameBox ul li a .bottom {
+  top: unset;
+  left: unset;
+  right: -7vw;
+  bottom: -7vw;
+}
+html body .mainList .gameBox ul li a .wordBox {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+html body .mainList .gameBox ul li a .wordBox .title {
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+  color: #feb300;
+}
+html body .mainList .gameBox ul li a .wordBox .num {
+  font-size: 7vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+  color: #ffffff;
+}
+html body .mainList .gameBox ul li a .wordBox .remind {
+  font-size: 3vw;
+  font-weight: bold;
+  color: #ffcc41;
+  letter-spacing: 1px;
+}
+html body .mainList .gameBox ul li .img {
+  position: absolute;
+  bottom: -1px;
+  right: 3vw;
+  width: 30vw;
+  height: 26vw;
+  z-index: 1;
+  pointer-events: none;
+}
+html body footer {
+  width: 100%;
+  height: 13.8vw;
+  background: #27303c;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 5vw 5vw 0 0;
+  border-top: solid 2px #feb300;
+  padding: 0 4vw;
+  z-index: 10;
+  box-shadow: 0 -10px 10px 0 #0000001e;
+}
+html body footer.inner ul li:active a i, html body footer.inner ul li.active a i {
+  background-position-y: 0;
+}
+html body footer.inner ul li:active a p, html body footer.inner ul li.active a p {
+  color: #9ea5af;
+}
+html body footer.inner ul li a i {
+  width: 5.7vw;
+}
+html body footer ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+html body footer ul li {
+  width: 20%;
+  height: 100%;
+  padding-top: 1.2vw;
+}
+html body footer ul li:active a i, html body footer ul li.active a i {
+  background-position-y: 100%;
+}
+html body footer ul li:active a p, html body footer ul li.active a p {
+  color: #feb300;
+}
+html body footer ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body footer ul li a i {
+  width: 6.2vw;
+  height: 5.2vw;
+  margin-bottom: 1vw;
+}
+html body footer ul li a i.home_ic, html body footer ul li a i.teach_ic {
+  background-position-x: 0;
+}
+html body footer ul li a i.result_ic, html body footer ul li a i.control_ic {
+  background-position-x: 25%;
+}
+html body footer ul li a i.service_ic, html body footer ul li a i.nowBet_ic {
+  background-position-x: 50%;
+}
+html body footer ul li a i.record_ic, html body footer ul li a i.historyBet_ic {
+  background-position-x: calc(75% - 1px);
+}
+html body footer ul li a i.member_ic, html body footer ul li a i.refresh_ic {
+  background-position-x: 100%;
+}
+html body footer ul li a p {
+  font-size: 3.7vw;
+  font-weight: bold;
+  color: #9ea5af;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .ad {
+  width: 100%;
+  height: auto;
+  padding: 2vw 3.5vw;
+  flex-shrink: 0;
+}
+html body .ad .single-item {
+  margin: 0;
+  border-radius: 2.5vw;
+  overflow: hidden;
+}
+html body .ad .single-item .slick-list {
+  height: 40.5vw;
+}
+html body .ad .single-item .slick-list .slick-track {
+  height: 100%;
+}
+html body .ad .single-item .slick-list .slick-track img {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+html body .marqueeWrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0 3.5vw;
+  flex-shrink: 0;
+}
+html body .marqueeWrap .marquee {
+  width: 79%;
+  height: 6vw;
+  background: #3d5261;
+  border-radius: 3vw;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 1vw;
+  overflow: hidden;
+  margin-right: 2vw;
+}
+html body .marqueeWrap .marquee i {
+  width: 5vw;
+  height: 4vw;
+  margin-right: 1vw;
+  flex-shrink: 0;
+}
+html body .marqueeWrap .marquee pre {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+html body .marqueeWrap .marquee pre p {
+  display: inline-block;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #ffcc41;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: marquee 10s linear 0s infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+html body .marqueeWrap .chartBtn {
+  width: 18vw;
+  height: 6vw;
+  background: linear-gradient(to top, #feb300 0%, #ffcc41 100%);
+  border-radius: 1.5vw;
+  color: #212832;
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .marqueeWrap .chartBtn:active, html body .marqueeWrap .chartBtn.active {
+  background: linear-gradient(to bottom, #feb300 0%, #ffcc41 100%);
+}
+html body .marqueeWrap .chartBtn i {
+  width: 3vw;
+  height: 4vw;
+  margin-right: 1vw;
+}
+@media only screen and (max-width: 320px) {
+  html body .mainList .list {
+    width: 19.5vw;
+  }
+}
+html body .filter {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000b7;
+  z-index: 99;
+  display: none;
+}
+html body .filter.display {
+  display: block;
+}
+html body .filter .mainWrapList {
+  width: 100%;
+  height: 28.5vw;
+  background: #2f3f58;
+  border-bottom: solid 1px #feb300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 10.5vw;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+html body .filter .mainWrapList.display {
+  display: flex;
+}
+html body .filter .mainWrapList .btnBox {
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+}
+html body .filter .mainWrapList .btnBox button {
+  width: 23%;
+  height: 7.5vw;
+  background: #3d5261;
+  border-radius: 1vw;
+  border: solid 1px #feb300;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .filter .mainWrapList .btnBox button:active, html body .filter .mainWrapList .btnBox button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .filter .setMenu {
+  width: 100%;
+  height: 73vw;
+  background: #2f3f58;
+  border-top: solid 1px #feb300;
+  padding: 2vw 2.5vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+html body .filter .setMenu.display {
+  display: block;
+}
+html body .filter .setMenu .rowBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5vw;
+}
+html body .filter .setMenu .rowBox .title {
+  font-size: 3.7vw;
+  font-weight: bold;
+  color: #feb300;
+  margin-bottom: 1vw;
+}
+html body .filter .setMenu .rowBox .row {
+  width: 100%;
+  height: 8vw;
+  background: #19202a;
+  border-radius: 10vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+html body .filter .setMenu .rowBox .row.active p {
+  color: #ffffff;
+}
+html body .filter .setMenu .rowBox .row.active p:nth-of-type(1) {
+  color: #97a0ad;
+}
+html body .filter .setMenu .rowBox .row p {
+  color: #97a0ad;
+}
+html body .filter .setMenu .rowBox .row p:nth-of-type(1) {
+  color: #ffffff;
+}
+html body .filter .setMenu .rowBox .row .bar {
+  background: #567ebb;
+}
+html body .filter .setMenu .rowBox .row.active .bar {
+  left: 51%;
+}
+html body .filter .setMenu .rowBox .row p {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.7vw;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s all;
+}
+html body .filter .setMenu .rowBox .row .bar {
+  width: 48%;
+  height: 82%;
+  border-radius: 10vw;
+  position: absolute;
+  transition: 0.3s all;
+  left: 1%;
+}
+html body .filter .setMenu .check {
+  width: 100%;
+  height: 12vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 0;
+}
+html body .filter .setMenu .check:active, html body .filter .setMenu .check.active {
+  background: #ffffff;
+}
+html body .filter .betWindow {
+  width: 88%;
+  height: auto;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #25344b;
+  border: solid 1px #feb300;
+  border-radius: 2vw;
+  display: none;
+}
+html body .filter .betWindow.display {
+  display: block;
+}
+html body .filter .betWindow .cancelBtn {
+  position: absolute;
+  top: -10vw;
+  right: -2vw;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  border: solid 1px #feb300;
+  background: #25344b;
+}
+html body .filter .betWindow .cancelBtn::before, html body .filter .betWindow .cancelBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 4vw;
+  background: #feb300;
+  border-radius: 1vw;
+}
+html body .filter .betWindow .cancelBtn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .filter .betWindow .cancelBtn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .filter .betWindow .top {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .filter .betWindow .top .title {
+  width: 100%;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .filter .betWindow .top .title p {
+  position: relative;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+html body .filter .betWindow .top .title i {
+  position: relative;
+  width: 1.5vw;
+  height: 0;
+  margin: 0 2vw;
+}
+html body .filter .betWindow .top .title i::before, html body .filter .betWindow .top .title i::after {
+  content: "";
+  position: absolute;
+  width: 0.5vw;
+  height: 3.5vw;
+  top: 0;
+  transform: translateY(-38%) rotate(15deg);
+  background: #ff8207;
+  border-radius: 1vw;
+}
+html body .filter .betWindow .top .title i::before {
+  right: 0;
+}
+html body .filter .betWindow .top .title i::after {
+  left: 0;
+}
+html body .filter .betWindow .top .smallTitle {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3vw;
+}
+html body .filter .betWindow .top .teamBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3vw 0;
+}
+html body .filter .betWindow .top .teamBox .first {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 4vw;
+  margin-bottom: 2vw;
+}
+html body .filter .betWindow .top .teamBox .score {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3vw;
+  margin-bottom: 2vw;
+}
+html body .filter .betWindow .top .teamBox .second {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 4vw;
+}
+html body .filter .betWindow .top .teamBox .second span {
+  color: #ffffff;
+  margin-left: 2vw;
+}
+html body .filter .betWindow .mid {
+  width: 100%;
+  height: auto;
+  padding: 2vw 3.5vw;
+}
+html body .filter .betWindow .mid .box {
+  width: 100%;
+  height: 14vw;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  background: linear-gradient(to right, #feb300 0%, #fe9b00 100%);
+}
+html body .filter .betWindow .mid .box .title {
+  color: #212832;
+  font-size: 3.4vw;
+  font-weight: bold;
+}
+html body .filter .betWindow .mid .box .num {
+  color: #212832;
+  font-size: 4.5vw;
+  font-weight: bold;
+}
+html body .filter .betWindow .mid .box .num span {
+  color: #ff0909;
+}
+html body .filter .betWindow .bottom {
+  width: 100%;
+  height: auto;
+  background: #3a4f6f;
+  padding: 0 3.5vw;
+}
+html body .filter .betWindow .bottom .title {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .betWindow .bottom .title span {
+  color: #ffffff;
+  margin-left: 1.5vw;
+}
+html body .filter .betWindow .bottom .inputBox {
+  width: 100%;
+  height: 9vw;
+  position: relative;
+}
+html body .filter .betWindow .bottom .inputBox input {
+  width: 100%;
+  height: 100%;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+}
+html body .filter .betWindow .bottom .inputBox input::placeholder {
+  color: #a8b0be;
+}
+html body .filter .betWindow .bottom .inputBox p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2vw;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .filter .betWindow .bottom .btnBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2vw 0 5vw;
+}
+html body .filter .betWindow .bottom .btnBox button {
+  width: 19.5vw;
+  height: 9vw;
+  background: #5c7293;
+  border-radius: 1vw;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+  margin-bottom: 1vw;
+}
+html body .filter .betWindow .bottom .btnBox button:active, html body .filter .betWindow .bottom .btnBox button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .filter .betWindow .bottom .btnBox button:last-child {
+  width: 39.8vw;
+}
+html body .filter .betWindow .bottom .infoBox {
+  width: 100%;
+  height: auto;
+}
+html body .filter .betWindow .bottom .infoBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .filter .betWindow .bottom .infoBox ul li {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+html body .filter .betWindow .bottom .infoBox ul li .kind {
+  width: 50%;
+  color: #feb300;
+  border-right: solid 1px #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 3vw;
+}
+html body .filter .betWindow .bottom .infoBox ul li .kind:last-child {
+  margin: 0;
+}
+html body .filter .betWindow .bottom .infoBox ul li .num {
+  width: 50%;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  text-align: right;
+}
+html body .filter .betWindow .bottom .check {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1vw;
+}
+html body .filter .betWindow .bottom .check input {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 1.5vw;
+}
+html body .filter .betWindow .bottom .check p {
+  color: #ff8207;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-left: 2vw;
+}
+html body .filter .betWindow .checkBtn {
+  width: 100%;
+  height: 12vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  border-radius: 0 0 2vw 2vw;
+}
+html body .filter .betWindow .checkBtn:active, html body .filter .betWindow .checkBtn.active {
+  background: #ffffff;
+}
+html body .filter .ballType {
+  position: absolute;
+  top: 23vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96%;
+  height: auto;
+  background: #44608a;
+  border: solid 1px #aecbdf;
+  border-radius: 2vw;
+  display: none;
+}
+html body .filter .ballType.display {
+  display: block;
+}
+html body .filter .ballType::before {
+  content: "";
+  position: absolute;
+  top: -1.7vw;
+  left: 11vw;
+  transform: rotate(-45deg);
+  width: 3vw;
+  height: 3vw;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  border-color: #aecbdf;
+  background: #283d5c;
+}
+html body .filter .ballType .title {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  background: #283d5c;
+  border-radius: 2vw 2vw 0 0;
+}
+html body .filter .ballType .title i {
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  right: 2vw;
+}
+html body .filter .ballType .title i::before, html body .filter .ballType .title i::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 4vw;
+  background: #feb300;
+  border-radius: 1vw;
+}
+html body .filter .ballType .title i::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .filter .ballType .title i::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .filter .ballType .content {
+  width: 100%;
+  height: auto;
+  padding: 2vw 2vw 0.5vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .filter .ballType .content button {
+  min-width: 17vw;
+  height: 8vw;
+  background: #3d5261;
+  border-radius: 1vw;
+  border: solid 1px #feb300;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5vw 1.5vw 0;
+  padding: 0 2vw;
+}
+html body .filter .ballType .content button:active, html body .filter .ballType .content button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .filter .timeType {
+  position: absolute;
+  top: 23vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96%;
+  height: auto;
+  background: #44608a;
+  border: solid 1px #aecbdf;
+  border-radius: 2vw;
+  display: none;
+}
+html body .filter .timeType.display {
+  display: block;
+}
+html body .filter .timeType::before {
+  content: "";
+  position: absolute;
+  top: -1.7vw;
+  left: 37.5vw;
+  transform: rotate(-45deg);
+  width: 3vw;
+  height: 3vw;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  border-color: #aecbdf;
+  background: #283d5c;
+}
+html body .filter .timeType .title {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  background: #283d5c;
+  border-radius: 2vw 2vw 0 0;
+}
+html body .filter .timeType .title i {
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  right: 2vw;
+}
+html body .filter .timeType .title i::before, html body .filter .timeType .title i::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 4vw;
+  background: #feb300;
+  border-radius: 1vw;
+}
+html body .filter .timeType .title i::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .filter .timeType .title i::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .filter .timeType .content {
+  width: 100%;
+  height: auto;
+  padding: 2vw 2vw 0.5vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .filter .timeType .content button {
+  min-width: 17.1vw;
+  height: 8vw;
+  background: #3d5261;
+  border-radius: 1vw;
+  border: solid 1px #feb300;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5vw 1.5vw 0;
+  padding: 0 2vw;
+}
+html body .filter .timeType .content button:active, html body .filter .timeType .content button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .filter .timeType .content button:nth-of-type(5n) {
+  margin-right: 0;
+}
+html body .filter .betListWindow {
+  width: 95%;
+  height: auto;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #25344b;
+  border: solid 1px #feb300;
+  border-radius: 2vw;
+  display: none;
+}
+html body .filter .betListWindow.display {
+  display: block;
+}
+html body .filter .betListWindow .cancelBtn {
+  position: absolute;
+  top: -10vw;
+  right: -2vw;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  border: solid 1px #feb300;
+  background: #25344b;
+}
+html body .filter .betListWindow .cancelBtn::before, html body .filter .betListWindow .cancelBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 4vw;
+  background: #feb300;
+  border-radius: 1vw;
+}
+html body .filter .betListWindow .cancelBtn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .filter .betListWindow .cancelBtn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .filter .betListWindow .title {
+  width: 100%;
+  height: 9vw;
+  background: #25344b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2vw 2vw 0 0;
+}
+html body .filter .betListWindow .title p {
+  color: #feb300;
+  font-size: 4vw;
+  font-weight: bold;
+}
+html body .filter .betListWindow .title .num {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  background: #feb300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2vw;
+}
+html body .filter .betListWindow .title .num span {
+  color: #212832;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .betListWindow .flowBox {
+  width: 100%;
+  height: 60vh;
+  overflow-y: auto;
+}
+html body .filter .betListWindow .flowBox .content {
+  width: 100%;
+  height: auto;
+  padding: 1vw;
+  background: #44608a;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox {
+  width: 100%;
+  height: auto;
+  border: solid 1px #5c6d79;
+  height: calc(15vw - 2px);
+  overflow: hidden;
+  margin-bottom: 1vw;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox.active {
+  height: auto;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox.active .title {
+  background: #feb300;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox.active .title p {
+  color: #212832;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox.active .title p i {
+  width: 2vw;
+  height: 3.2vw;
+  transform: rotate(90deg);
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .outerCnt {
+  width: 100%;
+  height: 7vw;
+  background: #25344a;
+  border-top: solid 1px #5c6d79;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+  display: none;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .outerCnt.display {
+  display: flex;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .outerCnt .smallTitle {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .outerCnt .num {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .outerCnt .num span {
+  color: #ffcc41;
+  font-weight: bold;
+  font-size: 3.7vw;
+  padding-left: 4vw;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .title {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  justify-content: space-between;
+  background: #212832;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .title p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .title p i {
+  width: 3vw;
+  height: 2vw;
+  margin-left: 3vw;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul {
+  width: 100%;
+  height: auto;
+  background: #212832;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li {
+  display: flex;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li:not(:nth-of-type(1)) div:nth-of-type(1), html body .filter .betListWindow .flowBox .content .bettingBox ul li:not(:nth-of-type(1)) div:nth-of-type(3) {
+  width: 25%;
+  flex-shrink: 0;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li:last-child div {
+  border-bottom: none;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li:last-child div:nth-of-type(3) {
+  width: 33%;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li:last-child div:nth-of-type(4) {
+  width: 25%;
+  flex-shrink: 0;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li div {
+  width: 100%;
+  height: 100%;
+  padding: 1.5vw;
+  border: solid 1px #5c6d79;
+  border-width: 0 1px 1px 0;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li div:last-child {
+  border-right: none;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li div.name {
+  background: #25344a;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li div.name p {
+  text-align: center;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li div p {
+  width: 100%;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.4vw;
+  line-height: 5vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox ul li div p span {
+  color: #ffffff;
+}
+html body .filter .betListWindow .flowBox .content .bettingBox .title {
+  border-radius: 0;
+}
+html body .filter .betListWindow .lastBox {
+  width: 100%;
+  height: 15vw;
+  border-top: solid 1px #5c6d79;
+  display: flex;
+}
+html body .filter .betListWindow .lastBox div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .filter .betListWindow .lastBox div:nth-of-type(1) {
+  position: relative;
+}
+html body .filter .betListWindow .lastBox div:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 50%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #5c6d79;
+}
+html body .filter .betListWindow .lastBox div .top {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+html body .filter .betListWindow .lastBox div .num {
+  color: #ffcc41;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .goWindow {
+  width: 88%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #25344b;
+  border: solid 1px #feb300;
+  border-radius: 2vw;
+  display: none;
+}
+html body .filter .goWindow.display {
+  display: block;
+}
+html body .filter .goWindow .cancelBtn {
+  position: absolute;
+  top: -10vw;
+  right: -2vw;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  border: solid 1px #feb300;
+  background: #25344b;
+}
+html body .filter .goWindow .cancelBtn::before, html body .filter .goWindow .cancelBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 4vw;
+  background: #feb300;
+  border-radius: 1vw;
+}
+html body .filter .goWindow .cancelBtn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .filter .goWindow .cancelBtn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .filter .goWindow .title {
+  width: 100%;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 2vw 2vw 0 0;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .filter .goWindow .title p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .goWindow .content {
+  width: 100%;
+  height: auto;
+  padding: 0 6vw;
+}
+html body .filter .goWindow .content .text {
+  width: 100%;
+  height: auto;
+  padding: 4vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .filter .goWindow .content .text p {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .goWindow .content button {
+  width: 100%;
+  height: 9vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 3vw 0;
+}
+html body .filter .goWindow .content button:active, html body .filter .goWindow .content button.active {
+  background: #ffffff;
+}
+html body .filter .calc {
+  width: 88%;
+  height: auto;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #25344b;
+  border: solid 1px #feb300;
+  border-radius: 2vw;
+  display: none;
+}
+html body .filter .calc.display {
+  display: block;
+}
+html body .filter .calc .cancelBtn {
+  position: absolute;
+  top: -10vw;
+  right: -2vw;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  border: solid 1px #feb300;
+  background: #25344b;
+}
+html body .filter .calc .cancelBtn::before, html body .filter .calc .cancelBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 4vw;
+  background: #feb300;
+  border-radius: 1vw;
+}
+html body .filter .calc .cancelBtn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .filter .calc .cancelBtn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .filter .calc .title {
+  width: 100%;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 2vw 2vw 0 0;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .filter .calc .title p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .calc .content {
+  width: 96%;
+  height: auto;
+  border-radius: 2vw;
+  overflow: hidden;
+  border: solid 1px transparent;
+  margin: 2% auto;
+  border-color: #5c6d79;
+}
+html body .filter .calc .content.active {
+  height: auto;
+  border-color: #5c6d79;
+}
+html body .filter .calc .content.active .title {
+  background: #feb300;
+  color: #212832;
+}
+html body .filter .calc .content.active .title i {
+  width: 2vw;
+  height: 3vw;
+  transform: rotate(90deg);
+}
+html body .filter .calc .content .title {
+  width: 100%;
+  height: 7.5vw;
+  background: #31425b;
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .filter .calc .content .title i {
+  width: 3vw;
+  height: 2vw;
+  transition: 0.3s all;
+}
+html body .filter .calc .content table {
+  width: 100%;
+  height: auto;
+}
+html body .filter .calc .content table tr {
+  background: #25344b;
+}
+html body .filter .calc .content table tr:nth-of-type(even) {
+  background: #31425b;
+}
+html body .filter .calc .content table tr:last-child td {
+  border-bottom: none;
+}
+html body .filter .calc .content table tr th,
+html body .filter .calc .content table tr td {
+  vertical-align: middle;
+  border: solid 1px #5c6d79;
+  border-width: 0 1px 1px 0;
+}
+html body .filter .calc .content table tr th:last-child,
+html body .filter .calc .content table tr td:last-child {
+  border-right: none;
+}
+html body .filter .calc .content table tr th p,
+html body .filter .calc .content table tr td p {
+  width: 100%;
+  text-align: center;
+  color: #ffcc41;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .calc .content table tr th p span,
+html body .filter .calc .content table tr td p span {
+  color: #ffffff;
+}
+html body .filter .calc .content table tr th {
+  height: 7vw;
+}
+html body .filter .calc .content table tr td {
+  width: 22%;
+  height: 7vw;
+}
+html body .filter .calc .content table tr td:nth-of-type(1) {
+  width: 12%;
+}
+html body .filter .calc .content table tr td:nth-of-type(1) p {
+  color: #feb300;
+}
+html body .filter .calc .content table tr td p {
+  color: #ffffff;
+}
+html body .filter .calc .content table tr th,
+html body .filter .calc .content table tr td {
+  border-right: none;
+}
+html body .filter .calc .content table tr td {
+  height: 8vw;
+  text-align: center;
+  padding: 1vw 0;
+}
+html body .filter .calc .content table tr td input {
+  width: 80%;
+  height: 100%;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+}
+html body .filter .calc .content table tr td input::placeholder {
+  color: #a8b0be;
+}
+html body .filter .calc .content table tr td select {
+  width: 80%;
+  height: 100%;
+  background-color: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+  background-color: #1b2739;
+  background-image: linear-gradient(45deg, transparent 50%, #feb300 0), linear-gradient(135deg, #feb300 50%, transparent 0);
+  background-position: calc(100% - 4vw) calc(50%), calc(100% - 3vw) calc(54%);
+  background-size: 6px 5px, 5px 6px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+          appearance: none;
+}
+html body .filter .calc .result {
+  width: 100%;
+  height: 9vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+}
+html body .filter .calc .result p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .filter .calc .result input {
+  width: 25vw;
+  height: 7vw;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+}
+html body .filter .calc .result input::placeholder {
+  color: #a8b0be;
+}
+html body .filter .calc .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2% auto 5%;
+}
+html body .filter .calc .check:active, html body .filter .calc .check.active {
+  background: #ffffff;
+}
+html body .filter .noviceWindow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: none;
+}
+html body .filter .noviceWindow.display {
+  display: flex;
+}
+html body .filter .noviceWindow.basic div:nth-of-type(1) .next, html body .filter .noviceWindow.basic div:nth-of-type(2) .next, html body .filter .noviceWindow.basic div:nth-of-type(4) .next {
+  top: 70%;
+}
+html body .filter .noviceWindow.basic div:nth-of-type(3) .cancelBtn {
+  left: 2vw;
+}
+html body .filter .noviceWindow.basic div:nth-of-type(3) .next {
+  top: 70%;
+}
+html body .filter .noviceWindow.basic div:nth-of-type(4) .cancel {
+  top: 40%;
+}
+html body .filter .noviceWindow.single div:nth-of-type(1) .next, html body .filter .noviceWindow.single div:nth-of-type(2) .next, html body .filter .noviceWindow.single div:nth-of-type(3) .next, html body .filter .noviceWindow.single div:nth-of-type(7) .next {
+  top: 75%;
+}
+html body .filter .noviceWindow.single div:nth-of-type(4) .next, html body .filter .noviceWindow.single div:nth-of-type(5) .next, html body .filter .noviceWindow.single div:nth-of-type(6) .next {
+  top: 35%;
+}
+html body .filter .noviceWindow.single div:nth-of-type(8) .play {
+  top: 54%;
+}
+html body .filter .noviceWindow.single div:nth-of-type(8) .cancel {
+  top: 62%;
+}
+html body .filter .noviceWindow.single div:nth-of-type(8) .again {
+  top: 70%;
+}
+html body .filter .noviceWindow.multi div:nth-of-type(1) .next, html body .filter .noviceWindow.multi div:nth-of-type(4) .next, html body .filter .noviceWindow.multi div:nth-of-type(6) .next, html body .filter .noviceWindow.multi div:nth-of-type(8) .next {
+  top: 40%;
+}
+html body .filter .noviceWindow.multi div:nth-of-type(2) .next, html body .filter .noviceWindow.multi div:nth-of-type(3) .next, html body .filter .noviceWindow.multi div:nth-of-type(9) .next {
+  top: 70%;
+}
+html body .filter .noviceWindow.multi div:nth-of-type(5) .next {
+  top: 30%;
+}
+html body .filter .noviceWindow.multi div:nth-of-type(7) .next {
+  top: 25%;
+}
+html body .filter .noviceWindow.multi div:nth-of-type(10) .play {
+  top: 54%;
+}
+html body .filter .noviceWindow.multi div:nth-of-type(10) .cancel {
+  top: 62%;
+}
+html body .filter .noviceWindow.multi div:nth-of-type(10) .again {
+  top: 70%;
+}
+html body .filter .noviceWindow.bet div:nth-of-type(1) .next {
+  top: 40%;
+}
+html body .filter .noviceWindow.bet div:nth-of-type(2) .next {
+  top: 70%;
+}
+html body .filter .noviceWindow.bet div:nth-of-type(3) .cancel {
+  top: 70%;
+}
+html body .filter .noviceWindow div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+  overflow-y: auto;
+}
+html body .filter .noviceWindow div.display {
+  display: block;
+}
+html body .filter .noviceWindow div img {
+  width: 100%;
+}
+html body .filter .noviceWindow div .cancelBtn {
+  position: absolute;
+  top: 5vw;
+  right: 2vw;
+  width: 9vw;
+  height: 9vw;
+  border-radius: 50%;
+  border: solid 1px #ffffff;
+  background: none;
+}
+html body .filter .noviceWindow div .cancelBtn::before, html body .filter .noviceWindow div .cancelBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 5vw;
+  background: #ffffff;
+  border-radius: 1vw;
+}
+html body .filter .noviceWindow div .cancelBtn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .filter .noviceWindow div .cancelBtn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .filter .noviceWindow div button:not(.cancelBtn) {
+  width: 70vw;
+  height: 14vw;
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00000080;
+  border-radius: 10vw;
+  border: solid 1px #ffffff;
+}
+html body .filter .noviceWindow div button:not(.cancelBtn).play {
+  background: #feb300;
+  color: #212832;
+}
+html body .chartWrap {
+  width: 100%;
+  height: 100%;
+  padding: 0 1vw;
+  display: flex;
+  flex-direction: column;
+}
+html body .chartWrap .btnBox {
+  width: 100%;
+  height: auto;
+  margin: 1vw 0 2vw;
+  display: flex;
+  flex-shrink: 0;
+}
+html body .chartWrap .btnBox button {
+  width: 20%;
+  height: 8vw;
+  margin-right: 1vw;
+  background: #2f3640;
+  border-radius: 1vw;
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .chartWrap .btnBox button:active, html body .chartWrap .btnBox button.active {
+  background: #44608a;
+  color: #ffffff;
+}
+html body .chartWrap .btnBox button:last-child {
+  margin: 0;
+}
+html body .chartWrap .listBox {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .chartWrap .listBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .chartWrap .listBox ul li {
+  width: 100%;
+  height: 7.5vw;
+  border-radius: 2vw;
+  overflow: hidden;
+  border: solid 1px transparent;
+  margin-bottom: 2vw;
+}
+html body .chartWrap .listBox ul li.active {
+  height: auto;
+  border-color: #5c6d79;
+}
+html body .chartWrap .listBox ul li.active .title {
+  background: #feb300;
+  color: #212832;
+}
+html body .chartWrap .listBox ul li.active .title i {
+  width: 2vw;
+  height: 3vw;
+  transform: rotate(90deg);
+}
+html body .chartWrap .listBox ul li .title {
+  width: 100%;
+  height: 7.5vw;
+  background: #31425b;
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .chartWrap .listBox ul li .title i {
+  width: 3vw;
+  height: 2vw;
+  transition: 0.3s all;
+}
+html body .chartWrap .listBox ul li table {
+  width: 100%;
+  height: auto;
+}
+html body .chartWrap .listBox ul li table tr {
+  background: #25344b;
+}
+html body .chartWrap .listBox ul li table tr:nth-of-type(even) {
+  background: #31425b;
+}
+html body .chartWrap .listBox ul li table tr:last-child td {
+  border-bottom: none;
+}
+html body .chartWrap .listBox ul li table tr th,
+html body .chartWrap .listBox ul li table tr td {
+  vertical-align: middle;
+  border: solid 1px #5c6d79;
+  border-width: 0 1px 1px 0;
+}
+html body .chartWrap .listBox ul li table tr th:last-child,
+html body .chartWrap .listBox ul li table tr td:last-child {
+  border-right: none;
+}
+html body .chartWrap .listBox ul li table tr th p,
+html body .chartWrap .listBox ul li table tr td p {
+  width: 100%;
+  text-align: center;
+  color: #ffcc41;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .chartWrap .listBox ul li table tr th p span,
+html body .chartWrap .listBox ul li table tr td p span {
+  color: #ffffff;
+}
+html body .chartWrap .listBox ul li table tr th {
+  height: 7vw;
+}
+html body .chartWrap .listBox ul li table tr td {
+  width: 22%;
+  height: 7vw;
+}
+html body .chartWrap .listBox ul li table tr td:nth-of-type(1) {
+  width: 12%;
+}
+html body .chartWrap .listBox ul li table tr td:nth-of-type(1) p {
+  color: #feb300;
+}
+html body .chartWrap .listBox ul li table tr td p {
+  color: #ffffff;
+}
+html body .mainWrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+html body .mainWrap .innerTopList {
+  width: 100%;
+  height: 18vw;
+  background: #2d3644;
+  position: relative;
+  padding: 1.5vw 3.5vw 3.5vw;
+  flex-shrink: 0;
+}
+html body .mainWrap .innerTopList::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10.5vw;
+  width: 100%;
+  height: 10.5vw;
+  background: #2d3644;
+}
+html body .mainWrap .innerTopList ul {
+  width: auto;
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+}
+html body .mainWrap .innerTopList ul li {
+  width: 18vw;
+  height: 100%;
+  border-radius: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 2vw 2vw 0 0;
+  font-weight: bold;
+  font-size: 3vw;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+html body .mainWrap .innerTopList ul li:active, html body .mainWrap .innerTopList ul li.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .mainWrap .innerTopList ul li:active .num, html body .mainWrap .innerTopList ul li.active .num {
+  color: #212832;
+}
+html body .mainWrap .innerTopList ul li .num {
+  color: #97a0ad;
+}
+html body .mainWrap .innerTopList ul li .num {
+  position: absolute;
+  right: 1vw;
+  top: 2vw;
+  font-size: 3vw;
+  font-weight: bold;
+}
+html body .mainWrap .innerTopList ul li i {
+  width: 6.5vw;
+  height: 5.5vw;
+  margin-bottom: 1vw;
+}
+html body .mainWrap .innerTopList ul li i.soccer_ic {
+  background-position-x: 0;
+}
+html body .mainWrap .innerTopList ul li i.basketball_ic {
+  background-position-x: 25%;
+}
+html body .mainWrap .innerTopList ul li i.horse_ic {
+  background-position-x: 50%;
+}
+html body .mainWrap .innerTopList ul li i.game_ic {
+  background-position-x: 75%;
+}
+html body .mainWrap .innerTopList ul li i.stock_ic {
+  background-position-x: 100%;
+}
+html body .mainWrap .nameType {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 1vw 2vw;
+  flex-shrink: 0;
+}
+html body .mainWrap .nameType .title {
+  color: #ffffff;
+  font-size: 3vw;
+  font-weight: bold;
+}
+html body .mainWrap .nameType .row {
+  width: 28vw;
+  height: 5.5vw;
+  background: #3d5261;
+  border-radius: 10vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+html body .mainWrap .nameType .row.old p {
+  color: #212832;
+}
+html body .mainWrap .nameType .row.old p:nth-of-type(1) {
+  color: #97a0ad;
+}
+html body .mainWrap .nameType .row.old .bar {
+  background: linear-gradient(to right, #00fd18 0%, #00db15 100%);
+}
+html body .mainWrap .nameType .row p {
+  color: #97a0ad;
+}
+html body .mainWrap .nameType .row p:nth-of-type(1) {
+  color: #212832;
+}
+html body .mainWrap .nameType .row .bar {
+  background: linear-gradient(to right, #ffcc41 0%, #feb300 100%);
+}
+html body .mainWrap .nameType .row.old .bar {
+  left: 52%;
+}
+html body .mainWrap .nameType .row p {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3vw;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s all;
+}
+html body .mainWrap .nameType .row .bar {
+  width: 45%;
+  height: 84%;
+  border-radius: 10vw;
+  position: absolute;
+  transition: 0.3s all;
+  left: 3%;
+}
+html body .mainWrap .typeBox {
+  width: 100%;
+  height: calc(100% - 26vw);
+  display: none;
+}
+html body .mainWrap .typeBox.display {
+  display: block;
+}
+html body .mainWrap .typeBox .gameWrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: none;
+}
+html body .mainWrap .typeBox .gameWrap.display {
+  display: block;
+}
+html body .mainWrap .typeBox .gameWrap .ing,
+html body .mainWrap .typeBox .gameWrap .ready {
+  width: 100%;
+  height: 7vw;
+  overflow: hidden;
+}
+html body .mainWrap .typeBox .gameWrap .ing.active,
+html body .mainWrap .typeBox .gameWrap .ready.active {
+  height: auto;
+}
+html body .mainWrap .typeBox .gameWrap .ing .titleTime,
+html body .mainWrap .typeBox .gameWrap .ready .titleTime {
+  width: 100%;
+  height: 7vw;
+  background: #2d3644;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  font-size: 3.7vw;
+  color: #4eff1f;
+  border-top: solid 1px #4eff1f;
+}
+html body .mainWrap .typeBox .gameWrap .ing .titleTime i,
+html body .mainWrap .typeBox .gameWrap .ready .titleTime i {
+  width: 4vw;
+  height: 4vw;
+  margin-right: 2vw;
+}
+html body .mainWrap .typeBox .gameWrap .ing .titleTime i.ready_ic,
+html body .mainWrap .typeBox .gameWrap .ready .titleTime i.ready_ic {
+  background-position-x: 100%;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox {
+  width: 98%;
+  height: auto;
+  margin: 1vw auto;
+  background: #2f3f58;
+  border: solid 1px #feb300;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .title,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .title {
+  width: 100%;
+  height: 6vw;
+  background: #455c80;
+  align-items: center;
+  padding: 0 2vw;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  display: none;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .title.display,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .title.display {
+  display: flex;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content:last-child,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content:last-child {
+  border: none;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more {
+  width: 100%;
+  height: auto;
+  padding: 1vw 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .liveBox,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .liveBox {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .liveBox i,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .liveBox i {
+  width: 5vw;
+  height: 4vw;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .liveBox i.tv_ic,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .liveBox i.tv_ic {
+  background-position-x: calc(100% - 1px);
+  margin-left: 1vw;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .liveBox p,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .liveBox p {
+  margin-left: 1.5vw;
+  font-size: 3vw;
+  color: #97a0ad;
+  display: flex;
+  align-items: center;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .liveBox p span,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .liveBox p span {
+  margin-left: 1.5vw;
+  display: block;
+  padding: 0 1vw 0.2vw;
+  border-radius: 1vw;
+  border: solid 1px #4eff1f;
+  color: #4eff1f;
+  font-size: 2vw;
+  font-weight: bold;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .listBox,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .listBox {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .listBox i,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .listBox i {
+  width: 1.5vw;
+  height: 2.3vw;
+  margin-left: 1vw;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .listBox p,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .listBox p {
+  font-size: 3vw;
+  font-weight: bold;
+  color: #ff8207;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .league,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .league {
+  width: 100%;
+  height: 6vw;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  align-items: center;
+  display: none;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .more .league.display,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .more .league.display {
+  display: flex;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .team,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .team {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .team p,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .team p {
+  font-size: 3.7vw;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .team p.right i,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .team p.right i {
+  background-position-x: 100%;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .team p.vs,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .team p.vs {
+  font-size: 3vw;
+  color: #feb300;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .team p i,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .team p i {
+  width: 6vw;
+  height: 4.5vw;
+  margin: 0 1vw;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .btnBox,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5vw;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .btnBox button,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button {
+  width: 33%;
+  height: 9.5vw;
+  background: #fffccf;
+  border-radius: 1vw;
+  color: #be4008;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .btnBox button:active, html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .btnBox button.active,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button:active,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button.active {
+  background: #ffec14;
+  color: #000000;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .btnBox button:active span, html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .btnBox button.active span,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button:active span,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button.active span {
+  color: #99941f;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .btnBox button span,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button span {
+  color: #637590;
+}
+html body .mainWrap .typeBox .gameWrap .ing .gameBox .content .btnBox button span,
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button span {
+  display: block;
+  font-size: 3vw;
+  font-weight: bold;
+}
+html body .mainWrap .typeBox .gameWrap .ready .titleTime {
+  color: #2ac5ff;
+  border-top-color: #2ac5ff;
+}
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button {
+  background: #5c6d79;
+  border-radius: 1vw;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button:active, html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button:active span, html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button.active span {
+  color: #2f3f58;
+}
+html body .mainWrap .typeBox .gameWrap .ready .gameBox .content .btnBox button span {
+  color: #ffcc41;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .more,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .more {
+  padding: 0;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .more .betType,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .more .betType {
+  width: 100%;
+  height: 6vw;
+  background: #3d5261;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .more .betType div,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .more .betType div {
+  width: 54%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .more .betType div p,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .more .betType div p {
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  width: 32.5%;
+  text-align: center;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .more .liveBox,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .more .liveBox {
+  padding-left: 1.5vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .more .liveBox p,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .more .liveBox p {
+  margin: 0;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .more .listBox,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .more .listBox {
+  padding-right: 1.5vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .more .league,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .more .league {
+  justify-content: flex-end;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 1vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .team,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .team {
+  width: 46%;
+  height: auto;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 1.5%;
+  flex-shrink: 0;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .team p,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .team p {
+  margin-bottom: 4.5vw;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .team .liveBox,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .team .liveBox {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .team .liveBox i,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .team .liveBox i {
+  width: 5vw;
+  height: 4vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .team .liveBox i.tv_ic,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .team .liveBox i.tv_ic {
+  background-position-x: calc(100% - 1px);
+  margin-left: 1vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .btnBox ul,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .btnBox ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .btnBox ul li,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .btnBox ul li {
+  width: 32%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.8vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .btnBox ul li:last-child,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .btnBox ul li:last-child {
+  margin: 0;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .btnBox ul li button,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .btnBox ul li button {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.8vw;
+}
+html body .mainWrap .typeBox .gameWrap.oldWrap .ing .gameBox .content .box .btnBox ul li button:last-child,
+html body .mainWrap .typeBox .gameWrap.oldWrap .ready .gameBox .content .box .btnBox ul li button:last-child {
+  margin: 0;
+}
+html body .mainWrap .emptyBox {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .mainWrap .emptyBox.display {
+  display: flex;
+}
+html body .mainWrap .emptyBox .emptyImg {
+  width: 45vw;
+  height: 45vw;
+}
+html body .mainWrap .emptyBox p {
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .mainWrap .multiWrap {
+  width: 100%;
+  height: 10.5vw;
+  position: absolute;
+  left: 0;
+  bottom: 13.8vw;
+  display: none;
+}
+html body .mainWrap .multiWrap.display {
+  display: block;
+}
+html body .mainWrap .multiWrap.active {
+  height: auto;
+  border: solid 1px #5c6d79;
+  bottom: 0;
+  z-index: 100;
+  border-radius: 5vw 5vw 0 0;
+}
+html body .mainWrap .multiWrap.active .title::before {
+  display: none;
+}
+html body .mainWrap .multiWrap.active .title i {
+  transform: rotate(180deg);
+}
+html body .mainWrap .multiWrap .title {
+  width: 100%;
+  height: 10.5vw;
+  background: #ffde84;
+  border-radius: 5vw 5vw 0 0;
+  display: flex;
+  align-items: center;
+  padding: 1vw 3.5vw 0;
+}
+html body .mainWrap .multiWrap .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5vw;
+  width: 100%;
+  height: 5vw;
+  background: #ffde84;
+}
+html body .mainWrap .multiWrap .title .num {
+  width: 6vw;
+  height: 6vw;
+  background: #2f3f58;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+  margin-right: 2vw;
+  flex-shrink: 0;
+}
+html body .mainWrap .multiWrap .title .name {
+  color: #212832;
+  font-size: 3.7vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .mainWrap .multiWrap .title .calcBtn {
+  width: 5vw;
+  height: 6vw;
+  margin: 0 2vw 0 7vw;
+  border-radius: 0.5vw;
+  flex-shrink: 0;
+}
+html body .mainWrap .multiWrap .title .money {
+  color: #212832;
+  font-size: 3.7vw;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+html body .mainWrap .multiWrap .title .money span {
+  font-size: 4vw;
+  font-weight: bold;
+  color: #eb0808;
+}
+html body .mainWrap .multiWrap .title i {
+  width: 3vw;
+  height: 4vw;
+  margin-left: 3vw;
+  transition: 0.3s all;
+  flex-shrink: 0;
+}
+html body .mainWrap .multiWrap .detailWindow {
+  width: 100%;
+  height: auto;
+  border-top: solid 1px #5c6d79;
+}
+html body .mainWrap .multiWrap .detailWindow .box {
+  width: 100%;
+  height: 22vw;
+  background: #25344b;
+  border-bottom: solid 1px #5c6d79;
+  display: flex;
+}
+html body .mainWrap .multiWrap .detailWindow .box .cancelBtn {
+  width: 7vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+html body .mainWrap .multiWrap .detailWindow .box .cancelBtn i {
+  width: 5vw;
+  height: 5vw;
+  position: relative;
+}
+html body .mainWrap .multiWrap .detailWindow .box .cancelBtn i::before, html body .mainWrap .multiWrap .detailWindow .box .cancelBtn i::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 4vw;
+  background: #97a0ad;
+  border-radius: 1vw;
+}
+html body .mainWrap .multiWrap .detailWindow .box .cancelBtn i::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .mainWrap .multiWrap .detailWindow .box .cancelBtn i::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .mainWrap .multiWrap .detailWindow .box .textBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html body .mainWrap .multiWrap .detailWindow .box .textBox .first {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+  margin-bottom: 1vw;
+}
+html body .mainWrap .multiWrap .detailWindow .box .textBox .first span {
+  color: #97a0ad;
+}
+html body .mainWrap .multiWrap .detailWindow .box .textBox .type {
+  color: #ff8207;
+  font-weight: bold;
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+html body .mainWrap .multiWrap .detailWindow .box .textBox .league {
+  color: #ffcc41;
+  font-weight: bold;
+  font-size: 3.7vw;
+  margin-bottom: 1vw;
+}
+html body .mainWrap .multiWrap .detailWindow .box .textBox .team {
+  color: #ffcc41;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .mainWrap .multiWrap .detailWindow .box .textBox .team span {
+  color: #97a0ad;
+}
+html body .mainWrap .multiWrap .detailWindow .box .betBox {
+  width: 17vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+html body .mainWrap .multiWrap .detailWindow .box .betBox p {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .mainWrap .multiWrap .detailWindow .box .betBox p span {
+  color: #ffffff;
+}
+html body .mainWrap .multiWrap .bottomBox {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+html body .mainWrap .multiWrap .bottomBox.display {
+  display: block;
+}
+html body .mainWrap .multiWrap .bottomBox.finish .content {
+  padding: 0 2vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content {
+  width: 100%;
+  height: auto;
+  background: #3a4f6f;
+  padding: 0 1vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .top {
+  width: 100%;
+  height: auto;
+  padding: 1vw 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .mainWrap .multiWrap .bottomBox .content .top .num {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .mainWrap .multiWrap .bottomBox .content .top .num span {
+  padding: 0 1vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .top .inputBox {
+  width: 50vw;
+  height: 9vw;
+  position: relative;
+}
+html body .mainWrap .multiWrap .bottomBox .content .top .inputBox input {
+  width: 100%;
+  height: 100%;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .top .inputBox input::placeholder {
+  color: #a8b0be;
+}
+html body .mainWrap .multiWrap .bottomBox .content .top .inputBox p {
+  position: absolute;
+  top: 50%;
+  right: 2vw;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .btnBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+html body .mainWrap .multiWrap .bottomBox .content .btnBox button {
+  width: 23.8vw;
+  height: 9vw;
+  background: #5c7293;
+  border-radius: 1vw;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+  margin-bottom: 0.8vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .btnBox button:active, html body .mainWrap .multiWrap .bottomBox .content .btnBox button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .mainWrap .multiWrap .bottomBox .content .btnBox button:last-child {
+  width: 48.4vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .infoBox {
+  width: 100%;
+  height: auto;
+  margin-top: 2vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .infoBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .mainWrap .multiWrap .bottomBox .content .infoBox ul li {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+html body .mainWrap .multiWrap .bottomBox .content .infoBox ul li .kind {
+  width: 50%;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  border-right: solid 1px #feb300;
+  margin-bottom: 3vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .infoBox ul li .num {
+  width: 50%;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  text-align: right;
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishTitle {
+  width: 100%;
+  height: 15vw;
+  display: flex;
+  align-items: center;
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishTitle i {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  border: solid 1px #4eff1f;
+  background: #2f3f58;
+  position: relative;
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishTitle i::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 36%;
+  width: 1vw;
+  height: 3vw;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  border-color: transparent #4eff1f #4eff1f transparent;
+  transform: rotate(45deg);
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishTitle p {
+  color: #4eff1f;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-left: 2vw;
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishInfo {
+  width: 100%;
+  height: auto;
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishInfo ul {
+  width: 100%;
+  height: auto;
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishInfo ul li {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishInfo ul li p {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .mainWrap .multiWrap .bottomBox .content .finishInfo ul li p.name {
+  color: #feb300;
+}
+html body .mainWrap .multiWrap .bottomBox .content .moneyBox {
+  width: 100%;
+  height: auto;
+  padding: 5vw 0;
+}
+html body .mainWrap .multiWrap .bottomBox .content .moneyBox ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+html body .mainWrap .multiWrap .bottomBox .content .moneyBox ul li {
+  width: 33%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: solid 1px #5c6d79;
+}
+html body .mainWrap .multiWrap .bottomBox .content .moneyBox ul li:last-child {
+  border: none;
+}
+html body .mainWrap .multiWrap .bottomBox .content .moneyBox ul li p {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .mainWrap .multiWrap .bottomBox .content .moneyBox ul li p.name {
+  color: #feb300;
+  margin-bottom: 2vw;
+}
+html body .mainWrap .multiWrap .bottomBox .bottomCheck {
+  width: 100%;
+  padding: 1vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #25344b;
+}
+html body .mainWrap .multiWrap .bottomBox .bottomCheck .addBtn {
+  width: auto;
+  height: auto;
+  font-size: 4vw;
+  font-weight: bold;
+  color: #97a0ad;
+  background: none;
+  margin-left: 8vw;
+}
+html body .mainWrap .multiWrap .bottomBox .bottomCheck .checkBtn {
+  width: 44vw;
+  height: 12vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+}
+html body .mainWrap .multiWrap .bottomBox .bottomCheck .checkBtn:active, html body .mainWrap .multiWrap .bottomBox .bottomCheck .checkBtn.active {
+  background: #ffffff;
+}
+html body .mainWrap .multiWrap .bottomBox .bottomCheck .checkBtn span {
+  display: block;
+}
+html body .mainWrap .multiWrap .bottomBox .lastBtn {
+  width: 100%;
+  height: auto;
+  background: #25344b;
+  padding: 2vw 0;
+}
+html body .mainWrap .multiWrap .bottomBox .lastBtn button {
+  width: 98%;
+  height: 9vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 0 auto;
+}
+html body .mainWrap .multiWrap .bottomBox .lastBtn button:active, html body .mainWrap .multiWrap .bottomBox .lastBtn button.active {
+  background: #ffffff;
+}
+html body .searchWrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 101;
+  background: #25344b;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: 0.3s all;
+}
+html body .searchWrap.active {
+  transform: translateX(0);
+}
+html body .searchWrap .header {
+  width: 100%;
+  height: 10.5vw;
+  border-radius: 0 0 5vw 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  background: #feb300;
+  position: relative;
+}
+html body .searchWrap .header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #212832;
+  font-weight: bold;
+  font-size: 5vw;
+  white-space: nowrap;
+}
+html body .searchWrap .header i {
+  width: 4vw;
+  height: 4vw;
+  position: relative;
+}
+html body .searchWrap .header i::before, html body .searchWrap .header i::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 0.5vw;
+  height: 5vw;
+  background: #212832;
+  border-radius: 1vw;
+}
+html body .searchWrap .header i::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+html body .searchWrap .header i::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+html body .searchWrap .header .back {
+  font-size: 3.7vw;
+  font-weight: bold;
+  color: #212832;
+}
+html body .searchWrap .inputBox {
+  width: 93%;
+  height: 9.5vw;
+  margin: 1.5vw auto 0;
+  position: relative;
+}
+html body .searchWrap .inputBox input {
+  width: 100%;
+  height: 100%;
+  background: #19202a;
+  border-radius: 10vw;
+  color: #a8b0be;
+  font-weight: bold;
+  font-size: 3vw;
+  padding-left: 10vw;
+}
+html body .searchWrap .inputBox input::placeholder {
+  color: #a8b0be;
+}
+html body .searchWrap .inputBox i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5.5vw;
+  height: 5.5vw;
+  left: 3vw;
+}
+html body .searchWrap .leagueList {
+  width: 100%;
+  height: 86vh;
+  padding: 0 3vw;
+  overflow-y: auto;
+}
+html body .searchWrap .leagueList ul {
+  width: 100%;
+  height: 100%;
+}
+html body .searchWrap .leagueList ul li {
+  width: 100%;
+  height: 10vw;
+  border-bottom: solid 1px #5c6d79;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body .searchWrap .leagueList ul li:nth-of-type(1) {
+  border: none;
+}
+html body .searchWrap .leagueList ul li:nth-of-type(1) .check {
+  color: #feb300;
+  font-size: 3vw;
+}
+html body .searchWrap .leagueList ul li .name {
+  color: #feb300;
+  font-size: 4vw;
+}
+html body .searchWrap .leagueList ul li .check {
+  color: #ffcc41;
+  font-size: 3.7vw;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+html body .searchWrap .leagueList ul li .check input {
+  position: relative;
+  margin-left: 2vw;
+}
+html body .searchWrap .leagueList ul li .check input::before {
+  background: #212832;
+  border: solid 1px #feb300;
+}
+html body .searchWrap .leagueList ul li .check input::after {
+  background: #feb300;
+}
+html body .searchWrap .leagueList ul li .check input::before, html body .searchWrap .leagueList ul li .check input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html body .searchWrap .leagueList ul li .check input::before {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+}
+html body .searchWrap .leagueList ul li .check input::after {
+  display: none;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+}
+html body .searchWrap .leagueList ul li .check input:checked::after {
+  display: block;
+}
+html body .innerWrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 101;
+  background: #19202a;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: 0.3s all;
+  display: flex;
+  flex-direction: column;
+}
+html body .innerWrap.active {
+  transform: translateX(0);
+}
+html body .innerWrap .top {
+  width: 100%;
+  height: 53vw;
+  position: relative;
+  flex-shrink: 0;
+  display: none;
+}
+html body .innerWrap .top.display {
+  display: block;
+}
+html body .innerWrap .top.live {
+  background: none;
+  height: auto;
+}
+html body .innerWrap .top .leave {
+  width: 100%;
+  height: 12vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+html body .innerWrap .top .leave p {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+  letter-spacing: 1px;
+}
+html body .innerWrap .top .leave i {
+  position: absolute;
+  left: 4vw;
+  width: 4vw;
+  height: 4vw;
+  filter: brightness(15);
+}
+html body .innerWrap .top .infoBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .innerWrap .top .infoBox .time,
+html body .innerWrap .top .infoBox .score {
+  color: #ffffff;
+  font-size: 5vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+html body .innerWrap .top .infoBox .team {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+  margin-bottom: 2vw;
+}
+html body .innerWrap .top .infoBox .team span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6vw;
+  height: 6vw;
+  color: #ffffff;
+  font-size: 2vw;
+  font-weight: bold;
+  background: #e12258;
+  border-radius: 1vw;
+  padding-bottom: 1px;
+}
+html body .innerWrap .top .liveBtn {
+  width: auto;
+  height: auto;
+  background: #000000b9;
+  border-radius: 10vw;
+  padding: 1.5vw 3vw;
+  color: #ffffff;
+  font-size: 2vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+html body .innerWrap .top .liveBtn i {
+  width: 4vw;
+  height: 3vw;
+  margin-right: 2vw;
+}
+html body .innerWrap .top .updateBtn {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  background: none;
+  position: absolute;
+  right: 3vw;
+  bottom: 2vw;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .innerWrap .top .updateBtn i {
+  width: 5vw;
+  height: 5vw;
+}
+html body .innerWrap .top .header {
+  width: 100%;
+  height: 9vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  background: #feb300;
+  position: relative;
+  flex-shrink: 0;
+}
+html body .innerWrap .top .header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #212832;
+  font-weight: bold;
+  font-size: 3.7vw;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+html body .innerWrap .top .header .title span {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 4px 0 4px;
+  border-color: #212832 transparent;
+  margin-left: 2vw;
+}
+html body .innerWrap .top .header i {
+  width: 4vw;
+  height: 4vw;
+}
+html body .innerWrap .top .header a {
+  width: auto;
+  height: auto;
+  background: #3b73c2;
+  border-radius: 1vw;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  font-size: 3.2vw;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding: 1.5vw 1vw;
+}
+html body .innerWrap .top video {
+  width: 100%;
+  height: calc(100% - 16vw);
+}
+html body .innerWrap .top .teamName {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  background: #455c80;
+}
+html body .innerWrap .top .teamName .time {
+  width: auto;
+  height: 100%;
+  border-radius: 0 10vw 10vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #feb300 0%, #fe9b00 100%);
+  padding: 0 5vw 0 3vw;
+  flex-shrink: 0;
+}
+html body .innerWrap .top .teamName .time p {
+  color: #212832;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .innerWrap .top .teamName .team {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+html body .innerWrap .top .teamName .team .name {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .innerWrap .top .teamName .team span {
+  color: #ffcc41;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin: 0 3vw;
+}
+html body .innerWrap .top .teamName .team .vs {
+  color: #97a0ad;
+  font-size: 4vw;
+  font-weight: bold;
+}
+html body .innerWrap .innerBetList {
+  width: 100%;
+  height: 9vw;
+  padding: 1vw;
+  flex-shrink: 0;
+}
+html body .innerWrap .innerBetList ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+html body .innerWrap .innerBetList ul li {
+  width: auto;
+  height: 100%;
+  border-bottom: solid 1px transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2vw;
+}
+html body .innerWrap .innerBetList ul li:active, html body .innerWrap .innerBetList ul li.active {
+  border-color: #feb300;
+}
+html body .innerWrap .innerBetList ul li p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .innerWrap .bottom {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .innerWrap .bottom ul {
+  width: 100%;
+  height: auto;
+  background: #2f3f58;
+  padding: 2vw 1vw;
+}
+html body .innerWrap .bottom ul li {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2vw;
+}
+html body .innerWrap .bottom ul li .title {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 1vw;
+  border-left: solid 2px #feb300;
+  margin-bottom: 1vw;
+}
+html body .innerWrap .bottom ul li .smallTitle {
+  width: 100%;
+  height: 8vw;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #5c6d79;
+  margin-bottom: 1vw;
+}
+html body .innerWrap .bottom ul li .smallTitle span {
+  width: 34%;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  text-align: center;
+}
+html body .innerWrap .bottom ul li .btnBox {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1vw;
+}
+html body .innerWrap .bottom ul li .btnBox button {
+  width: 50%;
+  height: 7vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 3vw 1vw 1vw;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  background: #5c6d79;
+  border-radius: 1vw;
+  margin-right: 1vw;
+}
+html body .innerWrap .bottom ul li .btnBox button:active, html body .innerWrap .bottom ul li .btnBox button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .innerWrap .bottom ul li .btnBox button:active span, html body .innerWrap .bottom ul li .btnBox button.active span {
+  color: #2f3f58;
+}
+html body .innerWrap .bottom ul li .btnBox button.empty {
+  background: none;
+}
+html body .innerWrap .bottom ul li .btnBox button span {
+  color: #cadbf6;
+}
+html body .innerWrap .bottom ul li .btnBox button:last-child {
+  margin: 0;
+}
+html body .innerWrap .bottom ul li .btnBox button i {
+  width: 5.5vw;
+  height: 5vw;
+  border-radius: 1vw;
+  background: #e12258;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1px;
+  color: #ffffff;
+}
+html body .innerWrap .bottom ul li .btnBox button i.mid {
+  background: #1c3e73;
+}
+html body .innerWrap .bottom ul li .btnBox button i.cus {
+  background: #0095e2;
+}
+html body .innerWrap .bottom ul li .btnBox button span {
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .teachWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html body .teachWrap .teachList {
+  width: 100%;
+  height: auto;
+  padding: 1vw;
+  flex-shrink: 0;
+}
+html body .teachWrap .teachList ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow-x: auto;
+}
+html body .teachWrap .teachList ul li {
+  width: auto;
+  height: 7.5vw;
+  background: #2f3640;
+  border-radius: 1vw;
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1vw;
+  padding: 0 4vw;
+  flex-shrink: 0;
+}
+html body .teachWrap .teachList ul li:active, html body .teachWrap .teachList ul li.active {
+  background: #44608a;
+  color: #ffffff;
+}
+html body .teachWrap .teachList ul li i {
+  width: 5vw;
+  height: 5vw;
+  margin-right: 2vw;
+}
+html body .teachWrap .teachList ul li i.soccer_ic {
+  background-position-x: 0;
+}
+html body .teachWrap .teachList ul li i.basketball_ic {
+  background-position-x: 50%;
+}
+html body .teachWrap .teachList ul li i.baseball_ic {
+  background-position-x: 100%;
+}
+html body .teachWrap .type {
+  width: 100%;
+  height: 8vw;
+  padding: 1vw;
+  flex-shrink: 0;
+}
+html body .teachWrap .type ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+html body .teachWrap .type ul li {
+  width: 50%;
+  height: 100%;
+  color: #feb300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 2px transparent;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .teachWrap .type ul li:active, html body .teachWrap .type ul li.active {
+  border-color: #feb300;
+}
+html body .teachWrap .teachBox {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .teachWrap .teachBox .teachType {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+html body .teachWrap .teachBox .teachType.display {
+  display: block;
+}
+html body .teachWrap .teachBox .teachType .type {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+html body .teachWrap .teachBox .teachType .type.display {
+  display: block;
+}
+html body .teachWrap .teachBox .teachType .type .box {
+  width: 100%;
+  height: auto;
+  background: #25344b;
+  padding-bottom: 1px;
+  margin-bottom: 1vw;
+}
+html body .teachWrap .teachBox .teachType .type .box:last-child {
+  margin-bottom: 5vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .title {
+  width: 100%;
+  height: 6vw;
+  display: flex;
+  align-items: center;
+  padding-left: 4vw;
+  border-bottom: solid 1px #5c6d79;
+  color: #feb300;
+  position: relative;
+  font-size: 3vw;
+  font-weight: bold;
+}
+html body .teachWrap .teachBox .teachType .type .box .title::before {
+  content: "";
+  position: absolute;
+  width: 0.5vw;
+  height: 3vw;
+  background: #feb300;
+  left: 2vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2vw 0 3vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox .left,
+html body .teachWrap .teachBox .teachType .type .box .nameBox .right {
+  width: 30vw;
+  height: auto;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox .left .name,
+html body .teachWrap .teachBox .teachType .type .box .nameBox .right .name {
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 1.5vw;
+  line-height: 4vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox .left .score,
+html body .teachWrap .teachBox .teachType .type .box .nameBox .right .score {
+  color: #ffcc41;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 1.5vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox .left .bet,
+html body .teachWrap .teachBox .teachType .type .box .nameBox .right .bet {
+  color: #ffffff;
+  font-size: 3vw;
+  font-weight: bold;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox .left {
+  text-align: right;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox .mid {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #feb300;
+  font-size: 5vw;
+  font-weight: bold;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox .mid i {
+  width: 9.5vw;
+  height: 7vw;
+  margin: 0 4vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .nameBox .mid i.rightTeam_ic {
+  background-position-x: 100%;
+}
+html body .teachWrap .teachBox .teachType .type .box .remind {
+  width: 100%;
+  height: auto;
+  color: #ff8207;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultBox {
+  width: 98%;
+  height: 18vw;
+  margin: 0 auto;
+  border-radius: 18vw;
+  background: #1d2635;
+  box-shadow: 0 2px 0 0 #121823 inset, 0 -2px 0 0 #50647f inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultBox .textBox {
+  width: 37vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultBox .textBox .name {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3vw;
+  margin-bottom: 2vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultBox .textBox .result {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultBox .textBox .result.lose {
+  color: #97a0ad;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultBox .center {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 20vw;
+  background: linear-gradient(to bottom, #415471 0%, #2f3f58 100%);
+  border: solid 1px #5c6d79;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultBox .center .name {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+  margin-bottom: 2vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultBox .center .result {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultWord {
+  width: 96%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 4vw auto;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultWord div {
+  width: 47%;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultWord div.lose p {
+  color: #97a0ad;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultWord div.left {
+  text-align: right;
+}
+html body .teachWrap .teachBox .teachType .type .box .resultWord div p {
+  color: #ff8207;
+  font-weight: bold;
+  font-size: 3vw;
+  line-height: 4vw;
+}
+html body .resultWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html body .resultWrap .resultList {
+  width: 100%;
+  height: auto;
+  padding: 1vw;
+  background: #19202a;
+  position: relative;
+  z-index: 100;
+}
+html body .resultWrap .resultList ul {
+  overflow-x: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+html body .resultWrap .resultList ul li {
+  width: auto;
+  height: 8vw;
+  background: #2f3640;
+  border-radius: 1vw;
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2vw;
+  margin-right: 1vw;
+}
+html body .resultWrap .resultList ul li:active, html body .resultWrap .resultList ul li.active {
+  background: #44608a;
+  color: #ffffff;
+}
+html body .resultWrap .dayList {
+  width: 100%;
+  height: auto;
+  padding: 0 1vw 1vw;
+}
+html body .resultWrap .dayList ul {
+  overflow-x: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+html body .resultWrap .dayList ul li {
+  width: 22vw;
+  height: 8vw;
+  background: #3d5261;
+  border-radius: 1vw;
+  border: solid 1px #feb300;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1vw;
+  font-size: 4vw;
+}
+html body .resultWrap .dayList ul li:active, html body .resultWrap .dayList ul li.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .resultWrap .resultType {
+  display: none;
+  width: 100%;
+  height: auto;
+  padding: 0 1vw 1vw;
+  overflow-y: auto;
+}
+html body .resultWrap .resultType.display {
+  display: block;
+}
+html body .resultWrap .resultType .resultBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1vw;
+  border: solid 1px #feb300;
+}
+html body .resultWrap .resultType .resultBox .title {
+  width: 100%;
+  height: 6vw;
+  display: flex;
+  align-items: center;
+  padding-left: 3vw;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  background: #455c80;
+}
+html body .resultWrap .resultType .resultBox table {
+  width: 100%;
+  height: auto;
+}
+html body .resultWrap .resultType .resultBox table tr:last-child td {
+  border-bottom: none;
+}
+html body .resultWrap .resultType .resultBox table tr:nth-last-of-type(2).time td:nth-of-type(1) {
+  border-bottom: none;
+}
+html body .resultWrap .resultType .resultBox table tr.time td {
+  border-bottom-color: #5c6d79;
+}
+html body .resultWrap .resultType .resultBox table tr.time td:nth-of-type(1) {
+  background: #2f3f58;
+  border-bottom-color: #aecbdf;
+}
+html body .resultWrap .resultType .resultBox table tr.time td:nth-of-type(1) p {
+  color: #a8b0be;
+  text-align: center;
+}
+html body .resultWrap .resultType .resultBox table tr.time td:nth-of-type(1) p:nth-of-type(1) {
+  margin-bottom: 1.5vw;
+}
+html body .resultWrap .resultType .resultBox table tr th {
+  background: #3d5261;
+  vertical-align: middle;
+  height: 6vw;
+}
+html body .resultWrap .resultType .resultBox table tr th p {
+  width: 100%;
+  text-align: center;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .resultWrap .resultType .resultBox table tr td {
+  height: 6.5vw;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: #aecbdf #5c6d79;
+  background: #25344a;
+}
+html body .resultWrap .resultType .resultBox table tr td:last-child {
+  border-right: none;
+}
+html body .resultWrap .resultType .resultBox table tr td.score {
+  background: #2f3f58;
+}
+html body .resultWrap .resultType .resultBox table tr td.score p {
+  color: #ffffff;
+  text-align: center;
+}
+html body .resultWrap .resultType .resultBox table tr td p {
+  font-size: 3.2vw;
+  font-weight: bold;
+  width: 100%;
+  padding: 0 2vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #feb300;
+}
+html body .recordWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html body .recordWrap .recordList {
+  width: 100%;
+  height: auto;
+  padding: 1vw 1vw 0;
+  flex-shrink: 0;
+}
+html body .recordWrap .recordList.notEmpty ul li {
+  border-radius: 1vw 1vw 0 0;
+}
+html body .recordWrap .recordList ul {
+  width: 100%;
+  height: auto;
+  overflow-x: auto;
+  display: flex;
+}
+html body .recordWrap .recordList ul li {
+  width: 30vw;
+  height: 8vw;
+  background: #2f3640;
+  border-radius: 1vw;
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1vw;
+}
+html body .recordWrap .recordList ul li:active, html body .recordWrap .recordList ul li.active {
+  background: #44608a;
+  color: #ffffff;
+}
+html body .recordWrap .content {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 15vw;
+  overflow-y: auto;
+}
+html body .recordWrap .content .emptyBox {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .recordWrap .content .emptyBox.display {
+  display: flex;
+}
+html body .recordWrap .content .emptyBox div {
+  width: 45vw;
+  height: 45vw;
+}
+html body .recordWrap .content .emptyBox p {
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .recordWrap .content .emptyBox a {
+  width: 50vw;
+  height: 12vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin-top: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .recordWrap .content .emptyBox a:active, html body .recordWrap .content .emptyBox a.active {
+  background: #ffffff;
+}
+html body .recordWrap .content .nowBetting {
+  width: 100%;
+  height: auto;
+  background: #44608a;
+  padding: 1.5vw;
+  display: none;
+}
+html body .recordWrap .content .nowBetting.display {
+  display: block;
+}
+html body .recordWrap .content .nowBetting .bettingBox {
+  width: 100%;
+  height: auto;
+  border: solid 1px #5c6d79;
+  height: calc(15vw - 2px);
+  overflow: hidden;
+  margin-bottom: 1vw;
+}
+html body .recordWrap .content .nowBetting .bettingBox.active {
+  height: auto;
+}
+html body .recordWrap .content .nowBetting .bettingBox.active .title {
+  background: #feb300;
+}
+html body .recordWrap .content .nowBetting .bettingBox.active .title p {
+  color: #212832;
+}
+html body .recordWrap .content .nowBetting .bettingBox.active .title p i {
+  width: 2vw;
+  height: 3.2vw;
+  transform: rotate(90deg);
+}
+html body .recordWrap .content .nowBetting .bettingBox .outerCnt {
+  width: 100%;
+  height: 7vw;
+  background: #25344a;
+  border-top: solid 1px #5c6d79;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+  display: none;
+}
+html body .recordWrap .content .nowBetting .bettingBox .outerCnt.display {
+  display: flex;
+}
+html body .recordWrap .content .nowBetting .bettingBox .outerCnt .smallTitle {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .recordWrap .content .nowBetting .bettingBox .outerCnt .num {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .recordWrap .content .nowBetting .bettingBox .outerCnt .num span {
+  color: #ffcc41;
+  font-weight: bold;
+  font-size: 3.7vw;
+  padding-left: 4vw;
+}
+html body .recordWrap .content .nowBetting .bettingBox .title {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  justify-content: space-between;
+  background: #212832;
+}
+html body .recordWrap .content .nowBetting .bettingBox .title p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+html body .recordWrap .content .nowBetting .bettingBox .title p i {
+  width: 3vw;
+  height: 2vw;
+  margin-left: 3vw;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul {
+  width: 100%;
+  height: auto;
+  background: #212832;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li {
+  display: flex;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li:not(:nth-of-type(1)) div:nth-of-type(1), html body .recordWrap .content .nowBetting .bettingBox ul li:not(:nth-of-type(1)) div:nth-of-type(3) {
+  width: 25%;
+  flex-shrink: 0;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li:last-child div {
+  border-bottom: none;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li:last-child div:nth-of-type(3) {
+  width: 33%;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li:last-child div:nth-of-type(4) {
+  width: 25%;
+  flex-shrink: 0;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li div {
+  width: 100%;
+  height: 100%;
+  padding: 1.5vw;
+  border: solid 1px #5c6d79;
+  border-width: 0 1px 1px 0;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li div:last-child {
+  border-right: none;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li div.name {
+  background: #25344a;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li div.name p {
+  text-align: center;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li div p {
+  width: 100%;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.4vw;
+  line-height: 5vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .recordWrap .content .nowBetting .bettingBox ul li div p span {
+  color: #ffffff;
+}
+html body .recordWrap .content .historyBetting {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: none;
+}
+html body .recordWrap .content .historyBetting.display {
+  display: flex;
+}
+html body .recordWrap .content .historyBetting .historyList {
+  width: 100%;
+  height: auto;
+  padding: 1vw;
+  background: #44608a;
+  flex-shrink: 0;
+}
+html body .recordWrap .content .historyBetting .historyList ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+html body .recordWrap .content .historyBetting .historyList ul li {
+  width: 100%;
+  height: 8vw;
+  background: #3d5261;
+  border-radius: 1vw;
+  border: solid 1px #feb300;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1vw;
+}
+html body .recordWrap .content .historyBetting .historyList ul li:active, html body .recordWrap .content .historyBetting .historyList ul li.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .recordWrap .content .historyBetting .historyList ul li:last-child {
+  margin: 0;
+}
+html body .recordWrap .content .historyBetting .topName {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  background: #222a38;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+html body .recordWrap .content .historyBetting .topName p {
+  text-align: center;
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3vw;
+}
+html body .recordWrap .content .historyBetting .topName p:nth-of-type(1) {
+  width: 33%;
+  padding-left: 8vw;
+}
+html body .recordWrap .content .historyBetting .topName p:nth-of-type(2) {
+  width: 40%;
+}
+html body .recordWrap .content .historyBetting .topName p:last-child {
+  width: 20%;
+}
+html body .recordWrap .content .historyBetting .listWrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox.display {
+  display: block;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox {
+  width: 100%;
+  height: 8vw;
+  overflow: hidden;
+  margin-bottom: 1vw;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox.active {
+  height: auto;
+  background: #44608a;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox.active .bigTitle {
+  background: #44608a;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox:nth-of-type(1) {
+  margin-top: 1vw;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle {
+  display: flex;
+  align-items: center;
+  background: #31425b;
+  width: 100%;
+  height: 8vw;
+  justify-content: space-between;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle .num {
+  position: absolute;
+  left: 3.5vw;
+  width: 4.5vw;
+  height: 4.5vw;
+  background: #feb300;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle .num span {
+  color: #212832;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle p {
+  text-align: center;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle p.win {
+  color: #34ff25;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle p.lose {
+  color: #ff5d47;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle p:nth-of-type(1) {
+  width: 33%;
+  padding-left: 8vw;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle p:nth-of-type(2) {
+  width: 40%;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .bigTitle p:last-child {
+  width: 20%;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box {
+  width: 98%;
+  border: solid 1px #5c6d79;
+  height: calc(15vw - 2px);
+  overflow: hidden;
+  height: calc(15vw - 1px);
+  margin: 0 auto 1vw;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box.active {
+  height: auto;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box.active .title {
+  background: #feb300;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box.active .title p {
+  color: #212832;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box.active .title p i {
+  width: 2vw;
+  height: 3.2vw;
+  transform: rotate(90deg);
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .outerCnt {
+  width: 100%;
+  height: 7vw;
+  background: #25344a;
+  border-top: solid 1px #5c6d79;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+  display: none;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .outerCnt.display {
+  display: flex;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .outerCnt .smallTitle {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .outerCnt .num {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .outerCnt .num span {
+  color: #ffcc41;
+  font-weight: bold;
+  font-size: 3.7vw;
+  padding-left: 4vw;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .title {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  justify-content: space-between;
+  background: #212832;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .title p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .title p i {
+  width: 3vw;
+  height: 2vw;
+  margin-left: 3vw;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul {
+  width: 100%;
+  height: auto;
+  background: #212832;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li {
+  display: flex;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li:not(:nth-of-type(1)) div:nth-of-type(1), html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li:not(:nth-of-type(1)) div:nth-of-type(3) {
+  width: 25%;
+  flex-shrink: 0;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li:last-child div {
+  border-bottom: none;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li:last-child div:nth-of-type(3) {
+  width: 33%;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li:last-child div:nth-of-type(4) {
+  width: 25%;
+  flex-shrink: 0;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li div {
+  width: 100%;
+  height: 100%;
+  padding: 1.5vw;
+  border: solid 1px #5c6d79;
+  border-width: 0 1px 1px 0;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li div:last-child {
+  border-right: none;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li div.name {
+  background: #25344a;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li div.name p {
+  text-align: center;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li div p {
+  width: 100%;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.4vw;
+  line-height: 5vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li div p span {
+  color: #ffffff;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .outerCnt .num span.win {
+  color: #34ff25;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box .outerCnt .num span.lose {
+  color: #ff5d47;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li div p span.win {
+  color: #34ff25;
+}
+html body .recordWrap .content .historyBetting .listWrap .dateBox .bettingBox .box ul li div p span.lose {
+  color: #ff5d47;
+}
+html body .recordWrap .resultBox {
+  width: 100%;
+  height: 15vw;
+  background: #44608a;
+  border-top: solid 1px #aecbdf;
+  position: absolute;
+  left: 0;
+  bottom: 13.8vw;
+  display: flex;
+}
+html body .recordWrap .resultBox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5vw;
+  background: #44608a;
+  width: 100%;
+  height: 5vw;
+}
+html body .recordWrap .resultBox .box {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .recordWrap .resultBox .box:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 8vw;
+  background: #aecbdf;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+html body .recordWrap .resultBox .box .title {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+html body .recordWrap .resultBox .box .num {
+  color: #ffcc41;
+  font-weight: bold;
+  font-size: 4.5vw;
+}
+html body .recordWrap .resultBox .box .num.win {
+  color: #34ff25;
+}
+html body .recordWrap .resultBox .box .num.lose {
+  color: #ff5d47;
+}
+html body .memberWrap {
+  width: 100%;
+  height: 100%;
+}
+html body .memberWrap .top {
+  width: 100%;
+  height: auto;
+  background: #25344b;
+  margin: 2vw 0 3vw;
+}
+html body .memberWrap .top .info {
+  width: 100%;
+  height: 22vw;
+  display: flex;
+}
+html body .memberWrap .top .info .sticker {
+  width: 27vw;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .memberWrap .top .info .sticker div {
+  width: 19vw;
+  height: 19vw;
+}
+html body .memberWrap .top .info .linkBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body .memberWrap .top .info .linkBox .userBox {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .memberWrap .top .info .linkBox .userBox .name {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 4.2vw;
+  margin-bottom: 2vw;
+}
+html body .memberWrap .top .info .linkBox .userBox .money {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 4.2vw;
+}
+html body .memberWrap .top .info .linkBox .link {
+  width: 9vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: none;
+}
+html body .memberWrap .top .info .linkBox .link::before {
+  content: "";
+  position: absolute;
+  width: 4vw;
+  height: 3vw;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+html body .memberWrap .top .btnBox {
+  width: 100%;
+  height: 31vw;
+}
+html body .memberWrap .top .btnBox ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 4vw;
+}
+html body .memberWrap .top .btnBox ul li {
+  width: 25%;
+  height: auto;
+}
+html body .memberWrap .top .btnBox ul li a {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+html body .memberWrap .top .btnBox ul li a i {
+  width: 7.5vw;
+  height: 7.7vw;
+  margin-bottom: 4vw;
+}
+html body .memberWrap .top .btnBox ul li a i.bet_ic {
+  background-position-x: 0;
+}
+html body .memberWrap .top .btnBox ul li a i.rule_ic {
+  background-position-x: 50%;
+}
+html body .memberWrap .top .btnBox ul li a i.control_ic {
+  background-position-x: 100%;
+}
+html body .memberWrap .top .btnBox ul li a p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .memberWrap .bottom {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+html body .memberWrap .bottom.display {
+  display: block;
+}
+html body .memberWrap .bottom ul {
+  width: 100%;
+  height: auto;
+  padding: 0 4vw;
+  background: #2f3f58;
+}
+html body .memberWrap .bottom ul li {
+  width: 100%;
+  height: 14vw;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .memberWrap .bottom ul li:last-child {
+  border: none;
+}
+html body .memberWrap .bottom ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .memberWrap .bottom ul li a div {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+html body .memberWrap .bottom ul li a div i {
+  width: 5.5vw;
+  height: 5.5vw;
+  margin-right: 4vw;
+}
+html body .memberWrap .bottom ul li a div i.teach_ic {
+  background-position-x: 0;
+}
+html body .memberWrap .bottom ul li a div i.paper_ic {
+  background-position-x: 25%;
+}
+html body .memberWrap .bottom ul li a div i.chart_ic {
+  background-position-x: 50%;
+}
+html body .memberWrap .bottom ul li a div i.logout_ic {
+  background-position-x: 75%;
+}
+html body .memberWrap .bottom ul li a div i.logout_ic.sp {
+  transform: scaleX(-1) translateX(3px);
+}
+html body .memberWrap .bottom ul li a div p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+html body .memberWrap .bottom ul li a .arrow_ic {
+  width: 4vw;
+  height: 3vw;
+  transform: rotate(-90deg);
+}
+html body .infoWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #19202a;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s all;
+  transform: translateX(100%);
+}
+html body .infoWrap.display {
+  transform: translateX(0);
+}
+html body .infoWrap .header {
+  width: 100%;
+  height: 10.5vw;
+  border-radius: 0 0 5vw 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  background: #feb300;
+  position: relative;
+  flex-shrink: 0;
+}
+html body .infoWrap .header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #212832;
+  font-weight: bold;
+  font-size: 5vw;
+  white-space: nowrap;
+}
+html body .infoWrap .header i {
+  width: 4vw;
+  height: 4vw;
+}
+html body .infoWrap .content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  margin-top: 1.5vw;
+  display: none;
+}
+html body .infoWrap .content.display {
+  display: block;
+}
+html body .infoWrap .content ul {
+  width: 100%;
+  height: auto;
+  padding: 0 3vw;
+  background: #25344b;
+}
+html body .infoWrap .content ul li {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #5c6d79;
+  display: flex;
+  flex-direction: column;
+  padding: 3vw 0;
+  position: relative;
+}
+html body .infoWrap .content ul li:nth-of-type(1), html body .infoWrap .content ul li:nth-of-type(2) {
+  padding: 4vw 0;
+}
+html body .infoWrap .content ul li:nth-of-type(1) .title, html body .infoWrap .content ul li:nth-of-type(2) .title {
+  margin-bottom: 3vw;
+}
+html body .infoWrap .content ul li:last-child {
+  border: none;
+}
+html body .infoWrap .content ul li.fake {
+  display: none;
+}
+html body .infoWrap .content ul li.fake.display {
+  display: flex;
+}
+html body .infoWrap .content ul li.fake div {
+  width: 100%;
+  height: 30vh;
+}
+html body .infoWrap .content ul li .title {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2vw;
+}
+html body .infoWrap .content ul li .title p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .infoWrap .content ul li .sticker {
+  width: 100%;
+  height: auto;
+}
+html body .infoWrap .content ul li .sticker div {
+  width: 16vw;
+  height: 16vw;
+  position: relative;
+}
+html body .infoWrap .content ul li .sticker div i {
+  width: 5.5vw;
+  height: 5.5vw;
+  position: absolute;
+  right: -2vw;
+  bottom: 0;
+}
+html body .infoWrap .content ul li p {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .infoWrap .content ul li p.remind {
+  color: #ff8207;
+  font-size: 2vw;
+  line-height: 4vw;
+  margin-top: 2vw;
+}
+html body .infoWrap .content ul li input {
+  width: 100%;
+  height: 8vw;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+  font-size: 3.7vw;
+}
+html body .infoWrap .content ul li input::placeholder {
+  color: #a8b0be;
+}
+html body .infoWrap .content ul li select {
+  width: 100%;
+  height: 8vw;
+  background-color: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+  background-color: #1b2739;
+  background-image: linear-gradient(45deg, transparent 50%, #feb300 0), linear-gradient(135deg, #feb300 50%, transparent 0);
+  background-position: calc(100% - 4vw) calc(50%), calc(100% - 3vw) calc(54%);
+  background-size: 6px 5px, 5px 6px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+          appearance: none;
+  font-size: 3.7vw;
+}
+html body .infoWrap .content ul li .changeBtn {
+  width: 15vw;
+  height: 6vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  right: 0;
+  bottom: 1.5vw;
+  font-size: 3vw;
+  border-radius: 1vw;
+}
+html body .infoWrap .content ul li .changeBtn:active, html body .infoWrap .content ul li .changeBtn.active {
+  background: #ffffff;
+}
+html body .infoWrap .content ul li .changeBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body .infoWrap .content .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2vw auto;
+  display: none;
+}
+html body .infoWrap .content .check:active, html body .infoWrap .content .check.active {
+  background: #ffffff;
+}
+html body .infoWrap .content .check.display {
+  display: block;
+}
+html body .infoWrap .content .remindBox {
+  width: 100%;
+  height: 18vw;
+  background: #2f3f58;
+  display: flex;
+  align-items: center;
+  padding: 0 4vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+html body .infoWrap .content .remindBox p {
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  line-height: 4vw;
+}
+html body .infoWrap .content .remindBox p span {
+  color: #ffffff;
+}
+html body .postWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html body .postWrap .postList {
+  width: 100%;
+  height: 9vw;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+html body .postWrap .postList ul {
+  width: 100%;
+  height: 8vw;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+html body .postWrap .postList ul li {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px transparent;
+  padding: 0 4vw;
+  flex-shrink: 0;
+}
+html body .postWrap .postList ul li:active, html body .postWrap .postList ul li.active {
+  border-color: #feb300;
+}
+html body .postWrap .postList ul li p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .postWrap .postCnt {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .postWrap .postCnt .cntBox {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+html body .postWrap .postCnt .cntBox.display {
+  display: block;
+}
+html body .postWrap .postCnt .cntBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .postWrap .postCnt .cntBox ul li {
+  width: 100%;
+  height: auto;
+  padding: 4vw 4vw 4vw 0;
+  display: flex;
+  border-bottom: solid 1px #5c6d79;
+  background: #25344b;
+}
+html body .postWrap .postCnt .cntBox ul li:last-child {
+  margin-bottom: 5vw;
+}
+html body .postWrap .postCnt .cntBox ul li .icBox {
+  width: 18vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+html body .postWrap .postCnt .cntBox ul li .icBox i {
+  width: 10vw;
+  height: 10vw;
+}
+html body .postWrap .postCnt .cntBox ul li .textBox {
+  width: 100%;
+  height: auto;
+}
+html body .postWrap .postCnt .cntBox ul li .textBox .time {
+  color: #97a0ad;
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+html body .postWrap .postCnt .cntBox ul li .textBox .cnt {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  line-height: 4.5vw;
+  letter-spacing: 1px;
+}
+html body .controlWrap {
+  width: 100%;
+  height: 100%;
+}
+html body .controlWrap .content {
+  width: 100%;
+  height: auto;
+  background: #25344b;
+  padding: 4vw 2.5vw;
+  margin: 1vw 0 2vw;
+}
+html body .controlWrap .content .rowBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5vw;
+}
+html body .controlWrap .content .rowBox .title {
+  font-size: 3.7vw;
+  font-weight: bold;
+  color: #feb300;
+  margin-bottom: 1vw;
+}
+html body .controlWrap .content .rowBox .row {
+  width: 100%;
+  height: 8vw;
+  background: #19202a;
+  border-radius: 10vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+html body .controlWrap .content .rowBox .row.active p {
+  color: #ffffff;
+}
+html body .controlWrap .content .rowBox .row.active p:nth-of-type(1) {
+  color: #97a0ad;
+}
+html body .controlWrap .content .rowBox .row p {
+  color: #97a0ad;
+}
+html body .controlWrap .content .rowBox .row p:nth-of-type(1) {
+  color: #ffffff;
+}
+html body .controlWrap .content .rowBox .row .bar {
+  background: #567ebb;
+}
+html body .controlWrap .content .rowBox .row.active .bar {
+  left: 51%;
+}
+html body .controlWrap .content .rowBox .row p {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.7vw;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s all;
+}
+html body .controlWrap .content .rowBox .row .bar {
+  width: 48%;
+  height: 82%;
+  border-radius: 10vw;
+  position: absolute;
+  transition: 0.3s all;
+  left: 1%;
+}
+html body .controlWrap .content .spRow {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4vw;
+}
+html body .controlWrap .content .spRow .title {
+  font-size: 3.7vw;
+  font-weight: bold;
+  color: #feb300;
+  margin-bottom: 1vw;
+}
+html body .controlWrap .content .spRow .row {
+  width: 20vw;
+  height: 8vw;
+  background: #19202a;
+  border-radius: 10vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 3vw;
+}
+html body .controlWrap .content .spRow .row.active p:nth-of-type(1) {
+  color: #97a0ad;
+}
+html body .controlWrap .content .spRow .row.active p:nth-of-type(2) {
+  color: transparent;
+}
+html body .controlWrap .content .spRow .row.active .bar {
+  background: #567ebb;
+}
+html body .controlWrap .content .spRow .row p {
+  color: #97a0ad;
+}
+html body .controlWrap .content .spRow .row p:nth-of-type(1) {
+  color: transparent;
+}
+html body .controlWrap .content .spRow .row .bar {
+  background: #4a5a70;
+}
+html body .controlWrap .content .spRow .row.active .bar {
+  left: 63%;
+}
+html body .controlWrap .content .spRow .row p {
+  width: 50%;
+  font-size: 3.7vw;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s all;
+}
+html body .controlWrap .content .spRow .row .bar {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 10vw;
+  position: absolute;
+  transition: 0.3s all;
+  left: 3%;
+}
+html body .controlWrap .btnBox {
+  width: 100%;
+  height: auto;
+  background: #2f3f58;
+}
+html body .controlWrap .btnBox ul {
+  width: 100%;
+  height: auto;
+  padding: 0 2.5vw;
+}
+html body .controlWrap .btnBox ul li {
+  width: 100%;
+  height: 14vw;
+}
+html body .controlWrap .btnBox ul li:nth-of-type(1) {
+  border-bottom: solid 1px #5c6d79;
+}
+html body .controlWrap .btnBox ul li:nth-of-type(1) a {
+  justify-content: space-between;
+}
+html body .controlWrap .btnBox ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .controlWrap .btnBox ul li a p {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .controlWrap .btnBox ul li a i {
+  width: 4vw;
+  height: 3vw;
+  transform: rotate(-90deg);
+}
+html body .passwordWrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 101;
+  background: #19202a;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: 0.3s all;
+}
+html body .passwordWrap.active {
+  transform: translateX(0);
+}
+html body .passwordWrap .header {
+  width: 100%;
+  height: 10.5vw;
+  border-radius: 0 0 5vw 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  background: #feb300;
+  position: relative;
+}
+html body .passwordWrap .header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #212832;
+  font-weight: bold;
+  font-size: 5vw;
+  white-space: nowrap;
+}
+html body .passwordWrap .header i {
+  width: 4vw;
+  height: 4vw;
+}
+html body .passwordWrap .content {
+  width: 100%;
+  height: auto;
+  padding: 4vw 4vw 8vw;
+  background: #25344b;
+  margin: 1.5vw 0;
+}
+html body .passwordWrap .content ul {
+  width: 100%;
+  height: auto;
+}
+html body .passwordWrap .content ul li {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #5c6d79;
+  margin-bottom: 3vw;
+}
+html body .passwordWrap .content ul li .title {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+html body .passwordWrap .content ul li input {
+  width: 100%;
+  height: 9vw;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+  margin-bottom: 2vw;
+}
+html body .passwordWrap .content ul li input::placeholder {
+  color: #a8b0be;
+}
+html body .passwordWrap .content ul li .remind {
+  color: #ff8207;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 3vw;
+}
+html body .passwordWrap .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2vw auto;
+}
+html body .passwordWrap .check:active, html body .passwordWrap .check.active {
+  background: #ffffff;
+}
+html body .serviceWrap {
+  width: 100%;
+  height: 100%;
+  padding: 2vw 3vw;
+}
+html body .serviceWrap .nameBox {
+  width: 100%;
+  height: 25vw;
+  padding: 4vw 4vw 4vw 0;
+  display: flex;
+  background: #25344b;
+  border-radius: 2vw;
+  margin-bottom: 4vw;
+}
+html body .serviceWrap .nameBox .icBox {
+  width: 24vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+html body .serviceWrap .nameBox .icBox div {
+  width: 15vw;
+  height: 15vw;
+}
+html body .serviceWrap .nameBox .info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .serviceWrap .nameBox .info .title {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+html body .serviceWrap .nameBox .info .title span {
+  color: #ffffff;
+}
+html body .serviceWrap .nameBox .info p {
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .serviceWrap .linkBox {
+  width: 100%;
+  height: 23vw;
+  padding: 4vw 4vw 4vw 0;
+  display: flex;
+  background: #3d5261;
+  border-radius: 2vw;
+  margin-bottom: 2vw;
+  border: solid 1px #feb300;
+}
+html body .serviceWrap .linkBox .icBox {
+  width: 16vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+html body .serviceWrap .linkBox .icBox div {
+  width: 9vw;
+  height: 8vw;
+}
+html body .serviceWrap .linkBox .icBox div.p2 {
+  background-position-x: 100%;
+}
+html body .serviceWrap .linkBox .info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+html body .serviceWrap .linkBox .info .title {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+  letter-spacing: 2px;
+}
+html body .serviceWrap .linkBox .info .remind {
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 3vw;
+  margin-bottom: 2vw;
+}
+html body .serviceWrap .linkBox .info .text {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .optionWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: #19202a;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s all;
+  transform: translateX(100%);
+}
+html body .optionWrap.display {
+  transform: translateX(0);
+}
+html body .optionWrap .header {
+  width: 100%;
+  height: 10.5vw;
+  border-radius: 0 0 5vw 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  background: #feb300;
+  position: relative;
+  flex-shrink: 0;
+}
+html body .optionWrap .header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #212832;
+  font-weight: bold;
+  font-size: 5vw;
+  white-space: nowrap;
+}
+html body .optionWrap .header i {
+  width: 4vw;
+  height: 4vw;
+}
+html body .optionWrap .header .btnBox {
+  width: auto;
+  height: auto;
+}
+html body .optionWrap .header .btnBox a {
+  width: auto;
+  height: auto;
+  background: #3b73c2;
+  border-radius: 1vw;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  font-size: 3.2vw;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding: 2vw;
+}
+html body .optionWrap .content {
+  width: 100%;
+  height: auto;
+  margin-top: 2vw;
+}
+html body .optionWrap .content .top {
+  width: 100%;
+  height: auto;
+  background: #25344b;
+  padding: 3vw;
+}
+html body .optionWrap .content .top div {
+  width: 100%;
+  height: auto;
+}
+html body .optionWrap .content .top div:nth-of-type(1) {
+  border-bottom: solid 1px #5c6d79;
+  padding-bottom: 1vw;
+  margin-bottom: 3vw;
+}
+html body .optionWrap .content .top div:nth-of-type(1) .title {
+  margin-bottom: 2vw;
+}
+html body .optionWrap .content .top div .title {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .optionWrap .content .top div select {
+  width: 100%;
+  height: 9vw;
+  background-color: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+  background-color: #1b2739;
+  background-image: linear-gradient(45deg, transparent 50%, #feb300 0), linear-gradient(135deg, #feb300 50%, transparent 0);
+  background-position: calc(100% - 4vw) calc(50%), calc(100% - 3vw) calc(54%);
+  background-size: 6px 5px, 5px 6px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+          appearance: none;
+}
+html body .optionWrap .content .bottom {
+  width: 100%;
+  height: auto;
+  padding: 3vw;
+  background: #2f3f58;
+}
+html body .optionWrap .content .bottom textarea {
+  width: 100%;
+  height: auto;
+  min-height: 37vh;
+  border-color: transparent transparent #5c6d79;
+  margin-bottom: 3vw;
+  background: none;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  resize: none;
+}
+html body .optionWrap .content .bottom textarea::placeholder {
+  color: #97a0ad;
+}
+html body .optionWrap .content .bottom .btnBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 6vw;
+}
+html body .optionWrap .content .bottom .btnBox button {
+  width: 12vw;
+  height: 12vw;
+  border: dashed 2px #5c6d79;
+  background: none;
+  position: relative;
+}
+html body .optionWrap .content .bottom .btnBox button::before {
+  content: "";
+  position: absolute;
+  width: 7vw;
+  height: 5vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html body .optionWrap .content .bottom .remind {
+  color: #ff8207;
+  font-size: 2vw;
+  font-weight: bold;
+  line-height: 4vw;
+}
+html body .optionWrap .content .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2vw auto;
+}
+html body .optionWrap .content .check:active, html body .optionWrap .content .check.active {
+  background: #ffffff;
+}
+html body .mineOptionWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background: #19202a;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s all;
+  transform: translateX(100%);
+}
+html body .mineOptionWrap.display {
+  transform: translateX(0);
+}
+html body .mineOptionWrap .header {
+  width: 100%;
+  height: 10.5vw;
+  border-radius: 0 0 5vw 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  background: #feb300;
+  position: relative;
+  flex-shrink: 0;
+}
+html body .mineOptionWrap .header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #212832;
+  font-weight: bold;
+  font-size: 5vw;
+  white-space: nowrap;
+}
+html body .mineOptionWrap .header i {
+  width: 4vw;
+  height: 4vw;
+}
+html body .mineOptionWrap .content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 2vw 3vw;
+}
+html body .mineOptionWrap .content ul {
+  width: 100%;
+  height: auto;
+}
+html body .mineOptionWrap .content ul li {
+  width: 100%;
+  height: auto;
+  border-radius: 2vw;
+  border: solid 1px #feb300;
+  overflow: hidden;
+  margin-bottom: 2vw;
+}
+html body .mineOptionWrap .content ul li .title {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #455c80;
+  padding: 0 3vw;
+}
+html body .mineOptionWrap .content ul li .title .name {
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .mineOptionWrap .content ul li .title .name span {
+  width: auto;
+  height: auto;
+  background: #2f3f58;
+  border: solid 1px #9ab1d4;
+  border-radius: 1vw;
+  font-size: 2vw;
+  color: #97a0ad;
+  padding: 0 2vw;
+  margin-left: 1vw;
+}
+html body .mineOptionWrap .content ul li .title .name span.empty {
+  background: none;
+}
+html body .mineOptionWrap .content ul li .title .time {
+  color: #97a0ad;
+  font-weight: bold;
+  font-size: 2vw;
+}
+html body .mineOptionWrap .content ul li .box {
+  width: 100%;
+  height: auto;
+  padding: 3vw;
+  background: #25344b;
+}
+html body .mineOptionWrap .content ul li .box .name {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  line-height: 4vw;
+}
+html body .mineOptionWrap .content ul li .box .text {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+  margin-top: 3vw;
+  line-height: 4vw;
+}
+html body .amountWrap {
+  width: 100%;
+  height: 100%;
+  padding: 2vw 1vw;
+}
+html body .amountWrap .listBox {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .amountWrap .listBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .amountWrap .listBox ul li {
+  width: 100%;
+  height: 7.5vw;
+  border-radius: 2vw;
+  overflow: hidden;
+  border: solid 1px transparent;
+  margin-bottom: 2vw;
+}
+html body .amountWrap .listBox ul li.active {
+  height: auto;
+  border-color: #5c6d79;
+}
+html body .amountWrap .listBox ul li.active .title {
+  background: #feb300;
+  color: #212832;
+}
+html body .amountWrap .listBox ul li.active .title i {
+  width: 2vw;
+  height: 3vw;
+  transform: rotate(90deg);
+}
+html body .amountWrap .listBox ul li .title {
+  width: 100%;
+  height: 7.5vw;
+  background: #31425b;
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .amountWrap .listBox ul li .title i {
+  width: 3vw;
+  height: 2vw;
+  transition: 0.3s all;
+}
+html body .amountWrap .listBox ul li table {
+  width: 100%;
+  height: auto;
+}
+html body .amountWrap .listBox ul li table tr {
+  background: #25344b;
+}
+html body .amountWrap .listBox ul li table tr:nth-of-type(even) {
+  background: #31425b;
+}
+html body .amountWrap .listBox ul li table tr:last-child td {
+  border-bottom: none;
+}
+html body .amountWrap .listBox ul li table tr th,
+html body .amountWrap .listBox ul li table tr td {
+  vertical-align: middle;
+  border: solid 1px #5c6d79;
+  border-width: 0 1px 1px 0;
+}
+html body .amountWrap .listBox ul li table tr th:last-child,
+html body .amountWrap .listBox ul li table tr td:last-child {
+  border-right: none;
+}
+html body .amountWrap .listBox ul li table tr th p,
+html body .amountWrap .listBox ul li table tr td p {
+  width: 100%;
+  text-align: center;
+  color: #ffcc41;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .amountWrap .listBox ul li table tr th p span,
+html body .amountWrap .listBox ul li table tr td p span {
+  color: #ffffff;
+}
+html body .amountWrap .listBox ul li table tr th {
+  height: 7vw;
+}
+html body .amountWrap .listBox ul li table tr td {
+  width: 22%;
+  height: 7vw;
+}
+html body .amountWrap .listBox ul li table tr td:nth-of-type(1) {
+  width: 12%;
+}
+html body .amountWrap .listBox ul li table tr td:nth-of-type(1) p {
+  color: #feb300;
+}
+html body .amountWrap .listBox ul li table tr td p {
+  color: #ffffff;
+}
+html body .amountWrap .listBox ul li table tr td {
+  width: auto;
+}
+html body .amountWrap .listBox ul li table tr td:nth-of-type(1) {
+  width: auto;
+}
+html body .ruleWrap {
+  width: 100%;
+  height: 100%;
+  padding: 2vw 1vw;
+}
+html body .ruleWrap .listBox {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .ruleWrap .listBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .ruleWrap .listBox ul li {
+  width: 100%;
+  height: 7.5vw;
+  border-radius: 2vw;
+  overflow: hidden;
+  border: solid 1px transparent;
+  margin-bottom: 2vw;
+}
+html body .ruleWrap .listBox ul li.active {
+  height: auto;
+  border-color: #5c6d79;
+}
+html body .ruleWrap .listBox ul li.active .title {
+  background: #feb300;
+  color: #212832;
+}
+html body .ruleWrap .listBox ul li.active .title i {
+  width: 2vw;
+  height: 3vw;
+  transform: rotate(90deg);
+}
+html body .ruleWrap .listBox ul li .title {
+  width: 100%;
+  height: 7.5vw;
+  background: #31425b;
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #feb300;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .ruleWrap .listBox ul li .title i {
+  width: 3vw;
+  height: 2vw;
+  transition: 0.3s all;
+}
+html body .ruleWrap .listBox ul li table {
+  width: 100%;
+  height: auto;
+}
+html body .ruleWrap .listBox ul li table tr {
+  background: #25344b;
+}
+html body .ruleWrap .listBox ul li table tr:nth-of-type(even) {
+  background: #31425b;
+}
+html body .ruleWrap .listBox ul li table tr:last-child td {
+  border-bottom: none;
+}
+html body .ruleWrap .listBox ul li table tr th,
+html body .ruleWrap .listBox ul li table tr td {
+  vertical-align: middle;
+  border: solid 1px #5c6d79;
+  border-width: 0 1px 1px 0;
+}
+html body .ruleWrap .listBox ul li table tr th:last-child,
+html body .ruleWrap .listBox ul li table tr td:last-child {
+  border-right: none;
+}
+html body .ruleWrap .listBox ul li table tr th p,
+html body .ruleWrap .listBox ul li table tr td p {
+  width: 100%;
+  text-align: center;
+  color: #ffcc41;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .ruleWrap .listBox ul li table tr th p span,
+html body .ruleWrap .listBox ul li table tr td p span {
+  color: #ffffff;
+}
+html body .ruleWrap .listBox ul li table tr th {
+  height: 7vw;
+}
+html body .ruleWrap .listBox ul li table tr td {
+  width: 22%;
+  height: 7vw;
+}
+html body .ruleWrap .listBox ul li table tr td:nth-of-type(1) {
+  width: 12%;
+}
+html body .ruleWrap .listBox ul li table tr td:nth-of-type(1) p {
+  color: #feb300;
+}
+html body .ruleWrap .listBox ul li table tr td p {
+  color: #ffffff;
+}
+html body .ruleWrap .listBox ul li table tr td {
+  padding: 2vw 1.5vw;
+}
+html body .ruleWrap .listBox ul li table tr td:nth-of-type(1) {
+  width: 100%;
+}
+html body .ruleWrap .listBox ul li table tr td p {
+  text-align: left;
+  line-height: 4.5vw;
+  font-size: 3.5vw;
+}
+html body .depositWrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .depositWrap .top,
+html body .depositWrap .bottom {
+  width: 100%;
+  height: auto;
+  background: #25344b;
+  margin-top: 2vw;
+  padding: 0 3vw 2vw;
+}
+html body .depositWrap .top .title,
+html body .depositWrap .bottom .title {
+  width: 100%;
+  height: 8vw;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+html body .depositWrap .top .listBox,
+html body .depositWrap .bottom .listBox {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #5c6d79;
+  padding-bottom: 1vw;
+}
+html body .depositWrap .top .listBox ul,
+html body .depositWrap .bottom .listBox ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .depositWrap .top .listBox ul li,
+html body .depositWrap .bottom .listBox ul li {
+  width: 24%;
+  height: 15vw;
+  margin: 0 1.2vw 1.2vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #3d5261;
+  border: solid 1px #feb300;
+  border-radius: 1vw;
+  overflow: hidden;
+  position: relative;
+}
+html body .depositWrap .top .listBox ul li:nth-of-type(4n),
+html body .depositWrap .bottom .listBox ul li:nth-of-type(4n) {
+  margin-right: 0;
+}
+html body .depositWrap .top .listBox ul li:active,
+html body .depositWrap .bottom .listBox ul li:active {
+  border-color: #ffffff;
+  background: #25344b;
+}
+html body .depositWrap .top .listBox ul li:active p,
+html body .depositWrap .bottom .listBox ul li:active p {
+  color: #ffffff;
+}
+html body .depositWrap .top .listBox ul li.active,
+html body .depositWrap .bottom .listBox ul li.active {
+  border-color: #ffffff;
+  background: #25344b;
+}
+html body .depositWrap .top .listBox ul li.active::before,
+html body .depositWrap .bottom .listBox ul li.active::before {
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  width: 5vw;
+  height: 5vw;
+  right: -2.5vw;
+  bottom: -2.5vw;
+  background: #ffffff;
+}
+html body .depositWrap .top .listBox ul li.active::after,
+html body .depositWrap .bottom .listBox ul li.active::after {
+  content: "";
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  right: 0vw;
+  bottom: 0vw;
+}
+html body .depositWrap .top .listBox ul li.active p,
+html body .depositWrap .bottom .listBox ul li.active p {
+  color: #ffffff;
+}
+html body .depositWrap .top .listBox ul li i,
+html body .depositWrap .bottom .listBox ul li i {
+  width: 6vw;
+  height: 6vw;
+  margin-bottom: 2vw;
+}
+html body .depositWrap .top .listBox ul li i.card_ic,
+html body .depositWrap .bottom .listBox ul li i.card_ic {
+  background-position-x: 0;
+}
+html body .depositWrap .top .listBox ul li i.bank_ic,
+html body .depositWrap .bottom .listBox ul li i.bank_ic {
+  background-position-x: 12.5%;
+}
+html body .depositWrap .top .listBox ul li i.alipayCard_ic,
+html body .depositWrap .bottom .listBox ul li i.alipayCard_ic {
+  background-position-x: 25%;
+}
+html body .depositWrap .top .listBox ul li i.wechat_ic,
+html body .depositWrap .bottom .listBox ul li i.wechat_ic {
+  background-position-x: 37.5%;
+}
+html body .depositWrap .top .listBox ul li i.alipay_ic,
+html body .depositWrap .bottom .listBox ul li i.alipay_ic {
+  background-position-x: 50%;
+}
+html body .depositWrap .top .listBox ul li i.qr_ic,
+html body .depositWrap .bottom .listBox ul li i.qr_ic {
+  background-position-x: 62.5%;
+}
+html body .depositWrap .top .listBox ul li i.hand_ic,
+html body .depositWrap .bottom .listBox ul li i.hand_ic {
+  background-position-x: 75%;
+}
+html body .depositWrap .top .listBox ul li p,
+html body .depositWrap .bottom .listBox ul li p {
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+html body .depositWrap .top input,
+html body .depositWrap .bottom input {
+  width: 100%;
+  height: 9vw;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+}
+html body .depositWrap .top input::placeholder,
+html body .depositWrap .bottom input::placeholder {
+  color: #a8b0be;
+}
+html body .depositWrap .top .remind,
+html body .depositWrap .bottom .remind {
+  margin-top: 1vw;
+  color: #ff8207;
+  font-weight: bold;
+  font-size: 3vw;
+  line-height: 4vw;
+}
+html body .depositWrap .top .btnBox,
+html body .depositWrap .bottom .btnBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .depositWrap .top .btnBox button,
+html body .depositWrap .bottom .btnBox button {
+  width: 24%;
+  height: 9vw;
+  margin: 0 1.2vw 1.2vw 0;
+  background: #5c7293;
+  border-radius: 1vw;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .depositWrap .top .btnBox button:active, html body .depositWrap .top .btnBox button.active,
+html body .depositWrap .bottom .btnBox button:active,
+html body .depositWrap .bottom .btnBox button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .depositWrap .top .btnBox button:nth-of-type(4n),
+html body .depositWrap .bottom .btnBox button:nth-of-type(4n) {
+  margin-right: 0;
+}
+html body .depositWrap .top .btnBox button:last-child,
+html body .depositWrap .bottom .btnBox button:last-child {
+  width: 49.4%;
+}
+html body .depositWrap .bottom {
+  background: #2f3f58;
+}
+html body .depositWrap .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2vw auto;
+}
+html body .depositWrap .check:active, html body .depositWrap .check.active {
+  background: #ffffff;
+}
+html body .transferWrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .transferWrap .top {
+  width: 100%;
+  height: auto;
+  padding: 0 3vw;
+  background: #25344b;
+  margin-top: 2vw;
+}
+html body .transferWrap .top .title {
+  width: 100%;
+  height: 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body .transferWrap .top .title p {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+html body .transferWrap .top .title p i {
+  width: 3vw;
+  height: 3vw;
+  margin-left: 2vw;
+}
+html body .transferWrap .top .title button {
+  width: auto;
+  height: auto;
+  background: #3d5261;
+  border-radius: 1vw;
+  border: solid 1px #feb300;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5vw 1vw;
+}
+html body .transferWrap .top .title button:active, html body .transferWrap .top .title button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .transferWrap .top .box {
+  width: 100%;
+  height: auto;
+  border: solid 1px #5c6d79;
+  border-width: 1px 0;
+}
+html body .transferWrap .top .box ul {
+  width: 100%;
+  height: auto;
+}
+html body .transferWrap .top .box ul li {
+  display: flex;
+  padding: 1.5vw 0;
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .transferWrap .top .box ul li:nth-of-type(1) {
+  padding: 2vw 0;
+}
+html body .transferWrap .top .box ul li:nth-of-type(1) div .num {
+  font-size: 4vw;
+}
+html body .transferWrap .top .box ul li:last-child {
+  border: none;
+}
+html body .transferWrap .top .box ul li div {
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: solid 1px #5c6d79;
+  flex-direction: column;
+}
+html body .transferWrap .top .box ul li div:last-child {
+  border: none;
+}
+html body .transferWrap .top .box ul li div .smallTitle {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+html body .transferWrap .top .box ul li div .smallTitle i {
+  width: 3vw;
+  height: 3vw;
+  margin-right: 1vw;
+}
+html body .transferWrap .top .box ul li div .smallTitle i.limit_ic {
+  background-position-x: 100%;
+}
+html body .transferWrap .top .box ul li div .num {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3vw;
+}
+html body .transferWrap .top .openBtn {
+  width: 100%;
+  height: 11vw;
+  background: none;
+  color: #97a0ad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+  font-weight: bold;
+}
+html body .transferWrap .top .openBtn i {
+  width: 3vw;
+  height: 3vw;
+  margin-left: 1vw;
+}
+html body .transferWrap .bottom {
+  width: 100%;
+  height: auto;
+  background: #2f3f58;
+  padding: 0 3vw;
+  margin-top: 2vw;
+}
+html body .transferWrap .bottom ul {
+  width: 100%;
+  height: auto;
+}
+html body .transferWrap .bottom ul li {
+  width: 100%;
+  height: auto;
+  padding: 3vw 0;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .transferWrap .bottom ul li:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body .transferWrap .bottom ul li:nth-of-type(1) .title {
+  margin: 0;
+}
+html body .transferWrap .bottom ul li:last-child {
+  border: none;
+}
+html body .transferWrap .bottom ul li .title {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 3vw;
+}
+html body .transferWrap .bottom ul li .row {
+  width: 20vw;
+  height: 8vw;
+  background: #19202a;
+  border-radius: 10vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 3vw;
+}
+html body .transferWrap .bottom ul li .row.active p:nth-of-type(1) {
+  color: #97a0ad;
+}
+html body .transferWrap .bottom ul li .row.active p:nth-of-type(2) {
+  color: transparent;
+}
+html body .transferWrap .bottom ul li .row.active .bar {
+  background: #567ebb;
+}
+html body .transferWrap .bottom ul li .row p {
+  color: #97a0ad;
+}
+html body .transferWrap .bottom ul li .row p:nth-of-type(1) {
+  color: transparent;
+}
+html body .transferWrap .bottom ul li .row .bar {
+  background: #4a5a70;
+}
+html body .transferWrap .bottom ul li .row.active .bar {
+  left: 63%;
+}
+html body .transferWrap .bottom ul li .row p {
+  width: 50%;
+  font-size: 3.7vw;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s all;
+}
+html body .transferWrap .bottom ul li .row .bar {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 10vw;
+  position: absolute;
+  transition: 0.3s all;
+  left: 3%;
+}
+html body .transferWrap .bottom ul li select {
+  width: 100%;
+  height: 9vw;
+  background-color: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+  background-color: #1b2739;
+  background-image: linear-gradient(45deg, transparent 50%, #feb300 0), linear-gradient(135deg, #feb300 50%, transparent 0);
+  background-position: calc(100% - 4vw) calc(50%), calc(100% - 3vw) calc(54%);
+  background-size: 6px 5px, 5px 6px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+          appearance: none;
+}
+html body .transferWrap .bottom ul li .inputBox {
+  width: 100%;
+  height: 10vw;
+  position: relative;
+}
+html body .transferWrap .bottom ul li .inputBox input {
+  width: 100%;
+  height: 100%;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+}
+html body .transferWrap .bottom ul li .inputBox input::placeholder {
+  color: #a8b0be;
+}
+html body .transferWrap .bottom ul li .inputBox p {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2vw;
+}
+html body .transferWrap .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2vw auto 7vw;
+}
+html body .transferWrap .check:active, html body .transferWrap .check.active {
+  background: #ffffff;
+}
+html body .withdrawalWrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .withdrawalWrap .top {
+  width: 100%;
+  height: auto;
+  background: #25344b;
+  padding: 0 3vw;
+  margin-top: 2vw;
+}
+html body .withdrawalWrap .top ul {
+  width: 100%;
+  height: auto;
+}
+html body .withdrawalWrap .top ul li {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #5c6d79;
+  padding: 2.5vw 0;
+}
+html body .withdrawalWrap .top ul li:last-child {
+  border: none;
+}
+html body .withdrawalWrap .top ul li .title {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+html body .withdrawalWrap .top ul li .num {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .withdrawalWrap .top ul li input {
+  width: 100%;
+  height: 9vw;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+}
+html body .withdrawalWrap .top ul li input::placeholder {
+  color: #a8b0be;
+}
+html body .withdrawalWrap .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2vw auto;
+}
+html body .withdrawalWrap .check:active, html body .withdrawalWrap .check.active {
+  background: #ffffff;
+}
+html body .withdrawalWrap .remind {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4vw;
+  color: #ff8207;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .withdrawalWrap .remindBox {
+  width: 96%;
+  height: auto;
+  margin: 0 auto 5vw;
+  border: solid 1px #feb300;
+  border-radius: 2vw;
+  background: #2f3f58;
+  padding: 3vw;
+}
+html body .withdrawalWrap .remindBox .title {
+  color: #feb300;
+  margin-bottom: 3vw;
+  font-weight: bold;
+  font-size: 3.7vw;
+}
+html body .withdrawalWrap .remindBox p:not(.title) {
+  color: #97a0ad;
+  font-size: 3.7vw;
+  font-weight: bold;
+  line-height: 4vw;
+}
+html body .withdrawalWrap .remindBox p:not(.title).remind {
+  margin: 3vw 0 0 0;
+  line-height: 4vw;
+  text-align: left;
+  color: #ff8207;
+}
+html body .cardWrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .cardWrap .cardList {
+  width: 100%;
+  height: auto;
+  padding: 2vw 3vw;
+  overflow-x: auto;
+  display: flex;
+}
+html body .cardWrap .cardList .card {
+  width: 55vw;
+  height: 29vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2vw;
+  background: linear-gradient(to right, #ffcc41 0%, #feb300 100%);
+  border: solid 1px #ffffff;
+  flex-shrink: 0;
+  padding: 4vw;
+  position: relative;
+  overflow: hidden;
+  margin-right: 2vw;
+}
+html body .cardWrap .cardList .card.empty {
+  background: linear-gradient(to right, #505b68 0%, #3c4653 100%);
+  border-color: #5c6d79;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+html body .cardWrap .cardList .card.empty p {
+  color: #a8b0be;
+}
+html body .cardWrap .cardList .card p {
+  color: #212832;
+}
+html body .cardWrap .cardList .card:last-child {
+  margin: 0;
+}
+html body .cardWrap .cardList .card .plusBtn {
+  width: 13vw;
+  height: 13vw;
+  margin-bottom: 4vw;
+}
+html body .cardWrap .cardList .card p {
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .cardWrap .cardList .card p.title {
+  font-size: 4.2vw;
+  margin-bottom: 2vw;
+}
+html body .cardWrap .cardList .card p.small {
+  margin-bottom: 3vw;
+}
+html body .cardWrap .cardList .card p.num {
+  font-size: 5vw;
+}
+html body .cardWrap .cardList .card .ready {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 29vw;
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+html body .cardWrap .cardList .card .ready p {
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-right: 2vw;
+}
+html body .cardWrap .bottom {
+  width: 100%;
+  height: auto;
+  padding: 3vw;
+  background: #25344b;
+}
+html body .cardWrap .bottom ul {
+  width: 100%;
+  height: auto;
+}
+html body .cardWrap .bottom ul li {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #5c6d79;
+  padding-bottom: 2vw;
+  margin-bottom: 3vw;
+}
+html body .cardWrap .bottom ul li:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+html body .cardWrap .bottom ul li .title {
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+html body .cardWrap .bottom ul li input {
+  width: 100%;
+  height: 9vw;
+  background: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+}
+html body .cardWrap .bottom ul li input::placeholder {
+  color: #a8b0be;
+}
+html body .cardWrap .bottom ul li .selectBox {
+  width: 100%;
+  height: 9vw;
+  display: flex;
+}
+html body .cardWrap .bottom ul li .selectBox select {
+  width: 50%;
+  height: 100%;
+  background-color: #1b2739;
+  border-radius: 1vw;
+  border: solid 1px #5c6d79;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding-left: 4vw;
+  background-color: #1b2739;
+  background-image: linear-gradient(45deg, transparent 50%, #feb300 0), linear-gradient(135deg, #feb300 50%, transparent 0);
+  background-position: calc(100% - 4vw) calc(50%), calc(100% - 3vw) calc(54%);
+  background-size: 6px 5px, 5px 6px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+          appearance: none;
+  font-size: 3vw;
+}
+html body .cardWrap .bottom ul li .selectBox select:nth-of-type(1) {
+  margin-right: 1vw;
+}
+html body .cardWrap .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2vw auto;
+}
+html body .cardWrap .check:active, html body .cardWrap .check.active {
+  background: #ffffff;
+}
+html body .contactWrap {
+  width: 100%;
+  height: 100%;
+}
+html body .contactWrap .top,
+html body .contactWrap .bottom {
+  width: 100%;
+  height: auto;
+  background: #25344b;
+  margin-top: 2vw;
+  padding: 0 3vw 2vw;
+}
+html body .contactWrap .top .title,
+html body .contactWrap .bottom .title {
+  width: 100%;
+  height: 9vw;
+  display: flex;
+  align-items: center;
+  color: #feb300;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .contactWrap .top .box,
+html body .contactWrap .bottom .box {
+  width: 100%;
+  height: auto;
+}
+html body .contactWrap .top .box ul,
+html body .contactWrap .bottom .box ul {
+  width: 100%;
+  height: auto;
+}
+html body .contactWrap .top .box ul li,
+html body .contactWrap .bottom .box ul li {
+  width: 100%;
+  height: 15vw;
+  display: flex;
+  border-bottom: solid 1px #5c6d79;
+}
+html body .contactWrap .top .box ul li:last-child,
+html body .contactWrap .bottom .box ul li:last-child {
+  border: none;
+}
+html body .contactWrap .top .box ul li .left,
+html body .contactWrap .bottom .box ul li .left {
+  width: 22vw;
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .contactWrap .top .box ul li .left::before,
+html body .contactWrap .bottom .box ul li .left::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1px;
+  height: 60%;
+  background: #5c6d79;
+}
+html body .contactWrap .top .box ul li .left div,
+html body .contactWrap .bottom .box ul li .left div {
+  width: 8vw;
+  height: 9vw;
+}
+html body .contactWrap .top .box ul li .left div.qq_ic,
+html body .contactWrap .bottom .box ul li .left div.qq_ic {
+  background-position-x: 25%;
+}
+html body .contactWrap .top .box ul li .left div.skype_ic,
+html body .contactWrap .bottom .box ul li .left div.skype_ic {
+  background-position-x: 50%;
+}
+html body .contactWrap .top .box ul li .left div.sugram_ic,
+html body .contactWrap .bottom .box ul li .left div.sugram_ic {
+  background-position-x: 75%;
+}
+html body .contactWrap .top .box ul li .right,
+html body .contactWrap .bottom .box ul li .right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 4vw;
+}
+html body .contactWrap .top .box ul li .right .textBox,
+html body .contactWrap .bottom .box ul li .right .textBox {
+  width: auto;
+  height: auto;
+}
+html body .contactWrap .top .box ul li .right .textBox .smallTitle,
+html body .contactWrap .bottom .box ul li .right .textBox .smallTitle {
+  color: #feb300;
+  margin-bottom: 2vw;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .contactWrap .top .box ul li .right .textBox .cnt,
+html body .contactWrap .bottom .box ul li .right .textBox .cnt {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .contactWrap .top .box ul li .right button,
+html body .contactWrap .bottom .box ul li .right button {
+  width: auto;
+  height: auto;
+  background: #3d5261;
+  border-radius: 1vw;
+  border: solid 1px #feb300;
+  color: #feb300;
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw 2vw;
+}
+html body .contactWrap .top .box ul li .right button:active, html body .contactWrap .top .box ul li .right button.active,
+html body .contactWrap .bottom .box ul li .right button:active,
+html body .contactWrap .bottom .box ul li .right button.active {
+  background: #feb300;
+  color: #212832;
+}
+html body .contactWrap .check {
+  width: 96%;
+  height: 11vw;
+  display: block;
+  background: #feb300;
+  color: #212832;
+  font-size: 4vw;
+  font-weight: bold;
+  border-radius: 2vw;
+  margin: 2vw auto;
+}
+html body .contactWrap .check:active, html body .contactWrap .check.active {
+  background: #ffffff;
+}

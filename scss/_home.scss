@@ -1,0 +1,323 @@
+//operate
+.operate {
+    width: 100%;
+    height: auto;
+    margin-top: 3vw;
+    padding: 0 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    .user {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .userName {
+            font-size: 3.7vw;
+            font-weight: bold;
+            color: $title_1;
+            margin-bottom: 2vw;
+        }
+
+        .amount {
+            font-size: 5vw;
+            font-weight: bold;
+            color: $title_3;
+            display: flex;
+            align-items: center;
+
+            i {
+                width: 4vw;
+                height: 4vw;
+                margin-left: 2vw;
+            }
+        }
+    }
+
+    .btnBox {
+        width: auto;
+        height: auto;
+
+        ul {
+            width: auto;
+            height: auto;
+            display: flex;
+
+            li {
+                width: auto;
+                height: auto;
+                margin: 0 3vw;
+
+                &:last-child {
+                    margin-right: 1vw;
+                }
+
+                a {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        width: 8vw;
+                        height: 9vw;
+                        margin-bottom: 1.5vw;
+
+                        &.deposit_ic {
+                            background-position-x: 0;
+                        }
+                        &.transfer_ic {
+                            background-position-x: 50%;
+                        }
+                        &.withdrawal_ic {
+                            background-position-x: 100%;
+                        }
+                    }
+
+                    p {
+                        font-size: 3.7vw;
+                        font-weight: bold;
+                        color: $title_1;
+                        width: 100%;
+                        text-align: center;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//mainList
+.mainList {
+    width: 100%;
+    height: calc(100% - 72.5vw);
+    display: flex;
+    padding: 0 3.5vw;
+    margin-top: 5vw;
+
+    .list {
+        width: 17.5vw;
+        height: 100%;
+        margin-right: 2vw;
+        flex-shrink: 0;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                width: 100%;
+                height: 25%;
+                margin-bottom: 2.5vw;
+                @include mainListBtn;
+
+                &:active,&.active {
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: calc(100% + 2px);
+                        height: 100%;
+                        left: -1px;
+                        bottom: 1vw;
+                        border-radius: 2vw;
+                    }
+                }
+                
+                .title {
+                    font-size: 3.2vw;
+                    font-weight: bold;
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 1vw;
+                }
+
+                .num {
+                    font-size: 4.3vw;
+                    font-weight: bold;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    .gameBox {
+        width: 75vw;
+        height: 100%;
+        overflow-y: auto;
+        
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: 27vw;
+                margin-bottom: 2.5vw;
+                position: relative;
+
+                &:last-child {
+                    margin-bottom: 4vw;
+                }
+
+                &.goSoccer {
+
+                    .img {
+                        background-position-x: 0;
+                    }
+
+                    a {
+                        
+                        &::after {
+                            background-position-x: 0;
+                        }
+                    }
+                }
+                &.goBasketball {
+
+                    .img {
+                        background-position-x: 50%;
+                    }
+
+                    a {
+                        
+                        &::after {
+                            background-position-x: 50%;
+                        }
+                    }
+                }
+                &.goEsports {
+
+                    .img {
+                        background-position-x: 100%;
+                    }
+
+                    a {
+                        
+                        &::after {
+                            background-position-x: 100%;
+                        }
+                    }
+                }
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    border: solid 1px $Border_1;
+                    border-radius: 2vw;
+                    background: $mainList_gameBoxBG;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 75%;
+                        height: 100%;
+                        pointer-events: none;
+                        background: $mainList_gameBoxLinear;
+                        clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 44vw;
+                        height: 10vw;
+                    }
+
+                    .top,
+                    .bottom {
+                        width: 14vw;
+                        height: 14vw;
+                        position: absolute;
+                        top: -7vw;
+                        left: -7vw;
+                        transform: rotate(45deg);
+                        background: $mainList_cornerBG;
+                        border: solid 1px $Border_1;
+                    }
+                    .top {
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            right: 1.5vw;
+                            bottom: 5.5vw;
+                            width: 3vw;
+                            height: 3vw;
+                            border-radius: 7vw;
+                            transform: rotate(-45deg);
+                            background: $mainList_cornerDot_BG;
+                            box-shadow: 0 2px 5px 0 $mainList_cornerDot_Shadow;
+                        }
+                    }
+                    .bottom {
+                        top: unset;
+                        left: unset;
+                        right: -7vw;
+                        bottom: -7vw;
+                    }
+
+                    .wordBox {
+                        width: 60%;
+                        height: 100%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        z-index: 2;
+
+                        .title {
+                            font-size: 4vw;
+                            font-weight: bold;
+                            margin-bottom: 2vw;
+                            color: $title_1;
+                        }
+                
+                        .num {
+                            font-size: 7vw;
+                            font-weight: bold;
+                            margin-bottom: 2vw;
+                            color: $title_3;
+                        }
+                
+                        .remind {
+                            font-size: 3vw;
+                            font-weight: bold;
+                            color: $title_2;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+
+                .img {
+                    position: absolute;
+                    bottom: -1px;
+                    right: 3vw;
+                    width: 30vw;
+                    height: 26vw;
+                    z-index: 1;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

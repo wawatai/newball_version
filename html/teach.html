@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascripts.js"></script>
+</head>
+<body>
+    <header>
+        <!--backArrow-->
+        <a class="backArrow" href="./innerIndex.html"></a>
+        <!--title-->
+        <p class="title">チュートリアル</p>
+        <!--icon-->
+        <div class="iconBox"></div>
+    </header>
+    <main>
+        <div class="teachWrap">
+            <!--上選單-->
+            <div class="teachList">
+                <ul>
+                    <li class="active">
+                        <i class="soocer_ic"></i>
+                        サッカー
+                    </li>
+                    <li>
+                        <i class="basketball_ic"></i>
+                        バスケットボール
+                    </li>
+                    <li>
+                        <i class="baseball_ic"></i>
+                        野球
+                    </li>
+                </ul>
+            </div>
+            <!--選擇類別-->
+            <div class="type">
+                <ul>
+                    <li class="active">ハンディキャップ</li>
+                    <li>大小</li>
+                </ul>
+            </div>
+            <!--teachBox-->
+            <div class="teachBox">
+                <div class="teachType display">
+                    <div class="type p1 display">
+                        <div class="box">
+                            <p class="title">タイ</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">マンチェスターユ ナイテッド[ホーム]</p>
+                                    <p class="score">1ボール</p>
+                                    <p class="bet">0.910</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">アーセナル</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.910</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">1 - 0</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>ハンデ「1ボール」とします</p>
+                                    <p>引分けになります</p>
+                                    <p>返金</p>
+                                </div>
+                                <div class="right">
+                                    <p>ハンデ「1ボール」とします</p>
+                                    <p>引分けになります</p>
+                                    <p>返金</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">勝ち/負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">マンチェスターユ ナイテッド[ホーム]</p>
+                                    <p class="score">1ボール</p>
+                                    <p class="bet">0.910</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">アーセナル</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.910</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">920円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">3 - 0</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result lose">元金を失う1,000円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>勝つ1000X（0.920）= 920</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>ハンディキャップは「1球/ 2球」</p>
+                                    <p>2チームの合計スコアは3です</p>
+                                    <p>だから、プリンシパルを失うた</p>
+                                    <p>めにアウェイチームに賭ける</p>
+                                </div>
+                            </div>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result lose">元金を失う1,000円</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">3 - 0</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">920円を獲得</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left lose">
+                                    <p>ハンディキャップは「1球/ 2球」</p>
+                                    <p>2チームの合計スコアは3です</p>
+                                    <p>だから、プリンシパルを失うた</p>
+                                    <p>めにアウェイチームに賭ける</p>
+                                </div>
+                                <div class="right">
+                                    <p>勝つ1000X（0.920）= 920</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">半分勝ち/半分負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">レアル・マドリード[ホーム]</p>
+                                    <p class="score">1ボール半/ 2ボール</p>
+                                    <p class="bet">0.920</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">バルセロナ</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.960</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">460円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">2 - 0</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result lose">元金を失う500円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>勝つ1000 X (50%) X (1+0.92)</p>
+                                    <p>-1000 X 50% = 460</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>1000 (50%) - 1000 = -500</p>
+                                    <p>元金を失う500円</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type p2">
+                        <div class="box">
+                            <p class="title">勝ち/負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">レアル・マドリード[ホーム]</p>
+                                    <p class="score">2.5大きい</p>
+                                    <p class="bet">0.960</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">バルセロナ</p>
+                                    <p class="score">2.5小</p>
+                                    <p class="bet">0.880</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">960円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">1 - 2</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">元金を失う1,000円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>勝つ1000X（0.960）= 960</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>ボールの大小は「2.5大/2.5小」です</p>
+                                    <p>2チームの合計スコアは3です</p>
+                                    <p>だから2.5時間を賭けて元金を失う</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">引分</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">レアル・マドリード[ホーム]</p>
+                                    <p class="score">3フラット</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">バルセロナ</p>
+                                    <p class="score">3フラットスモール</p>
+                                    <p class="bet">0.880</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">2 - 1</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>ボールの大小は「3フラットビッグ/ 3フラットスモール」です。</p>
+                                    <p>2チームの合計スコアは3です</p>
+                                    <p>したがって、勝者を区別したり、元金を失って元金を返却したりすることはできません。</p>
+                                </div>
+                                <div class="right">
+                                    <p>ボールの大小は「3フラットビッグ/ 3フラットスモール」です。</p>
+                                    <p>2チームの合計スコアは3です</p>
+                                    <p>したがって、勝者を区別したり、元金を失って元金を返却したりすることはできません。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="teachType">
+                    <div class="type p1 display">
+                        <div class="box">
+                            <p class="title">引分</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">ヒート[ホーム]</p>
+                                    <p class="score">2フラット</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">超音速</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">91 - 89</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>ボールを「2タイ」にハンディキャップ</p>
+                                    <p>引分けになります</p>
+                                    <p>返金</p>
+                                </div>
+                                <div class="right">
+                                    <p>ハンデ「1ボール」とします</p>
+                                    <p>引分けになります</p>
+                                    <p>返金</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">勝ち/負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">ヒート[ホーム]</p>
+                                    <p class="score">引き分け</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">超音速</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">940円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">103 - 89</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result lose">元金を失う1,000円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>勝つ1000X（0.940）= 940</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>1000 x -1 = -1000を失う</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">半分勝ち/半分負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">ヒート[ホーム]</p>
+                                    <p class="score">2+50</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">超音速</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">460円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">95 - 93</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result lose">元金を失う500円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>1000 X（50％）X（1 + 0.94）に勝つ</p>
+                                    <p>-1000 X 50% = 460</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>1000 (50%) - 1000 = -500</p>
+                                    <p>元金を失う500円</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type p2">
+                        <div class="box">
+                            <p class="title">勝ち/負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">スパーズ[ホーム]</p>
+                                    <p class="score">186.5大きい</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">ピストン</p>
+                                    <p class="score">186.5小</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">900円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">95 - 93</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">元金を失う1,000円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>勝つ1000X（0.900）= 900</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>ボールの大小は「186.5大/186.5小」です</p>
+                                    <p>2チームの合計スコアは188です</p>
+                                    <p>したがって、元金を失うために186.5を小さく賭けます</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">引分</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">スパーズ[ホーム]</p>
+                                    <p class="score">192フラット</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">ピストン</p>
+                                    <p class="score">192フラットスモール</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">103 - 89</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>ボールの大小は「192フラットビッグ/ 192フラットスモール」です。</p>
+                                    <p>2チームの合計スコアは192です</p>
+                                    <p>したがって、勝者を区別したり、元金を失って元金を返却したりすることはできません。</p>
+                                </div>
+                                <div class="right">
+                                    <p>ボールの大小は「192フラットビッグ/ 192フラットスモール」です。</p>
+                                    <p>2チームの合計スコアは192です</p>
+                                    <p>したがって、勝者を区別したり、元金を失って元金を返却したりすることはできません。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="teachType">
+                    <div class="type p1 display">
+                        <div class="box">
+                            <p class="title">引分</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">レッドソックス[ホーム]</p>
+                                    <p class="score">1フラット</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">天使</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">4 - 3</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>ハンデ「1ボール」とします</p>
+                                    <p>引分けになります</p>
+                                    <p>返金</p>
+                                </div>
+                                <div class="right">
+                                    <p>ハンデ「1ボール」とします</p>
+                                    <p>引分けになります</p>
+                                    <p>返金</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">勝ち/負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">レッドソックス[ホーム]</p>
+                                    <p class="score">引き分け</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">超音速</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">940円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">6 - 3</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result lose">元金を失う1,000円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>勝つ1000X（0.940）= 940</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>1000 x -1 = -1000を失う</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">半分勝ち/半分負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">レッドソックス[ホーム]</p>
+                                    <p class="score">2+50</p>
+                                    <p class="bet">0.940</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">天使</p>
+                                    <p class="score">-</p>
+                                    <p class="bet">0.960</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">460円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">6 - 4</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result lose">元金を失う500円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>1000 X（50％）X（1 + 0.94）に勝つ</p>
+                                    <p>-1000 X 50% = 460</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>1000 (50%) - 1000 = -500</p>
+                                    <p>元金を失う500円</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type p2">
+                        <div class="box">
+                            <p class="title">勝ち/負け</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">ブルーバード[ホーム]</p>
+                                    <p class="score">9.5大きい</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">セーラー</p>
+                                    <p class="score">9.5小</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">900円を獲得</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">6 - 4</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">元金を失う1,000円</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>勝つ1000X（0.900）= 900</p>
+                                    <p>（元金を除く）</p>
+                                </div>
+                                <div class="right lose">
+                                    <p>ボールの大小は「9.5大/9.5小」です</p>
+                                    <p>2チームの合計スコアは10です</p>
+                                    <p>したがって、元金を失うために9.5を小さく賭けます</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="title">引分</p>
+                            <div class="nameBox">
+                                <div class="left">
+                                    <p class="name">ブルーバード[ホーム]</p>
+                                    <p class="score">9フラット</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                                <div class="mid">
+                                    <i class="leftTeam_ic"></i>
+                                    vs
+                                    <i class="rightTeam_ic"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="name">セーラー</p>
+                                    <p class="score">9フラットスモール</p>
+                                    <p class="bet">0.900</p>
+                                </div>
+                            </div>
+                            <p class="remind">1,000円にベット</p>
+                            <div class="resultBox">
+                                <div class="textBox">
+                                    <p class="name">ホームチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                                <div class="center">
+                                    <p class="name">結果</p>
+                                    <p class="result">6 - 3</p>
+                                </div>
+                                <div class="textBox">
+                                    <p class="name">アウェイチームに賭ける</p>
+                                    <p class="result">返金</p>
+                                </div>
+                            </div>
+                            <div class="resultWord">
+                                <div class="left">
+                                    <p>ボールの大小は「9フラットビッグ/ 9フラットスモール」です。</p>
+                                    <p>2チームの合計スコアは9です</p>
+                                    <p>したがって、勝者を区別したり、元金を失って元金を返却したりすることはできません。</p>
+                                </div>
+                                <div class="right">
+                                    <p>ボールの大小は「9フラットビッグ/ 9フラットスモール」です。</p>
+                                    <p>2チームの合計スコアは9です</p>
+                                    <p>したがって、勝者を区別したり、元金を失って元金を返却したりすることはできません。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="./innerIndex.html">
+                    <i class="home_ic"></i>
+                    <p>ホーム</p>
+                </a>
+            </li>
+            <li>
+                <a href="./gameresult.html">
+                    <i class="result_ic"></i>
+                    <p>試合結果</p>
+                </a>
+            </li>
+            <li>
+                <a href="./service.html">
+                    <i class="service_ic"></i>
+                    <p>顧客サー...</p>
+                </a>
+            </li>
+            <li>
+                <a href="./bettingRecord.html">
+                    <i class="record_ic"></i>
+                    <p>ベット履歴</p>
+                </a>
+            </li>
+            <li>
+                <a href="./member.html">
+                    <i class="member_ic"></i>
+                    <p>メンバー</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <div class="filter"></div>
+</body>
+</html>

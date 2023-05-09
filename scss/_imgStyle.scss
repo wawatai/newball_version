@@ -1,0 +1,314 @@
+//login
+.loginWrap {
+    background: url('../images/login_BG.jpg') no-repeat;
+    background-size: cover;
+}
+.loginWrap .inputBox i {
+    background: url('../images/icon/login_ic.png') no-repeat;
+    background-size: 100%;
+}
+.loginWrap .slip .bar::before {
+    background: url('../images/icon/login_arrow.png') no-repeat;
+    background-size: contain;
+}
+
+//header
+header .msg_ic {
+    background: url('../images/icon/header_msg.png') no-repeat;
+    background-size: contain;
+}
+header .backArrow {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+header .money_ic {
+    background: url('../images/icon/header_money.png') no-repeat;
+    background-size: contain;
+}
+header .search_ic {
+    background: url('../images/icon/header_search.png') no-repeat;
+    background-size: contain;
+}
+header .ques_ic {
+    background: url('../images/icon/question_ic2.png') no-repeat;
+    background-size: contain;
+}
+
+//footer
+footer i {
+    background: url('../images/icon/footer_ic.png') no-repeat;
+    background-size: 500%;
+}
+footer.inner i {
+    background: url('../images/icon/footer_ic2.png') no-repeat;
+    background-size: 500%;
+}
+
+//marquee
+.marqueeWrap .marquee_ic {
+    background: url('../images/icon/marquee_ic.png') no-repeat center;
+    background-size: 88%;
+}
+.marqueeWrap .chart_ic {
+    background: url('../images/icon/chart_ic.png') no-repeat;
+    background-size: contain;
+}
+
+//operate
+.operate .question_ic {
+    background: url('../images/icon/question_ic.png') no-repeat;
+    background-size: contain;
+}
+.operate .btnBox i {
+    background: url('../images/icon/operate_ic.png') no-repeat;
+    background-size: 300%;
+}
+
+//mainList
+.mainList .gameBox a::after {
+    background: url('../images/gameBox_word.png') no-repeat;
+    background-size: 300%;
+}
+.mainList .gameBox .img {
+    background: url('../images/gameBox_img.png') no-repeat;
+    background-size: 300%;
+}
+
+//chart
+.chartWrap li .arrow_ic {
+    background: url('../images/icon/arrow_y.png') no-repeat;
+    background-size: contain;
+}
+.chartWrap li.active .arrow_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+
+//topList
+.innerTopList i {
+    background: url('../images/icon/topList_ic.png') no-repeat;
+    background-size: 500%;
+}
+
+//mainGame
+.gameWrap .titleTime i {
+    background: url('../images/icon/mainGame_timeIC.png') no-repeat;
+    background-size: 200%;
+}
+.gameWrap .listBox i {
+    background: url('../images/icon/arrow_o.png') no-repeat;
+    background-size: contain;
+}
+.gameWrap .team i {
+    background: url('../images/icon/mainGame_teamIC.png') no-repeat;
+    background-size: 200%;
+}
+.gameWrap .liveBox i {
+    background: url('../images/icon/mainGame_liveIC.png') no-repeat;
+    background-size: 200%;
+}
+.mainWrap .emptyImg {
+    background: url('../images/empty_1.png') no-repeat;
+    background-size: contain;
+}
+.searchWrap .search_ic {
+    background: url('../images/icon/search_ic.png') no-repeat;
+    background-size: contain;
+}
+
+//teach
+.teachWrap .teachList i {
+    background: url('../images/icon/teach_ball.png') no-repeat;
+    background-size: 300%;
+}
+.teachWrap .nameBox i {
+    background: url('../images/icon/teach_team.png') no-repeat;
+    background-size: 200%;
+}
+
+//multiWrap
+.multiWrap .calcBtn {
+    background: url('../images/icon/calc.png') no-repeat;
+    background-size: contain;
+}
+.multiWrap .title .arrow_ic {
+    background: url('../images/icon/dbArrow_b.png') no-repeat;
+    background-size: contain;
+}
+
+//record
+.recordWrap .emptyBox div {
+    background: url('../images/empty_2.png') no-repeat;
+    background-size: contain;
+}
+.recordWrap .bettingBox .arrow_ic {
+    background: url('../images/icon/arrow_y.png') no-repeat;
+    background-size: contain;
+}
+.recordWrap .bettingBox.active .arrow_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+.recordWrap .bettingBox.active .box .arrow_ic {
+    background: url('../images/icon/arrow_y.png') no-repeat;
+    background-size: contain;
+}
+.recordWrap .bettingBox.active .box.active .arrow_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+
+//member
+.memberWrap .sticker div {
+    background: url('../images/sticker.png') no-repeat;
+    background-size: cover;
+}
+.memberWrap .linkBox .link::before {
+    background: url('../images/icon/arrow_y.png') no-repeat;
+    background-size: contain;
+}
+.memberWrap .btnBox i {
+    background: url('../images/icon/member_ic.png') no-repeat;
+    background-size: 300%;
+}
+.memberWrap .bottom li i {
+    background: url('../images/icon/member_ic2.png') no-repeat;
+    background-size: 500%;
+}
+.memberWrap .bottom .arrow_ic {
+    background: url('../images/icon/arrow_y.png') no-repeat;
+    background-size: contain;
+}
+.infoWrap .header .cancel_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+.infoWrap .sticker div {
+    background: url('../images/sticker.png') no-repeat;
+    background-size: cover;
+}
+.infoWrap .sticker .edit_ic {
+    background: url('../images/icon/edit_ic.png') no-repeat;
+    background-size: contain;
+}
+.innerWrap .top {
+    background: url('../images/inner_BG.jpg') no-repeat;
+    background-size: cover;
+}
+.innerWrap .top .arrow_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+.innerWrap .live_ic {
+    background: url('../images/icon/live_ic.png') no-repeat;
+    background-size: contain;
+}
+.innerWrap .update_ic {
+    background: url('../images/icon/update_ic.png') no-repeat;
+    background-size: contain;
+}
+
+//post
+.postWrap .post_ic {
+    background: url('../images/icon/post_ic.png') no-repeat;
+    background-size: contain;
+}
+
+//control
+.controlWrap .arrow_ic {
+    background: url("../images/icon/arrow_y.png") no-repeat;
+    background-size: contain;
+}
+.passwordWrap .cancel_ic {
+    background: url("../images/icon/arrow_b.png") no-repeat;
+    background-size: contain;
+}
+
+//service
+.serviceWrap .icBox .sticker {
+    background: url('../images/sticker.png') no-repeat;
+    background-size: cover;
+}
+.serviceWrap .icBox .service_ic {
+    background: url('../images/icon/service_ic.png') no-repeat;
+    background-size: 200%;
+}
+.optionWrap .cancel_ic,
+.mineOptionWrap .cancel_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+.optionWrap .bottom .btnBox button::before {
+    background: url('../images/icon/img_ic.png') no-repeat;
+    background-size: contain;
+}
+
+//bettingAmount
+.amountWrap li .arrow_ic {
+    background: url('../images/icon/arrow_y.png') no-repeat;
+    background-size: contain;
+}
+.amountWrap li.active .arrow_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+
+//rule
+.ruleWrap li .arrow_ic {
+    background: url('../images/icon/arrow_y.png') no-repeat;
+    background-size: contain;
+}
+.ruleWrap li.active .arrow_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}
+
+//deposit
+.depositWrap .listBox i {
+    background: url('../images/icon/deposit_ic.png') no-repeat;
+    background-size: 900%;
+}
+.depositWrap .listBox li.active::after {
+    background: url('../images/icon/arrow_check.png') no-repeat;
+    background-size: contain;
+}
+
+//transfer
+.transferWrap .title .reset_ic {
+    background: url('../images/icon/refresh_ic.png') no-repeat;
+    background-size: contain;
+}
+.transferWrap .smallTitle i {
+    background: url('../images/icon/transfer_ic.png') no-repeat;
+    background-size: 200%;
+}
+.transferWrap .top .dbarrow_ic {
+    background: url('../images/icon/dbArrow_y.png') no-repeat;
+    background-size: contain;
+}
+
+//card
+.cardWrap .plusBtn {
+    background: url('../images/icon/cardAdd_ic.png') no-repeat;
+    background-size: contain;
+}
+.cardWrap .ready {
+    background: url('../images/icon/cardReady_ic.png') no-repeat;
+    background-size: cover;
+}
+
+//contact
+.contactWrap .left div {
+    background: url('../images/icon/contact_ic.png') no-repeat;
+    background-size: 500%;
+}
+
+//jumpWindow
+.jumpWindow .bettingBox .arrow_ic {
+    background: url('../images/icon/arrow_y.png') no-repeat;
+    background-size: contain;
+}
+.jumpWindow .bettingBox.active .arrow_ic {
+    background: url('../images/icon/arrow_b.png') no-repeat;
+    background-size: contain;
+}

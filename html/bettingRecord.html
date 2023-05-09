@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascripts.js"></script>
+</head>
+<body>
+    <header>
+        <!--backArrow-->
+        <a class="backArrow" href="./innerIndex.html"></a>
+        <!--title-->
+        <p class="title ">ベット履歴</p>
+        <!--icon-->
+        <div class="iconBox">
+            <i class="msg_ic active">
+                <a href="./post.html"></a>
+            </i>
+        </div>
+    </header>
+    <main>
+        <div class="recordWrap">
+            <!--上選單-->
+            <div class="recordList notEmpty">
+                <ul>
+                    <li class="active">ベットリスト</li>
+                    <li>結果/履歴</li>
+                </ul>
+            </div>
+            <!--主內容-->
+            <div class="content">
+                <!--空-->
+                <div class="emptyBox">
+                    <div></div>
+                    <p>あなたはまだ賭けをしていません</p>
+                    <a href="./mainPage.html">賭けに行く</a>
+                </div>
+                <!--即時注單-->
+                <div class="nowBetting display">
+                    <div class="bettingBox active">
+                        <div class="title">
+                            <p>サッカー-前半-ハンデ</p>
+                            <p>
+                                R7511212
+                                <i class="arrow_ic"></i>
+                            </p>
+                        </div>
+                        <div class="outerCnt">
+                            <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                            <p class="num">
+                                ベット
+                                <span>100</span>
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <div>
+                                    <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                    <p>
+                                        チェスターフィールド
+                                        <span>0/5</span>
+                                        アルトリンチャム[主]
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>ベット時間</p>
+                                </div>
+                                <div>
+                                    <p>02/25 09:30</p>
+                                </div>
+                                <div class="name">
+                                    <p>試合時間</p>
+                                </div>
+                                <div>
+                                    <p>02/27 18:06</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>有効なベット</p>
+                                </div>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div class="name">
+                                    <p>オッズ</p>
+                                </div>
+                                <div>
+                                    <p>0.88</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>選択対象</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>[(主)0:0]アルトリンチャム</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>結果</p>
+                                </div>
+                                <div>
+                                    <p>試合前</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>ベット</p>
+                                </div>
+                                <div>
+                                    <p>100</p>
+                                </div>
+                                <div class="name">
+                                    <p>勝てる(参照する)</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>88</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bettingBox">
+                        <div class="title">
+                            <p>サッカー-前半-ハンデ</p>
+                            <p>
+                                R7511212
+                                <i class="arrow_ic"></i>
+                            </p>
+                        </div>
+                        <div class="outerCnt display">
+                            <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                            <p class="num">
+                                ベット
+                                <span>100</span>
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <div>
+                                    <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                    <p>
+                                        チェスターフィールド
+                                        <span>0/5</span>
+                                        アルトリンチャム[主]
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>ベット時間</p>
+                                </div>
+                                <div>
+                                    <p>02/25 09:30</p>
+                                </div>
+                                <div class="name">
+                                    <p>試合時間</p>
+                                </div>
+                                <div>
+                                    <p>02/27 18:06</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>有効なベット</p>
+                                </div>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div class="name">
+                                    <p>オッズ</p>
+                                </div>
+                                <div>
+                                    <p>0.88</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>選択対象</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>[(主)0:0]アルトリンチャム</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>結果</p>
+                                </div>
+                                <div>
+                                    <p>試合前</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>ベット</p>
+                                </div>
+                                <div>
+                                    <p>100</p>
+                                </div>
+                                <div class="name">
+                                    <p>勝てる(参照する)</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>88</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bettingBox">
+                        <div class="title">
+                            <p>サッカー-前半-ハンデ</p>
+                            <p>
+                                R7511212
+                                <i class="arrow_ic"></i>
+                            </p>
+                        </div>
+                        <div class="outerCnt display">
+                            <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                            <p class="num">
+                                ベット
+                                <span>100</span>
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <div>
+                                    <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                    <p>
+                                        チェスターフィールド
+                                        <span>0/5</span>
+                                        アルトリンチャム[主]
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>ベット時間</p>
+                                </div>
+                                <div>
+                                    <p>02/25 09:30</p>
+                                </div>
+                                <div class="name">
+                                    <p>試合時間</p>
+                                </div>
+                                <div>
+                                    <p>02/27 18:06</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>有効なベット</p>
+                                </div>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div class="name">
+                                    <p>オッズ</p>
+                                </div>
+                                <div>
+                                    <p>0.88</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>選択対象</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>[(主)0:0]アルトリンチャム</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>結果</p>
+                                </div>
+                                <div>
+                                    <p>試合前</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>ベット</p>
+                                </div>
+                                <div>
+                                    <p>100</p>
+                                </div>
+                                <div class="name">
+                                    <p>勝てる(参照する)</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>88</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bettingBox">
+                        <div class="title">
+                            <p>サッカー-前半-ハンデ</p>
+                            <p>
+                                R7511212
+                                <i class="arrow_ic"></i>
+                            </p>
+                        </div>
+                        <div class="outerCnt display">
+                            <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                            <p class="num">
+                                ベット
+                                <span>100</span>
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <div>
+                                    <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                    <p>
+                                        チェスターフィールド
+                                        <span>0/5</span>
+                                        アルトリンチャム[主]
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>ベット時間</p>
+                                </div>
+                                <div>
+                                    <p>02/25 09:30</p>
+                                </div>
+                                <div class="name">
+                                    <p>試合時間</p>
+                                </div>
+                                <div>
+                                    <p>02/27 18:06</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>有効なベット</p>
+                                </div>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div class="name">
+                                    <p>オッズ</p>
+                                </div>
+                                <div>
+                                    <p>0.88</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>選択対象</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>[(主)0:0]アルトリンチャム</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>結果</p>
+                                </div>
+                                <div>
+                                    <p>試合前</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <p>ベット</p>
+                                </div>
+                                <div>
+                                    <p>100</p>
+                                </div>
+                                <div class="name">
+                                    <p>勝てる(参照する)</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>88</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--歷史注單-->
+                <div class="historyBetting">
+                    <div class="historyList">
+                        <ul>
+                            <li class="active">今日</li>
+                            <li>昨日</li>
+                            <li>明日</li>
+                            <li>今週</li>
+                            <li>先週</li>
+                            <li>今月</li>
+                        </ul>
+                    </div>
+                    <div class="topName">
+                        <p>時間</p>
+                        <p>ベット額 / 有効なベット</p>
+                        <p>結果</p>
+                    </div>
+                    <div class="listWrap">
+                        <div class="dateBox display">
+                            <div class="bettingBox active">
+                                <div class="bigTitle">
+                                    <div class="num">
+                                        <span>3</span>
+                                    </div>
+                                    <p>2010-02-26</p>
+                                    <p>
+                                        <span>0</span>
+                                        /0
+                                    </p>
+                                    <p class="win">300</p>
+                                </div>
+                                <div class="box active">
+                                    <div class="title">
+                                        <p>サッカー-前半-ハンデ</p>
+                                        <p>
+                                            R7511212
+                                            <i class="arrow_ic"></i>
+                                        </p>
+                                    </div>
+                                    <div class="outerCnt">
+                                        <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                                        <p class="num">
+                                            結果
+                                            <span class="win">100</span>
+                                        </p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                                <p>
+                                                    チェスターフィールド
+                                                    <span>0/5</span>
+                                                    アルトリンチャム[主]
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/25 09:30</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>試合時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/27 18:06</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>有効なベット</p>
+                                            </div>
+                                            <div>
+                                                <p>0</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>オッズ</p>
+                                            </div>
+                                            <div>
+                                                <p>0.88</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>述べる</p>
+                                            </div>
+                                            <div>
+                                                <p>&ensp;</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>選択対象</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span>[(主)0:0]アルトリンチャム</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット</p>
+                                            </div>
+                                            <div>
+                                                <p>100</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>結果</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span class="win">100</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        <p>サッカー-前半-ハンデ</p>
+                                        <p>
+                                            R7511212
+                                            <i class="arrow_ic"></i>
+                                        </p>
+                                    </div>
+                                    <div class="outerCnt display">
+                                        <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                                        <p class="num">
+                                            結果
+                                            <span class="win">100</span>
+                                        </p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                                <p>
+                                                    チェスターフィールド
+                                                    <span>0/5</span>
+                                                    アルトリンチャム[主]
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/25 09:30</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>試合時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/27 18:06</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>有効なベット</p>
+                                            </div>
+                                            <div>
+                                                <p>0</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>オッズ</p>
+                                            </div>
+                                            <div>
+                                                <p>0.88</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>述べる</p>
+                                            </div>
+                                            <div>
+                                                <p>&ensp;</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>選択対象</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span>[(主)0:0]アルトリンチャム</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット</p>
+                                            </div>
+                                            <div>
+                                                <p>100</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>結果</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span class="win">100</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        <p>サッカー-前半-ハンデ</p>
+                                        <p>
+                                            R7511212
+                                            <i class="arrow_ic"></i>
+                                        </p>
+                                    </div>
+                                    <div class="outerCnt display">
+                                        <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                                        <p class="num">
+                                            結果
+                                            <span class="win">100</span>
+                                        </p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                                <p>
+                                                    チェスターフィールド
+                                                    <span>0/5</span>
+                                                    アルトリンチャム[主]
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/25 09:30</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>試合時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/27 18:06</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>有効なベット</p>
+                                            </div>
+                                            <div>
+                                                <p>0</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>オッズ</p>
+                                            </div>
+                                            <div>
+                                                <p>0.88</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>述べる</p>
+                                            </div>
+                                            <div>
+                                                <p>&ensp;</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>選択対象</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span>[(主)0:0]アルトリンチャム</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット</p>
+                                            </div>
+                                            <div>
+                                                <p>100</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>結果</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span class="win">100</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bettingBox">
+                                <div class="bigTitle">
+                                    <p>2010-02-26</p>
+                                    <p>
+                                        <span>0</span>
+                                        /0
+                                    </p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="bettingBox">
+                                <div class="bigTitle">
+                                    <div class="num">
+                                        <span>2</span>
+                                    </div>
+                                    <p>2010-02-26</p>
+                                    <p>
+                                        <span>0</span>
+                                        /0
+                                    </p>
+                                    <p class="lose">-100</p>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        <p>サッカー-前半-ハンデ</p>
+                                        <p>
+                                            R7511212
+                                            <i class="arrow_ic"></i>
+                                        </p>
+                                    </div>
+                                    <div class="outerCnt display">
+                                        <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                                        <p class="num">
+                                            結果
+                                            <span class="win">100</span>
+                                        </p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                                <p>
+                                                    チェスターフィールド
+                                                    <span>0/5</span>
+                                                    アルトリンチャム[主]
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/25 09:30</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>試合時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/27 18:06</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>有効なベット</p>
+                                            </div>
+                                            <div>
+                                                <p>0</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>オッズ</p>
+                                            </div>
+                                            <div>
+                                                <p>0.88</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>述べる</p>
+                                            </div>
+                                            <div>
+                                                <p>&ensp;</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>選択対象</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span>[(主)0:0]アルトリンチャム</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット</p>
+                                            </div>
+                                            <div>
+                                                <p>100</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>結果</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span class="win">100</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        <p>サッカー-前半-ハンデ</p>
+                                        <p>
+                                            R7511212
+                                            <i class="arrow_ic"></i>
+                                        </p>
+                                    </div>
+                                    <div class="outerCnt display">
+                                        <p class="smallTitle">[(主)0:0]アルトリンチャム</p>
+                                        <p class="num">
+                                            結果
+                                            <span class="win">100</span>
+                                        </p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <p>イングランド・カンファレンス・ナショナルリーグ 前半</p>
+                                                <p>
+                                                    チェスターフィールド
+                                                    <span>0/5</span>
+                                                    アルトリンチャム[主]
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/25 09:30</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>試合時間</p>
+                                            </div>
+                                            <div>
+                                                <p>02/27 18:06</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>有効なベット</p>
+                                            </div>
+                                            <div>
+                                                <p>0</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>オッズ</p>
+                                            </div>
+                                            <div>
+                                                <p>0.88</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>述べる</p>
+                                            </div>
+                                            <div>
+                                                <p>&ensp;</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>選択対象</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span>[(主)0:0]アルトリンチャム</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="name">
+                                                <p>ベット</p>
+                                            </div>
+                                            <div>
+                                                <p>100</p>
+                                            </div>
+                                            <div class="name">
+                                                <p>結果</p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <span class="win">100</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dateBox">
+                            <div class="bettingBox">
+                                <div class="bigTitle">
+                                    <p>2010-02-26</p>
+                                    <p>
+                                        <span>0</span>
+                                        /0
+                                    </p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--結果窗-->
+            <div class="resultBox">
+                <div class="box">
+                    <p class="title">ベット</p>
+                    <p class="num">1,600</p>
+                </div>
+                <div class="box">
+                    <p class="title">結果</p>
+                    <p class="num win">1,200</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="./innerIndex.html">
+                    <i class="home_ic"></i>
+                    <p>ホーム</p>
+                </a>
+            </li>
+            <li>
+                <a href="./gameresult.html">
+                    <i class="result_ic"></i>
+                    <p>試合結果</p>
+                </a>
+            </li>
+            <li>
+                <a href="./service.html">
+                    <i class="service_ic"></i>
+                    <p>顧客サー...</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="./bettingRecord.html">
+                    <i class="record_ic"></i>
+                    <p>ベット履歴</p>
+                </a>
+            </li>
+            <li>
+                <a href="./member.html">
+                    <i class="member_ic"></i>
+                    <p>メンバー</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <div class="filter"></div>
+</body>
+</html>

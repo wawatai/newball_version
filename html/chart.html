@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascripts.js"></script>
+</head>
+<body>
+    <header>
+        <!--backArrow-->
+        <a class="backArrow" href="./innerIndex.html"></a>
+        <!--title-->
+        <p class="title">早見表</p>
+        <!--icon-->
+        <div class="iconBox"></div>
+    </header>
+    <main>
+        <div class="chartWrap">
+            <div class="btnBox">
+                <button class="active">0</button>
+                <button>0/半</button>
+                <button>1</button>
+                <button>1/半</button>
+                <button>2</button>
+                <button>2/半</button>
+            </div>
+            <div class="listBox">
+                <ul>
+                    <li class="active">
+                        <p class="title">
+                            0
+                            <i class="arrow_ic"></i>
+                        </p>
+                        <table>
+                            <tr>
+                                <th>&ensp;</th>
+                                <th>
+                                    <p>同点</p>
+                                </th>
+                                <th>
+                                    <p>1点差</p>
+                                </th>
+                                <th>
+                                    <p>2点差</p>
+                                </th>
+                                <th>
+                                    <p>3点差</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/10</p>
+                                </td>
+                                <td>
+                                    <p>1,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/15</p>
+                                </td>
+                                <td>
+                                    <p>1,500 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/20</p>
+                                </td>
+                                <td>
+                                    <p>2,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/30</p>
+                                </td>
+                                <td>
+                                    <p>3,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/40</p>
+                                </td>
+                                <td>
+                                    <p>4,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/50</p>
+                                </td>
+                                <td>
+                                    <p>5,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/60</p>
+                                </td>
+                                <td>
+                                    <p>6,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/70</p>
+                                </td>
+                                <td>
+                                    <p>7,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/80</p>
+                                </td>
+                                <td>
+                                    <p>8,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0/90</p>
+                                </td>
+                                <td>
+                                    <p>9,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="title">
+                            0/半
+                            <i class="arrow_ic"></i>
+                        </p>
+                        <table>
+                            <tr>
+                                <th>&ensp;</th>
+                                <th>
+                                    <p>同点</p>
+                                </th>
+                                <th>
+                                    <p>1点差</p>
+                                </th>
+                                <th>
+                                    <p>2点差</p>
+                                </th>
+                                <th>
+                                    <p>3点差</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半1</p>
+                                </td>
+                                <td>
+                                    <p>1,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>9,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半2</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>8,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半3</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>7,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半4</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>6,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半5</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>5,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半6</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>4,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半7</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>3,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半8</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>2,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>0半9</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>1,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="title">
+                            1
+                            <i class="arrow_ic"></i>
+                        </p>
+                        <table>
+                            <tr>
+                                <th>&ensp;</th>
+                                <th>
+                                    <p>同点</p>
+                                </th>
+                                <th>
+                                    <p>1点差</p>
+                                </th>
+                                <th>
+                                    <p>2点差</p>
+                                </th>
+                                <th>
+                                    <p>3点差</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.1</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>1,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.2</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>2,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.3</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>3,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.4</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>4,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.5</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>5,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.6</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>6,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.7</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>7,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.8</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>8,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1.9</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>9,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="title">
+                            1/半
+                            <i class="arrow_ic"></i>
+                        </p>
+                        <table>
+                            <tr>
+                                <th>&ensp;</th>
+                                <th>
+                                    <p>同点</p>
+                                </th>
+                                <th>
+                                    <p>1点差</p>
+                                </th>
+                                <th>
+                                    <p>2点差</p>
+                                </th>
+                                <th>
+                                    <p>3点差</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半1</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>9,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半2</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>8,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半3</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>7,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半4</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>6,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半5</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>5,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半6</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>4,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半7</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>3,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半8</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>2,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>1半9</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>1,000 円勝</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="title">
+                            2
+                            <i class="arrow_ic"></i>
+                        </p>
+                        <table>
+                            <tr>
+                                <th>&ensp;</th>
+                                <th>
+                                    <p>同点</p>
+                                </th>
+                                <th>
+                                    <p>1点差</p>
+                                </th>
+                                <th>
+                                    <p>2点差</p>
+                                </th>
+                                <th>
+                                    <p>3点差</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.1</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>1,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.2</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>2,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.3</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>3,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.4</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>4,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.5</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>5,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.6</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>6,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.7</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>7,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.8</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>8,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2.9</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>9,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="title">
+                            2/半
+                            <i class="arrow_ic"></i>
+                        </p>
+                        <table>
+                            <tr>
+                                <th>&ensp;</th>
+                                <th>
+                                    <p>同点</p>
+                                </th>
+                                <th>
+                                    <p>1点差</p>
+                                </th>
+                                <th>
+                                    <p>2点差</p>
+                                </th>
+                                <th>
+                                    <p>3点差</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半1</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>9,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半2</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>8,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半3</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>7,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半4</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>6,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半5</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>5,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半6</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>4,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半7</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>3,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半8</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>2,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>2半9</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>1,000 円勝</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>3</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>10,000 円負</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="./innerIndex.html">
+                    <i class="home_ic"></i>
+                    <p>ホーム</p>
+                </a>
+            </li>
+            <li>
+                <a href="./gameresult.html">
+                    <i class="result_ic"></i>
+                    <p>試合結果</p>
+                </a>
+            </li>
+            <li>
+                <a href="./service.html">
+                    <i class="service_ic"></i>
+                    <p>顧客サー...</p>
+                </a>
+            </li>
+            <li>
+                <a href="./bettingRecord.html">
+                    <i class="record_ic"></i>
+                    <p>ベット履歴</p>
+                </a>
+            </li>
+            <li>
+                <a href="./member.html">
+                    <i class="member_ic"></i>
+                    <p>メンバー</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

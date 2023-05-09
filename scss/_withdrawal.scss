@@ -1,0 +1,95 @@
+.withdrawalWrap {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    .top {
+        width: 100%;
+        height: auto;
+        background: $mainBG_3;
+        padding: 0 3vw;
+        margin-top: 2vw;
+
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: auto;
+                border-bottom: solid 1px $Border_2;
+                padding: 2.5vw 0;
+
+                &:last-child {
+                    border: none;
+                }
+
+                .title {
+                    color: $title_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    margin-bottom: 2vw;
+                }
+
+                .num {
+                    color: $title_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                }
+
+                input {
+                    width: 100%;
+                    height: 9vw;
+                    @include inputStyle_1;
+                }
+            }
+        }
+    }
+
+    .check {
+        width: 96%;
+        height: 11vw;
+        @include setMenuBtn;
+        margin: 2vw auto;
+    }
+
+    .remind {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4vw;
+        color: $remind_1;
+        font-size: 3.7vw;
+        font-weight: bold;
+    }
+
+    .remindBox {
+        width: 96%;
+        height: auto;
+        margin: 0 auto 5vw;
+        border: solid 1px $Border_1;
+        border-radius: 2vw;
+        background: $mainBG_2;
+        padding: 3vw;
+
+        .title {
+            color: $title_1;
+            margin-bottom: 3vw;
+            font-weight: bold;
+            font-size: 3.7vw;
+        }
+
+        p:not(.title) {
+            color: $title_4;
+            font-size: 3.7vw;
+            font-weight: bold;
+            line-height: 4vw;
+
+            &.remind {
+                margin: 3vw 0 0 0;
+                line-height: 4vw;
+                text-align: left;
+                color: $remind_1;
+            }
+        }
+    }
+}

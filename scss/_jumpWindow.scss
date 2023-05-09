@@ -1,0 +1,1204 @@
+.filter {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $filter;
+    z-index: 99;
+    display: none;
+
+    &.display {
+        display: block;
+    }
+
+    //mainWrap下拉式選單
+    .mainWrapList {
+        width: 100%;
+        height: 28.5vw;
+        background: $mainBG_2;
+        border-bottom: solid 1px $Border_1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 10.5vw;
+        align-items: center;
+        justify-content: center;
+        display: none;
+
+        &.display {
+            display: flex;
+        }
+
+        .btnBox {
+            width: 93%;
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                width: 23%;
+                height: 7.5vw;
+                @include listBtn;
+            }
+        }
+    }
+
+    //mainWrap設置菜單
+    .setMenu {
+        width: 100%;
+        height: 73vw;
+        background: $mainBG_2;
+        border-top: solid 1px $Border_1;
+        padding: 2vw 2.5vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        .rowBox {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1.5vw;
+
+            .title {
+                font-size: 3.7vw;
+                font-weight: bold;
+                color: $title_1;
+                margin-bottom: 1vw;
+            }
+
+            .row {
+                width: 100%;
+                height: 8vw;
+                @include rowStyle_2;
+    
+                &.active {
+            
+                    .bar {
+                        left: 51%;
+                    }
+                }
+    
+                p {
+                    width: 50%;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 3.7vw;
+                    letter-spacing: 1px;
+                    position: relative;
+                    z-index: 1;
+                    transition: 0.3s all;
+                }
+    
+                .bar {
+                    width: 48%;
+                    height: 82%;
+                    border-radius: 10vw;
+                    position: absolute;
+                    transition: 0.3s all;
+                    left: 1%;
+                }
+            }
+        }
+
+        .check {
+            width: 100%;
+            height: 12vw;
+            @include setMenuBtn;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: 0;
+        }
+    }
+
+    //投注彈窗
+    .betWindow {
+        width: 88%;
+        height: auto;
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: $mainBG_3;
+        border: solid 1px $Border_1;
+        border-radius: 2vw;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        .cancelBtn {
+            position: absolute;
+            top: -10vw;
+            right: -2vw;
+            width: 7vw;
+            height: 7vw;
+            border-radius: 50%;
+            border: solid 1px $Border_1;
+            background: $mainBG_3;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                width: 0.5vw;
+                height: 4vw;
+                background: $Border_1;
+                border-radius: 1vw;
+            }
+
+            &::before {
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+            &::after {
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+        }
+
+        .top {
+            width: 100%;
+            height: auto;
+            border-bottom: solid 1px $Border_2;
+
+            .title {
+                width: 100%;
+                height: 10vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                p {
+                    position: relative;
+                    color: $title_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
+    
+                i {
+                    position: relative;
+                    width: 1.5vw;
+                    height: 0;
+                    margin: 0 2vw;
+    
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 0.5vw;
+                        height: 3.5vw;
+                        top: 0;
+                        transform: translateY(-38%) rotate(15deg);
+                        background: $remind_1;
+                        border-radius: 1vw;
+                    }
+    
+                    &::before {
+                        right: 0;
+                    }
+                    &::after {
+                        left: 0;
+                    }
+                }
+            }
+    
+            .smallTitle {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                color: $title_4;
+                font-weight: bold;
+                font-size: 3vw;
+            }
+    
+            .teamBox {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin: 3vw 0;
+    
+                .first {
+                    color: $title_1;
+                    font-weight: bold;
+                    font-size: 4vw;
+                    margin-bottom: 2vw;
+                }
+    
+                .score {
+                    color: $title_3;
+                    font-weight: bold;
+                    font-size: 3vw;
+                    margin-bottom: 2vw;
+                }
+    
+                .second {
+                    color: $title_1;
+                    font-weight: bold;
+                    font-size: 4vw;
+    
+                    span {
+                        color: $title_3;
+                        margin-left: 2vw;
+                    }
+                }
+            }
+        }
+
+        .mid {
+            width: 100%;
+            height: auto;
+            padding: 2vw 3.5vw;
+
+            .box {
+                width: 100%;
+                height: 14vw;
+                border-radius: 1vw;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 6vw;
+                background: $mainPage_liveLinear;
+
+                .title {
+                    color: $title_5;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                }
+
+                .num {
+                    color: $title_5;
+                    font-size: 4.5vw;
+                    font-weight: bold;
+
+                    span {
+                        color: $mainPage_Bet;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            height: auto;
+            background: $secondBG_3;
+            padding: 0 3.5vw;
+
+            .title {
+                width: 100%;
+                height: 7vw;
+                display: flex;
+                align-items: center;
+                color: $title_1;
+                font-size: 3.7vw;
+                font-weight: bold;
+
+                span {
+                    color: $title_3;
+                    margin-left: 1.5vw;
+                }
+            }
+
+            .inputBox {
+                width: 100%;
+                height: 9vw;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    @include inputStyle_1;
+                }
+
+                p {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 2vw;
+                    color: $title_3;
+                    font-weight: bold;
+                    font-size: 3.7vw;
+                }
+            }
+
+            .btnBox {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 2vw 0 5vw;
+
+                button {
+                    width: 19.5vw;
+                    height: 9vw;
+                    @include moneyBtn;
+                    margin-bottom: 1vw;
+
+                    &:last-child {
+                        width: 39.8vw;
+                    }
+                }
+            }
+
+            .infoBox {
+                width: 100%;
+                height: auto;
+
+                ul {
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+
+                        .kind {
+                            width: 50%;
+                            color: $title_1;
+                            border-right: solid 1px $Border_1;
+                            font-size: 3.7vw;
+                            font-weight: bold;
+                            margin-bottom: 3vw;
+
+                            &:last-child {
+                                margin: 0;
+                            }
+                        }
+
+                        .num {
+                            width: 50%;
+                            color: $title_3;
+                            font-size: 3.7vw;
+                            font-weight: bold;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            .check {
+                width: 100%;
+                height: 7vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 1vw;
+
+                input {
+                    width: 4vw;
+                    height: 4vw;
+                    border-radius: 1.5vw;
+                }
+
+                p {
+                    color: $remind_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    margin-left: 2vw;
+                }
+            }
+        }
+
+        .checkBtn {
+            width: 100%;
+            height: 12vw;
+            @include setMenuBtn;
+            border-radius: 0 0 2vw 2vw;
+        }
+    }
+
+    //球種彈窗
+    .ballType {
+        position: absolute;
+        top: 23vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 96%;
+        height: auto;
+        background: $secondBG_4;
+        border: solid 1px $resultWindow_Border;
+        border-radius: 2vw;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1.7vw;
+            left: 11vw;
+            transform: rotate(-45deg);
+            width: 3vw;
+            height: 3vw;
+            border-style: solid;
+            border-width: 1px 1px 0 0;
+            border-color: $resultWindow_Border;
+            background: $resultWindow_Title;
+        }
+
+        .title {
+            width: 100%;
+            height: 7vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: $title_1;
+            font-size: 3.7vw;
+            font-weight: bold;
+            background: $resultWindow_Title;
+            border-radius: 2vw 2vw 0 0;
+
+            i {
+                width: 5vw;
+                height: 5vw;
+                position: absolute;
+                right: 2vw;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 52%;
+                    width: 0.5vw;
+                    height: 4vw;
+                    background: $Border_1;
+                    border-radius: 1vw;
+                }
+
+                &::before {
+                    transform: translate(-50%,-50%) rotate(45deg);
+                }
+                &::after {
+                    transform: translate(-50%,-50%) rotate(-45deg);
+                }
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            padding: 2vw 2vw 0.5vw;
+            display: flex;
+            flex-wrap: wrap;
+
+            button {
+                min-width: 17vw;
+                height: 8vw;
+                @include listBtn;
+                margin: 0 1.5vw 1.5vw 0;
+                padding: 0 2vw;
+            }
+        }
+    }
+
+    //時間選擇彈窗
+    .timeType {
+        position: absolute;
+        top: 23vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 96%;
+        height: auto;
+        background: $secondBG_4;
+        border: solid 1px $resultWindow_Border;
+        border-radius: 2vw;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1.7vw;
+            left: 37.5vw;
+            transform: rotate(-45deg);
+            width: 3vw;
+            height: 3vw;
+            border-style: solid;
+            border-width: 1px 1px 0 0;
+            border-color: $resultWindow_Border;
+            background: $resultWindow_Title;
+        }
+
+        .title {
+            width: 100%;
+            height: 7vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: $title_1;
+            font-size: 3.7vw;
+            font-weight: bold;
+            background: $resultWindow_Title;
+            border-radius: 2vw 2vw 0 0;
+
+            i {
+                width: 5vw;
+                height: 5vw;
+                position: absolute;
+                right: 2vw;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 52%;
+                    width: 0.5vw;
+                    height: 4vw;
+                    background: $Border_1;
+                    border-radius: 1vw;
+                }
+
+                &::before {
+                    transform: translate(-50%,-50%) rotate(45deg);
+                }
+                &::after {
+                    transform: translate(-50%,-50%) rotate(-45deg);
+                }
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            padding: 2vw 2vw 0.5vw;
+            display: flex;
+            flex-wrap: wrap;
+
+            button {
+                min-width: 17.1vw;
+                height: 8vw;
+                @include listBtn;
+                margin: 0 1.5vw 1.5vw 0;
+                padding: 0 2vw;
+
+                &:nth-of-type(5n) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    //即時投注彈窗
+    .betListWindow {
+        width: 95%;
+        height: auto;
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: $mainBG_3;
+        border: solid 1px $Border_1;
+        border-radius: 2vw;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        .cancelBtn {
+            position: absolute;
+            top: -10vw;
+            right: -2vw;
+            width: 7vw;
+            height: 7vw;
+            border-radius: 50%;
+            border: solid 1px $Border_1;
+            background: $mainBG_3;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                width: 0.5vw;
+                height: 4vw;
+                background: $Border_1;
+                border-radius: 1vw;
+            }
+
+            &::before {
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+            &::after {
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+        }
+        
+        .title {
+            width: 100%;
+            height: 9vw;
+            background: $mainBG_3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2vw 2vw 0 0;
+
+            p {
+                color: $title_1;
+                font-size: 4vw;
+                font-weight: bold;
+            }
+
+            .num {
+                width: 6vw;
+                height: 6vw;
+                border-radius: 50%;
+                background: $mainBG_1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 2vw;
+
+                span {
+                    color: $title_5;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .flowBox {
+            width: 100%;
+            height: 60vh;
+            overflow-y: auto;
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 1vw;
+                background: $secondBG_4;
+    
+                .bettingBox {
+                    width: 100%;
+                    height: auto;
+                    @include tableList_3;
+                    margin-bottom: 1vw;
+    
+                    .title {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+
+        .lastBox {
+            width: 100%;
+            height: 15vw;
+            border-top: solid 1px $Border_2;
+            display: flex;
+
+            div {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                &:nth-of-type(1) {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 50%;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: $Border_2;
+                    }
+                }
+
+                .top {
+                    color: $title_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    margin-bottom: 2vw;
+                }
+
+                .num {
+                    color: $title_2;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    //簡單型彈窗
+    .goWindow {
+        width: 88%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: $mainBG_3;
+        border: solid 1px $Border_1;
+        border-radius: 2vw;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        .cancelBtn {
+            position: absolute;
+            top: -10vw;
+            right: -2vw;
+            width: 7vw;
+            height: 7vw;
+            border-radius: 50%;
+            border: solid 1px $Border_1;
+            background: $mainBG_3;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                width: 0.5vw;
+                height: 4vw;
+                background: $Border_1;
+                border-radius: 1vw;
+            }
+
+            &::before {
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+            &::after {
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+        }
+
+        .title {
+            width: 100%;
+            height: 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 2vw 2vw 0 0;
+            border-bottom: solid 1px $Border_2;
+
+            p {
+                color: $title_1;
+                font-size: 3.7vw;
+                font-weight: bold;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            padding: 0 6vw;
+
+            .text {
+                width: 100%;
+                height: auto;
+                padding: 4vw 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    color: $title_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 9vw;
+                @include setMenuBtn;
+                margin: 3vw 0;
+            }
+        }
+    }
+
+    //串關計算機
+    .calc {
+        width: 88%;
+        height: auto;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: $mainBG_3;
+        border: solid 1px $Border_1;
+        border-radius: 2vw;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        .cancelBtn {
+            position: absolute;
+            top: -10vw;
+            right: -2vw;
+            width: 7vw;
+            height: 7vw;
+            border-radius: 50%;
+            border: solid 1px $Border_1;
+            background: $mainBG_3;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                width: 0.5vw;
+                height: 4vw;
+                background: $Border_1;
+                border-radius: 1vw;
+            }
+
+            &::before {
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+            &::after {
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+        }
+
+        .title {
+            width: 100%;
+            height: 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 2vw 2vw 0 0;
+            border-bottom: solid 1px $Border_2;
+
+            p {
+                color: $title_1;
+                font-size: 3.7vw;
+                font-weight: bold;
+            }
+        }
+
+        .content {
+            width: 96%;
+            height: auto;
+            @include tableList_1;
+            margin: 2% auto;
+            border-color: $Border_2;
+
+            table {
+
+                tr {
+
+                    th,
+                    td {
+                        border-right: none;
+                    }
+
+                    td {
+                        height: 8vw;
+                        text-align: center;
+                        padding: 1vw 0;
+
+                        input {
+                            width: 80%;
+                            height: 100%;
+                            @include inputStyle_1;
+                        }
+
+                        select {
+                            width: 80%;
+                            height: 100%;
+                            @include selectStyle_1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .result {
+            width: 100%;
+            height: 9vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6vw;
+
+            p {
+                color: $title_1;
+                font-size: 3.7vw;
+                font-weight: bold;
+            }
+
+            input {
+                width: 25vw;
+                height: 7vw;
+                @include inputStyle_1;
+            }
+        }
+
+        .check {
+            width: 96%;
+            height: 11vw;
+            @include setMenuBtn;
+            margin: 2% auto 5%;
+        }
+    }
+
+    //新手介紹
+    .noviceWindow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        display: none;
+
+        &.display {
+            display: flex;
+        }
+
+        &.basic {
+
+            div {
+
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+
+                    .next {
+                        top: 70%;
+                    }
+                }
+
+                &:nth-of-type(3) {
+
+                    .cancelBtn {
+                        left: 2vw;
+                    }
+
+                    .next {
+                        top: 70%;
+                    }
+                }
+
+                &:nth-of-type(4) {
+
+                    .cancel {
+                        top: 40%;
+                    }
+                }
+            }
+        }
+        &.single {
+
+            div {
+
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(7) {
+    
+                    .next {
+                        top: 75%;
+                    }
+                }
+    
+                &:nth-of-type(4),
+                &:nth-of-type(5),
+                &:nth-of-type(6) {
+    
+                    .next {
+                        top: 35%;
+                    }
+                }
+
+                &:nth-of-type(8) {
+
+                    .play {
+                        top: 54%;
+                    }
+
+                    .cancel {
+                        top: 62%;
+                    }
+
+                    .again {
+                        top: 70%;
+                    }
+                }
+            }
+        }
+        &.multi {
+            
+            div {
+
+                &:nth-of-type(1),
+                &:nth-of-type(4),
+                &:nth-of-type(6),
+                &:nth-of-type(8) {
+
+                    .next {
+                        top: 40%;
+                    }
+                }
+
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(9) {
+
+                    .next {
+                        top: 70%;
+                    }
+                }
+
+                &:nth-of-type(5) {
+
+                    .next {
+                        top: 30%;
+                    }
+                }
+
+                &:nth-of-type(7) {
+
+                    .next {
+                        top: 25%;
+                    }
+                }
+
+                &:nth-of-type(10) {
+
+                    .play {
+                        top: 54%;
+                    }
+
+                    .cancel {
+                        top: 62%;
+                    }
+
+                    .again {
+                        top: 70%;
+                    }
+                }
+            }
+        }
+        &.bet {
+            
+            div {
+
+                &:nth-of-type(1) {
+
+                    .next {
+                        top: 40%;
+                    }
+                }
+
+                &:nth-of-type(2) {
+
+                    .next {
+                        top: 70%;
+                    }
+                }
+
+                &:nth-of-type(3) {
+
+                    .cancel {
+                        top: 70%;
+                    }
+                }
+            }
+        }
+
+        div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: none;
+            overflow-y: auto;
+
+            &.display {
+                display: block;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .cancelBtn {
+                position: absolute;
+                top: 5vw;
+                right: 2vw;
+                width: 9vw;
+                height: 9vw;
+                border-radius: 50%;
+                border: solid 1px $novice_Border;
+                background: none;
+    
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 52%;
+                    width: 0.5vw;
+                    height: 5vw;
+                    background: $novice_Border;
+                    border-radius: 1vw;
+                }
+    
+                &::before {
+                    transform: translate(-50%,-50%) rotate(45deg);
+                }
+                &::after {
+                    transform: translate(-50%,-50%) rotate(-45deg);
+                }
+            }
+    
+            button:not(.cancelBtn) {
+                width: 70vw;
+                height: 14vw;
+                color: $title_3;
+                font-size: 4vw;
+                font-weight: bold;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $novice_btnBG;
+                border-radius: 10vw;
+                border: solid 1px $novice_Border;
+
+                &.play {
+                    background: $mainBG_1;
+                    color: $title_5;
+                }
+            }
+        }
+    }
+}

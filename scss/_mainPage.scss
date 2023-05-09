@@ -1,0 +1,1520 @@
+.mainWrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    //上選項列
+    .innerTopList {
+        width: 100%;
+        height: 18vw;
+        background: $mainPage_ListBG;
+        position: relative;
+        padding: 1.5vw 3.5vw 3.5vw;
+        flex-shrink: 0;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -10.5vw;
+            width: 100%;
+            height: 10.5vw;
+            background: $mainPage_ListBG;
+        }
+    
+        ul {
+            width: auto;
+            height: 100%;
+            display: flex;
+            overflow-x: auto;
+    
+            li {
+                width: 18vw;
+                height: 100%;
+                @include topListBtn;
+
+                .num {
+                    position: absolute;
+                    right: 1vw;
+                    top: 2vw;
+                    font-size: 3vw;
+                    font-weight: bold;
+                }
+    
+                i {
+                    width: 6.5vw;
+                    height: 5.5vw;
+                    margin-bottom: 1vw;
+    
+                    &.soccer_ic {
+                        background-position-x: 0;
+                    }
+                    &.basketball_ic {
+                        background-position-x: 25%;
+                    }
+                    &.horse_ic {
+                        background-position-x: 50%;
+                    }
+                    &.game_ic {
+                        background-position-x: 75%;
+                    }
+                    &.stock_ic {
+                        background-position-x: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+    //遊戲名+新老手版切換
+    .nameType {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding: 1vw 2vw;
+        flex-shrink: 0;
+    
+        .title {
+            color: $title_3;
+            font-size: 3vw;
+            font-weight: bold;
+        }
+    
+        .row {
+            width: 28vw;
+            height: 5.5vw;
+            @include rowStyle_1;
+
+            &.old {
+        
+                .bar {
+                    left: 52%;
+                }
+            }
+
+            p {
+                width: 50%;
+                text-align: center;
+                font-weight: bold;
+                font-size: 3vw;
+                letter-spacing: 1px;
+                position: relative;
+                z-index: 1;
+                transition: 0.3s all;
+            }
+
+            .bar {
+                width: 45%;
+                height: 84%;
+                border-radius: 10vw;
+                position: absolute;
+                transition: 0.3s all;
+                left: 3%;
+            }
+        }
+    }
+    
+    .typeBox {
+        width: 100%;
+        height: calc(100% - 26vw);
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        //新手版
+        .gameWrap {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            .ing,
+            .ready {
+                width: 100%;
+                height: 7vw;
+                overflow: hidden;
+
+                &.active {
+                    height: auto;
+                }
+
+                .titleTime {
+                    width: 100%;
+                    height: 7vw;
+                    background: $mainPage_ListBG;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 2vw;
+                    font-size: 3.7vw;
+                    color: $mainPage_Color_Ing;
+                    border-top: solid 1px $mainPage_Color_Ing;
+
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        margin-right: 2vw;
+
+                        &.ready_ic {
+                            background-position-x: 100%;
+                        }
+                    }
+                }
+
+                .gameBox {
+                    width: 98%;
+                    height: auto;
+                    margin: 1vw auto;
+                    background: $mainBG_2;
+                    border: solid 1px $Border_1;
+
+                    .title {
+                        width: 100%;
+                        height: 6vw;
+                        background: $secondBG_2;
+                        align-items: center;
+                        padding: 0 2vw;
+                        color: $title_1;
+                        font-size: 3vw;
+                        font-weight: bold;
+                        display: none;
+
+                        &.display {
+                            display: flex;
+                        }
+                    }
+
+                    .content {
+                        width: 100%;
+                        height: auto;
+                        border-bottom: solid 1px $Border_2;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        .more {
+                            width: 100%;
+                            height: auto;
+                            padding: 1vw 1.5vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+        
+                            .liveBox {
+                                width: auto;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+        
+                                i {
+                                    width: 5vw;
+                                    height: 4vw;
+        
+                                    &.tv_ic {
+                                        background-position-x: calc(100% - 1px);
+                                        margin-left: 1vw;
+                                    }
+                                }
+        
+                                p {
+                                    margin-left: 1.5vw;
+                                    font-size: 3vw;
+                                    color: $title_4;
+                                    display: flex;
+                                    align-items: center;
+        
+                                    span {
+                                        margin-left: 1.5vw;
+                                        display: block;
+                                        padding: 0 1vw 0.2vw;
+                                        border-radius: 1vw;
+                                        border: solid 1px $mainPage_Color_Ing;
+                                        color: $mainPage_Color_Ing;
+                                        font-size: 2vw;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+        
+                            .listBox {
+                                width: auto;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+        
+                                i {
+                                    width: 1.5vw;
+                                    height: 2.3vw;
+                                    margin-left: 1vw;
+                                }
+        
+                                p {
+                                    font-size: 3vw;
+                                    font-weight: bold;
+                                    color: $remind_1;
+                                }
+                            }
+
+                            .league {
+                                width: 100%;
+                                height: 6vw;
+                                color: $title_1;
+                                font-size: 3vw;
+                                font-weight: bold;
+                                align-items: center;
+                                display: none;
+
+                                &.display {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                        .team {
+                            width: 100%;
+                            height: 7vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            p {
+                                font-size: 3.7vw;
+                                font-weight: bold;
+                                color: $title_3;
+                                display: flex;
+                                align-items: center;
+
+                                &.right {
+
+                                    i {
+                                        background-position-x: 100%;
+                                    }
+                                }
+
+                                &.vs {
+                                    font-size: 3vw;
+                                    color: $title_1;
+                                }
+
+                                i {
+                                    width: 6vw;
+                                    height: 4.5vw;
+                                    margin: 0 1vw;
+                                }
+                            }
+                        }
+
+                        .btnBox {
+                            width: 100%;
+                            height: auto;
+                            margin-bottom: 1vw;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 0 1.5vw;
+
+                            button {
+                                width: 33%;
+                                height: 9.5vw;
+                                @include betBtn_ing;
+
+                                span {
+                                    display: block;
+                                    font-size: 3vw;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ready {
+                
+                .titleTime {
+                    color: $mainPage_Color_Wait;
+                    border-top-color: $mainPage_Color_Wait;
+                }
+
+                .gameBox {
+
+                    .content {
+
+                        .btnBox {
+
+                            button {
+                                @include betBtn_ready;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //老手版
+            &.oldWrap {
+
+                .ing,
+                .ready {
+
+                    .gameBox {
+
+                        .content {
+
+                            .more {
+                                padding: 0;
+
+                                .betType {
+                                    width: 100%;
+                                    height: 6vw;
+                                    background: $secondBG_1;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    margin-bottom: 1vw;
+
+                                    div {
+                                        width: 54%;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        padding: 0 1.5vw;
+
+                                        p {
+                                            color: $title_1;
+                                            font-size: 3vw;
+                                            font-weight: bold;
+                                            width: 32.5%;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+            
+                                .liveBox {
+                                    padding-left: 1.5vw;
+                                    
+            
+                                    p {
+                                        margin: 0;
+                                    }
+                                }
+
+                                .listBox {
+                                    padding-right: 1.5vw;
+                                }
+
+                                .league {
+                                    justify-content: flex-end;
+                                }
+                            }
+
+                            .box {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                margin-top: 1vw;
+
+                                .team {
+                                    width: 46%;
+                                    height: auto;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    padding-left: 1.5%;
+                                    flex-shrink: 0;
+
+                                    p {
+                                        margin-bottom: 4.5vw;
+                                        width: 100%;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+
+                                    .liveBox {
+                                        width: auto;
+                                        height: auto;
+                                        display: flex;
+                                        align-items: center;
+                
+                                        i {
+                                            width: 5vw;
+                                            height: 4vw;
+                
+                                            &.tv_ic {
+                                                background-position-x: calc(100% - 1px);
+                                                margin-left: 1vw;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btnBox {
+
+                                    ul {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        
+                                        li {
+                                            width: 32%;
+                                            height: 100%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            margin-right: 0.8vw;
+
+                                            &:last-child {
+                                                margin: 0;
+                                            }
+
+                                            button {
+                                                width: 100%;
+                                                height: 100%;
+                                                margin-bottom: 0.8vw;
+
+                                                &:last-child {
+                                                    margin: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //空
+    .emptyBox {
+        width: 100%;
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &.display {
+            display: flex;
+        }
+
+        .emptyImg {
+            width: 45vw;
+            height: 45vw;
+        }
+
+        p {
+            color: $title_4;
+            font-weight: bold;
+            font-size: 3.7vw;
+        }
+    }
+
+    //串關彈窗
+    .multiWrap {
+        width: 100%;
+        height: 10.5vw;
+        position: absolute;
+        left: 0;
+        bottom: 13.8vw;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        &.active {
+            height: auto;
+            border: solid 1px $Border_2;
+            bottom: 0;
+            z-index: 100;
+            border-radius: 5vw 5vw 0 0;
+
+            .title {
+
+                &::before {
+                    display: none;
+                }
+
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        
+        .title {
+            width: 100%;
+            height: 10.5vw;
+            background: $multiWrap_Title;
+            border-radius: 5vw 5vw 0 0;
+            display: flex;
+            align-items: center;
+            padding: 1vw 3.5vw 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5vw;
+                width: 100%;
+                height: 5vw;
+                background: $multiWrap_Title;
+            }
+
+            .num {
+                width: 6vw;
+                height: 6vw;
+                background: $mainBG_2;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $title_3;
+                font-weight: bold;
+                font-size: 3.7vw;
+                margin-right: 2vw;
+                flex-shrink: 0;
+            }
+
+            .name {
+                color: $title_5;
+                font-size: 3.7vw;
+                font-weight: bold;
+                letter-spacing: 1px;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .calcBtn {
+                width: 5vw;
+                height: 6vw;
+                margin: 0 2vw 0 7vw;
+                border-radius: 0.5vw;
+                flex-shrink: 0;
+            }
+
+            .money {
+                color: $title_5;
+                font-size: 3.7vw;
+                font-weight: bold;
+                flex-shrink: 0;
+
+                span {
+                    font-size: 4vw;
+                    font-weight: bold;
+                    color: $multiWrap_Money;
+                }
+            }
+
+            i {
+                width: 3vw;
+                height: 4vw;
+                margin-left: 3vw;
+                transition: 0.3s all;
+                flex-shrink: 0;
+            }
+        }
+
+        .detailWindow {
+            width: 100%;
+            height: auto;
+            border-top: solid 1px $Border_2;
+            
+            .box {
+                width: 100%;
+                height: 22vw;
+                background: $mainBG_3;
+                border-bottom: solid 1px $Border_2;
+                display: flex;
+
+                .cancelBtn {
+                    width: 7vw;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+
+                    i {
+                        width: 5vw;
+                        height: 5vw;
+                        position: relative;
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 52%;
+                            width: 0.5vw;
+                            height: 4vw;
+                            background: $title_4;
+                            border-radius: 1vw;
+                        }
+
+                        &::before {
+                            transform: translate(-50%,-50%) rotate(45deg);
+                        }
+                        &::after {
+                            transform: translate(-50%,-50%) rotate(-45deg);
+                        }
+                    }   
+                }
+
+                .textBox {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .first {
+                        color: $title_1;
+                        font-weight: bold;
+                        font-size: 3.7vw;
+                        margin-bottom: 1vw;
+
+                        span {
+                            color: $title_4;
+                        }
+                    }
+
+                    .type {
+                        color: $remind_1;
+                        font-weight: bold;
+                        font-size: 3vw;
+                        margin-bottom: 1vw;
+                    }
+
+                    .league {
+                        color: $title_2;
+                        font-weight: bold;
+                        font-size: 3.7vw;
+                        margin-bottom: 1vw;
+                    }
+
+                    .team {
+                        color: $title_2;
+                        font-weight: bold;
+                        font-size: 3.7vw;
+
+                        span {
+                            color: $title_4;
+                        }
+                    }
+                }
+
+                .betBox {
+                    width: 17vw;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-shrink: 0;
+
+                    p {
+                        color: $title_1;
+                        font-weight: bold;
+                        font-size: 3.7vw;
+
+                        span {
+                            color: $title_3;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottomBox {
+            width: 100%;
+            height: auto;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            &.finish {
+
+                .content {
+                    padding: 0 2vw;
+                }
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                background: $secondBG_3;
+                padding: 0 1vw;
+    
+                .top {
+                    width: 100%;
+                    height: auto;
+                    padding: 1vw 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    .num {
+                        color: $title_1;
+                        font-size: 3.7vw;
+                        font-weight: bold;
+    
+                        span {
+                            padding: 0 1vw;
+                        }
+                    }
+    
+                    .inputBox {
+                        width: 50vw;
+                        height: 9vw;
+                        position: relative;
+    
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            @include inputStyle_1;
+                        }
+    
+                        p {
+                            position: absolute;
+                            top: 50%;
+                            right: 2vw;
+                            transform: translateY(-50%);
+                            color: $title_3;
+                            font-weight: bold;
+                            font-size: 3.7vw;
+                        }
+                    }
+                }
+    
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    
+                    button {
+                        width: 23.8vw;
+                        height: 9vw;
+                        @include moneyBtn;
+                        margin-bottom: 0.8vw;
+    
+                        &:last-child {
+                            width: 48.4vw;
+                        }
+                    }
+                }
+    
+                .infoBox {
+                    width: 100%;
+                    height: auto;
+                    margin-top: 2vw;
+    
+                    ul {
+                        width: 100%;
+                        height: auto;
+    
+                        li {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+    
+                            .kind {
+                                width: 50%;
+                                color: $title_1;
+                                font-size: 3.7vw;
+                                font-weight: bold;
+                                border-right: solid 1px $Border_1;
+                                margin-bottom: 3vw;
+                            }
+    
+                            .num {
+                                width: 50%;
+                                color: $title_3;
+                                font-size: 3.7vw;
+                                font-weight: bold;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+
+                .finishTitle {
+                    width: 100%;
+                    height: 15vw;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        width: 7vw;
+                        height: 7vw;
+                        border-radius: 50%;
+                        border: solid 1px $multiWrap_Sus;
+                        background: $mainBG_2;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 15%;
+                            left: 36%;
+                            width: 1vw;
+                            height: 3vw;
+                            border-style: solid;
+                            border-width: 0 3px 3px 0;
+                            border-color: transparent $multiWrap_Sus $multiWrap_Sus transparent;
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    p {
+                        color: $multiWrap_Sus;
+                        font-size: 3.7vw;
+                        font-weight: bold;
+                        margin-left: 2vw;
+                    }
+                }
+
+                .finishInfo {
+                    width: 100%;
+                    height: auto;
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+
+                        li {
+                            width: 100%;
+                            height: 7vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-bottom: solid 1px $Border_2;
+
+                            p {
+                                color: $title_3;
+                                font-size: 3.7vw;
+                                font-weight: bold;
+
+                                &.name {
+                                    color: $title_1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .moneyBox {
+                    width: 100%;
+                    height: auto;
+                    padding: 5vw 0;
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+
+                        li {
+                            width: 33%;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            border-right: solid 1px $Border_2;
+
+                            &:last-child {
+                                border: none;
+                            }
+
+                            p {
+                                color: $title_3;
+                                font-size: 3.7vw;
+                                font-weight: bold;
+
+                                &.name {
+                                    color: $title_1;
+                                    margin-bottom: 2vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .bottomCheck {
+                width: 100%;
+                padding: 1vw;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: $mainBG_3;
+    
+                .addBtn {
+                    width: auto;
+                    height: auto;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    color: $title_4;
+                    background: none;
+                    margin-left: 8vw;
+                }
+    
+                .checkBtn {
+                    width: 44vw;
+                    height: 12vw;
+                    @include setMenuBtn;
+    
+                    span {
+                        display: block;
+                    }
+                }
+            }
+
+            .lastBtn {
+                width: 100%;
+                height: auto;
+                background: $mainBG_3;
+                padding: 2vw 0;
+                
+                button {
+                    width: 98%;
+                    height: 9vw;
+                    @include setMenuBtn;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.searchWrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 101;
+    background: $mainBG_3;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: 0.3s all;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    .header {
+        width: 100%;
+        height: 10.5vw;
+        border-radius: 0 0 5vw 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4vw;
+        background: $mainBG_1;
+        position: relative;
+
+        .title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $title_5;
+            font-weight: bold;
+            font-size: 5vw;
+            white-space: nowrap;
+        }
+
+        i {
+            width: 4vw;
+            height: 4vw;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                width: 0.5vw;
+                height: 5vw;
+                background: $title_5;
+                border-radius: 1vw;
+            }
+
+            &::before {
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+            &::after {
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+        }
+
+        .back {
+            font-size: 3.7vw;
+            font-weight: bold;
+            color: $title_5;
+        }
+    }
+
+    .inputBox {
+        width: 93%;
+        height: 9.5vw;
+        margin: 1.5vw auto 0;
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 100%;
+            @include searchInput;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5.5vw;
+            height: 5.5vw; 
+            left: 3vw;
+        }
+    }
+
+    .leagueList {
+        width: 100%;
+        height: 86vh;
+        padding: 0 3vw;
+        overflow-y: auto;
+
+        ul {
+            width: 100%;
+            height: 100%;
+
+            li {
+                width: 100%;
+                height: 10vw;
+                border-bottom: solid 1px $Border_2;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:nth-of-type(1) {
+                    border: none;
+
+                    .check {
+                        color: $title_1;
+                        font-size: 3vw;
+                    }
+                }
+
+                .name {
+                    color: $title_1;
+                    font-size: 4vw;
+                }
+
+                .check {
+                    color: $title_2;
+                    font-size: 3.7vw;
+                    display: flex;
+                    align-items: center;
+                    font-weight: bold;
+
+                    input {
+                        @include checkboxStyle;
+                        margin-left: 2vw;
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+
+                        &::before {
+                            width: 4vw;
+                            height: 4vw;
+                            border-radius: 50%;
+                        }
+
+                        &::after {
+                            display: none;
+                            width: 2vw;
+                            height: 2vw;
+                            border-radius: 50%;
+                        }
+
+                        &:checked {
+
+                            &::after {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.innerWrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 101;
+    background: $BG;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: 0.3s all;
+    display: flex;
+    flex-direction: column;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    .top {
+        width: 100%;
+        height: 53vw;
+        position: relative;
+        flex-shrink: 0;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        &.live {
+            background: none;
+            height: auto;
+        }
+
+        .leave {
+            width: 100%;
+            height: 12vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            p {
+                color: $title_3;
+                font-weight: bold;
+                font-size: 3.7vw;
+                letter-spacing: 1px;
+            }
+
+            i {
+                position: absolute;
+                left: 4vw;
+                width: 4vw;
+                height: 4vw;
+                filter: brightness(15);
+            }
+        }
+
+        .infoBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .time,
+            .score {
+                color: $title_3;
+                font-size: 5vw;
+                font-weight: bold;
+                margin-bottom: 2vw;
+            }
+
+            .team {
+                color: $title_1;
+                font-weight: bold;
+                font-size: 3.7vw;
+                margin-bottom: 2vw;
+
+                span {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 6vw;
+                    height: 6vw;
+                    color: $title_3;
+                    font-size: 2vw;
+                    font-weight: bold;
+                    background: $mainPage_innerBox1;
+                    border-radius: 1vw;
+                    padding-bottom: 1px;
+                }
+            }
+        }
+
+        .liveBtn {
+            width: auto;
+            height: auto;
+            @include liveBtn;
+            margin: 0 auto;
+
+            i {
+                width: 4vw;
+                height: 3vw;
+                margin-right: 2vw;
+            }
+        }
+
+        .updateBtn {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            background: none;
+            position: absolute;
+            right: 3vw;
+            bottom: 2vw;
+            color: $title_3;
+            font-weight: bold;
+            font-size: 3.7vw;
+
+            i {
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+
+        .header {
+            width: 100%;
+            height: 9vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2vw;
+            background: $mainBG_1;
+            position: relative;
+            flex-shrink: 0;
+    
+            .title {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                color: $title_5;
+                font-weight: bold;
+                font-size: 3.7vw;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+
+                span {
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 6px 4px 0 4px;
+                    border-color: #212832 transparent;
+                    margin-left: 2vw;
+                }
+            }
+    
+            i {
+                width: 4vw;
+                height: 4vw;
+            }
+    
+            a {
+                width: auto;
+                height: auto;
+                @include loginRecord;
+                padding: 1.5vw 1vw;
+            }
+        }
+
+        video {
+            width: 100%;
+            height: calc(100% - 16vw);
+        }
+
+        .teamName {
+            width: 100%;
+            height: 7vw;
+            display: flex;
+            background: $secondBG_2;
+
+            .time {
+                width: auto;
+                height: 100%;
+                border-radius: 0 10vw 10vw 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $mainPage_liveLinear;
+                padding: 0 5vw 0 3vw;
+                flex-shrink: 0;
+
+                p {
+                    color: $title_5;
+                    font-weight: bold;
+                    font-size: 3.7vw;
+                }
+            }
+
+            .team {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+
+                .name {
+                    color: $title_3;
+                    font-weight: bold;
+                    font-size: 3.7vw;
+                }
+
+                span {
+                    color: $title_2;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    margin: 0 3vw;
+                }
+
+                .vs {
+                    color: $title_4;
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .innerBetList {
+        width: 100%;
+        height: 9vw;
+        padding: 1vw;
+        flex-shrink: 0;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                width: auto;
+                height: 100%;
+                border-bottom: solid 1px transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 2vw;
+
+                &:active,&.active {
+                    border-color: $Border_1;
+                }
+
+                p {
+                    color: $title_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+
+        ul {
+            width: 100%;
+            height: auto;
+            background: $mainBG_2;
+            padding: 2vw 1vw;
+
+            li {
+                width: 100%;
+                height: auto;
+                margin-bottom: 2vw;
+
+                .title {
+                    color: $title_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    padding-left: 1vw;
+                    border-left: solid 2px $Border_1;
+                    margin-bottom: 1vw;
+                }
+
+                .smallTitle {
+                    width: 100%;
+                    height: 8vw;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: solid 1px $Border_2;
+                    margin-bottom: 1vw;
+
+                    span {
+                        width: 34%;
+                        color: $title_3;
+                        font-size: 3.7vw;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+
+                .btnBox {
+                    width: 100%;
+                    display: flex;
+                    margin-bottom: 1vw;
+                    
+                    button {
+                        width: 50%;
+                        height: 7vw;
+                        @include innerBetBtn;
+                        margin-right: 1vw;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+
+                        i {
+                            width: 5.5vw;
+                            height: 5vw;
+                            border-radius: 1vw;
+                            background: $mainPage_innerBox1;
+                            font-size: 2vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding-bottom: 1px;
+                            color: $title_3;
+
+                            &.mid {
+                                background: $mainPage_innerBox2;
+                            }
+                            &.cus {
+                                background: $mainPage_innerBox3;
+                            }
+                        }
+
+                        span {
+                            font-size: 3.7vw;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
