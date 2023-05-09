@@ -1,0 +1,44 @@
+.chartWrap {
+    width: 100%;
+    height: 100%;
+    padding: 0 1vw;
+    display: flex;
+    flex-direction: column;
+
+    .btnBox {
+        width: 100%;
+        height: auto;
+        margin: 1vw 0 2vw;
+        display: flex;
+        flex-shrink: 0;
+
+        button {
+            width: 20%;
+            height: 8vw;
+            margin-right: 1vw;
+            @include chartListBtn;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .listBox {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: 7.5vw;
+                @include tableList_1;
+                margin-bottom: 2vw;
+            }
+        }
+    }
+}

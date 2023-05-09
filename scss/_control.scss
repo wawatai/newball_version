@@ -1,0 +1,240 @@
+.controlWrap {
+    width: 100%;
+    height: 100%;
+
+    .content {
+        width: 100%;
+        height: auto;
+        background: $mainBG_3;
+        padding: 4vw 2.5vw;
+        margin: 1vw 0 2vw;
+
+        .rowBox {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1.5vw;
+
+            .title {
+                font-size: 3.7vw;
+                font-weight: bold;
+                color: $title_1;
+                margin-bottom: 1vw;
+            }
+
+            .row {
+                width: 100%;
+                height: 8vw;
+                @include rowStyle_2;
+    
+                &.active {
+            
+                    .bar {
+                        left: 51%;
+                    }
+                }
+    
+                p {
+                    width: 50%;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 3.7vw;
+                    letter-spacing: 1px;
+                    position: relative;
+                    z-index: 1;
+                    transition: 0.3s all;
+                }
+    
+                .bar {
+                    width: 48%;
+                    height: 82%;
+                    border-radius: 10vw;
+                    position: absolute;
+                    transition: 0.3s all;
+                    left: 1%;
+                }
+            }
+        }
+
+        .spRow {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 4vw;
+
+            .title {
+                font-size: 3.7vw;
+                font-weight: bold;
+                color: $title_1;
+                margin-bottom: 1vw;
+            }
+
+            .row {
+                width: 20vw;
+                height: 8vw;
+                @include rowStyle_3;
+
+                &.active {
+                    
+                    .bar {
+                        left: 63%;
+                    }
+                }
+
+                p {
+                    width: 50%;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    text-align: center;
+                    transition: 0.3s all;
+                }
+
+                .bar {
+                    width: 7vw;
+                    height: 7vw;
+                    border-radius: 10vw;
+                    position: absolute;
+                    transition: 0.3s all;
+                    left: 3%;
+                }
+            }
+        }
+    }
+
+    .btnBox {
+        width: 100%;
+        height: auto;
+        background: $mainBG_2;
+
+        ul {
+            width: 100%;
+            height: auto;
+            padding: 0 2.5vw;
+
+            li {
+                width: 100%;
+                height: 14vw;
+
+                &:nth-of-type(1) {
+                    border-bottom: solid 1px $Border_2;
+                    
+                    a {
+                        justify-content: space-between;
+                    }
+                }
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    p {
+                        color: $title_1;
+                        font-weight: bold;
+                        font-size: 3.7vw;
+                    }
+    
+                    i {
+                        width: 4vw;
+                        height: 3vw;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.passwordWrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 101;
+    background: $BG;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: 0.3s all;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    .header {
+        width: 100%;
+        height: 10.5vw;
+        border-radius: 0 0 5vw 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4vw;
+        background: $mainBG_1;
+        position: relative;
+
+        .title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $title_5;
+            font-weight: bold;
+            font-size: 5vw;
+            white-space: nowrap;
+        }
+
+        i {
+            width: 4vw;
+            height: 4vw;
+        }
+    }
+
+    .content {
+        width: 100%;
+        height: auto;
+        padding: 4vw 4vw 8vw;
+        background: $mainBG_3;
+        margin: 1.5vw 0;
+
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: auto;
+                border-bottom: solid 1px $Border_2;
+                margin-bottom: 3vw;
+
+                .title {
+                    color: $title_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    margin-bottom: 2vw;
+                }
+
+                input {
+                    width: 100%;
+                    height: 9vw;
+                    @include inputStyle_1;
+                    margin-bottom: 2vw;
+                }
+
+                .remind {
+                    color: $remind_1;
+                    font-size: 3vw;
+                    font-weight: bold;
+                    margin-bottom: 3vw;
+                }
+            }
+        }
+    }
+
+    .check {
+        width: 96%;
+        height: 11vw;
+        @include setMenuBtn;
+        margin: 2vw auto;
+    }
+}

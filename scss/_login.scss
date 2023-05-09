@@ -1,0 +1,131 @@
+.loginWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 9vw;
+
+    .logo {
+        margin: 21vw 0 16.5vw;
+        color: $title_1;
+        font-weight: bold;
+        font-size: 7vw;
+    }
+
+    .inputBox {
+        width: 100%;
+        height: auto;
+
+        .btnBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2vw;
+
+            button {
+                width: 22vw;
+                height: 6.5vw;
+
+                &.goPC {
+                    @include goPC;
+                }
+
+                &.record {
+                    @include loginRecord;
+                }
+            }
+        }
+
+        label {
+            display: block;
+            position: relative;
+            margin-bottom: 2vw;
+
+            &.checkBox {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8vw;
+
+                .check {
+                    width: 4.5vw;
+                    height: 4.5vw;
+                }
+
+                p {
+                    padding-left: 2vw;
+                    font-size: 2vw;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    color: $remind_1;
+                }
+            }
+
+            i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 2.5vw;
+                width: 5vw;
+                height: 5.3vw;
+
+                &.acc_ic {
+                    background-position-y: 0;
+                }
+                &.pass_ic {
+                    background-position-y: 100%;
+                }
+            }
+
+            input:not(.check) {
+                width: 100%;
+                height: 11vw;
+                @include inputStyle_1;
+                padding-left: 9vw;
+            }
+        }
+    }
+
+    .slip {
+        width: 100%;
+        height: 11vw;
+        border-radius: 1.5vw;
+        position: relative;
+        overflow: hidden;
+        @include slip;
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 4vw;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .bar {
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 1.5vw;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 4vw;
+                height: 4vw;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 2vw;
+            }
+        }
+    }
+}

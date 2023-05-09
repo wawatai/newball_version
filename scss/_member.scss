@@ -1,0 +1,418 @@
+.memberWrap {
+    width: 100%;
+    height: 100%;
+
+    .top {
+        width: 100%;
+        height: auto;
+        background: $mainBG_3;
+        margin: 2vw 0 3vw;
+
+        .info {
+            width: 100%;
+            height: 22vw;
+            display: flex;
+
+            .sticker {
+                width: 27vw;
+                height: 100%;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                div {
+                    width: 19vw;
+                    height: 19vw;
+                }
+            }
+
+            .linkBox {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .userBox {
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    .name {
+                        color: $title_1;
+                        font-weight: bold;
+                        font-size: 4.2vw;
+                        margin-bottom: 2vw;
+                    }
+
+                    .money {
+                        color: $title_3;
+                        font-weight: bold;
+                        font-size: 4.2vw;
+                    }
+                }
+
+                .link {
+                    width: 9vw;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    background: none;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 4vw;
+                        height: 3vw;
+                        transform: rotate(-90deg);
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+
+        .btnBox {
+            width: 100%;
+            height: 31vw;
+            
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0 4vw;
+
+                li {
+                    width: 25%;
+                    height: auto;
+
+                    a {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+
+                        i {
+                            width: 7.5vw;
+                            height: 7.7vw;
+                            margin-bottom: 4vw;
+    
+                            &.bet_ic {
+                                background-position-x: 0;
+                            }
+    
+                            &.rule_ic {
+                                background-position-x: 50%;
+                            }
+    
+                            &.control_ic {
+                                background-position-x: 100%;
+                            }
+                        }
+    
+                        p {
+                            color: $title_1;
+                            font-size: 3.7vw;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        height: auto;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+            padding: 0 4vw;
+            background: $mainBG_2;
+
+            li {
+                width: 100%;
+                height: 14vw;
+                border-bottom: solid 1px $Border_2;
+
+                &:last-child {
+                    border: none;
+                }
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    div {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+    
+                        i {
+                            width: 5.5vw;
+                            height: 5.5vw;
+                            margin-right: 4vw;
+    
+                            &.teach_ic {
+                                background-position-x: 0;
+                            }
+                            &.paper_ic {
+                                background-position-x: 25%;
+                            }
+                            &.chart_ic {
+                                background-position-x: 50%;
+                            }
+                            &.logout_ic {
+                                background-position-x: 75%;
+
+                                &.sp {
+                                    transform: scaleX(-1) translateX(3px);
+                                }
+                            }
+                        }
+    
+                        p {
+                            color: $title_1;
+                            font-size: 3.7vw;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        }
+                    }
+    
+                    .arrow_ic {
+                        width: 4vw;
+                        height: 3vw;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.infoWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: $BG;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s all;
+    transform: translateX(100%);
+
+    &.display {
+        transform: translateX(0);
+    }
+
+    .header {
+        width: 100%;
+        height: 10.5vw;
+        border-radius: 0 0 5vw 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4vw;
+        background: $mainBG_1;
+        position: relative;
+        flex-shrink: 0;
+
+        .title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $title_5;
+            font-weight: bold;
+            font-size: 5vw;
+            white-space: nowrap;
+        }
+
+        i {
+            width: 4vw;
+            height: 4vw;
+        }
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        margin-top: 1.5vw;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+        
+        ul {
+            width: 100%;
+            height: auto;
+            padding: 0 3vw;
+            background: $mainBG_3;
+
+            li {
+                width: 100%;
+                height: auto;
+                border-bottom: solid 1px $Border_2;
+                display: flex;
+                flex-direction: column;
+                padding: 3vw 0;
+                position: relative;
+
+                &:nth-of-type(1),
+                &:nth-of-type(2) {
+                    padding: 4vw 0;
+
+                    .title {
+                        margin-bottom: 3vw;
+                    }
+                }
+                &:last-child {
+                    border: none;
+                }
+
+                &.fake {
+                    display: none;
+
+                    &.display {
+                        display: flex;
+                    }
+                    
+                    div {
+                        width: 100%;
+                        height: 30vh;
+                    }
+                }
+                
+                .title {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 2vw;
+                    
+                    p {
+                        color: $title_1;
+                        font-size: 3.7vw;
+                        font-weight: bold;
+                    }
+                }
+
+                .sticker {
+                    width: 100%;
+                    height: auto;
+
+                    div {
+                        width: 16vw;
+                        height: 16vw;
+                        position: relative;
+
+                        i {
+                            width: 5.5vw;
+                            height: 5.5vw;
+                            position: absolute;
+                            right: -2vw;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                p {
+                    color: $title_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+
+                    &.remind {
+                        color: $remind_1;
+                        font-size: 2vw;
+                        line-height: 4vw;
+                        margin-top: 2vw;
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    height: 8vw;
+                    @include inputStyle_1;
+                    font-size: 3.7vw;
+                }
+
+                select {
+                    width: 100%;
+                    height: 8vw;
+                    @include selectStyle_1;
+                    font-size: 3.7vw;
+                }
+
+                .changeBtn {
+                    width: 15vw;
+                    height: 6vw;
+                    @include setMenuBtn;
+                    right: 0;
+                    bottom: 1.5vw;
+                    font-size: 3vw;
+                    border-radius: 1vw;
+                }
+
+                .changeBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .check {
+            width: 96%;
+            height: 11vw;
+            @include setMenuBtn;
+            margin: 2vw auto;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+        }
+
+        .remindBox {
+            width: 100%;
+            height: 18vw;
+            background: $mainBG_2;
+            display: flex;
+            align-items: center;
+            padding: 0 4vw;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+
+            p {
+                color: $title_1;
+                font-size: 3vw;
+                font-weight: bold;
+                line-height: 4vw;
+
+                span {
+                    color: $title_3;
+                }
+            }
+        }
+    }
+}

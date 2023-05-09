@@ -1,0 +1,68 @@
+.marqueeWrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0 3.5vw;
+    flex-shrink: 0;
+
+    .marquee {
+        width: 79%;
+        height: 6vw;
+        background: $secondBG_1;
+        border-radius: 3vw;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 1vw;
+        overflow: hidden;
+        margin-right: 2vw;
+
+        i {
+            width: 5vw;
+            height: 4vw;
+            margin-right: 1vw;
+            flex-shrink: 0;
+        }
+
+        pre {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            p {
+                display: inline-block;
+                font-size: 3vw;
+                font-weight: bold;
+                color: $title_2;
+                padding-left: 100%;
+                white-space: nowrap;
+                animation: marquee 10s linear 0s infinite;
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    .chartBtn {
+        width: 18vw;
+        height: 6vw;
+        @include marqueeBtn;
+
+        i {
+            width: 3vw;
+            height: 4vw;
+            margin-right: 1vw;
+        }
+    }
+}

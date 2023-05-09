@@ -1,0 +1,181 @@
+.depositWrap {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    .top,
+    .bottom {
+        width: 100%;
+        height: auto;
+        background: $mainBG_3;
+        margin-top: 2vw;
+        padding: 0 3vw 2vw;
+
+        .title {
+            width: 100%;
+            height: 8vw;
+            color: $title_1;
+            font-size: 3.7vw;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .listBox {
+            width: 100%;
+            height: auto;
+            border-bottom: solid 1px $Border_2;
+            padding-bottom: 1vw;
+
+            ul {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    width: 24%;
+                    height: 15vw;
+                    margin: 0 1.2vw 1.2vw 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    background: $secondBG_1;
+                    border: solid 1px $Border_1;
+                    border-radius: 1vw;
+                    overflow: hidden;
+                    position: relative;
+
+                    &:nth-of-type(4n) {
+                        margin-right: 0;
+                    }
+
+                    &:active {
+                        border-color: $deposit_Active;
+                        background: $mainBG_3;
+
+                        p {
+                            color: $title_3;
+                        }
+                    }
+
+                    &.active {
+                        border-color: $deposit_Active;
+                        background: $mainBG_3;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            transform: rotate(45deg);
+                            width: 5vw;
+                            height: 5vw;
+                            right: -2.5vw;
+                            bottom: -2.5vw;
+                            background: $deposit_Active;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 2vw;
+                            height: 2vw;
+                            right: 0vw;
+                            bottom: 0vw;
+                        }
+
+                        p {
+                            color: $title_3;
+                        }
+                    }
+
+                    i {
+                        width: 6vw;
+                        height: 6vw;
+                        margin-bottom: 2vw;
+
+                        &.card_ic {
+                            background-position-x: 0;
+                        }
+                        &.bank_ic {
+                            background-position-x: 12.5%;
+                        }
+                        &.alipayCard_ic {
+                            background-position-x: 25%;
+                        }
+                        &.wechat_ic {
+                            background-position-x: 37.5%;
+                        }
+                        &.alipay_ic {
+                            background-position-x: 50%;
+                        }
+                        &.qr_ic {
+                            background-position-x: 62.5%;
+                        }
+                        &.hand_ic {
+                            background-position-x: 75%;
+                        }
+                    }
+
+                    p {
+                        color: $title_1;
+                        font-size: 3vw;
+                        font-weight: bold;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 9vw;
+            @include inputStyle_1;
+        }
+
+        .remind {
+            margin-top: 1vw;
+            color: $remind_1;
+            font-weight: bold;
+            font-size: 3vw;
+            line-height: 4vw;
+        }
+
+        .btnBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            button {
+                width: 24%;
+                height: 9vw;
+                margin: 0 1.2vw 1.2vw 0;
+                @include moneyBtn;
+
+                &:nth-of-type(4n) {
+                    margin-right: 0;
+                }
+
+                &:last-child {
+                    width: 49.4%;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        background: $mainBG_2;
+    }
+
+    .check {
+        width: 96%;
+        height: 11vw;
+        @include setMenuBtn;
+        margin: 2vw auto;
+    }
+}

@@ -1,0 +1,116 @@
+footer {
+    width: 100%;
+    height: 13.8vw;
+    background: $footer_BG;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 5vw 5vw 0 0;
+    border-top: solid 2px $Border_1;
+    padding: 0 4vw;
+    z-index: 10;
+    box-shadow: 0 -10px 10px 0 $footer_Shadow;
+
+    &.inner {
+
+        ul {
+
+            li {
+
+                &:active,&.active {
+
+                    a {
+
+                        i {
+                            background-position-y: 0;
+                        }
+
+                        p {
+                            color: $footer_Word;
+                        }
+                    }
+                }
+
+                a {
+
+                    i {
+                        width: 5.7vw;
+                    }
+                }
+            }
+        }
+    }
+
+    ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        li {
+            width: 20%;
+            height: 100%;
+            padding-top: 1.2vw;
+
+            &:active,&.active {
+
+                a {
+
+                    i {
+                        background-position-y: 100%;
+                    }
+
+                    p {
+                        color: $title_1;
+                    }
+                }
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                i {
+                    width: 6.2vw;
+                    height: 5.2vw;
+                    margin-bottom: 1vw;
+
+                    &.home_ic,
+                    &.teach_ic {
+                        background-position-x: 0;
+                    }
+                    &.result_ic,
+                    &.control_ic {
+                        background-position-x: 25%;
+                    }
+                    &.service_ic,
+                    &.nowBet_ic {
+                        background-position-x: 50%;
+                    }
+                    &.record_ic,
+                    &.historyBet_ic {
+                        background-position-x: calc(75% - 1px);
+                    }
+                    &.member_ic,
+                    &.refresh_ic {
+                        background-position-x: 100%;
+                    }
+                }
+
+                p {
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    color: $footer_Word;
+                    width: 100%;
+                    text-align: center;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,301 @@
+.teachWrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    //上選單
+    .teachList {
+        width: 100%;
+        height: auto;
+        padding: 1vw;
+        flex-shrink: 0;
+
+        ul {
+            width: 100%;
+            height: auto;
+            display: flex;
+            overflow-x: auto;
+
+            li {
+                width: auto;
+                height: 7.5vw;
+                @include chartListBtn;
+                margin-right: 1vw;
+                padding: 0 4vw;
+                flex-shrink: 0;
+
+                i {
+                    width: 5vw;
+                    height: 5vw;
+                    margin-right: 2vw;
+
+                    &.soccer_ic {
+                        background-position-x: 0;
+                    }
+                    &.basketball_ic {
+                        background-position-x: 50%;
+                    }
+                    &.baseball_ic {
+                        background-position-x: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    //選擇類別
+    .type {
+        width: 100%;
+        height: 8vw;
+        padding: 1vw;
+        flex-shrink: 0;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            li {
+                width: 50%;
+                height: 100%;
+                color: $title_1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: solid 2px transparent;
+                font-size: 3.7vw;
+                font-weight: bold;
+
+                &:active,&.active {
+                    border-color: $Border_1;
+                }
+            }
+        }
+    }
+
+    //teachBox
+    .teachBox {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+
+        .teachType {
+            width: 100%;
+            height: auto;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            .type {
+                width: 100%;
+                height: auto;
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+
+                .box {
+                    width: 100%;
+                    height: auto;
+                    background: $mainBG_3;
+                    padding-bottom: 1px;
+                    margin-bottom: 1vw;
+    
+                    &:last-child {
+                        margin-bottom: 5vw;
+                    }
+    
+                    .title {
+                        width: 100%;
+                        height: 6vw;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 4vw;
+                        border-bottom: solid 1px $Border_2;
+                        color: $title_1;
+                        position: relative;
+                        font-size: 3vw;
+                        font-weight: bold;
+    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 0.5vw;
+                            height: 3vw;
+                            background: $Border_1;
+                            left: 2vw;
+                        }
+                    }
+    
+                    .nameBox {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 2vw 0 3vw;
+    
+                        .left,
+                        .right {
+                            width: 30vw;
+                            height: auto;
+    
+                            .name {
+                                color: $title_1;
+                                font-size: 3vw;
+                                font-weight: bold;
+                                margin-bottom: 1.5vw;
+                                line-height: 4vw;
+                            }
+    
+                            .score {
+                                color: $title_2;
+                                font-size: 3vw;
+                                font-weight: bold;
+                                margin-bottom: 1.5vw;
+                            }
+    
+                            .bet {
+                                color: $title_3;
+                                font-size: 3vw;
+                                font-weight: bold;
+                            }
+                        }
+                        .left {
+                            text-align: right;
+                        }
+    
+                        .mid {
+                            width: auto;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $title_1;
+                            font-size: 5vw;
+                            font-weight: bold;
+    
+                            i {
+                                width: 9.5vw;
+                                height: 7vw;
+                                margin: 0 4vw;
+    
+                                &.rightTeam_ic {
+                                    background-position-x: 100%;
+                                }
+                            }
+                        }
+                    }
+    
+                    .remind {
+                        width: 100%;
+                        height: auto;
+                        color: $remind_1;
+                        font-size: 3vw;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-bottom: 4vw;
+                    }
+    
+                    .resultBox {
+                        width: 98%;
+                        height: 18vw;
+                        margin: 0 auto;
+                        border-radius: 18vw;
+                        background: $teachResult_BG1;
+                        box-shadow: 0 2px 0 0 $teachResult_Border1 inset,0 -2px 0 0 $teachResult_Border2 inset;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .textBox {
+                            width: 37vw;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+        
+                            .name {
+                                color: $title_1;
+                                font-weight: bold;
+                                font-size: 3vw;
+                                margin-bottom: 2vw;
+                            }
+        
+                            .result {
+                                color: $title_3;
+                                font-weight: bold;
+                                font-size: 3vw;
+    
+                                &.lose {
+                                    color: $title_4;
+                                }
+                            }
+                        }
+    
+                        .center {
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 20vw;
+                            background: $teachResult_BG2;
+                            border: solid 1px $teachResult_Border3;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+    
+                            .name {
+                                color: $title_1;
+                                font-weight: bold;
+                                font-size: 3.7vw;
+                                margin-bottom: 2vw;
+                            }
+    
+                            .result {
+                                color: $title_3;
+                                font-weight: bold;
+                                font-size: 3.7vw;
+                            }
+                        }
+                    }
+    
+                    .resultWord {
+                        width: 96%;
+                        height: auto;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        margin: 4vw auto;
+    
+                        div {
+                            width: 47%;
+    
+                            &.lose {
+    
+                                p {
+                                    color: $title_4;
+                                }
+                            }
+    
+                            &.left {
+                                text-align: right;
+                            }
+    
+                            p {
+                                color: $remind_1;
+                                font-weight: bold;
+                                font-size: 3vw;
+                                line-height: 4vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
