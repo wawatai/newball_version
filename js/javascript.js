@@ -33,6 +33,26 @@ $(function(){
     })
 })
 
+//切換模式
+$(document).on("click","header .top .endBox i",function(){
+    var n = $(this).index();
+
+    $(this)
+    .addClass("active")
+    .siblings().removeClass("active");
+
+    if(n == 0) {
+        $(".cssStyle")
+        .attr("href","../css_2/style.css");
+    }
+    
+    if(n == 1) {
+        $(".cssStyle")
+        .attr("href","../css/style.css");
+    }
+    
+})
+
 //chleague
 $(function(){
     $(".topfix .chooseLeague").on("click",function(){
@@ -146,6 +166,16 @@ $(function(){
     //即時資訊單數
     var count = $(".right .statusWindow .ST_Window li").length;
     $(".right .statusWindow .stNumber").text(count);
+
+    //移除注單
+    $(".right .statusWindow .ST_Window li .betAmount i").click(function(){
+        $(this)
+        .closest("li")
+        .remove();
+
+        var count = $(".right .statusWindow .ST_Window li").length;
+        $(".right .statusWindow .stNumber").text(count);
+    })
 
     //room livelist展開切換
     $(".right .room .twobut button").click(function(){

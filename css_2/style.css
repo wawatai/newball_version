@@ -240,11 +240,60 @@ html body header .top .btnBox button {
 html body header .top .btnBox button:first-child {
   margin: 0;
 }
-html body header .top span {
+html body header .top .endBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body header .top .endBox i {
+  color: #3d87b3;
+  font-size: 12px;
+  padding: 4px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+html body header .top .endBox i:nth-of-type(2) {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  padding: 4px 5.5px;
+  margin-left: 5px;
+}
+html body header .top .endBox i:hover, html body header .top .endBox i:active, html body header .top .endBox i.active {
+  color: #ff7200;
+}
+html body header .top .endBox i:hover::after, html body header .top .endBox i:active::after, html body header .top .endBox i.active::after {
+  background: #ffffff;
+}
+html body header .top .endBox i:hover:nth-of-type(2), html body header .top .endBox i:active:nth-of-type(2), html body header .top .endBox i.active:nth-of-type(2) {
+  color: #feb300;
+}
+html body header .top .endBox i:hover:nth-of-type(2)::after, html body header .top .endBox i:active:nth-of-type(2)::after, html body header .top .endBox i.active:nth-of-type(2)::after {
+  background: #044e7b;
+}
+html body header .top .endBox i::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #044e7b;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+html body header .top span.time {
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
-  margin-right: 15px;
+  margin: 0 15px 0 5px;
 }
 html body header .top .marqueeBox {
   width: 50%;
@@ -766,12 +815,27 @@ html body .right .statusWindow .ST_Window li div {
   overflow: hidden;
 }
 html body .right .statusWindow .ST_Window li div span {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 html body .right .statusWindow .ST_Window li .betAmount {
   color: #000000;
   font-size: 12px;
   font-weight: bold;
+}
+html body .right .statusWindow .ST_Window li .betAmount.success {
+  color: #28b208;
+}
+html body .right .statusWindow .ST_Window li .betAmount.fail {
+  color: #c90202;
+}
+html body .right .statusWindow .ST_Window li .betAmount.waiting {
+  color: #888888;
+}
+html body .right .statusWindow .ST_Window li i {
+  font-size: 12px;
+  color: #000000;
+  margin-left: 5px;
+  cursor: pointer;
 }
 html body .right .liveWindow {
   width: 100%;
@@ -935,6 +999,9 @@ html body .right .room .liveListBox .livelist .innerList p {
   text-overflow: ellipsis;
   overflow: hidden;
   margin-bottom: 8px;
+}
+html body .right .room .liveListBox .livelist .innerList p:nth-of-type(2) {
+  color: #888888;
 }
 html body .right .room .liveListBox .livelist .innerList button {
   width: 90%;
@@ -4472,7 +4539,7 @@ html body .teach .topfix ul li::before {
   content: "";
   width: 1px;
   height: 15px;
-  background: #000000;
+  background: #ffffff;
   position: absolute;
   top: 50%;
   right: 0;
@@ -4483,10 +4550,10 @@ html body .teach .topfix ul li:last-child::before {
   display: none;
 }
 html body .teach .topfix ul li:hover, html body .teach .topfix ul li:active, html body .teach .topfix ul li.active {
-  border-color: #000000;
+  border-color: #ffffff;
 }
 html body .teach .topfix ul li p {
-  color: #000000;
+  color: #ffffff;
   font-size: 15px;
   margin: 0 10px;
 }
@@ -4518,13 +4585,14 @@ html body .teach .middle .teachContent.display {
 html body .teach .middle .teachContent .teachBoard {
   width: 100%;
   height: auto;
+  background: #ffffff;
   position: relative;
 }
 html body .teach .middle .teachContent .teachBoard::before {
   content: "";
   width: 100%;
   height: 1px;
-  background: #465a79;
+  background: transparent;
   position: absolute;
   bottom: 10px;
 }
@@ -4540,16 +4608,15 @@ html body .teach .middle .teachContent .teachBoard .techTitle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #2474a2;
+  background: #e8e8e8;
   position: sticky;
   top: 0;
   left: 0;
   padding: 0 10px 2px;
-  border-bottom: 1px solid #000000;
   z-index: 1;
 }
 html body .teach .middle .teachContent .teachBoard .techTitle p {
-  color: #000000;
+  color: #044e7b;
   font-size: 13px;
 }
 html body .teach .middle .teachContent .teachBoard .teamLine {
@@ -4565,7 +4632,7 @@ html body .teach .middle .teachContent .teachBoard .teamLine {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  border-bottom: 1px solid #465a79;
+  border-bottom: 1px solid #bbbbbb;
 }
 html body .teach .middle .teachContent .teachBoard .teamLine .team {
   width: 200px;
@@ -4595,8 +4662,14 @@ html body .teach .middle .teachContent .teachBoard .teamLine .team div p {
   white-space: nowrap;
   margin: 10px 0;
 }
+html body .teach .middle .teachContent .teachBoard .teamLine .team div p:nth-of-type(1) {
+  font-weight: bold;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .team div p:nth-of-type(1) span {
+  color: #1e62c5;
+}
 html body .teach .middle .teachContent .teachBoard .teamLine .team div p span {
-  color: #ffffff;
+  color: #ff4800;
   font-weight: bold;
   margin-left: 5px;
 }
@@ -4607,7 +4680,7 @@ html body .teach .middle .teachContent .teachBoard .teamLine .team .teamImg {
   margin: 0 20px;
 }
 html body .teach .middle .teachContent .teachBoard .teamLine .vs {
-  color: #ff4800;
+  color: #000000;
   font-size: 14px;
   font-weight: bold;
   text-align: center;
@@ -4622,9 +4695,10 @@ html body .teach .middle .teachContent .teachBoard .teamLine .midText {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #5c6d79;
+  background: #eff6fb;
   border-radius: 30px;
-  color: #ffffff;
+  border: 1px solid #bbbbbb;
+  color: #000000;
   font-size: 14px;
   padding: 5px 0;
   position: absolute;
@@ -4649,7 +4723,6 @@ html body .teach .middle .teachContent .teachBoard .moreInfo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px solid #465a79;
 }
 html body .teach .middle .teachContent .teachBoard .moreInfo .box {
   width: 310px;
@@ -4663,8 +4736,10 @@ html body .teach .middle .teachContent .teachBoard .moreInfo .box {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #ffffff;
+  background: #f0f0f0;
   border-radius: 80px;
+  -webkit-box-shadow: inset 1px 1px 20px rgba(0, 0, 0, 0.2862745098);
+          box-shadow: inset 1px 1px 20px rgba(0, 0, 0, 0.2862745098);
   padding: 0 5px;
   margin-bottom: 30px;
   position: relative;
@@ -4678,12 +4753,15 @@ html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p {
   margin-bottom: 10px;
 }
 html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.win, html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.lose {
-  color: #c90202;
+  color: #ff4800;
   font-weight: bold;
 }
 html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.win span, html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.lose span {
   font-family: sans-serif;
   margin: 0 2px;
+}
+html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p.lose {
+  color: #888888;
 }
 html body .teach .middle .teachContent .teachBoard .moreInfo .box .textBox p:last-child {
   margin-bottom: 0px;
@@ -4704,8 +4782,10 @@ html body .teach .middle .teachContent .teachBoard .moreInfo .box .midBox {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #2e3f57;
+  background: #ffffff;
   border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2862745098);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4717,12 +4797,12 @@ html body .teach .middle .teachContent .teachBoard .moreInfo .box .midBox p {
   white-space: nowrap;
 }
 html body .teach .middle .teachContent .teachBoard .moreInfo .box .midBox p:first-child {
-  color: #ffffff;
+  color: #000000;
   font-size: 18px;
   margin-bottom: 10px;
 }
 html body .teach .middle .teachContent .teachBoard .moreInfo .box .midBox p:last-child {
-  color: #000000;
+  color: #ff4800;
   font-size: 24px;
   letter-spacing: 2px;
 }

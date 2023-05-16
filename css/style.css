@@ -238,11 +238,47 @@ html body header .top .btnBox button {
 html body header .top .btnBox button:first-child {
   margin: 0;
 }
-html body header .top span {
-  color: #ffffff;
+html body header .top .endBox {
+  width: auto;
+  height: auto;
+}
+html body header .top .endBox i {
+  color: #212832;
   font-size: 12px;
-  font-weight: bold;
-  margin-right: 15px;
+  padding: 4px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+html body header .top .endBox i:nth-of-type(2) {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  padding: 4px 5.5px;
+}
+html body header .top .endBox i:hover, html body header .top .endBox i:active, html body header .top .endBox i.active {
+  color: #ff7200;
+}
+html body header .top .endBox i:hover::after, html body header .top .endBox i:active::after, html body header .top .endBox i.active::after {
+  background: #ffffff;
+}
+html body header .top .endBox i:hover:nth-of-type(2), html body header .top .endBox i:active:nth-of-type(2), html body header .top .endBox i.active:nth-of-type(2) {
+  color: #feb300;
+}
+html body header .top .endBox i:hover:nth-of-type(2)::after, html body header .top .endBox i:active:nth-of-type(2)::after, html body header .top .endBox i.active:nth-of-type(2)::after {
+  background: #19202a;
+}
+html body header .top .endBox i::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #19202a;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
 }
 html body header .top .marqueeBox {
   width: 50%;
@@ -754,12 +790,27 @@ html body .right .statusWindow .ST_Window li div {
   overflow: hidden;
 }
 html body .right .statusWindow .ST_Window li div span {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 html body .right .statusWindow .ST_Window li .betAmount {
   color: #feb300;
   font-size: 12px;
   font-weight: bold;
+}
+html body .right .statusWindow .ST_Window li .betAmount.success {
+  color: #00c613;
+}
+html body .right .statusWindow .ST_Window li .betAmount.fail {
+  color: #ce1427;
+}
+html body .right .statusWindow .ST_Window li .betAmount.waiting {
+  color: #b4bac8;
+}
+html body .right .statusWindow .ST_Window li i {
+  font-size: 12px;
+  color: #ffffff;
+  margin-left: 5px;
+  cursor: pointer;
 }
 html body .right .liveWindow {
   width: 100%;
@@ -4503,6 +4554,9 @@ html body .teach .middle .teachContent .teachBoard .teamLine .team div p {
   text-align: center;
   white-space: nowrap;
   margin: 10px 0;
+}
+html body .teach .middle .teachContent .teachBoard .teamLine .team div p:nth-of-type(1) span {
+  color: #feb300;
 }
 html body .teach .middle .teachContent .teachBoard .teamLine .team div p span {
   color: #ffffff;

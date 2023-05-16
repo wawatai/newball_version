@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.25">
     <title>Document</title>
-    <link rel="stylesheet" href="../css_2/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css_2/style.css" class="cssStyle">
+    <script src="https://kit.fontawesome.com/8858aac5ee.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="../js/javascript.js"></script>
 </head>
@@ -27,8 +27,13 @@
                     <a href="#">★敬請注意★帳務日期01月01日其他籃球-摩洛哥籃球聯賽(AREH哈吉VSFUS拉巴特)因資訊源無上半場比分，故(全場,上半場)以退組計算，敬請會員留意，謝謝。</a>
                 </marquee>
             </div>
-            <!--time-->
-            <span class="time"></span>
+            <div class="endBox">
+                <!-- 日夜模式切換 -->
+                <i class="fa-solid fa-sun active"></i>
+                <i class="fa-solid fa-moon"></i>
+                <!--time-->
+                <span class="time"></span>
+            </div>
         </div>
         <!--article-->
         <article>
@@ -5135,12 +5140,43 @@
                     </div>
                     <ul class="ST_Window">
                         <li>
-                            <div> <!-- "新增外層div 2023/01/03_S -->
+                            <div>
                                 10:17:19
-                                <span>足球-獨贏</span> <!-- "投注名"新增<span> 2023/01/03_S -->
+                                <span>足球-獨贏</span>
                             </div>
                             <span class="betAmount">
                                 下注100
+                                <i class="fa-regular fa-circle-xmark"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <div>
+                                10:17:19
+                                <span>足球-獨贏</span>
+                            </div>
+                            <span class="betAmount success">
+                                成功
+                                <i class="fa-regular fa-circle-xmark"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <div>
+                                10:17:19
+                                <span>足球-獨贏</span>
+                            </div>
+                            <span class="betAmount fail">
+                                失敗
+                                <i class="fa-regular fa-circle-xmark"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <div>
+                                10:17:19
+                                <span>足球-獨贏</span>
+                            </div>
+                            <span class="betAmount waiting">
+                                等待中
+                                <i class="fa-regular fa-circle-xmark"></i>
                             </span>
                         </li>
                     </ul>
