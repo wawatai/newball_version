@@ -1,0 +1,321 @@
+.teach {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .topfix {
+        width: 100%;
+        height: 50px;
+        background: $mainBG_1;
+        box-shadow: 0 2px 5px 0 $mainShadow_1;
+        border-radius: 3px;
+        position: relative;
+        margin-bottom: 5px;
+        z-index: 20;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+    
+            li {
+                width: auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid transparent;
+                transition: 0.3s all;
+                position: relative;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    width: 1px;
+                    height: 15px;
+                    background: $mainColor_1;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+
+                &:last-child {
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                &:hover,&:active,&.active {
+                    border-color: $mainColor_1;
+                }
+    
+                p {
+                    color: $mainColor_1;
+                    font-size: 15px;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    .middle {
+        width: 100%;
+        height: auto;
+        overflow-y: overlay;
+        @include scrollBarStyle_1;
+
+        .teachContent {
+            display: none;
+            width: 100%;
+            height: auto;
+
+            &.display {
+                display: block;
+            }
+
+            .teachBoard {
+                width: 100%;
+                height: auto;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background: $mainColor_4;
+                    position: absolute;
+                    bottom: 10px;
+                }
+
+                &:last-child {
+
+                    &::before {
+                        display: none;
+                    }
+                }
+              
+                .techTitle {
+                    width: 100%;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    background: $mainBG_1;
+                    position: sticky;
+                    top: 0;
+                    left: 0;
+                    padding: 0 10px 2px;
+                    border-bottom: 1px solid $mainColor_1;
+                    z-index: 1;
+    
+                    p {
+                        color: $mainColor_1;
+                        font-size: 13px;
+                    }
+                }
+
+                .teamLine {
+                    width: 100%;
+                    height: 105px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    border-bottom: 1px solid $mainColor_4;
+
+                    .team {
+                        width: 200px;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: right;
+
+                        &:nth-of-type(2) {
+                            justify-content: left;
+                           
+                            .teamImg {
+                                background-position-x: 100%;
+                            }
+                        }
+
+                        div {
+                            
+                            p {
+                                color: $mainColor_1;
+                                font-size: 14px;
+                                text-align: center;
+                                white-space: nowrap;
+                                margin: 10px 0;
+
+                                span {
+                                    color: $mainColor_2;
+                                    font-weight: bold;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                        
+                        .teamImg {
+                            width: 35px;
+                            height: 29px;
+                            background-position-x: 0%;
+                            margin: 0 20px;
+                        }
+                    }
+
+                    .vs {
+                        color: $otherColor_3;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                        margin: 0 10px;
+                    }
+
+                    .midText {
+                        width: 160px;
+                        height: auto;
+                        display: flex;
+                        justify-content: center;
+                        background: $tech_midText_BG;
+                        border-radius: 30px;
+                        color: $mainColor_2;
+                        font-size: 14px;
+                        padding: 5px 0;
+                        position: absolute;
+                        left: 50%;
+                        bottom: -12px;
+                        transform: translateX(-50%)
+                    }
+                }
+                
+                .moreInfo {
+                    width: 100%;
+                    height: 230px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: 1px solid $mainColor_4;
+
+                    .box {
+                        width: 310px;
+                        height: 70px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background: $mainBG_5;
+                        border-radius: 80px;
+                        padding: 0 5px;
+                        margin-bottom: 30px;
+                        position: relative;
+
+                        .textBox {
+                            width: 40%;
+
+                            p {
+                                font-size: 14px;
+                                text-align: center;
+                                margin-bottom: 10px;
+
+                                &.win,
+                                &.lose {
+                                    color: $otherColor_1;
+                                    font-weight: bold;
+
+                                    span {
+                                        font-family: sans-serif;
+                                        margin: 0 2px;
+                                    }
+                                }
+
+                                &:last-child {
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+
+                        .midBox {
+                            width: 80px;
+                            height: 80px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            background: $mainBG_3;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+
+                            p {
+                                font-weight: bold;
+                                white-space: nowrap;
+
+                                &:first-child {
+                                    color: $mainColor_2;
+                                    font-size: 18px;
+                                    margin-bottom: 10px;
+                                }
+
+                                &:last-child {
+                                    color: $mainColor_1;
+                                    font-size: 24px;
+                                    letter-spacing: 2px;
+                                }
+                            }
+                        }
+                    }
+
+                    .flexWrap {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .explain {
+                            width: auto;
+                            height: auto;
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: left;
+                            line-height: 20px;
+
+                            &:first-child {
+                                text-align: right;
+                                margin-right: 130px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1160px) {
+        .topfix {
+            ul {
+                li {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+          
+        }
+    }
+
+    @media only screen and (max-width: 1130px) {
+        .topfix {
+            ul {
+                li {
+                    p {
+                        font-size: 13px;
+                    }
+                }
+            }
+          
+        }
+    }
+}

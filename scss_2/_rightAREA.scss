@@ -1,0 +1,342 @@
+.right {
+    width: 300px;
+    height: auto;
+    background: $mainBG_5;
+    flex-shrink: 0;
+    margin-left: 5px;
+
+    //即時資訊
+    .statusWindow {
+        width: 100%;
+        height: auto;
+        
+        .ST_Window {
+            width: 100%;
+            height: 80px;
+            overflow-y: auto;
+            @include scrollBarStyle_1;
+            padding: 3px 0px;
+
+            li {
+                width: 97%;
+                height: auto;
+                border-bottom: 1px solid $mainBorder_1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 3px 10px 5px;
+                margin: 0 auto;
+
+                div {
+                    width: auto;
+                    color: $mainColor_1;
+                    font-size: 13px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    @include textHidden;
+
+                    span {
+                        margin-left: 15px;
+                    }
+                }
+
+                .betAmount {
+                    color: $mainColor_1;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    //直播
+    .liveWindow {
+        width: 100%;
+        height: auto;
+        font-size: 0;
+
+        .teamWindow {
+            display: none;
+            width: 100%;
+            height: auto;
+            background: $mainBG_5;
+            color: $mainColor_1;
+            font-size: 12px;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px 0;
+            
+            &.display {
+                display: flex;
+            }
+
+            .score {
+                font-weight: bold;
+
+                span {
+                    color: $subColor_1;
+                }
+            }
+        }
+
+        video {
+            width: 100%;
+            height: 187px;
+        }
+    }
+
+    //下半
+    .room {
+        width: 100%;
+        height: auto;
+
+        .twobut {
+            width: 100%;
+            height: auto;
+            display: flex;
+
+            button {
+                width: 50%;
+                height: auto;
+                @include rightArea_twoBtn;
+            }
+        }
+
+        //直播賽事
+        .liveListBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            overflow-y: auto;
+            @include scrollBarStyle_1;
+
+            &.display {
+                display: block;
+            }
+
+            .livelist {
+                width: 100%;
+                height: 32px;
+                background: $mainBG_5;
+                overflow: hidden;
+    
+                .liveTitle {
+                    width: 100%;
+                    height: 32px;
+                    @include liveList_listTitle;
+                    
+                    .games {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        font-weight: bold;
+
+                        .arrow {
+                            @include liveList_Arrow;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+    
+                .innerList {
+                    width: 100%;
+                    height: auto;
+                    border-bottom: solid 1px $mainBorder_1;
+                    padding: 8px;
+
+                    &.active {
+
+                        button {
+                            background: $liveList_liveBtn_ActiveBG;
+                        }
+                    }
+
+                    .gTitle {
+                        width: 100%;
+                        height: auto;
+                        color: $mainColor_3;
+                        font-size: 12px;
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 12px;
+                        font-weight: bold;
+                        @include textHidden;
+                        margin-bottom: 8px;
+                    }
+
+                    button {
+                        width: 90%;
+                        height: 30px;
+                        @include liveList_liveBtn;
+                        margin: 0 auto;
+                    }
+                }
+
+                &:hover,&:active {
+
+                    .liveTitle {
+                        background: $mainBG_2;
+                        color: $mainColor_2;
+
+                        .arrow {
+                            border-color: transparent $mainColor_2;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                &.display {
+                    height: auto;
+                    
+                    .liveTitle {
+                        background: $mainBG_2;
+                        color: $mainColor_2;
+                        
+                        p {
+
+                            .arrow {
+                                border-color: transparent $mainColor_2;
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+
+        //即時注單
+        .bettingStatus {
+            display: none;
+            width: 100%;
+            height: auto;
+            overflow-y: auto;
+            @include scrollBarStyle_1;
+
+            &.display {
+                display: block;
+            }
+
+            table {
+                width: 95%;
+                height: auto;
+                background: $subBG_2;
+                border: solid 1px $mainBorder_1;
+                margin: 8px auto 0px;
+
+                tr {
+
+                    td {
+                        width: 50%;
+                        height: auto;
+                        border-style: solid;
+                        border-width: 0px 0px 1px 0px;
+                        border-color: $mainBorder_1;
+                        color: $mainColor_1;
+                        font-size: 12px;
+                        font-weight: bold;
+                        vertical-align: middle;
+                        padding: 7px;
+                        
+                        &.sus {
+                            color: $otherColor_2;
+                        }
+
+                        &.failRemind {
+                            display: none;
+                            background: $mainBG_5;
+                            text-align: center;
+                            padding: 10px 0px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+
+                        &:nth-of-type(even) {
+                            border-left-width: 1px;
+                        }
+
+                        span {
+                            color: $otherColor_1;
+
+                            &.vs {
+                                color: $subColor_1;
+                            }
+                            
+                            &.odds {
+                                color: $otherColor_3;
+                            }
+                        }
+                    }
+
+                    &:nth-last-of-type(2) {
+                        
+                        td {
+                            border-bottom: 0;
+                            word-break: keep-all;
+                            text-align: center;
+                            line-height: 16px;
+                        }
+                    }
+                }
+
+                &.fail {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: $mainShadow_1;
+                    }
+
+                    tr {
+                        
+                        td {
+                            color: $subColor_1;
+
+                            &.failRemind {
+                                display: block;
+                                color: $mainColor_3;
+                            }
+
+                            span {
+                                color: $subColor_1;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .title {
+        width: 100%;
+        height: 26px;
+        @include rightArea_title;
+
+        .stNumber {
+            color: $mainColor_1;
+        }
+
+        a {
+            width: auto;
+            height: auto;
+            @include subBtn_1;
+            padding: 3px 5px;
+        }
+    }
+
+    @media only screen and (max-width: 1480px) {
+        width: 20%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        width: 240px;
+    }  
+}

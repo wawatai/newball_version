@@ -1,0 +1,226 @@
+header {
+    width: 100%;
+    min-width: 1100px;
+    height: auto;
+
+    //top
+    .top {
+        width: 100%;
+        height: 25px;
+        background: $mainBG_1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 2px;
+        
+        //button
+        .btnBox {
+            width: auto;
+            height: auto;
+            margin-left: 15px;
+
+            button {
+                background: none;
+                border: none;
+                color: $mainColor_2;
+                font-size: 13px;
+                font-weight: bold;
+                margin-left: 15px;
+
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        //time
+        span {
+            color: $mainColor_2;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        //marquee
+        .marqueeBox {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            i {
+                color: $mainColor_1;
+                font-size: 18px;
+                flex-shrink: 0;
+            }
+
+            marquee {
+                width: 100%;
+                height: auto;
+
+                a {
+                    color: $subColor_1;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    //artcle
+    article {
+        width: 100%;
+        height: 70px;
+        background: $mainBG_4;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        //logo
+        .logo {
+            width: 252px;
+            height: 63px;
+            margin: 40px;
+        }
+
+        //loginBox
+        .loginBox {
+            width: auto;
+            height: auto;
+            position: absolute;
+            right: 20px;
+
+            .inputBox {
+                display: inline-block;
+                width: auto;
+                height: auto;
+                vertical-align: top;
+                margin-right: 6px;
+                
+                input {
+                    width: 130px;
+                    height: 30px;
+                    @include inputStyle_1;
+                }
+
+                .remember {
+                    color: $otherColor_4;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    .cube {
+                        @include cube;
+                        margin-right: 6px;
+                    }
+                }
+            }
+
+            button {
+                width: auto;
+                height: 30px;
+                @include headerBtn;
+            }
+        }
+
+        //loggedBox
+        .loggedBox {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 20px;
+            padding-bottom: 20px;
+
+            p {
+                color: $mainColor_3;
+                font-size: 13px;
+                margin-right: 10px;
+
+                &.quota {
+                    background: $mainBG_5;
+                    padding: 5px 8px 6px;
+
+                    span {
+                        color: $otherColor_4;
+                        font-weight: bold;
+                    }
+                }
+
+                span {
+                    padding-left: 5px;
+                }
+            }
+
+            button {
+                width: auto;
+                height: 30px;
+                @include headerBtn;
+            }
+        }
+
+        //headerList
+        .headerList {
+            width: auto;
+            height: 100%;
+            display: flex;
+            position: relative;
+            z-index: 1;
+
+            li {
+                width: auto;
+                height: 100%;
+                position: relative;
+                cursor: pointer;
+
+                &::before {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 4px;
+                    background: $mainColor_3;
+                }
+
+                &:hover,&:active,&.active {
+
+                    &::before {
+                        display: block;
+                    }
+                }
+
+                a {
+                    width: auto;
+                    height: 100%;
+                    color: $mainColor_3;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 10px;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1600px) {
+            
+            .headerList {
+
+                li {
+
+                    a {
+                        align-items: flex-end;
+                        padding: 0 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+}
