@@ -1,0 +1,428 @@
+//header
+header {
+    width: 100%;
+    min-width: 1480px;
+    height: 110px;
+    background: #feb300;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    &.mine {
+        min-width: 1200px;
+    }
+    
+    //上列
+    .top {
+        width: 100%;
+        height: 25px;
+        background: #3d5261;
+
+        //盤口對照表+設定
+        .conversionBtn,.controlBtn {
+            float: left;
+            width: auto;
+            height: 100%;
+            color: #ffffff;
+            background: transparent;
+            margin-left: 15px;
+            font-size: 13px;
+        }
+
+        //跑馬燈
+        .marqueeBox {
+            float: left;
+            width: 60%;
+            height: 100%;
+            position: relative;
+            margin-left: 185px;
+
+            .fa-volume-up {
+                position: absolute;
+                left: -23px;
+                top: 4px;
+                color: #febd00;
+            }
+
+            marquee {
+                line-height: 25px;
+                font-size: 12px;
+                color: #febd00;
+                overflow: visible;
+            }
+        }
+
+        //時間
+        span {
+            float: right;
+            font-size: 12px;
+            color: #ffffff;
+            line-height: 25px;
+            margin-right: 15px;
+        }
+
+        .threeCircle {
+            font-size: 0px;
+            float: right;
+            width: auto;
+            height: 100%;
+            line-height: 25px;
+
+            button {
+                width: 15px;
+                height: 15px;
+                border-radius: 30px;
+                margin: 5px 8px 0px 0px;
+                border: solid 2px transparent;
+                background: #31a20b;
+
+                &:hover,&:active,&.active {
+                    border-color: #31a20b;
+                    background: #131313;
+                }
+
+                &:last-child {
+                    margin-right: 10px;
+                }
+
+                &:nth-of-type(2) {
+                    background: #505050;
+
+                    &:hover,&:active,&.active {
+                        border-color: #bcbcbc;
+                        background: #505050;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    background: #1856bd;
+
+                    &:hover,&:active,&.active {
+                        border-color: #1856bd;
+                        background: #ffffff;
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    background: #d31c1c;
+
+                    &:hover,&:active,&.active {
+                        border-color: #c8dfed;
+                        background: #d31c1c;
+                    }
+                }
+
+                &:nth-of-type(5) {
+                    background: #ffffff;
+
+                    &:hover,&:active,&.active {
+                        border-color: #de1e30;
+                        background: #ffffff;
+                    }
+                }
+
+                &:nth-of-type(6) {
+                    background: #181818;
+
+                    &:hover,&:active,&.active {
+                        border-color: #ffc13c;
+                        background: #181818;
+                    }
+                }
+
+                &:nth-of-type(7) {
+                    background: #feb300;
+
+                    &:hover,&:active,&.active {
+                        border-color: #212832;
+                        background: #feb300;
+                    }
+                }
+            }
+        }
+    }
+
+    //置中外包
+    article {
+        width: 100%;
+        height: 85px;
+
+        //LOGO
+        .logo {
+            width: 180px;
+            height: 100%;
+            float: left;
+            font-size: 50px;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 85px;
+            color: #212832;
+        }
+
+        //上列表
+        ul {
+            float: left;
+            position: relative;
+            z-index: 2;
+
+            li {
+                float: left;
+                text-align: center;
+
+                a {
+                    display: block;
+                    padding: 0px 10px;
+                    height: 76px;
+                    line-height: 85px;
+                    color: #19202a;
+                    border-bottom: solid 5px transparent;
+                    font-size: 14px;
+
+                    &:hover,&:active,&.active {
+                        border-color: #5c6d79;
+                    }
+
+                    .fa-user {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+        .logged {
+            display: none;
+            width: auto;
+            height: 100%;
+            text-align: right;
+            position: absolute;
+            right: 20px;
+
+            &.display {
+                display: block;
+            }
+
+            .inputBox {
+                width: auto;
+                height: auto;
+                display: inline-block;
+                margin: 10px 6px 0px 0px;
+                position: relative;
+
+                input {
+                    width: 130px;
+                    height: 25px;
+                    font-size: 14px;
+                    padding-left: 5px;
+                    border-radius: 3px;
+                    border: solid 1px #1f385c;
+                    background: #ffffff;
+                    color: #19202a;
+
+                    &::placeholder {
+                        color: #8d8d8d;
+                    }
+                }
+
+                .forget {
+                    position: absolute;
+                    left: 0px;
+                    bottom: -28px;
+                    font-size: 14px;
+                    color: #1f385c;
+                }
+
+                .remember {
+                    position: absolute;
+                    left: 18px;
+                    bottom: -28px;
+                    font-size: 14px;
+                    color: #1f385c;
+
+                    .cube {
+                        left: -18px;
+                        top: -1px;
+                        background: transparent;
+                        border-color: #1f385c;
+
+                        &.active {
+
+                            &::before {
+                                background: url('../images/forCss_7/cubeArrow3.png') no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .loginBtn {
+                background: #1f385c;
+                padding: 5px 14px;
+                border-radius: 3px;
+                border: solid 1px transparent;
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: bold;
+                margin-right: 8px;
+                box-shadow: none;
+
+                &:hover,&:active,&.active {
+                    background: #17478d;
+                    color: #feb300;
+                }
+            }
+
+            .signupBtn {
+                background: #ffffff; 
+                border-radius: 3px;
+                border: none;
+                color: #1f385c;
+                padding: 5px 14px;
+                font-size: 14px;
+                font-weight: bold;
+                border: solid 1px #1f385c;
+
+                &:hover,&:active,&.active {
+                    border-color: transparent;
+                    background: #1f385c;
+                    color: #feb300;
+                }
+            }
+
+            .selectBox {
+                float: right;
+                width: 24%;
+                position: relative;
+                margin-top: 10px;
+
+                .fa-globe {
+                    float: left;
+                    margin: 3px 0px 0px 0px;
+                    color: #1f385c;
+                }
+
+                //下箭頭
+                &::after {
+                    content: "";
+                    position: absolute;
+                    pointer-events: none;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 6px 5px 0px 5px;
+                    border-color: #1f385c transparent;
+                    top: 8px;
+                    right: 10px;
+                }
+
+                select {
+                    width: 110px;
+                    padding: 3px 0px 3px 5px;
+                    background: #ffffff;
+                    border: solid 1px #1f385c;
+                    border-radius: 3px;
+                    color: #1f385c;
+                    font-size: 12px;
+                    appearance:none;   
+                    -moz-appearance:none;   
+                    -webkit-appearance:none;
+                }
+            }
+        }
+
+        //登入後樣式
+        .loggedIn {
+            display: none;
+            width: auto;
+            height: 100%;
+            text-align: right;
+            position: absolute;
+            right: 20px;
+
+            &.display {
+                display: block;
+            }
+
+            //字體
+            p {
+                display: inline-block;
+                color: #2e3f57;
+                font-size: 13px;
+                margin: 10px 5px 0px 0px;
+
+                //信用額度
+                &.quota {
+                    padding: 7px 7px 5px;
+                    border-radius: 3px;
+                    background: #ffffff;
+                    color: #1b1b1b;
+                    border: solid 1px #1f385c;
+                    
+                    span {
+                        color: #000391;
+                    }
+                }
+
+                span {
+                    color: #2e3f57;
+                    padding-left: 8px;
+                }
+            }
+
+            //登出按鈕
+            button {
+                border-radius: 3px;
+                padding: 4px 15px;
+                background: #1f385c;
+                color: #ffffff;
+                font-size: 14px;
+                box-shadow: none;
+                border: solid 1px transparent;
+
+                &:hover,&:active,&.active {
+                    background: #17478d;
+                    color: #feb300;
+                }
+            }
+
+            .selectBox {
+                float: right;
+                width: 20%;
+                position: relative;
+                margin-top: 10px;
+
+                .fa-globe {
+                    float: left;
+                    margin: 3px 3px 0px 0px;
+                    color: #1f385c;
+                }
+
+                //下箭頭
+                &::after {
+                    content: "";
+                    position: absolute;
+                    pointer-events: none;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 6px 5px 0px 5px;
+                    border-color: #1f385c transparent;
+                    top: 8px;
+                    right:10px;
+                }
+
+                select {
+                    width: 110px;
+                    padding: 3px 0px 3px 5px;
+                    background: #ffffff;
+                    border: solid 1px #1f385c;
+                    border-radius: 3px;
+                    color: #1f385c;
+                    font-size: 12px;
+                    appearance:none;   
+                    -moz-appearance:none;
+                    -webkit-appearance:none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,385 @@
+  .left {
+    width: 270px;
+    height: 850px;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    z-index: 6;
+    scrollbar-width: thin;
+    border-width: 1px 0px;
+    background: #212832;
+    margin-top: 15px;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #3c5260;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom,#feb300 0%,#c98000 100%);
+        border-radius: 10px;
+    }
+    
+    //我的頁面
+    &.mine {
+        border: none;
+
+        //上視窗
+        .minewindow {
+            width: 100%;
+            height: 270px;
+
+            //視窗上段
+            .avater {
+                width: 100%;
+                height: 160px;
+                padding-top: 25px;
+                text-align: center;
+
+                //大頭貼
+                .sticker {
+                    width: 79px;
+                    height: 81px;
+                    margin: 0px auto 20px;
+                    background: url('../images/forCss_7/avatar_big.png');
+                }
+
+                //字樣
+                p {
+                    color: #feb300;
+
+                    &.joinday {
+                        color: #ffcf5e;
+                        font-size: 15px;
+                        padding-top: 5px;
+                    }
+                    
+                    span {
+                        display: inline-block;
+                        width: 36px;
+                        height: 17px;
+                        background: #feb300;
+                        position: relative;
+                        text-align: right;
+                        color: #212832;
+                        font-weight: bold;
+                        border-radius: 5px;
+                        margin: -3px 0px 0px 5px;
+                        padding: 3px 5px 0px 0px;
+                        font-size: 15px;
+
+                        &::before {
+                            display: none;
+                            content: "";
+                            position: absolute;
+                            width: 23px;
+                            height: 9px;
+                            background: url('../images/forCss_7/vip.png') no-repeat;
+                            top: 5px;
+                            left: 5px;
+                        }
+                    }
+                }
+            }
+
+            //三按鈕
+            .threebut {
+                width: 100%;
+                height: 80px;
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    width: 60px;
+                    height: 58px;
+                    margin: 0px 3px;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    text-align: center;
+                    background: transparent;
+                    color: #feb300;
+                    padding-top: 10px;
+
+                    &:hover,&:active,&.active {
+                        background: #feb300;
+                        color: #2e3f57;
+
+                        &:nth-of-type(1),&:nth-of-type(2),&:nth-of-type(3) {
+                            
+                            i {
+                                color: #2e3f57;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(1) {
+                        
+                        i {
+                            color: #feb300;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        
+                        i {
+                            color: #feb300;
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        
+                        i {
+                            color: #feb300;
+                        }
+                    }
+
+                    //按鈕圖
+                    i {
+                        display: block;
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        //下半選單
+        ul {
+            
+            li {
+                width: 94%;
+                margin: 0px auto;
+
+                &:nth-of-type(1),&:nth-of-type(5),&:nth-of-type(9) {
+                    border-bottom: solid 1px #212832;
+                }
+
+                &:hover,&:active,&.active {
+                    padding: 0px ;
+
+                    a {
+                        background: #feb300;
+                        color: #212832 ;
+
+                        i,svg {
+                            color: #212832 ;
+                            fill: #212832 ;
+                        }
+                    }
+                }
+
+                a {
+                    border: solid 1px transparent;
+                    width: 100%;
+                    box-sizing: border-box;
+                    
+                    .live {
+                        display: inline-block;
+                        padding: 1px 0px 0px;
+                        width: 28px;
+                        text-align: center;
+                        font-size: 14px;
+                        position: initial;
+                        margin-left: 10px;
+                        transform: translateY(0px);
+                        background: #212832;
+                        color: #ffcf5e;
+                    }
+
+                    i {
+                        font-size: 22px;
+                        top: 10px;
+                        color: #feb300;
+
+                        &.fa-clipboard,&.fa-mobile-alt {
+                            left: 21px;
+                        }
+
+                        &.fa-money-bill-wave,&.fa-qusetion-circle,
+                        &.fa-users {
+                            left: 16px;
+                            top: 12px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //選項
+    ul {
+
+        li {
+            background: #212832;
+
+            &:hover {
+
+                a {
+                    background: #feb300;
+                    color: #2e3f57;
+
+                    .total {
+                        color: #476082;
+                    }
+
+                    i,svg {
+                        color: #2e3f57;
+                        fill: #2e3f57;
+                    }
+                }
+            }
+
+            &:active,&.active {
+                padding-bottom: 5px;
+
+                .smallList {
+                    display: block;
+                }
+
+                a {
+                    background: #feb300;
+                    color: #2e3f57;
+
+                    .total {
+                        color: #476082;
+                    }
+
+                    i,svg {
+                        color: #2e3f57;
+                        fill: #2e3f57;
+                    }
+                }
+            }
+
+            &.onLive {
+
+                .live {
+                    display: block;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 40px;
+            }
+
+            a {
+                display: block;
+                color: #feb300;
+                width: 94%;
+                height: 45px;
+                line-height: 45px;
+                font-size: 14px;
+                padding-left: 50px;
+                position: relative;
+                box-sizing: border-box;
+                margin: 0px auto;
+                background: #3d5261;
+                border-bottom: solid 1px #feb300;
+
+                //字前小圖
+                i {
+                    position: absolute;
+                    top: 12px;
+                    left: 18px;
+                    font-size: 18px;
+                    color: #feb300;
+
+                    &::before {
+                        margin: 0px auto;
+                    }
+
+                    &.fa-heart {
+                        color: transparent;
+                        background: linear-gradient(to top,#e63e17 0%,#f7a024 100%);
+                        background-clip: text;
+                    }
+
+                    &.fa-hotjar,&.fa-hockey-puck,
+                    &.fa-baseball-ball,&.fa-basketball-ball,
+                    &.fa-futbol,&.fa-volleyball-ball,&.fa-calendar-alt {
+                        left: 19px;
+                    }
+
+                    &.fa-piggy-bank {
+                        left: 16px;
+                    }
+
+                    &.fa-signal {
+                        font-size: 17px;
+                    }
+                }
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    left: 18px;
+                    top: 12px;
+                    fill: #feb300;
+                }
+
+                //字後小框
+                .total {
+                    position: absolute;
+                    right: 10px;
+                    top: 0px;
+                    font-size: 13px;
+                    color: #ffcf5e;
+                }
+
+                //LIVE小框
+                .live {
+                    display: none;
+                    position: absolute;
+                    line-height: 18px;
+                    height: auto;
+                    width: auto;
+                    top: 49%;
+                    transform: translateY(-50%);
+                    right: 42px;
+                    font-size: 12px;
+                    background: #15ae56;
+                    color: #ffffff;
+                    padding: 0px 4px;
+                    border-radius: 3px;
+                }
+            }
+
+            .smallList {
+                display: none;
+                width: calc(100% - 50px);
+                margin: 0px auto;
+                height: 30px;
+                background: #2e3f57;
+                line-height: 30px;
+                padding-left: 30px;
+                font-size: 12px;
+                color: #ffcf5e;
+                cursor: pointer;
+                overflow: hidden;
+
+                &:nth-of-type(1) {
+                    margin-top: 5px;
+                    border-radius: 5px 5px 0px 0px;
+                }
+
+                &:last-child {
+                    border-radius: 0px 0px 5px 5px;
+                }
+
+                &:hover,&:active,&.active {
+                    background: #ffcf5e;
+                    color: #424242;
+                }
+
+                span {
+                    float: right;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
