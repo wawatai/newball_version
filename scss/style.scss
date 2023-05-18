@@ -1,0 +1,39 @@
+@import "_reset";
+@import "./header";
+@import "./main";
+@import "./leftside";
+@import "./rightside";
+@import "./table";
+@import "./type";
+@import "./fixside";
+@import "./discount";
+@import "./myself";
+@import "./anime";
+@import "./colorCode";
+html {
+    width: 100%;
+    height: 100%;
+    background: #2a2a2a;
+
+    body {
+        width: 100%;
+        height: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            height: 10px;
+            background-color: transparent;
+        }
+    
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: #828282;
+            border-radius: 10px;
+        }
+    }
+}
