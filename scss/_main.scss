@@ -1,0 +1,342 @@
+main {
+    width: 100%;
+    height: auto;
+    //置中外包
+    article {
+        //上bar
+        .rulebar {
+            width: 100%;
+            height: 40px;
+            background: #7b8bd7;
+            color: #fff;
+            border-radius: 12px 12px 0px 0px;
+            p {
+                line-height: 40px;
+                padding-left: 30px;
+                font-size: 15px;
+            }
+            .rwdbtn {
+                display: none;
+                width: 40px;
+                height: 70%;
+                float: left;
+                background: transparent;
+                margin: 5px 0px 0px 10px;
+                span {
+                    display: block;
+                    width: 80%;
+                    height: 3px;
+                    background: rgb(228, 228, 228);
+                    margin: 0px auto;
+                    border-radius: 30px;
+                    &:first-child {
+                        margin-bottom: 4px;
+                    }
+                    &:last-child {
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+        //主區塊
+        .rulebox {
+            width: 100%;
+            height: 710px;
+            background: #fff;
+            border-radius: 0px 0px 12px 12px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background:#b68c67;
+                border-radius: 100px;
+            }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+                background: #d6d6d6;
+            }
+            //for遊戲說明
+            &.gamerule {
+                p {
+                    padding: 30px;
+                    &:nth-child(even) {
+                        background: #efefef;
+                    }
+                }
+            }
+            //for球頭換算法
+            &.convert {
+                div {
+                    width: 93%;
+                    border: solid 1px #7b8bd7;
+                    margin: 30px auto 0px;
+                    border-radius: 10px;
+                    overflow-y: hidden;
+                    overflow-x: auto;
+                    &::-webkit-scrollbar {
+                        height: 12px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: #556de7;
+                        border-radius: 30px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: transparent;
+                        background: #d6d6d6;
+                        border-radius: 0px 0px 15px 15px;
+                    }
+                    table {
+                        width: 1202px;
+                        border-radius: 10px;
+                        border-collapse: collapse;
+                        tr {
+                            text-align: center;
+                            &:nth-child(odd) {
+                                background: #ededed;
+                            }
+                            td {
+                                border-right: solid 1px #e0e3f3;
+                                padding: 15px 10px;
+                                color: #4d515d;
+                                font-size: 14px;
+                                &:last-child {
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //for一般球類
+            &.balls {
+                .box {
+                    width: 94%;
+                    height: auto;
+                    margin: 0px auto;
+                    padding-bottom: 50px;
+                    //按鈕
+                    .btnbar {
+                        width: 100%;
+                        border-bottom: solid 1px #d2d2d2;
+                        &.longlen {
+                            button {
+                                width: 101px;
+                            }
+                        }
+                        button {
+                            margin: 25px 5px 15px 0px;
+                            width: 105px;
+                            height: 32px;
+                            background: transparent;
+                            border: solid 1px #556de7;
+                            border-radius: 5px;
+                            color: #556de7;
+                            font-size: 14px;
+                            &:hover,&:active,&.active {
+                                background: #556de7;
+                                color: #fff;
+                            }
+                            &.nmar {
+                                margin-right: 0px;
+                            }
+                            &.longword {
+                                width: auto;
+                            }
+                        }
+                    }
+                    //主體
+                    .ballsrule {
+                        width: 95%;
+                        height: auto;
+                        margin: 0px auto;
+                        h2 {
+                            font-size: 14px;
+                            color: #4d515d;
+                            font-weight: bold;
+                            margin: 15px 0px;
+                            line-height: 24px;
+                        }
+                        h3 {
+                            font-size: 14px;
+                            color: #4d515d;
+                            font-weight: bold;
+                            position: relative;
+                            margin: 25px 0px 5px 10px;
+                            &:nth-of-type(1) {
+                                margin-top: 0px;
+                            }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 2px;
+                                left: -10px;
+                                width: 7px;
+                                height: 7px;
+                                background: url('../images/rule_ic.png') no-repeat;
+                            }
+                        }
+                        ul {
+                            margin: 10px 0px 0px 12px;
+                            li {
+                                list-style: decimal;
+                                line-height: 24px;
+                                margin-top: 15px;
+                                font-size: 14px;
+                                &.lastLi {
+                                    padding-bottom: 40px;
+                                }
+                            }
+                        }
+                        a {
+                            color: #337ab7;
+                        }
+                        //table外包
+                        .rtable {
+                            width: 100%;
+                            height: auto;
+                            overflow-y: hidden;
+                            overflow-x: auto;
+                            border-radius: 12px;
+                            margin-bottom: 15px;
+                            &::-webkit-scrollbar {
+                                height: 12px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background:#556de7;
+                                border-radius: 30px;
+                                // #d38a4a
+                            }
+                            &::-webkit-scrollbar-track {
+                                background: transparent;
+                                background: #d6d6d6;
+                                border-radius: 0px 0px 15px 15px;
+                            }
+                            table {
+                                width: 1205px;
+                                height: auto;
+                                border-radius: 10px 10px 0px 0px;
+                                font-size: 15px;
+                                overflow: hidden;
+                                tr {
+                                    th,td {
+                                        vertical-align: middle;
+                                        word-break: break-all;
+                                    }
+                                }
+                                //一般版
+                                &.normal {
+                                    tr {
+                                        text-align: center;
+                                        th {
+                                            padding: 8px 0px;
+                                            position: relative;
+                                            &.tilted {
+                                                width: 100px;
+                                                height: 40px;
+                                                padding: 0px;
+                                                position: relative;
+                                                span {
+                                                    &.fr {
+                                                        float: right;
+                                                        margin-right: 10px ;
+                                                    }
+                                                    &.fl {
+                                                        float: left;
+                                                        margin: 16px 0px 0px 10px;
+                                                        position: relative;
+                                                    }
+                                                }
+                                                div {
+                                                    width: 0px;
+                                                    height: 0px;
+                                                    position: absolute;
+                                                    top: 0px;
+                                                    left: 0px;
+                                                    &::before {
+                                                        content: "";
+                                                        position: absolute;
+                                                        border-style: solid;
+                                                        border-color: transparent transparent #756d6d transparent;
+                                                        border-width: 0px 100px 40px 0px;
+                                                        top: 0px;
+                                                        left: 0px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        td {
+                                            line-height: 20px;
+                                            padding: 20px 0px;
+                                            border: solid 1px #e0e3f3;
+                                        }
+                                    }
+                                    //多層級用
+                                    &.pad10 {
+                                        tr {
+                                            td {
+                                                padding: 10px 0px;
+                                            }
+                                        }
+                                    }
+                                }
+                                //demo版
+                                &.demo {
+                                    width: 100%;
+                                    tr {
+                                        th {
+                                            text-align: left;
+                                            padding: 8px 0px 8px 50px;
+                                            position: relative;
+                                            background: #f0b37d;
+                                            color: #fff;
+                                            border-radius: 12px 12px 0px 0px;
+                                            &::before {
+                                                content: "";
+                                                position: absolute;
+                                                top: 7px;
+                                                left: 20px;
+                                                width: 15px;
+                                                height: 15px;
+                                                background: #fff;
+                                                border-radius: 15px;
+                                            }
+                                        }
+                                        td {
+                                            padding: 15px;
+                                            background: #ffedcd;
+                                            color: #4d515d;
+                                            line-height: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        //頁面切換
+                        .deal-rule,.single-rule,.half-rule,.ground-rule,.complex-rule,
+                        .score-rule,.let-rule,.touch-rule,.roll-rule,.correct-rule,
+                        .half-all-rule,.all-in-rule,.standard-rule,.champion-rule,.SC-rule,
+                        .CS-rule,.LOL-rule,.DOTA-rule,.FIFA-rule {
+                            display: none;
+                            &.display {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            p {
+                font-size: 14px;
+                color: #4d515d;
+                line-height: 24px;
+                &.lastP {
+                    padding-bottom: 15px;
+                }
+                &.wd_red {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+}

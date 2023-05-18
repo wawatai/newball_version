@@ -1,0 +1,86 @@
+header {
+    width: 100%;
+    height: 215px;
+    //置中外包
+    article {
+        text-align: center;
+        //標題
+        h1 {
+            color: #fff;
+            padding: 35px 0px;
+            font-size: 38px;
+        }
+        //按鈕
+        .rulebtn {
+            text-align: left;
+            a {
+                display: inline-block;
+                width: 105px;
+                height: 32px;
+                line-height: 32px;
+                border-radius: 5px;
+                border: solid 1px #b68860;
+                color: #b68860;
+                font-size: 14px;
+                background: #fff;
+                margin: 0px 7px 10px 0px;
+                text-align: center;
+                &.nmar {
+                    margin-right: 0px;
+                }
+                &:hover,&:active,&.active {
+                    background: #b68c67;
+                    color: #fff;
+                    border-color: #f1cfb2;
+                }
+            }
+        }
+        //返回按鈕
+        .backbtn {
+            width: 115px;
+            height: 32px;
+            line-height: 32px;
+            border: solid 1px #fff;
+            border-left-width: 0px;
+            position: absolute;
+            top: 38px;
+            left: 20px;
+            color: #fff;
+            font-size: 14px;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 23px;
+                height: 23px;
+                top: 4px;
+                left: -12px;
+                border-style: solid;
+                border-color: #fff;
+                border-width: 0px 0px 1px 1px;
+                transform: rotate(45deg);
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                top: 9px;
+                left: 0px;
+                border-style: solid;
+                border-color: transparent #fff transparent transparent;
+                border-width: 7px;
+            }
+            &:hover {
+                transform: scale(1.1);
+                background: #2d69d8;
+            }
+            &:hover:before {
+                background: #2d69d8;
+            }
+            &:active {
+                transform: scale(1);
+                background: #2d69d8;
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+nav {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+  position: absolute;
+  z-index: 2;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all; }
+  nav::-webkit-scrollbar {
+    width: 3px; }
+  nav::-webkit-scrollbar-thumb {
+    background: #000; }
+  nav::-webkit-scrollbar-track {
+    background: transparent; }
+  nav.slide {
+    margin-left: -100%;
+    -webkit-animation: slide 0.5s ease-out;
+    animation: slide 0.5s ease-out; }
+    nav.slide button {
+      display: block;
+      margin-right: -50px;
+      -webkit-transition: 1s all;
+      -o-transition: 1s all;
+      transition: 1s all;
+      -webkit-transition-delay: 1s;
+      -o-transition-delay: 1s;
+      transition-delay: 1s; }
+  nav .title {
+    width: 100%;
+    height: 8%;
+    position: relative; }
+    nav .title div {
+      width: 95%;
+      height: 70%;
+      background: #fff;
+      border-radius: 50px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
+      -webkit-box-shadow: 0px 3px 10px 1px #e4e4e4;
+      box-shadow: 0px 3px 10px 1px #e4e4e4;
+      overflow: hidden; }
+      nav .title div p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
+        color: #4d515d; }
+      nav .title div a {
+        display: block;
+        width: 12%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border: none; }
+        nav .title div a::before {
+          content: "";
+          position: absolute;
+          width: 20%;
+          height: 20%;
+          border-style: solid;
+          border-color: transparent transparent #4d4d4d #4d515d;
+          border-radius: 5px 0px 5px 0px;
+          left: 40%;
+          top: 50%;
+          -webkit-transform: translateY(-50%) rotate(45deg);
+          -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg); }
+  nav a {
+    display: block;
+    width: 100%;
+    height: calc(5.75% - 1px);
+    border-bottom: solid 1px #e0e3f3;
+    position: relative;
+    background: #fff; }
+    nav a::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-style: solid;
+      border-color: #4d4d4d #4d4d4d transparent transparent;
+      border-radius: 5px 0px 5px 0px;
+      right: 10%;
+      top: 50%;
+      -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+      transform: translateY(-50%) rotate(45deg); }
+    nav a p {
+      position: absolute;
+      top: 50%;
+      left: 15%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: #4d515d; }
+    nav a span {
+      display: block;
+      width: 22px;
+      height: 24px;
+      background: url("../images/rwd_ic.png") no-repeat;
+      background-size: 1600%;
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      nav a span.convert {
+        background-position-x: -22px; }
+      nav a span.bask {
+        background-position-x: -44px; }
+      nav a span.base {
+        background-position-x: -66px; }
+      nav a span.soc {
+        background-position-x: -88px; }
+      nav a span.ftb {
+        background-position-x: -110px; }
+      nav a span.lot {
+        background-position-x: -132px; }
+      nav a span.stk {
+        background-position-x: -154px; }
+      nav a span.golf {
+        background-position-x: -176px; }
+      nav a span.iceb {
+        background-position-x: -198px; }
+      nav a span.ten {
+        background-position-x: -220px; }
+      nav a span.boxing {
+        background-position-x: -242px; }
+      nav a span.race {
+        background-position-x: -264px; }
+      nav a span.esp {
+        background-position-x: -286px; }
+      nav a span.world {
+        background-position-x: -308px; }
+      nav a span.else {
+        background-position-x: -330px; }
+  nav button {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 0px;
+    -webkit-box-shadow: 0px 3px 10px 1px #e4e4e4;
+    box-shadow: 0px 3px 10px 1px #e4e4e4; }

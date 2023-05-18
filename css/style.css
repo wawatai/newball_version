@@ -1,0 +1,668 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: "my_font";
+  src: local("Heiti TC"), local("微軟正黑體"), local("Microsoft JhengHei");
+  unicode-range: U+4E00-9FFF, U+2E80-2EFF, U+0020-007F; }
+
+@font-face {
+  font-family: 'my_font';
+  src: url(../font/Bahnschrift.TTF);
+  unicode-range: U+0020-007F; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  font-family: "my_font";
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+input {
+  outline: none; }
+
+html {
+  font-family: "my_font";
+  background: white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+a:link {
+  text-decoration: none; }
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  html body {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    overflow: hidden; }
+    html body header {
+      width: 100%;
+      height: 215px; }
+      html body header article {
+        text-align: center; }
+        html body header article h1 {
+          color: #fff;
+          padding: 35px 0px;
+          font-size: 38px; }
+        html body header article .rulebtn {
+          text-align: left; }
+          html body header article .rulebtn a {
+            display: inline-block;
+            width: 105px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 5px;
+            border: solid 1px #b68860;
+            color: #b68860;
+            font-size: 14px;
+            background: #fff;
+            margin: 0px 7px 10px 0px;
+            text-align: center; }
+            html body header article .rulebtn a.nmar {
+              margin-right: 0px; }
+            html body header article .rulebtn a:hover, html body header article .rulebtn a:active, html body header article .rulebtn a.active {
+              background: #b68c67;
+              color: #fff;
+              border-color: #f1cfb2; }
+        html body header article .backbtn {
+          width: 115px;
+          height: 32px;
+          line-height: 32px;
+          border: solid 1px #fff;
+          border-left-width: 0px;
+          position: absolute;
+          top: 38px;
+          left: 20px;
+          color: #fff;
+          font-size: 14px; }
+          html body header article .backbtn:before {
+            content: "";
+            position: absolute;
+            width: 23px;
+            height: 23px;
+            top: 4px;
+            left: -12px;
+            border-style: solid;
+            border-color: #fff;
+            border-width: 0px 0px 1px 1px;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+          html body header article .backbtn:after {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            top: 9px;
+            left: 0px;
+            border-style: solid;
+            border-color: transparent #fff transparent transparent;
+            border-width: 7px; }
+          html body header article .backbtn:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            background: #2d69d8; }
+          html body header article .backbtn:hover:before {
+            background: #2d69d8; }
+          html body header article .backbtn:active {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            background: #2d69d8; }
+    html body main {
+      width: 100%;
+      height: auto; }
+      html body main article .rulebar {
+        width: 100%;
+        height: 40px;
+        background: #7b8bd7;
+        color: #fff;
+        border-radius: 12px 12px 0px 0px; }
+        html body main article .rulebar p {
+          line-height: 40px;
+          padding-left: 30px;
+          font-size: 15px; }
+        html body main article .rulebar .rwdbtn {
+          display: none;
+          width: 40px;
+          height: 70%;
+          float: left;
+          background: transparent;
+          margin: 5px 0px 0px 10px; }
+          html body main article .rulebar .rwdbtn span {
+            display: block;
+            width: 80%;
+            height: 3px;
+            background: #e4e4e4;
+            margin: 0px auto;
+            border-radius: 30px; }
+            html body main article .rulebar .rwdbtn span:first-child {
+              margin-bottom: 4px; }
+            html body main article .rulebar .rwdbtn span:last-child {
+              margin-top: 4px; }
+      html body main article .rulebox {
+        width: 100%;
+        height: 710px;
+        background: #fff;
+        border-radius: 0px 0px 12px 12px;
+        overflow-x: hidden;
+        overflow-y: auto; }
+        html body main article .rulebox::-webkit-scrollbar {
+          width: 8px; }
+        html body main article .rulebox::-webkit-scrollbar-thumb {
+          background: #b68c67;
+          border-radius: 100px; }
+        html body main article .rulebox::-webkit-scrollbar-track {
+          background: transparent;
+          background: #d6d6d6; }
+        html body main article .rulebox.gamerule p {
+          padding: 30px; }
+          html body main article .rulebox.gamerule p:nth-child(even) {
+            background: #efefef; }
+        html body main article .rulebox.convert div {
+          width: 93%;
+          border: solid 1px #7b8bd7;
+          margin: 30px auto 0px;
+          border-radius: 10px;
+          overflow-y: hidden;
+          overflow-x: auto; }
+          html body main article .rulebox.convert div::-webkit-scrollbar {
+            height: 12px; }
+          html body main article .rulebox.convert div::-webkit-scrollbar-thumb {
+            background: #556de7;
+            border-radius: 30px; }
+          html body main article .rulebox.convert div::-webkit-scrollbar-track {
+            background: transparent;
+            background: #d6d6d6;
+            border-radius: 0px 0px 15px 15px; }
+          html body main article .rulebox.convert div table {
+            width: 1202px;
+            border-radius: 10px;
+            border-collapse: collapse; }
+            html body main article .rulebox.convert div table tr {
+              text-align: center; }
+              html body main article .rulebox.convert div table tr:nth-child(odd) {
+                background: #ededed; }
+              html body main article .rulebox.convert div table tr td {
+                border-right: solid 1px #e0e3f3;
+                padding: 15px 10px;
+                color: #4d515d;
+                font-size: 14px; }
+                html body main article .rulebox.convert div table tr td:last-child {
+                  border: none; }
+        html body main article .rulebox.balls .box {
+          width: 94%;
+          height: auto;
+          margin: 0px auto;
+          padding-bottom: 50px; }
+          html body main article .rulebox.balls .box .btnbar {
+            width: 100%;
+            border-bottom: solid 1px #d2d2d2; }
+            html body main article .rulebox.balls .box .btnbar.longlen button {
+              width: 101px; }
+            html body main article .rulebox.balls .box .btnbar button {
+              margin: 25px 5px 15px 0px;
+              width: 105px;
+              height: 32px;
+              background: transparent;
+              border: solid 1px #556de7;
+              border-radius: 5px;
+              color: #556de7;
+              font-size: 14px; }
+              html body main article .rulebox.balls .box .btnbar button:hover, html body main article .rulebox.balls .box .btnbar button:active, html body main article .rulebox.balls .box .btnbar button.active {
+                background: #556de7;
+                color: #fff; }
+              html body main article .rulebox.balls .box .btnbar button.nmar {
+                margin-right: 0px; }
+              html body main article .rulebox.balls .box .btnbar button.longword {
+                width: auto; }
+          html body main article .rulebox.balls .box .ballsrule {
+            width: 95%;
+            height: auto;
+            margin: 0px auto; }
+            html body main article .rulebox.balls .box .ballsrule h2 {
+              font-size: 14px;
+              color: #4d515d;
+              font-weight: bold;
+              margin: 15px 0px;
+              line-height: 24px; }
+            html body main article .rulebox.balls .box .ballsrule h3 {
+              font-size: 14px;
+              color: #4d515d;
+              font-weight: bold;
+              position: relative;
+              margin: 25px 0px 5px 10px; }
+              html body main article .rulebox.balls .box .ballsrule h3:nth-of-type(1) {
+                margin-top: 0px; }
+              html body main article .rulebox.balls .box .ballsrule h3::before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: -10px;
+                width: 7px;
+                height: 7px;
+                background: url("../images/rule_ic.png") no-repeat; }
+            html body main article .rulebox.balls .box .ballsrule ul {
+              margin: 10px 0px 0px 12px; }
+              html body main article .rulebox.balls .box .ballsrule ul li {
+                list-style: decimal;
+                line-height: 24px;
+                margin-top: 15px;
+                font-size: 14px; }
+                html body main article .rulebox.balls .box .ballsrule ul li.lastLi {
+                  padding-bottom: 40px; }
+            html body main article .rulebox.balls .box .ballsrule a {
+              color: #337ab7; }
+            html body main article .rulebox.balls .box .ballsrule .rtable {
+              width: 100%;
+              height: auto;
+              overflow-y: hidden;
+              overflow-x: auto;
+              border-radius: 12px;
+              margin-bottom: 15px; }
+              html body main article .rulebox.balls .box .ballsrule .rtable::-webkit-scrollbar {
+                height: 12px; }
+              html body main article .rulebox.balls .box .ballsrule .rtable::-webkit-scrollbar-thumb {
+                background: #556de7;
+                border-radius: 30px; }
+              html body main article .rulebox.balls .box .ballsrule .rtable::-webkit-scrollbar-track {
+                background: transparent;
+                background: #d6d6d6;
+                border-radius: 0px 0px 15px 15px; }
+              html body main article .rulebox.balls .box .ballsrule .rtable table {
+                width: 1205px;
+                height: auto;
+                border-radius: 10px 10px 0px 0px;
+                font-size: 15px;
+                overflow: hidden; }
+                html body main article .rulebox.balls .box .ballsrule .rtable table tr th, html body main article .rulebox.balls .box .ballsrule .rtable table tr td {
+                  vertical-align: middle;
+                  word-break: break-all; }
+                html body main article .rulebox.balls .box .ballsrule .rtable table.normal tr {
+                  text-align: center; }
+                  html body main article .rulebox.balls .box .ballsrule .rtable table.normal tr th {
+                    padding: 8px 0px;
+                    position: relative; }
+                    html body main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted {
+                      width: 100px;
+                      height: 40px;
+                      padding: 0px;
+                      position: relative; }
+                      html body main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted span.fr {
+                        float: right;
+                        margin-right: 10px; }
+                      html body main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted span.fl {
+                        float: left;
+                        margin: 16px 0px 0px 10px;
+                        position: relative; }
+                      html body main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted div {
+                        width: 0px;
+                        height: 0px;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px; }
+                        html body main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted div::before {
+                          content: "";
+                          position: absolute;
+                          border-style: solid;
+                          border-color: transparent transparent #756d6d transparent;
+                          border-width: 0px 100px 40px 0px;
+                          top: 0px;
+                          left: 0px; }
+                  html body main article .rulebox.balls .box .ballsrule .rtable table.normal tr td {
+                    line-height: 20px;
+                    padding: 20px 0px;
+                    border: solid 1px #e0e3f3; }
+                html body main article .rulebox.balls .box .ballsrule .rtable table.normal.pad10 tr td {
+                  padding: 10px 0px; }
+                html body main article .rulebox.balls .box .ballsrule .rtable table.demo {
+                  width: 100%; }
+                  html body main article .rulebox.balls .box .ballsrule .rtable table.demo tr th {
+                    text-align: left;
+                    padding: 8px 0px 8px 50px;
+                    position: relative;
+                    background: #f0b37d;
+                    color: #fff;
+                    border-radius: 12px 12px 0px 0px; }
+                    html body main article .rulebox.balls .box .ballsrule .rtable table.demo tr th::before {
+                      content: "";
+                      position: absolute;
+                      top: 7px;
+                      left: 20px;
+                      width: 15px;
+                      height: 15px;
+                      background: #fff;
+                      border-radius: 15px; }
+                  html body main article .rulebox.balls .box .ballsrule .rtable table.demo tr td {
+                    padding: 15px;
+                    background: #ffedcd;
+                    color: #4d515d;
+                    line-height: 24px; }
+            html body main article .rulebox.balls .box .ballsrule .deal-rule, html body main article .rulebox.balls .box .ballsrule .single-rule, html body main article .rulebox.balls .box .ballsrule .half-rule, html body main article .rulebox.balls .box .ballsrule .ground-rule, html body main article .rulebox.balls .box .ballsrule .complex-rule,
+            html body main article .rulebox.balls .box .ballsrule .score-rule, html body main article .rulebox.balls .box .ballsrule .let-rule, html body main article .rulebox.balls .box .ballsrule .touch-rule, html body main article .rulebox.balls .box .ballsrule .roll-rule, html body main article .rulebox.balls .box .ballsrule .correct-rule,
+            html body main article .rulebox.balls .box .ballsrule .half-all-rule, html body main article .rulebox.balls .box .ballsrule .all-in-rule, html body main article .rulebox.balls .box .ballsrule .standard-rule, html body main article .rulebox.balls .box .ballsrule .champion-rule, html body main article .rulebox.balls .box .ballsrule .SC-rule,
+            html body main article .rulebox.balls .box .ballsrule .CS-rule, html body main article .rulebox.balls .box .ballsrule .LOL-rule, html body main article .rulebox.balls .box .ballsrule .DOTA-rule, html body main article .rulebox.balls .box .ballsrule .FIFA-rule {
+              display: none; }
+              html body main article .rulebox.balls .box .ballsrule .deal-rule.display, html body main article .rulebox.balls .box .ballsrule .single-rule.display, html body main article .rulebox.balls .box .ballsrule .half-rule.display, html body main article .rulebox.balls .box .ballsrule .ground-rule.display, html body main article .rulebox.balls .box .ballsrule .complex-rule.display,
+              html body main article .rulebox.balls .box .ballsrule .score-rule.display, html body main article .rulebox.balls .box .ballsrule .let-rule.display, html body main article .rulebox.balls .box .ballsrule .touch-rule.display, html body main article .rulebox.balls .box .ballsrule .roll-rule.display, html body main article .rulebox.balls .box .ballsrule .correct-rule.display,
+              html body main article .rulebox.balls .box .ballsrule .half-all-rule.display, html body main article .rulebox.balls .box .ballsrule .all-in-rule.display, html body main article .rulebox.balls .box .ballsrule .standard-rule.display, html body main article .rulebox.balls .box .ballsrule .champion-rule.display, html body main article .rulebox.balls .box .ballsrule .SC-rule.display,
+              html body main article .rulebox.balls .box .ballsrule .CS-rule.display, html body main article .rulebox.balls .box .ballsrule .LOL-rule.display, html body main article .rulebox.balls .box .ballsrule .DOTA-rule.display, html body main article .rulebox.balls .box .ballsrule .FIFA-rule.display {
+                display: block; }
+        html body main article .rulebox p {
+          font-size: 14px;
+          color: #4d515d;
+          line-height: 24px; }
+          html body main article .rulebox p.lastP {
+            padding-bottom: 15px; }
+          html body main article .rulebox p.wd_red {
+            color: #ff0000; }
+    @media only screen and (max-width: 1349px) {
+      html body main article .rulebox.convert div::-webkit-scrollbar {
+        height: 12px; }
+      html body main article .rulebox.balls .box .ballsrule .rtable::-webkit-scrollbar {
+        height: 12px; }
+      html body main article .rulebox.balls .box .btnbar {
+        padding: 12px 0px 5px; }
+        html body main article .rulebox.balls .box .btnbar.longlen button {
+          width: 90px;
+          margin: 0px 4px 10px 4px; }
+        html body main article .rulebox.balls .box .btnbar button {
+          width: 90px;
+          margin: 0px 4px 10px 4px;
+          font-size: 12px; } }
+    @media only screen and (max-width: 1115px) {
+      html body header article .rulebtn {
+        text-align: center; } }
+    @media only screen and (max-width: 1023px) {
+      html body header article .rulebtn {
+        width: 96%;
+        margin: 0px auto; }
+        html body header article .rulebtn a {
+          width: 97px;
+          margin-right: 2px; } }
+    @media only screen and (max-width: 935px) {
+      html body header article .rulebtn {
+        width: 100%; }
+        html body header article .rulebtn a {
+          width: 11%;
+          font-size: 12px; } }
+    @media only screen and (max-width: 640px) {
+      html body header {
+        display: none; }
+      html body main {
+        position: absolute; }
+        html body main article .rulebar {
+          border-radius: 0px; }
+          html body main article .rulebar p {
+            float: left;
+            padding-left: 5px; }
+          html body main article .rulebar .rwdbtn {
+            display: block; }
+        html body main article .rulebox {
+          border-radius: 0px; }
+          html body main article .rulebox.balls .box {
+            width: 94%; }
+            html body main article .rulebox.balls .box .ballsrule {
+              width: 90%;
+              margin: 0px auto; }
+              html body main article .rulebox.balls .box .ballsrule .rtable table {
+                width: 900px; }
+            html body main article .rulebox.balls .box .btnbar {
+              display: inline-block;
+              width: 100%;
+              margin: 0px auto; }
+              html body main article .rulebox.balls .box .btnbar.longlen button {
+                width: 30%; }
+              html body main article .rulebox.balls .box .btnbar button {
+                float: left;
+                width: 30%; }
+      html body nav.rwd {
+        display: block; } }
+    html body nav {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background: #f7f7f7;
+      position: absolute;
+      z-index: 2;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
+      html body nav::-webkit-scrollbar {
+        width: 3px; }
+      html body nav::-webkit-scrollbar-thumb {
+        background: #000; }
+      html body nav::-webkit-scrollbar-track {
+        background: transparent; }
+      html body nav.slide {
+        margin-left: -100%;
+        -webkit-animation: slide 0.5s ease-out;
+        animation: slide 0.5s ease-out; }
+        html body nav.slide button {
+          display: block;
+          margin-right: -50px;
+          -webkit-transition: 1s all;
+          -o-transition: 1s all;
+          transition: 1s all;
+          -webkit-transition-delay: 1s;
+          -o-transition-delay: 1s;
+          transition-delay: 1s; }
+      html body nav .title {
+        width: 100%;
+        height: 8%;
+        position: relative; }
+        html body nav .title div {
+          width: 95%;
+          height: 70%;
+          background: #fff;
+          border-radius: 50px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translateY(-50%) translateX(-50%);
+          -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+          -webkit-box-shadow: 0px 3px 10px 1px #e4e4e4;
+          box-shadow: 0px 3px 10px 1px #e4e4e4;
+          overflow: hidden; }
+          html body nav .title div p {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateY(-50%) translateX(-50%);
+            -ms-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+            color: #4d515d; }
+          html body nav .title div a {
+            display: block;
+            width: 12%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            border: none; }
+            html body nav .title div a::before {
+              top: 30%;
+              -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+      html body nav a {
+        display: block;
+        width: 100%;
+        height: calc(5.75% - 1px);
+        border-bottom: solid 1px #e0e3f3;
+        position: relative;
+        background: #fff; }
+        html body nav a::before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          background: url("../images/arrow.png") no-repeat;
+          background-size: 100%;
+          right: 10%;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+        html body nav a p {
+          position: absolute;
+          top: 50%;
+          left: 15%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          font-size: 14px;
+          color: #4d515d; }
+        html body nav a span {
+          display: block;
+          width: 22px;
+          height: 24px;
+          background: url("../images/rwd_ic.png") no-repeat;
+          background-size: 1600%;
+          position: absolute;
+          left: 5%;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+          html body nav a span.convert {
+            background-position-x: -22px; }
+          html body nav a span.bask {
+            background-position-x: -44px; }
+          html body nav a span.base {
+            background-position-x: -66px; }
+          html body nav a span.soc {
+            background-position-x: -88px; }
+          html body nav a span.ftb {
+            background-position-x: -110px; }
+          html body nav a span.lot {
+            background-position-x: -132px; }
+          html body nav a span.stk {
+            background-position-x: -154px; }
+          html body nav a span.golf {
+            background-position-x: -176px; }
+          html body nav a span.iceb {
+            background-position-x: -198px; }
+          html body nav a span.ten {
+            background-position-x: -220px; }
+          html body nav a span.boxing {
+            background-position-x: -242px; }
+          html body nav a span.race {
+            background-position-x: -264px; }
+          html body nav a span.esp {
+            background-position-x: -286px; }
+          html body nav a span.world {
+            background-position-x: -308px; }
+          html body nav a span.else {
+            background-position-x: -330px; }
+      html body nav button {
+        display: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 0px 10px 10px 0px;
+        position: absolute;
+        z-index: 1;
+        top: 30px;
+        right: 0px;
+        -webkit-box-shadow: 0px 3px 10px 1px #e4e4e4;
+        box-shadow: 0px 3px 10px 1px #e4e4e4; }
+
+@-webkit-keyframes slide {
+  0% {
+    margin-left: 0%; }
+  100% {
+    margin-left: -100%; } }
+
+@keyframes slide {
+  0% {
+    margin-left: 0%; }
+  100% {
+    margin-left: -100%; } }
+    html body article {
+      max-width: 1280px;
+      height: 100%;
+      margin: 0px auto;
+      position: relative; }
+    html body .bg {
+      width: 100%;
+      height: 100%;
+      background: url("../images/bg.jpg") no-repeat top center;
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -999; }
+
+.wd_aqua {
+  color: #008aff; }
+
+.wd_white {
+  color: #fff; }
+
+.wd_red {
+  color: #ff0000; }
+
+.wd_p16 {
+  font-size: 16px; }
+
+.bg_purple {
+  background: #7b8bd7; }
+
+.bg_lightblue {
+  background: #cce6ff; }
+
+.bg_wdgray {
+  background: #ededed; }
+
+.bg_drakgray {
+  background: #756d6d; }
+
+.bor_purple {
+  border: solid 1px #7b8bd7; }
+
+.bor_lightbrown {
+  border: solid 1px #f0b37d; }

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相關規則</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body ontouchstart="">
+    <!--header-->
+    <header>
+        <!--置中外包-->
+        <article>
+            <!--標題-->
+            <h1>相關規則</h1>
+            <!--按鈕-->
+            <div class="rulebtn">
+                <a href="../index.html">遊戲說明</a>
+                <a href="./convert.html">球頭換算法</a>
+                <a href="./basketball.html">籃球</a>
+                <a href="./baseball.html">棒球</a>
+                <a href="./soccer.html">足球</a>
+                <a href="./football.html" class="active">美式足球</a>
+                <a href="./lotto.html">彩球</a>
+                <a href="./stock.html">指數</a>
+                <a href="./golf.html">高爾夫</a>
+                <a href="./iceball.html">冰球</a>
+                <a href="./tennis.html" class="nmar">網球</a>
+                <a href="./boxing.html">拳擊</a>
+                <a href="./race.html">賽馬賽狗</a>
+                <a href="./esp.html">電競</a>
+                <a href="./world.html">世界盃</a>
+                <a href="./else.html">其他籃球</a>
+            </div>
+            <!--返回按鈕-->
+            <a href="../" class="backbtn">返回頁面</a>
+        </article>
+    </header>
+    <!--main-->
+    <main>
+        <!--置中外包-->
+        <article>
+            <!--上bar-->
+            <div class="rulebar">
+                <button class="rwdbtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <p>美式足球相關規則</p>
+            </div>
+            <!--主區塊-->
+            <div class="rulebox balls">
+                <div class="box">
+                    <!--按鈕-->
+                    <div class="btnbar ftb">
+                        <button class="active">交易規則</button>
+                        <button>單式</button>
+                        <button>上下半場</button>
+                        <button>走地</button>
+                        <button>讓分過關</button>
+                        <button>綜合過關</button>
+                    </div>
+                    <!--主體-->
+                    <div class="ballsrule">
+                        <!--交易規則-->
+                        <div class="deal-rule display">
+                            <h2>玩法介紹</h2>
+                            <ul>
+                                <li><span class="wd_red">所有美式足球投注之賽果認定皆以本公司所訂定之規則為準。</span></li>
+                                <li>所有比賽都必須在預定日期或法定時間內進行，否則投注無效。若該場比賽因故取消或中止，則該場比賽視為無效，公司將退回注金(各項過關投注以賠率﹝1﹞計算)。</li>
+                                <li>如比賽提前舉行，則在開賽後所接受之注單均視為無效<span class="wd_red">(走地盤除外)</span>。</li>
+                                <li>所有美式足球比賽必須在<span class="wd_red">開賽後進行超過55分鐘法定時間</span>才視為有效比賽。</li>
+                            </ul>
+                        </div>
+                        <!--單式-->
+                        <div class="single-rule">
+                            <h2>單式交易-玩法介紹</h2>
+                            <h3>讓分</h3>
+                            <p>在指定球賽中，其中一隊球隊提供讓分作為比賽條件，賽果均以開賽超過55分鐘之後至最終完場的比數為準。</p>
+                            <h3>大/小(全場總得分數)</h3>
+                            <p>在指定球賽中當交易該場比賽的大/小(全場總得分數)時，若總得分高於該場比賽的大/小分數則為大，若總得分低於該場比賽的大/小分數則為小。</p>
+                            <p>如賽事結果之總得分數恰好等於「大/小盤分數」，則該交易金額將獲全數退回，賽果均以開賽超過55分鐘之後至最終完場的比數為準，如遇突發事件(例如：雨勢過大或其他因素)由任何體育紀律委員會裁決比賽勝負，則此類交易取消。</p>
+                            <h3>獨贏(不計算讓分在內)</h3>
+                            <p>在指定球賽中，兩隊以平手的方式(不計算讓分在內)選擇其中一隊勝出，賽果均以開賽超過55分鐘之後至最終完場的比數為準。</p>
+                            <h3>單/雙</h3>
+                            <p>在指定比賽中，兩隊在開賽55分鐘之後至最終完場得分的總數為「單」或「雙」，賽果以開賽55分鐘之後比賽結果為準。</p>
+                            <p>例：得分單數：即全場總得分數為<span class="wd_red">單數</span></p>
+                            <p>例：得分雙數：即全場總得分數為<span class="wd_red">雙數</span></p>
+                            <!--範例1-->
+                            <h2>單式交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>比賽時間</th>
+                                        <th>聯盟</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                        <th>大小</th>
+                                        <th>獨贏</th>
+                                        <th>單雙</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td class="wd_red">12:00a</td>
+                                        <td>美國聯會</td>
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>
+                                            0.930
+                                            <br>
+                                            <span class="wd_red">3輸</span>&ensp;0.950
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">大&ensp;42.5</span>&ensp;0.940
+                                            <br>
+                                            <span class="wd_red">小&ensp;42.5</span>&ensp;0.900
+                                        <td>
+                                            1.85
+                                            <br>
+                                            0.35
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.910</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.930</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td class="wd_red">12:00a</td>
+                                        <td>英超聯賽</td>
+                                        <td>
+                                            華盛頓紅人
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>
+                                            0.920
+                                            <br>
+                                            <span class="wd_red">4平</span>&ensp;0.920
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">大&ensp;38</span>&ensp;0.980
+                                            <br>
+                                            <span class="wd_red">小&ensp;38</span>&ensp;0.880
+                                        </td>
+                                        <td>
+                                            大&ensp;2.5&ensp;<span class="wd_red">1.90</span>
+                                            <br>
+                                            小&ensp;2.5&ensp;<span class="wd_red">0.15</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">1.90</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.15</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>讓分交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一段第一行-->
+                                    <tr>
+                                        <td rowspan="4">
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            紐約噴射機(主)&ensp;<span class="wd_red">3輸</span>
+                                        </td>
+                                        <td rowspan="4">全輸/全贏</td>
+                                        <td rowspan="2">22:28(主)</td>
+                                        <td>水牛城比爾&ensp;<span class="wd_red">0.930</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第一段第二行-->
+                                    <tr>
+                                        <td>紐約噴射機(主)&ensp;<span class="wd_red">0.950</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.960&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;960&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第一段第三行-->
+                                    <tr>
+                                        <td rowspan="2">22:24(主)</td>
+                                        <td>水牛城比爾&ensp;<span class="wd_red">0.930</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.930&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;930&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第一段第四行-->
+                                    <tr>
+                                        <td>紐約噴射機(主)&ensp;<span class="wd_red">0.950</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第二段第一行-->
+                                    <tr class="bg_wdgray">
+                                        <td rowspan="2">
+                                            華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            達拉斯牛仔(主)&ensp;<span class="wd_red">4平</span>
+                                        </td>
+                                        <td rowspan="2">平局</td>
+                                        <td rowspan="2">18:22(主)</td>
+                                        <td>華盛頓紅人&ensp;<span class="wd_red">0.960</span></td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                    <!--第二段第二行--->
+                                    <tr class="bg_wdgray">
+                                        <td>達拉斯牛仔(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例3-->
+                            <h2>大小交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--上半第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            紐約噴射機(主)&ensp;<span class="wd_red">3輸</span>
+                                        </td>
+                                        <td>贏</td>
+                                        <td rowspan="2">22:24(主)</td>
+                                        <td>大&ensp;42.5&ensp;<span class="wd_red">0.940</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.940&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;940&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--上半第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>小&ensp;42.5&ensp;<span class="wd_red">0.900</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--下半第一行-->
+                                    <tr class="bg_wdgray">
+                                        <td rowspan="2">
+                                            華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            達拉斯牛仔(主)&ensp;<span class="wd_red">4平</span>
+                                        </td>
+                                        <td>平局</td>
+                                        <td rowspan="2">18:22(主)</td>
+                                        <td>大&ensp;38&ensp;<span class="wd_red">0.900</span></td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                    <!--下半第二行-->
+                                    <tr class="bg_wdgray">
+                                        <td>輸</td>
+                                        <td>小&ensp;38&ensp;<span class="wd_red">0.940</span></td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例4-->
+                            <h2>獨贏交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--上半第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>贏</td>
+                                        <td rowspan="3">25:20(主)</td>
+                                        <td>水牛城比爾&ensp;<span class="wd_red">1.85</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;1.85&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;1850&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    <!--上半第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>紐約噴射機(主)&ensp;<span class="wd_red">0.35</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例5-->
+                            <h2>單雙交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td rowspan="2">華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            達拉斯牛仔(主)</td>
+                                        <td>贏</td>
+                                        <td rowspan="2">18:21(主)</td>
+                                        <td>單&ensp;<span class="wd_red">0.920</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.920&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;920&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>雙&ensp;<span class="wd_red">0.920</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--上下半場-->
+                        <div class="half-rule">
+                            <h2>上半場交易</h2>
+                            <p>上半場交易結果以該場賽事第一、二節之比數總合為基準，如遇下半場比賽取消或賽程中斷，上半場之注單仍為有效注單。</p>
+                            <h3>讓分</h3>
+                            <p>下半場交易結果以該場賽事第三、四節之比數總合(含延長加時)為基準。</p>
+                            <h3>大/小</h3>
+                            <p>大/小(半場總得分數) ：在指定比賽中當交易該場比賽的大/小(半場總得分數)時，若總得分高於該場比賽的大/小分數則為大，若總得分低於該場比賽的大/小分數則為小。</p>
+                            <p>如賽事結果之總得分數恰好等於「大/小分數」，則該交易金額將獲全數退回，賽果均以半場結束的比數為準。</p>
+                            <h3>單/雙</h3>
+                            <p>在指定比賽中，兩隊在半場結束時得分的總數為「 單 」或 「 雙 」，賽果均以半場結束的比數為準</p>
+                            <p>例：得分單數：即半場總得分數為<span class="wd_red">單數</span></p>
+                            <p>例：得分雙數：即半場總得分數為<span class="wd_red">雙數</span></p>
+                            <h3>獨贏</h3>
+                            <p>在指定球賽中，兩隊以平手的方式(不計算讓分在內)選擇其中一隊勝出，賽果均以半場結束的比數為準。</p>
+                            <!--範例1-->
+                            <h2>上下半場交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr>
+                                        <th colspan="7" class="bg_lightblue">上半場</th>
+                                    </tr>
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>聯盟</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                        <th>大小</th>
+                                        <th>單雙</th>
+                                        <th>獨贏</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>12:00a</td>
+                                        <td>美國聯會</td>
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>
+                                            0.930
+                                            <br>
+                                            <span class="wd_red">3輸</span>&ensp;0.950
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">大&ensp;14.5</span>&ensp;0.940
+                                            <br>
+                                            <span class="wd_red">小&ensp;14.5</span>&ensp;0.940
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">單</span>&ensp;0.960
+                                            <br>
+                                            <span class="wd_red">雙</span>&ensp;0.880
+                                        </td>
+                                        <td>
+                                            1.00
+                                            <br>
+                                            0.90
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>12:00a</td>
+                                        <td>美國聯會</td>
+                                        <td>
+                                            華盛頓紅人
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>
+                                            0.960
+                                            <br>
+                                            <span class="wd_red">4平</span>&ensp;0.920
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">大&ensp;21</span>&ensp;0.940
+                                            <br>
+                                            <span class="wd_red">小&ensp;21</span>&ensp;0.940
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">單</span>&ensp;0.940
+                                            <br>
+                                            <span class="wd_red">雙</span>&ensp;0.900
+                                        </td>
+                                        <td>
+                                            1.00
+                                            <br>
+                                            0.92
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr>
+                                        <th colspan="7" class="bg_lightblue">下半場</th>
+                                    </tr>
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>聯盟</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                        <th>大小</th>
+                                        <th>單雙</th>
+                                        <th>獨贏</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>12:00a</td>
+                                        <td>美國聯會</td>
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>
+                                            0.940
+                                            <br>
+                                            <span class="wd_red">3平</span>&ensp;0.940
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">大&ensp;30.5</span>&ensp;0.900
+                                            <br>
+                                            <span class="wd_red">小&ensp;30.5</span>&ensp;0.900
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">單</span>&ensp;0.960
+                                            <br>
+                                            <span class="wd_red">雙</span>&ensp;0.880
+                                        </td>
+                                        <td>
+                                            1.00
+                                            <br>
+                                            0.90
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>12:00a</td>
+                                        <td>美國聯會</td>
+                                        <td>
+                                            華盛頓紅人
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>
+                                            0.940
+                                            <br>
+                                            <span class="wd_red">3輸</span>&ensp;0.940
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">大&ensp;42.5</span>&ensp;0.900
+                                            <br>
+                                            <span class="wd_red">小&ensp;42.5</span>&ensp;0.900
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">單</span>&ensp;0.940
+                                            <br>
+                                            <span class="wd_red">雙</span>&ensp;0.900
+                                        </td>
+                                        <td>
+                                            1.00
+                                            <br>
+                                            0.92
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>半場讓分交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一段第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            紐約噴射機(主)&ensp;3輸
+                                        </td>
+                                        <td rowspan="2">全贏/全輸</td>
+                                        <td rowspan="2">10:5(主)&ensp;<span class="wd_red">上半場</span></td>
+                                        <td><span class="wd_red">水牛城比爾</span>&ensp;0.940</td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.940&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;940&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第一段第二行-->
+                                    <tr>
+                                        <td><span class="wd_red">紐約噴射機(主)</span>&ensp;0.940</td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第二段第一行-->
+                                    <tr class="bg_wdgray">
+                                        <td rowspan="2">
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            紐約噴射機(主)&ensp;3輸
+                                        </td>
+                                        <td rowspan="2">平局</td>
+                                        <td rowspan="2">17:20(主)&ensp;<span class="wd_red">下半場</span></td>
+                                        <td><span class="wd_red">水牛城比爾</span>&ensp;0.940</td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                    <!--第二段第二行-->
+                                    <tr class="bg_wdgray">
+                                        <td><span class="wd_red">紐約噴射機(主)</span>&ensp;0.940</td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                    <!--第三段第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            達拉斯牛仔(主)&ensp;3輸
+                                        </td>
+                                        <td rowspan="2">全輸/全贏</td>
+                                        <td rowspan="2">20:25(主)&ensp;<span class="wd_red">下半場</span></td>
+                                        <td><span class="wd_red">華盛頓紅人</span>&ensp;0.940</td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第三段第二行-->
+                                    <tr>
+                                        <td><span class="wd_red">達拉斯牛仔(主)</span>&ensp;0.940</td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.940&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;940&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例3-->
+                            <h2>半場大小交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一段第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>贏</td>
+                                        <td rowspan="2">10:5(主)&ensp;<span class="wd_red">上半場</span></td>
+                                        <td><span class="wd_red">大&ensp;14.5</span>&ensp;0.940</td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.940&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;940&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第一段第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td><span class="wd_red">小&ensp;14.5</span>&ensp;0.940</td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第二段第一行-->
+                                    <tr class="bg_wdgray">
+                                        <td rowspan="2">
+                                            華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td rowspan="2">平局</td>
+                                        <td rowspan="2">13:8(主)&ensp;<span class="wd_red">上半場</span></td>
+                                        <td><span class="wd_red">大&ensp;21</span>&ensp;0.900</td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                    <!--第二段第二行-->
+                                    <tr class="bg_wdgray">
+                                        <td><span class="wd_red">小&ensp;21</span>&ensp;0.900</td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例4-->
+                            <h2>半場單雙交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>贏</td>
+                                        <td rowspan="2">13:8(主)&ensp;<span class="wd_red">上半場</span></td>
+                                        <td><span class="wd_red">單</span>&ensp;0.940</td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.940&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;940&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td><span class="wd_red">雙</span>&ensp;0.900</td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例5-->
+                            <h2>半場獨贏交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一段第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">vs</span>
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>贏</td>
+                                        <td rowspan="2">15:5(主)&ensp;<span class="wd_red">上半場</span></td>
+                                        <td><span class="wd_red">水牛城比爾</span>&ensp;0.920</td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.920&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;920&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第一段第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td><span class="wd_red">紐約噴射機(主)</span>&ensp;0.920</td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--走地-->
+                        <div class="ground-rule">
+                            <h2>全場走地交易-玩法介紹</h2>
+                            <h3>走地交易規則</h3>
+                            <ul>
+                                <li>美式足球全場走地項目之交易結果計算：賽果均以比賽進行超過55分鐘後最終完場的比數為基準，若是該場次於比賽中如遇突發事件（例如：雨勢過大或其他因素）由任何體育紀律委員會裁決比賽勝負，則此類交易取消。</li>
+                                <li>採用基礎分計算（基礎分即為交易時之比分）。</li>
+                                <li>押注盤口按當時盤口計算（已經得分不算計在內）。</li>
+                                <li>交易結果計算方式為以完賽結果之比分減掉交易時之比分做比對，計算交易結果。</li>
+                            </ul>
+                            <h3>全場走地讓分</h3>
+                            <ul>
+                                <li>在指定球賽中當交易該場比賽的大/小(全場總得分數)時，若總得分高於該場比賽全場的大/小分數則為大，若總得分低於該場比賽全場的大/小分數則為小。</li>
+                                <li>如賽事結果之總得分數恰好等於「大/小盤分數」，則該交易金額將獲全數退回，賽果均以開賽超過55分鐘之後至最終完場的比數為基準，如遇突發事件(例如：雨勢過大或其他因素)由任何體育紀律委員會裁決比賽勝負，則此類交易取消。</li>
+                            </ul>
+                            <h3>全場走地單/雙</h3>
+                            <p>在指定比賽中，兩隊在比賽進行超過55分鐘後得分的總數為「單」或「雙」，賽果以比賽進行超過55分鐘後比賽結果為準。</p>
+                            <p>例：得分單數：即全場總得分數為單數</p>
+                            <p>例：得分雙數：即全場總得分數為雙數</p>
+                            <!--範例1-->
+                            <h2>走地交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_lightblue">
+                                        <th colspan="5">走地</th>
+                                    </tr>
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>聯盟</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                        <th>大小</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td class="wd_red">12:00a</td>
+                                        <td>國家聯盟</td>
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>
+                                            0.930
+                                            <br>
+                                            <span class="wd_red">3輸</span>&ensp;0.950
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">大&ensp;42.5</span>&ensp;0.940
+                                            <br>
+                                            <span class="wd_red">小&ensp;42.5</span>&ensp;0.900
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>當時比分</th>
+                                        <th>最終比分</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            水牛城比爾
+                                            <br>
+                                            vs
+                                            <br>
+                                            紐約噴射機(主)&ensp;3輸
+                                        </td>
+                                        <td rowspan="2">10:9(主)</td>
+                                        <td rowspan="2">17:21(主)</td>
+                                        <td><span class="wd_red">水牛城比爾</span>&ensp;0.930</td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr>
+                                        <td><span class="wd_red">紐約噴射機(主)</span>&ensp;0.950</td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.950&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;950&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--讓分過關-->
+                        <div class="let-rule">
+                            <h2>讓分過關交易</h2>
+                            <ul>
+                                <li>讓分過關是指在一場球賽中，其中一隊球隊提供讓分作為讓賽條件，賽果以比賽進行超過55分鐘後比賽結果為準。</li>
+                                <li>在「讓球過關」開放的每一場賽事中，客戶可交易其中一玩法種類勝出。</li>
+                                <li>所有在「讓球過關」中公佈之讓球條件及獲利率都可作過關交易（包括二關、三關、四關等）。</li>
+                                <li>每注的最高派彩金額上限為新台幣100萬元整。</li>
+                            </ul>
+                            <!--範例1-->
+                            <h2>讓分過關交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>聯盟</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td class="wd_red">12:00a</td>
+                                        <td>美國聯會</td>
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.930</span>
+                                            <br>
+                                            3輸&ensp;<span class="wd_red">0.950</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td class="wd_red">12:00a</td>
+                                        <td>國家聯會</td>
+                                        <td>
+                                            華盛頓紅人
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>
+                                            3輸&ensp;<span class="wd_red">0.960</span>
+                                            <br>
+                                            4平&ensp;<span class="wd_red">0.920</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>讓分過關交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>比賽結果</th>
+                                        <th>結果類型</th>
+                                        <th>交易種類/內容</th>
+                                        <th>交易結果(交易金額&nbsp;1000)</th>
+                                    </tr>
+                                    <!--第一行-->
+                                    <tr>
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">17:22</span>
+                                            <br>
+                                            紐約噴射機(主)
+                                            <br>
+                                            <br>
+                                            華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">15230</span>
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>全贏</td>
+                                        <td>
+                                            <span class="wd_red">(美足2串一)</span>
+                                            <br>
+                                            紐約噴射機(主)&ensp;<span class="wd_red">3輸</span>&ensp;水牛城比爾
+                                            <br>
+                                            <span class="wd_red">紐約噴射機(主)&ensp;@&ensp;0.950</span>
+                                            <br>
+                                            <br>
+                                            達拉斯牛仔(主)&ensp;<span class="wd_red">4平</span>華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">達拉斯牛仔(主)&ensp;@&ensp;0.920</span>
+                                        </td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.950&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.920&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;2744&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">17:22</span>
+                                            <br>
+                                            紐約噴射機(主)
+                                            <br>
+                                            <br>
+                                            華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">28:13</span>
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>全輸</td>
+                                        <td>
+                                            <span class="wd_red">(美足2串一)</span>
+                                            <br>
+                                            紐約噴射機(主)&ensp;<span class="wd_red">3輸</span>&ensp;水牛城比爾</span>
+                                            <br>
+                                            <span class="wd_red">紐約噴射機(主)&ensp;@&ensp;0.950</span>
+                                            <br>
+                                            <br>
+                                            達拉斯牛仔(主)&ensp;<span class="wd_red">4平</span>&ensp;華盛頓紅人</span>
+                                            <br>
+                                            <span class="wd_red">達拉斯牛仔(主)&ensp;@&ensp;0.920</span>
+                                        </td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第三行-->
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            <span class="wd_red">17:22</span>
+                                            <br>
+                                            紐約噴射機(主)
+                                            <br>
+                                            <br>
+                                            華盛頓紅人
+                                            <br>
+                                            <span class="wd_red">16:20</span>
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>全輸</td>
+                                        <td>
+                                            <span class="wd_red">(美足2串一)</span>
+                                            <br>
+                                            紐約噴射機(主)&ensp;<span class="wd_red">3輸</span>&ensp;水牛城比爾</span>
+                                            <br>
+                                            <span class="wd_red">紐約噴射機(主)&ensp;@&ensp;0.950</span>
+                                            <br>
+                                            <br>
+                                            達拉斯牛仔(主)&ensp;<span class="wd_red">4平</span>&ensp;華盛頓紅人</span>
+                                            <br>
+                                            <span class="wd_red">達拉斯牛仔(主)&ensp;@&ensp;0.920</span>
+                                        </td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.950&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;950&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--綜合過關-->
+                        <div class="complex-rule">
+                            <h2>綜合過關交易</h2>
+                            <ul>
+                                <li>綜合過關是指在一場球賽中，其中提供各種玩法作為過關交易條件 。</li>
+                                <li>在「綜合過關」開放的每一場賽事中，客戶僅能交易其中一種玩法勝出。賽果及結果計算均以各種玩法交易規則為準則 。</li>
+                                <li>所有在「綜合過關」中公佈之各種玩法條件及獲利率都可作過關交易（包括二關、三關、四關等） 。</li>
+                                <li>每注的最高派彩金額上限為新台幣100萬元整。</li>
+                            </ul>
+                            <!--範例1-->
+                            <h2>綜合過關交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_lightblue">
+                                        <th colspan="6">2005-04-20</th>
+                                    </tr>
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                        <th>大小</th>
+                                        <th>獨贏</th>
+                                        <th>單雙</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td class="wd_red">
+                                            7:10p
+                                            <br>
+                                            美國聯會
+                                        </td>
+                                        <td>
+                                            水牛城比爾
+                                            <br>
+                                            紐約噴射機(主)
+                                        </td>
+                                        <td>
+                                            0.940
+                                            <br>
+                                            <span class="wd_red">3輸</span>&ensp;0.900
+                                        </td>
+                                        <td>
+                                            大&nbsp;42.5&ensp;<span class="wd_red">0.940</span>
+                                            <br>
+                                            小&nbsp;42.5&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            1.85
+                                            <br>
+                                            0.35
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.910</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.930</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td class="wd_red">
+                                            7:10p
+                                            <br>
+                                            美國聯會
+                                        </td>
+                                        <td>
+                                            華盛頓紅人
+                                            <br>
+                                            達拉斯牛仔(主)
+                                        </td>
+                                        <td>
+                                            0.960
+                                            <br>
+                                            <span class="wd_red">4平</span>&ensp;0.920
+                                        </td>
+                                        <td>
+                                            大&nbsp;38&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            小&nbsp;38&ensp;<span class="wd_red">0.940</span>
+                                        </td>
+                                        <td>
+                                            1.90
+                                            <br>
+                                            0.15
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.920</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.920</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>綜合過關交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>比賽結果</th>
+                                        <th>結果類型</th>
+                                        <th>交易種類/內容</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            <span class="wd_red">水牛城比爾</span>
+                                            <br>
+                                            18:16
+                                            <br>
+                                            <span class="wd_red">紐約噴射機(主)</span>
+                                            <br>
+                                            <br>
+                                            <span class="wd_aqua">華盛頓紅人</span>
+                                            <br>
+                                            <span class="wd_aqua">達拉斯牛仔(主)</span>
+                                        </td>
+                                        <td>全輸</td>
+                                        <td>
+                                            <span class="wd_red">(棒球2串一)</span>
+                                            <br>
+                                            <span class="wd_aqua">獨贏</span>&ensp;-&ensp;水牛城比爾&ensp;vs&ensp;紐約噴射機(主)
+                                            <br>
+                                            <span class="wd_red">紐約噴射機&ensp;@&ensp;0.35</span>
+                                            <br>
+                                            <br>
+                                            <span class="wd_aqua">大小</span>&ensp;-&ensp;華盛頓紅人&ensp;vs&ensp;達拉斯牛仔(主)
+                                            <br>
+                                            <span class="wd_red">大&ensp;38&ensp;@&ensp;0.900</span>
+                                        </td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr>
+                                        <td>全贏</td>
+                                        <td>
+                                            <span class="wd_red">(棒球2串一)</span>
+                                            <br>
+                                            <span class="wd_aqua">獨贏</span>&ensp;-&ensp;水牛城比爾&ensp;vs&ensp;紐約噴射機(主)
+                                            <br>
+                                            <span class="wd_red">紐約噴射機&ensp;@&ensp;1.85</span>
+                                            <br>
+                                            <br>
+                                            <span class="wd_aqua">單雙</span>&ensp;-&ensp;華盛頓紅人&ensp;vs&ensp;達拉斯牛仔(主)
+                                            <br>
+                                            <span class="wd_red">雙&ensp;@&ensp;0.92</span>
+                                        </td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;1.850&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.920&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;4472&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!--RWD按鈕-->
+    <nav class="rwd slide">
+        <div class="title"><div><a href="../"></a><p>相關規則</p></div></div>
+        <a href="../index.html#"><span></span><p>遊戲說明</p></a>
+        <a href="./convert.html"><span class="convert"></span><p>球頭換算法</p></a>
+        <a href="./basketball.html"><span class="bask"></span><p>籃球</p></a>
+        <a href="./baseball.html"><span class="base"></span><p>棒球</p></a>
+        <a href="./soccer.html"><span class="soc"></span><p>足球</p></a>
+        <a href="./football.html"><span class="ftb"></span><p>美式足球</p></a>
+        <a href="./lotto.html"><span class="lot"></span><p>彩球</p></a>
+        <a href="./stock.html"><span class="stk"></span><p>指數</p></a>
+        <a href="./golf.html"><span class="golf"></span><p>高爾夫</p></a>
+        <a href="./iceball.html"><span class="iceb"></span><p>冰球</p></a>
+        <a href="./tennis.html"><span class="ten"></span><p>網球</p></a>
+        <a href="./boxing.html"><span class="boxing"></span><p>拳擊</p></a>
+        <a href="./race.html"><span class="race"></span><p>賽馬賽狗</p></a>
+        <a href="./esp.html"><span class="esp"></span><p>電競</p></a>
+        <a href="./world.html"><span class="world"></span><p>世界盃</p></a>
+        <a href="./else.html"><span class="else"></span><p>其他籃球</p></a>
+    </nav>
+    <!--背景-->
+    <div class="bg"></div>
+</body>
+</html>
