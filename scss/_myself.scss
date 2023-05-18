@@ -1,0 +1,1495 @@
+//我的頁面
+.myself {
+    width: 1170px;
+    height: 850px;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    text-align: center;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #b9becf;
+        border-radius: 10px;
+    }
+
+    .mineMainBox {
+        padding: 140px 0px 10px;
+        float: left;
+
+        &.record {
+            padding-top: 175px;
+        }
+
+        &.app {
+            width: calc(100% - 10px);
+        }
+    }
+
+    //投注紀錄
+    .recordbar {
+        width: 1150px;
+        height: 35px;
+        background: #cacaca;
+        border-radius: 3px;
+        margin: 0px 0px 15px 10px;
+        border: 1px solid #828282;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+
+        &.open {
+            background: linear-gradient(to bottom, #fedab8 0%, #d8a77b 100%);
+        }
+
+        div {
+            float: left;
+            width: 25%;
+            text-align: center;
+            color: #4d515d;
+            font-size: 15px;
+            line-height: 37px;
+            cursor: pointer;
+
+            //線段
+            .line {
+                width: 1px;
+                height: 15px;
+                background: #000000;
+                margin: 10px 0px 0px 0px;
+                float: right;
+            }
+            
+            span {
+                color: #ff0000;
+
+                &.remind {
+                    position: absolute;
+                    width: 20px;
+                    height: 18px;
+                    background: #ff0000;
+                    left: 35px;
+                    top: 48%;
+                    transform: translateY(-50%);
+                    line-height: 20px;
+                    color: #fff;
+                    border-radius: 5px;
+                    padding-left: 2px;
+                }
+            }
+        }
+    }
+    .recordbox {
+        display: none;
+        width: 1150px;
+        height: auto;
+        margin: 0px 0px 15px 10px;
+        border: 1px solid #b7906e;
+        border-top: none;
+        background: #b59273;
+        padding-top: 20px;
+        border-radius: 0px 0px 3px 3px;
+        box-sizing: border-box;
+        overflow: hidden;
+        transform: translateY(-20px);
+
+        &.display {
+            display: block;
+        }
+    }
+
+    //幫助中心/消息中心
+    .helpbar {
+        width: 1150px;
+        height: 45px;
+        background: #cacaca;
+        border-radius: 3px;
+        position: relative;
+        z-index: 1;
+        margin: 0px 0px 15px 10px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 8px;
+            background: url('../images/arrow_b.png') no-repeat;
+            right: 20px;
+            top: 18px;
+            transform: rotate(90deg);
+        }
+
+        &.open {
+            background: linear-gradient(to bottom, #fedab8 0%, #d8a77b 100%);
+
+            &::before {
+                width: 6px;
+                height: 8px;
+                background: url('../images/arrow_b.png') no-repeat;
+                background-size: 100%;
+                transform: rotate(-90deg);
+            }
+        }
+
+        //編輯中
+        &.edit {
+            background: #ffffff;
+
+            input {
+                display: block;
+            }
+        }
+
+        //聯繫我們-我的反饋
+        &.feeback {
+            pointer-events: none;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        p {
+            float: left;
+            line-height: 45px;
+            padding-left: 15px;
+            font-size: 15px;
+            color: #4d515d;
+            font-weight: bold;
+        }
+
+        span {
+            float: right;
+            line-height: 45px;
+            padding-right: 50px;
+            color: #4d515d;
+            font-size: 15px;
+        }
+
+        input {
+            display: none;
+            float: left;
+            margin: 15px 0px 0px 20px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .helpbox {
+        display: none;
+        width: 1150px;
+        height: auto;
+        margin: -20px 0px 15px 10px;
+        background: #fff;
+        padding-top: 20px;
+        border-radius: 0px 0px 3px 3px;
+        color: #4d515d;
+        text-align: left;
+
+        &.display {
+            display: block;
+        }
+
+        //消息中心用
+        &.mes {
+            padding-bottom: 40px;
+        }
+
+        //編輯中
+        &.edit {
+            display: none;
+        }
+        
+        p {
+            display: block;
+            width: 97%;
+            font-size: 14px;
+            line-height: 24px;
+            color: #4d515d;
+            padding: 0px 15px 15px 15px;
+        }
+
+        .innerbox {
+            width: 92%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #747474;
+            margin: 0px auto 20px;
+            padding: 15px;
+
+            p {
+                padding: 5px 15px;
+                font-size: 16px;
+            }
+        }
+
+        //視窗右下灰色字
+        .remind {
+            color: #505050;
+            font-size: 14px;
+            margin: 0px 20px 20px 0px;
+            float: right;
+            position: relative;
+            font-weight: bold;
+
+            &::before {
+                content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                background: url('../images/infor.png') no-repeat;
+                top: -2px;
+                left: -18px;
+            }
+        }
+    }
+    .depositP,.transP,.withP,.betP,.sportP,.skillP {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+    }
+    .notice,.announcement,.activity,.competition {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+    }
+
+    //連絡我們
+    .callusBox,.problemBox,.feebackBox,.onlineCilentBox {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+    }
+    .onlineCilent {
+        width: 1150px;
+        height: 100%;
+        margin: -15px 0px 0px 10px;
+        background: #fff;
+        border-radius: 0px 0px 3px 3px;
+        overflow: hidden;
+
+        //聊天窗
+        .chatwindow {
+            width: 100%;
+            height: 75%;
+            background: #f1f1f1;
+            border-bottom: solid 1px #ababab;
+            overflow-x: hidden;
+            overflow-y: auto;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #b9becf;
+                border-radius: 10px;
+            }
+
+            //時間列
+            .time {
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                color: #4556b1;
+                float: left;
+            }
+            
+            //對話欄
+            .chat {
+                width: 100%;
+                height: auto;
+                margin: 10px 0px;
+                float: left;
+
+                span {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    margin: 0px 15px;
+
+                    &.gm {
+                        background: url('../images/avatar_s.png') no-repeat;
+                        background-size: 100%;
+                        float: left;
+                    }
+
+                    &.user {
+                        height: 41px;
+                        background: url('../images/avatar_big.png') no-repeat;
+                        background-size: 100%;
+                        float: right;
+                    }
+                }
+                
+                .gmchat {
+                    float: left;
+                    border: 1px solid #304880;
+                    box-shadow: 0 0 8px 1px #f1f1f1;
+                    border-radius: 0px 8px 8px 8px;
+                    font-size: 14px;
+                    padding: 12px;
+                    text-align: left;
+
+                    a {
+                        display: block;
+                        width: 60%;
+                        padding: 5px 10px 4px;
+                        &:hover,&:active,&.active {
+                            background: #4556b1;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .userchat {
+                    float: right;
+                    background: #4556b1;
+                    color: #fff;
+                    box-shadow: 0 0 8px 1px #f1f1f1;
+                    border-radius: 8px 0px 8px 8px;
+                    font-size: 14px;
+                    padding: 12px;
+                }
+            }
+        }
+        
+        //打字窗
+        .onlineroom {
+            width: 100%;
+            height: 25%;
+            text-align: right;
+            overflow-x: hidden;
+            overflow-y: auto;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #b9becf;
+                border-radius: 10px;
+            }
+
+            .chatStyle {
+                width: 100%;
+                height: 40px;
+                box-sizing: border-box;
+                padding: 10px 15px;
+
+                button {
+                    width: 16px;
+                    height: 16px;
+                    background: url('../images/windowface.png') no-repeat;
+                    background-size: 200%;
+                    float: left;
+                    margin-right: 10px;
+                    
+                    &.font {
+                        background-position-x: 100%;
+                    }
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 80px;
+                padding: 0px 15px;
+                border: none;
+                outline: none;
+                resize: none;
+                box-sizing: border-box;
+                font-size: 15px;
+
+                &::placeholder {
+                    color: #8f8f8f;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+
+            .send {
+                width: 90px;
+                height: 36px;
+                margin: 0px 20px 20px 0px;
+                background: linear-gradient(to bottom, #8f9cdc 0%, #3247b8 100%);
+                border-radius: 5px;
+                color: #fff;
+                font-size: 15px;
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to top, #8f9cdc 0%, #3247b8 100%);
+                }
+            }
+        }
+    }
+
+    //幫助中心
+    .ruleBox {
+        display: none;
+        width: 1150px;
+        height: 590px;
+        margin: 0px 0px 0px 10px;
+        border-radius: 0px 0px 3px 3px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-sizing: border-box;
+        position: relative;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: transparent;
+        }
+    
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: #b9becf;
+            border-radius: 10px;
+        }
+
+        &.display {
+            display: block;
+        }
+
+        ol {
+            padding: 35px 0px;
+            background: #505050;
+
+            &.innRule {
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+            }
+
+            li {
+                text-align: left;
+                padding: 10px 35px;
+                line-height: 24px;
+                font-size: 14px;
+                color: #cacaca;
+
+                &.smallTitle {
+                    font-size: 16px;
+                    font-weight: bold;
+
+                    span {
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 8px;
+                        background: #fff;
+                        margin: 0px 5px 2px;
+                    }
+                }
+    
+                .remind {
+                    font-size: 16px;
+                    color: #ff8c00;
+                    padding: 0px 5px;
+                }
+    
+                .conversionBoard {
+                    margin: 1% auto;
+                }
+
+                .tableBox {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 3px;
+                    border: solid 1px #ababab;
+                    box-sizing: border-box;
+                    overflow-y: hidden;
+                    overflow-x: auto;
+
+                    &::-webkit-scrollbar {
+                        height: 8px;
+                        background-color: transparent;
+                    }
+                
+                    &::-webkit-scrollbar-track {
+                        background: #f1f1f1;
+                        border-radius: 10px;
+                    }
+                
+                    &::-webkit-scrollbar-thumb {
+                        background: #b9becf;
+                        border-radius: 10px;
+                    }
+
+                    table {
+                        width: 1200px;
+                        height: auto;
+                        user-select: none;
+                        
+                        tr {
+                            text-align: center;
+                            border-bottom: solid 1px #ababab;
+
+                            th {
+
+                                font-size: 14px;
+                                background: #3d3d3d;
+                                padding: 3px 0px;
+                                border-right: solid 1px #828282;
+
+                                &:last-child {
+                                    border: none;
+                                }
+
+                                &.title {
+                                    background: #ababab;
+                                    color: #505050;
+                                    padding: 6px 0px;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                }
+                            }
+
+                            td {
+                                padding: 5px 0px;
+                                vertical-align: middle;
+                                border-right: solid 1px #828282;
+
+                                &:last-child {
+                                    border: none;
+                                }
+
+                                span {
+                                    color: #ff8c00;
+                                    font-size: 13px;
+                                    padding: 0px 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ruleTitle {
+        display: none;
+        width: 1150px;
+        height: auto;
+        background: #ababab;
+        margin: 125px 0px 0px 10px;
+        border-radius: 3px 3px 0px 0px;
+
+        &.display {
+            display: block;
+        }
+
+        p {
+            padding: 10px 16px;
+            text-align: left;
+            color: #505050;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+    //關於我們
+    .aboutBox,.linkBox {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+    }
+    .linkBox {
+        
+        div {
+            width: 1080px;
+            height: auto;
+            margin-left: 45px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a {
+                width: 200px;
+                height: 120px;
+                border-radius: 5px;
+                overflow: hidden;
+                text-align: left;
+                margin: 0px 0px 20px 0px;
+
+                &:nth-of-type(5n) {
+                    margin-right: 0px;
+                }
+                
+                &:hover,&:active,&.active {
+                    text-decoration: underline;
+                }
+
+                &.nmar {
+                    margin-right: 0px;
+                }
+                
+                span {
+                    display: block;
+                    width: 200px;
+                    height: 88px;
+                    background: url('../images/about_link.png') no-repeat;
+                    &.mlb {
+                        background-position-x: 0px;
+                    }
+                    &.npb {
+                        background-position-x: -200px;
+                    }
+                    &.cpbl {
+                        background-position-x: -400px;
+                    }
+                    &.nba {
+                        background-position-x: -600px;
+                    }
+                    &.donbest {
+                        background-position-x: -800px;
+                    }
+                    &.kbl {
+                        background-position-x: -1000px;
+                    }
+                    &.ncaa {
+                        background-position-x: -1200px;
+                    }
+                    &.nfl {
+                        background-position-x: -1400px;
+                    }
+                }
+                
+                p {
+                    height: 32px;
+                    background: #fff;
+                    line-height: 32px;
+                    padding-left: 15px;
+                    font-size: 15px;
+                    color: #4d515d;
+                }
+            }
+        }
+    }
+}
+
+//懸浮列
+.minetopfix {
+    width: 1150px;
+    height: 125px;
+    background: #bcbcbc;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+    text-align: center;
+    z-index: 6;
+    left: 280px;
+    top: 0px;
+
+    //懸浮列假bar
+    .fixbar {
+        position: absolute;
+        width: 100%;
+        height: 45px;
+        border-radius: 5px;
+        background: #747474;
+        bottom: 0px;
+        z-index: 2;
+        color: #fff;
+
+        .editbut,.cancelbut,.delbut {
+            display: none;
+            float: right;
+            padding: 3px 5px;
+            color: #fff;
+            background: #505050;
+            border: solid 1px #fff;
+            border-radius: 5px;
+            font-size: 15px;
+            margin: 8px 10px 0px 0px;
+
+            &.display {
+                display: block;
+            }
+
+            &:hover,&:active,&.active {
+                background: #fff;
+                color: #505050;
+            }
+        }
+        .rowbutMes {
+            display: none;
+            float: right;
+            position: relative;
+            background: #ababab;
+            margin: 7px 20px 0px 0px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+
+            &.display {
+                display: block;
+            }
+
+            &.lside {
+
+                span {
+                    &:last-child {
+                        color: #fff;
+                    }
+                }
+
+                .innbut {
+                    animation: rowbut 0.3s ease-out 0s;
+                }
+            }
+
+            &.rside {
+                span {
+                    &:nth-of-type(1) {
+                        color: #fff;
+                    }
+                }
+                
+                .innbut {
+                    left: 53%;
+                    animation: rowbut2 0.3s ease-out 0s;
+                }
+            }
+
+            span {
+                margin-right: 20px;
+                font-size: 14px;
+                position: relative;
+                color: #505050;
+
+                &:last-child {
+                    margin: 0px;
+                }
+            }
+
+            .innbut {
+                width: 44%;
+                height: 80%;
+                background: #fff;
+                position: absolute;
+                left: 3%;
+                top: 10%;
+                border-radius: 20px;
+            }
+        }
+
+        //線段
+        .line {
+            width: 1px;
+            height: 25px;
+            background: #bcbcbc;
+            float: left;
+            margin: 10px 10px 0px 10px;
+        }
+
+        //日期搜尋列
+        .timeSearch {
+            width: 380px;
+            height: 45px;
+            margin-left: 20px;
+            float: left;
+
+            //交易紀錄用
+            &.deal {
+                float: right;
+                width: 335px;
+
+                .timesearchbut {
+                    margin-right: 0px;
+                }
+            }
+
+            button {
+
+                &.date {
+                    width: 19px;
+                    height: 19px;
+                    background: url('../images/date_icon.png') no-repeat;
+                    float: left;
+                    margin: 13px 0px 0px 0px;
+                    border: none;
+                }
+
+                &.timesearchbut {
+                    margin: 8px 24px 0px 0px;
+                    border: solid 1px #bcbcbc;
+                    background: transparent;
+                    padding: 5px 8px;
+                    border-radius: 3px;
+                    color: #fff;
+
+                    &:hover,&:active,&.active {
+                        background: #fff;
+                        color: #000;
+                    }
+                }
+            }
+
+            span {
+                float: left;
+                line-height: 45px;
+                font-weight: bold;
+                padding: 0px 10px;
+            }
+
+            select {
+                float: left;
+                margin: 11px 0px 0px 10px;
+                border: 1px solid #4556b1;
+                outline: none;
+                border-radius: 5px;
+                width: 95px;
+                height: 24px;
+                font-family: "my_font";
+            }
+        }
+        .smallTimeBtn {
+            margin: 8px 12px 0px 0px;
+            border: solid 1px #bcbcbc;
+            background: transparent;
+            padding: 5px 8px;
+            border-radius: 3px;
+            color: #fff;
+            float: right;
+
+            &:hover,&:active,&.active {
+                background: #fff;
+                color: #000;
+            }
+        }
+
+        //修改密碼按鈕
+        .changePassword {
+            float: right;
+            padding: 3px 5px;
+            color: #fff;
+            background: #505050;
+            border: solid 1px #fff;
+            border-radius: 5px;
+            font-size: 15px;
+            margin: 8px 10px 0px 0px;
+
+            /*for IE 9*/
+            @media all and (min-width:0\0) and (min-resolution:.001dpcm){
+                padding: 6px 5px;
+            }
+
+            /*for IE*/
+            @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none){
+                padding: 6px 5px;
+            }
+
+            &:hover,&:active,&.active {
+                background: #fff;
+                border-color: #505050;
+                color: #505050;
+            }
+
+            &.none {
+                display: none;
+            }
+        }
+
+        ul {
+            li {
+                float: left;
+                font-size: 15px;
+                height: 42px;
+                line-height: 47px;
+                border-bottom: solid 3px transparent;
+                color: #2a2a2a;
+                cursor: pointer;
+
+                &:first-child {
+                    margin-left: 15px;
+                }
+
+                &:hover,&:active,&.active {
+                    color: #fff;
+                    border-color: #59a936;
+                }
+            }
+        }
+
+        p {
+            line-height: 45px;
+            font-size: 15px;
+            float: left;
+            padding-right: 10px;
+
+            &:first-child {
+                padding-left: 20px;
+            }
+
+            span {
+                color: #ff8c00;
+            }
+        }
+    }
+    //懸浮下標題字
+    .floatName {
+        width: 100%;
+        height: 35px;
+        background: #404b87;
+        border-radius: 0px 0px 3px 3px;
+
+        //投注紀錄用
+        &.betting {
+            
+            div {
+                float: left;
+                width: 25%;
+                text-align: center;
+                color: #fff;
+                font-size: 15px;
+                padding-top: 12px;
+
+                .line {
+                    width: 1px;
+                    height: 10px;
+                    background: #bcbcbc;
+                    margin: -5px 0px 0px 0px;
+                    float: right;
+                }
+            }
+        }
+
+        //交易紀錄用
+        &.deal {
+
+            div {
+                float: left;
+                text-align: center;
+                color: #fff;
+                font-size: 15px;
+                padding-top: 12px;
+
+                &:nth-child(1) {
+                    width: 18%;
+                }
+
+                &:nth-child(2) {
+                    width: 12%;
+                }
+
+                &:nth-child(3) {
+                    width: 16%;
+                }
+
+                &:nth-child(4) {
+                    width: 20%;
+                }
+
+                &:nth-child(5) {
+                    width: 19%;
+
+                    .line {
+                        
+                        &.record {
+                            margin-right: -1px;
+                        }
+                    }
+                }
+
+                &:nth-child(6) {
+                    width: 15%;
+                }
+
+                .line {
+                    width: 1px;
+                    height: 10px;
+                    background: #bcbcbc;
+                    margin: -5px 0px 0px 0px;
+                    float: right;
+
+                    &.record {
+                        margin-right: -2px;
+                    }
+                }
+            }
+        }
+    }
+    //左段字
+    .leftword {
+        font-weight: bold;
+        color: #4d515d;
+        float: left;
+        margin: 30px 0px 0px 20px;
+    }
+
+    //中間字
+    .midword {
+        width: 500px;
+        height: 100%;
+        margin: 0px auto;
+        text-align: center;
+
+        p {
+            display: inline-block;
+            font-weight: bold;
+            margin: 20px 10px 0px;
+            font-size: 17px;
+            span {
+                display: block;
+                padding-top: 13px;
+                font-size: 17px;
+                color: #2a2a36;
+            }
+        }
+
+        //線段
+        .topline {
+            display: inline-block;
+            width: 1px;
+            height: 45px;
+            background: #bcbcbc;
+            margin: 0px 10px 0px 10px;
+        }
+    }
+}
+
+//隱藏版
+.mineHideBoard {
+    width: 1155px;
+    height: 125px;
+    background: #2a2a2a;
+    position: absolute;
+    z-index: 5;
+    left: 270px;
+    top: 0px;
+
+    //投注記錄用
+    &.recordboard {
+        height: 160px;
+    }
+
+    //體育規則用
+    &.sportBoard {
+        height: 250px;
+    }
+}
+
+//彈窗
+
+//修改密碼
+.changePasswordWindow {
+    display: none;
+    position: absolute;
+    width: 350px;
+    height: 360px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+
+    &.display {
+        display: block;
+    }
+
+    //上字
+    .topbar {
+        width: 100%;
+        height: 50px;
+        background: #ababab;
+        border-radius: 3px 3px 0px 0px;
+        position: relative;
+        border: solid 1px #a2a2a2;
+
+        span {
+            font-size: 14px;
+            color: #3d3d3d;
+            line-height: 50px;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+
+        //上XX
+        button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: #cacaca;
+            border: solid 3px #5e5e5e;
+            right: -50px;
+            top: -50px;
+            box-shadow: 0px 0px 0px 5px #cacaca;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                right: 16px;
+                top: 8px;
+                background: #5e5e5e;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                left: 16px;
+                top: 8px;
+                background: #5e5e5e;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    //主內容
+    .box {
+        width: 100%;
+        height: 160px;
+        background: #747474;
+        border-radius: 0px 0px 3px 3px;
+        padding: 20px 0px;
+        border: solid 1px #a2a2a2;
+        border-top: none;
+
+        div {
+            width: 95%;
+            height: 50px;
+            float: left;
+            position: relative;
+
+            &:last-child {
+                width: 500px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            input {
+                width: 205px;
+                height: 28px;
+                font-size: 17px;
+                padding: 3px 0px 3px 10px;
+                float: right;
+                border: 1px solid #ababab;
+                border-radius: 4px;
+            }
+            
+            span {
+                line-height: 40px;
+                color: #fff;
+                padding-left: 15px;
+            }
+
+            button {
+                width: 152px;
+                height: 36px;
+                margin-right: 10px;
+                background: linear-gradient(to bottom, #ffffff 0%, #d5d9ef 100%);
+                border: 1px solid #4556b1;
+                color: #4d515d;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #4d515d;
+
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to top, #ffffff 0%, #d5d9ef 100%);
+                }
+
+                &:last-child {
+                    margin: 0px;
+                    background: linear-gradient(to bottom, #8f9cdc 0%, #3247b8 100%);
+                    color: #fff;
+                    &:hover,&:active,&.active {
+                        background: linear-gradient(to bottom, #3247b8 0%, #8e9bdc 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//無註冊信用卡提醒
+.cardremind {
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    z-index: 20;
+
+    &.display {
+        display: block;
+    }
+
+    //上字
+    .topbar {
+        width: 100%;
+        height: 50px;
+        background: #ababab;
+        border-radius: 3px 3px 0px 0px;
+        position: relative;
+        border: solid 1px #a2a2a2;
+
+        span {
+            font-size: 14px;
+            color: #3d3d3d;
+            line-height: 50px;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+
+        //上XX
+        button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: #cacaca;
+            border: solid 3px #5e5e5e;
+            right: -50px;
+            top: -50px;
+            box-shadow: 0px 0px 0px 5px #cacaca;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                right: 16px;
+                top: 8px;
+                background: #5e5e5e;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                left: 16px;
+                top: 8px;
+                background: #5e5e5e;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    //主內容
+    .box {
+        width: 100%;
+        height: 105px;
+        background: #747474;
+        border-radius: 0px 0px 3px 3px;
+        padding: 20px 0px;
+        text-align: center;
+        border: solid 1px #a2a2a2;
+        border-top: none;
+
+        p {
+            font-size: 14px;
+            padding-bottom: 20px;
+            color: #fff;
+
+            &.remind {
+                color: #ff8c00;
+            }
+        }
+
+        button {
+            width: 160px;
+            height: 36px;
+            background: linear-gradient(to bottom, #ffffff 0%, #d5d9ef 100%);
+            border: 1px solid #4556b1;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #4d515d;
+            &:hover,&:active,&.active {
+                background: linear-gradient(to top, #ffffff 0%, #d5d9ef 100%);
+            }
+            &:last-child {
+                margin: 0px;
+                background: linear-gradient(to bottom, #8f9cdc 0%, #3247b8 100%);
+                color: #fff;
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to bottom, #3247b8 0%, #8e9bdc 100%);
+                }
+            }
+        }
+    }
+}
+
+//添加銀行卡
+.cardAdd  {
+    display: none;
+    position: absolute;
+    width: 800px;
+    height: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110px;
+    z-index: 20;
+
+    //顯示
+    &.display {
+        display: block;
+    }
+
+    //上字
+    .topbar {
+        width: 100%;
+        height: 40px;
+        background: #ababab;
+        border-radius: 3px 3px 0px 0px;
+        position: relative;
+        text-align: center;
+        border: solid 1px #a2a2a2;
+
+        span {
+            font-size: 14px;
+            color: #3d3d3d;
+            line-height: 42px;
+            font-weight: bold;
+        }
+
+        //上XX
+        button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: #cacaca;
+            border: solid 3px #5e5e5e;
+            right: -50px;
+            top: -50px;
+            box-shadow: 0px 0px 0px 5px #cacaca;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                right: 16px;
+                top: 8px;
+                background: #5e5e5e;
+                transform: rotate(45deg);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                left: 16px;
+                top: 8px;
+                background: #5e5e5e;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    //主內容
+    .box {
+        width: 100%;
+        height: 315px;
+        background: #747474;
+        border-radius: 0px 0px 3px 3px;
+        padding: 20px 0px;
+        border: solid 1px #a2a2a2;
+        border-top: none;
+
+        .inputBox {
+            width: 50%;
+            height: 50px;
+            float: left;
+            position: relative;
+            box-sizing: border-box;
+
+            &:nth-of-type(2n) {
+                padding-right: 30px;
+            }
+
+            input,select {
+                background: #505050;
+                color: #ababab;
+                width: 245px;
+                height: 36px;
+                box-sizing: border-box;
+                padding: 3px 0px 3px 10px;
+                float: right;
+                outline: none;
+                border: none;
+                border-radius: 3px;
+                font-size: 15px;
+                margin: 7px 0px 0px 0px;
+
+                &.short {
+                    width: 105px;
+                    margin-right: 30px;
+
+                    &:nth-of-type(1) {
+                        margin-right: 0px;
+                    }
+                }
+            }
+
+            span {
+                line-height: 50px;
+                color: #3d3d3d;
+                padding-left: 30px;
+                font-weight: bold;
+            }
+        }
+
+        button {
+            width: 220px;
+            height: 36px;
+            background: linear-gradient(to bottom, #8f9cdc 0%, #3247b8 100%);
+            border: 1px solid #4556b1;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0%;
+            &:hover,&:active,&.active {
+                background: linear-gradient(to bottom, #3247b8 0%, #8e9bdc 100%);
+            }
+        }
+    }
+}
