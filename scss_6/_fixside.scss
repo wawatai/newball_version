@@ -1,0 +1,360 @@
+.fixside {
+    width: 60px;
+    height: auto;
+    position: fixed;
+    right: 5px;
+    top: 125px;
+    z-index: 6;
+
+    &.rwd {
+        width: 30px;
+
+        .search {
+            height: 30px;
+
+            &.open {
+                height: 60px;
+                left: -270px;
+    
+                .searchbut {
+                    width: 60px;
+                    height: 60px;
+    
+                    span {
+                        display: inline;
+                    }
+    
+                    .fixsideimg {
+                        width: 30px;
+                        height: 30px;
+                        margin: 7px 15px 3px 14px;
+                    }
+                }
+            }
+
+            .searchbut {
+                width: 30px;
+                height: 30px;
+
+                span {
+                    display: none;
+                }
+
+                .fixsideimg {
+                    width: 24px;
+                    height: 24px;
+                    margin: 3px 4px;
+                }
+            }
+        }
+
+        .fun {
+            margin: 114px 0px 0px 30px;
+            border-radius: 0px 0px 0px 3px;
+
+            .hamBtn {
+                display: block;
+            }
+
+            &.open {
+                margin-left: -30px;
+            }
+        }
+    }
+
+    //搜尋列
+    .search {
+        width: 200px;
+        height: 55px;
+        background: #1b1b1b;
+        position: absolute;
+        top: 0px;
+        left: 65px;
+        transition: 0.5s left;
+        z-index: 2;
+        border: solid 1px #a88335;
+        border-bottom: none;
+        
+        &.open {
+            left: -135px;
+
+            .searchbut {
+                
+                &:hover,&:active,&.active {
+                    background: #ffbd38;
+                    border-color: transparent;
+
+                    .fixsideimg {
+                        background-position-y: 100%;
+                    }
+                    
+                    span {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+
+        .searchbut {
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            border-radius: 8px;
+            position: absolute;
+            top: 0px;
+            left: -60px;
+            text-align: center;
+            background: #1b1b1b;
+            border: solid 1px #a88335;
+
+            &:hover,&:active,&.active {
+                background: #ffbd38;
+                border-color: transparent;
+
+                span {
+                    color: #000000;
+                }
+
+                .fixsideimg {
+                    background-position-y: 100%;
+                }
+            }
+
+            span {
+                font-size: 13px;
+                color: #ffc13c;
+            }
+
+            .fixsideimg {
+                width: 30px;
+                height: 29px;
+                background: url('../images/forCss_6/fixside_ic5.png') no-repeat;
+                background-size: 500%;
+                float: left;
+                margin: 5px 5px 1px 11px;
+                pointer-events: none;
+            }
+
+        }
+
+        input {
+            width: 100px;
+            height: 26px;
+            font-size: 16px;
+            padding-left: 10px;
+            border: solid 1px #a88335;
+            border-radius: 3px;
+            float: left;
+            margin: 15px 0px 0px 10px;
+            background: #101010;
+            color: #ffffff;
+
+            &::placeholder {
+                font-weight: bold;
+                color: #ffffff;
+                font-size: 14px;
+            }
+        }
+
+        button {
+            width: 50px;
+            height: 28px;
+            background: #ffbd38;
+            color: #000000;
+            float: left;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 16px 0px 16px 15px;
+
+            &:hover,&:active,&.active {
+                background: #ff4719;
+                color: #ffffff;
+            }
+        }
+
+        //隊伍內容
+        .searchbox {
+            width: 200px;
+            height: auto;
+            float: left;
+            margin: -5px 0px 0px -1px;
+            overflow: hidden;
+            border: solid 1px #a88335;
+
+            li {
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                padding-left: 20px;
+                position: relative;
+                font-size: 14px;
+                background: #252525;
+                cursor: pointer;
+                box-sizing: border-box;
+                color: #ffc13c;
+
+                &::before {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    border-style: solid;
+                    border-color: #ffd973 transparent;
+                    border-width: 10px 8px 0px 8px;
+                    right: 20px;
+                    top: 21px;
+                    transform: rotate(-90deg);
+                    transition: 0.3s all;
+                }
+
+                &:hover,&:active,&.active {
+                    color: #ff4719;
+
+                    &::before {
+                        transform: rotate(0deg);
+                        border-color: #ff4719 transparent;
+                    }
+                }
+            }
+
+            div {
+                background: #0c0c0c;
+                width: 100%;
+                height: 0px;
+                overflow: hidden;
+
+                &.open {
+                    height: auto;
+                    border: solid 1px #a88335;
+                    border-width: 1px 0px;
+                }
+
+                a {
+                    display: block;
+                    width: 90%;
+                    height: auto;
+                    background: #292929;
+                    color: #d78f3a;
+                    font-size: 14px;
+                    margin: 0px auto;
+                    box-sizing: border-box;
+                    padding: 10px 20px;
+
+                    &:nth-of-type(1) {
+                        border-radius: 3px 3px 0px 0px;
+                        margin-top: 10px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0px 0px 3px 3px;
+                        margin-bottom: 10px;
+                    }
+
+                    &:hover,&:active,&.active {
+                        background: #3c3c3c;
+                        color: #ffc13c;
+
+                        .num {
+                            color: #ffc13c;
+                        }
+                    }
+
+                    .team {
+                        display: none;
+                        width: 30px;
+                        height: 30px;
+                        background: url('../images/forCss_6/fixside_team.png');
+                        float: left;
+                        margin: 10px 5px 0px 15px;
+                        background-size: 300%;
+                        
+                        &.french {
+                            background-position-x: -30px;
+                        }
+                        
+                        &.england {
+                            background-position-x: -60px;
+                        }
+                    }
+
+                    .num {
+                        color: #d78f3a;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    //功能列
+    .fun {
+        width: 55px;
+        height: auto;
+        position: relative;
+        transition: all 0.3s;
+        margin: 65px 0px 0px 5px;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 55px;
+            background: #1b1b1b;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            border: solid 1px #a88335;
+
+            &:hover,&:active,&.active {
+                background: #ffbd38;
+                border-color: transparent;
+
+                span {
+                    color: #000000;
+                }
+
+                .fixsideimg {
+                    background-position-y: 100%;
+                }
+            }
+
+            span {
+                font-size: 12px;
+                color: #ffc13c;
+            }
+
+            .fixsideimg {
+                width: 30px;
+                height: 29px;
+                background: url('../images/forCss_6/fixside_ic5.png') no-repeat;
+                background-size: 500%;
+                float: left;
+                margin: 5px 5px 1px 13px;
+                &.img2 {
+                    background-position-x: -30px;
+                }
+                &.img3 {
+                    background-position-x: -60px;
+                }
+                &.img4 {
+                    background-position-x: -90px;
+                }
+                &.img5 {
+                    background-position-x: 50%;
+                }
+                &.img6 {
+                    background-position-x: 75%;
+                }
+                &.img7 {
+                    background-position-x: 100%;
+                }
+                &.img8 {
+                    background-position-x: -210px;
+                }
+                &.img9 {
+                    background-position-x: 25%;
+                }
+            }
+        }
+    }
+}

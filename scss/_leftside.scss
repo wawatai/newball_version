@@ -1,0 +1,339 @@
+.left {
+    width: 270px;
+    height: 850px;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    z-index: 6;
+    scrollbar-width: thin;
+    border: solid 1px #6a6a6a;
+    border-width: 1px 0px;
+    background: #404040;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #121212;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #606360;
+        border-radius: 10px;
+    }
+    
+    //我的頁面
+    &.mine {
+        border: none;
+
+        //上視窗
+        .minewindow {
+            width: 100%;
+            height: 270px;
+
+            //視窗上段
+            .avater {
+                width: 100%;
+                height: 160px;
+                padding-top: 25px;
+                text-align: center;
+
+                //大頭貼
+                .sticker {
+                    width: 79px;
+                    height: 81px;
+                    margin: 0px auto 20px;
+                    background: url('../images/forCss/avatar_big.png');
+                }
+
+                //字樣
+                p {
+                    color: #ffffff;
+
+                    &.joinday {
+                        color: #ffffff;
+                        font-size: 15px;
+                        padding-top: 5px;
+                    }
+                    
+                    span {
+                        display: inline-block;
+                        width: 36px;
+                        height: 17px;
+                        background: linear-gradient(to right, #a1ea22 0%, #34da14 100%);
+                        background-color: #34da14;
+                        position: relative;
+                        text-align: right;
+                        color: #161616;
+                        font-weight: bold;
+                        border-radius: 5px;
+                        margin: -3px 0px 0px 5px;
+                        padding: 3px 5px 0px 0px;
+                        font-size: 15px;
+
+                        &::before {
+                            display: none;
+                            content: "";
+                            position: absolute;
+                            width: 23px;
+                            height: 9px;
+                            background: url('../images/forCss/vip.png') no-repeat;
+                            top: 5px;
+                            left: 5px;
+                        }
+                    }
+                }
+            }
+
+            //三按鈕
+            .threebut {
+                width: 100%;
+                height: 80px;
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    width: 60px;
+                    height: 58px;
+                    margin: 0px 3px;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    text-align: center;
+                    background: transparent;
+                    color: #c0c0c0;
+                    padding-top: 10px;
+                    border: solid 1px transparent;
+
+                    &:hover,&:active,&.active {
+                        background: linear-gradient(to top,#363636 0%,#1d1d1d 100%);
+                        color: #53c120;
+                        border-color: #2d7e12;
+                        span {
+                            background-position-y: -30px;
+                        }
+                    }
+
+                    //按鈕圖
+                    i {
+                        display: block;
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        //下半選單
+        ul {
+            li {
+                border-bottom: solid 1px #6f6f6f;
+
+                &:nth-of-type(1),&:nth-of-type(5),&:nth-of-type(9) {
+                    border-color: #e6e9f3;
+                }
+
+                &:hover,&:active,&.active {
+
+                    a {
+                        border-color: #30800e;
+                    }
+
+                    .live {
+                        background: linear-gradient(to right,#a1ea22 0%,#34da14 100%);
+                        color: #2b4517;
+                    }
+                }
+
+                a {
+                    border: solid 1px transparent;
+                    width: 100%;
+                    box-sizing: border-box;
+                    
+                    .live {
+                        display: inline-block;
+                        padding: 1px 0px 0px;
+                        width: 28px;
+                        text-align: center;
+                        font-size: 14px;
+                        position: initial;
+                        margin-left: 10px;
+                        transform: translateY(0px);
+                        background: #1d1d1d;
+                        color: #60dc1c;
+                    }
+
+                    i {
+                        font-size: 22px;
+                        top: 10px;
+
+                        &.fa-clipboard,&.fa-mobile-alt {
+                            left: 21px;
+                        }
+
+                        &.fa-money-bill-wave,&.fa-qusetion-circle,
+                        &.fa-users {
+                            left: 16px;
+                            top: 12px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //選項
+    ul {
+
+        li {
+
+            &:hover {
+
+                a {
+                    background: linear-gradient(to bottom,#1d1d1d 16%,#303030 100%);
+                    color: #57ed22;
+
+                    svg {
+                        fill: #3abc0d;
+                    }
+
+                    i {
+                        color: #3abc0d;
+                    }
+                }
+            }
+
+            &:active,&.active {
+
+                .smallList {
+                    display: block;
+                }
+
+                a {
+                    background: linear-gradient(to bottom,#1d1d1d 16%,#303030 100%);
+                    color: #57ed22;
+
+                    svg {
+                        fill: #3abc0d;
+                    }
+
+                    i {
+                        color: #3abc0d;
+                    }
+                }
+            }
+
+            &.onLive {
+
+                .live {
+                    display: block;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 20px;
+            }
+
+            a {
+                display: block;
+                color: #e0e0e0 ;
+                width: calc(100% - 50px);
+                background: linear-gradient(to top,#323232 0%,#434343 100%);
+                height: 45px;
+                line-height: 45px;
+                font-size: 14px;
+                padding-left: 50px;
+                position: relative;
+                border-bottom: solid 1px #6a6a6a;
+
+                //字前小圖
+                i {
+                    position: absolute;
+                    top: 12px;
+                    left: 18px;
+                    font-size: 18px;
+                    color: #ababab;
+
+                    &::before {
+                        margin: 0px auto;
+                    }
+
+                    &.fa-hotjar,&.fa-hockey-puck,
+                    &.fa-baseball-ball,&.fa-basketball-ball,
+                    &.fa-futbol,&.fa-volleyball-ball,&.fa-calendar-alt {
+                        left: 19px;
+                    }
+
+                    &.fa-piggy-bank {
+                        left: 16px;
+                    }
+
+                    &.fa-signal {
+                        font-size: 17px;
+                    }
+                }
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    left: 18px;
+                    top: 12px;
+                    fill: #ababab;
+                }
+
+                //字後小框
+                .total {
+                    position: absolute;
+                    right: 10px;
+                    top: 0px;
+                    font-size: 13px;
+                    color: #e0e0e0;
+                }
+
+                //LIVE小框
+                .live {
+                    display: none;
+                    position: absolute;
+                    line-height: 18px;
+                    height: auto;
+                    width: auto;
+                    top: 49%;
+                    transform: translateY(-50%);
+                    right: 42px;
+                    font-size: 12px;
+                    background: linear-gradient(to right,#a1ea22 0%,#34da14 100%);
+                    color: #2b4517;
+                    padding: 0px 4px;
+                    border-radius: 3px;
+                }
+            }
+
+            .smallList {
+                display: none;
+                width: calc(100% - 30px);
+                height: 30px;
+                background: #2d2d2d;
+                border-bottom: solid 1px #4c4c4c;
+                line-height: 30px;
+                padding-left: 30px;
+                font-size: 12px;
+                color: #46dd16;
+                cursor: pointer;
+
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to right,#45dc16 0%,#8fe720 100%);
+                    color: #1d1d1d;
+                }
+
+                span {
+                    float: right;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

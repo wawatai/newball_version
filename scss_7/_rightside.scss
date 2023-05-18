@@ -1,0 +1,568 @@
+//右列
+.right {
+    width: 300px;
+    height: 850px;
+    margin: 15px 0px 0px 10px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    z-index: 6;
+    scrollbar-width: thin;
+    margin-top: 15px;
+    background: #212832;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #3c5260;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom,#feb300 0%,#c98000 100%);
+        border-radius: 10px;
+    }
+    
+    //上段字樣
+    .statusWindow {
+        width: 100%;
+        height: 120px;
+        background: #212832;
+        position: relative;
+        margin-bottom: 10px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            bottom: -10px;
+            left: 0px;
+            background: #19202a;
+        }
+        
+        p {
+            background: #3d5261;
+            color: #feb300;
+            padding: 7px 15px;
+            font-size: 12px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 94%;
+                height: 1px;
+                background: #feb300;
+                bottom: -1px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 12px;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                background: #feb300;
+            }
+        }
+
+        ul {
+            position: absolute;
+            width: 95%;
+            height: auto;
+            left: 50%;
+            bottom: 5%;
+            transform: translateX(-50%);
+
+            li {
+                padding: 5px 15px;
+                font-size: 14px;
+                position: relative;
+                color: #feb300;
+                margin-bottom: 3px;
+                border-bottom: solid 1px #5c6d79;
+
+                &:last-child {
+                    margin: 0px;
+                }
+
+                span {
+                    float: right;
+                    font-size: 12px;
+                    color: #00c613;
+
+                    &.onWait {
+                        color: #99aab6;
+                    }
+
+                    &.fail {
+                        color: #f42a2a;
+                    }
+                }
+
+                button {
+                    float: right;
+                    width: 15px;
+                    height: 15px;
+                    background: transparent;
+                    border: solid 1px #feb300;
+                    border-radius: 15px;
+                    margin-left: 15px;
+                    position: relative;
+                    overflow: hidden;
+                    top: -2px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 7px;
+                        background: #feb300;
+                        transform: rotate(45deg);
+                        top: 3px;
+                        right: 6px;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 7px;
+                        background: #feb300;
+                        transform: rotate(-45deg);
+                        top: 3px;
+                        left: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    //直播小框
+    .liveWindow {
+        width: 100%;
+        height: auto;
+        background: #212832;
+        text-align: center;
+        position: relative;
+
+        .title {
+            background: #3d5261;
+            color: #feb300;
+            padding: 7px 15px;
+            font-size: 12px;
+            text-align: left;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 94%;
+                height: 1px;
+                background: #feb300;
+                bottom: -1px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 12px;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                background: #feb300;
+            }
+        }
+
+        .teamWindow {
+            width: 100%;
+            height: auto;
+            position: relative;
+            background: #feb300;
+
+            .leftTeam,.rightTeam {
+                display: inline-block;
+                width: 35%;
+                height: auto;
+                position: relative;
+    
+                &.leftTeam {
+    
+                    p {
+                        text-align: right;
+                        padding: 5px 0px 5px 5px;
+                    }
+                }
+    
+                &.rightTeam {
+    
+                    p {
+                        text-align: left;
+                        padding: 5px 5px 5px 0px;
+                    }
+                }
+    
+                p {
+                    font-size: 12px;
+                    color: #1f385c;
+                    line-height: 20px;
+                }
+            }
+            
+            .score {
+                display: inline-block;
+                width: 25%;
+                height: auto;
+    
+                p {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color: #1f385c;
+    
+                    span {
+                        color: #1f385c;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .liveShow {
+            width: 95%;
+            height: 195px;
+            background: url('../images/forCss_7/live.png') no-repeat;
+            background-size: cover;
+            margin: 0px auto;
+        }
+    }
+
+    //下大框
+    .room {
+        width: 95%;
+        height: auto;
+        margin: 10px auto;
+
+        //切換按鈕
+        .twobut {
+            width: 100%;
+            height: 27px;
+
+            .line {
+                display: none;
+                float: left;
+                width: 1%;
+                height: 100%;
+                background: #ababab;
+            }
+
+            button {
+                width: 49.5%;
+                height: 100%;
+                background: #5c6d79;
+                color: #ffc438;
+                font-size: 14px;
+                float: left;
+                border-radius: 3px 3px 0px 0px;
+
+                &:hover,&:active,&.active {
+                    background: #3d5261;
+                    color: #feb300;
+                }
+
+                &:last-child {
+                    float: right;
+                }
+            }
+        }
+        .onebut {
+            width: 100%;
+            height: 27px;
+
+            button {
+                width: 100%;
+                height: 100%;
+                background: #3d5261;
+                color: #feb300;
+                font-size: 12px;
+                text-align: left;
+                padding-left: 15px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 96%;
+                    height: 1px;
+                    background: #feb300;
+                    bottom: -1px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 12px;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                    background: #feb300;
+                }
+            }
+        }
+
+        //直播賽事
+        .livelist {
+            display: none;
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+        
+            &::-webkit-scrollbar-track {
+                background: #3c5260;
+                border-radius: 10px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: linear-gradient(to bottom,#feb300 0%,#c98000 100%);
+                border-radius: 10px;
+            }
+
+            &.open {
+                display: block;
+            }
+
+            ul {
+
+                //選單
+                li {
+                    width: 96%;
+                    height: 30px;
+                    margin: 0px auto;
+                    line-height: 32px;
+                    box-sizing: border-box;
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+                    background: #3d5261;
+                    border-bottom: solid 1px #2e3f57;
+
+                    &:nth-of-type(1) {
+                        margin-top: 5px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 45px;
+                    }
+
+                    &:hover,&:active {
+
+                        &::before {
+                            transform: rotate(90deg);
+                            border-color: transparent #feb300;
+                        }
+
+                        .gameName {
+                            color: #feb300;
+                            background: #2e3f57;
+                        }
+
+                        .games {
+                            color: #feb300;
+                        }
+                    }
+
+                    &.active {
+                        height: auto;
+
+                        &::before {
+                            transform: rotate(90deg);
+                            border-color: transparent #feb300;
+                        }
+
+                        .gameName {
+                            color: #feb300;
+                            background: #2e3f57;
+                            box-shadow: 0px 0px 0px 1px #feb300 inset;
+                        }
+
+                        .games {
+                            color: #feb300;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 0px;
+                        height: 0px;
+                        border-style: solid;
+                        border-width: 7px 0px 7px 8px;
+                        border-color: transparent #2e3f57;
+                        right: 25px;
+                        top: 8px;
+                        transition: 0.3s all;
+                    }
+
+                    .gameName {
+                        display: block;
+                        width: 100%;
+                        height: 30px;
+                        color: #ffcc41;
+                        font-size: 13px;
+                        box-sizing: border-box;
+                        padding-left: 25px;
+                        border: solid 1px transparent;
+                    }
+
+                    .games {
+                        font-size: 13px;
+                        font-weight: bold;
+                        color: #ffcc41;
+                        position: absolute;
+                        right: 60px;
+                        top: 0px;
+                    }
+
+                    .innerList {
+                        width: 96%;
+                        height: 70px;
+                        background: #2e3f57;
+                        position: relative;
+                        cursor: default;
+                        border-radius: 5px;
+                        margin: 0px auto 10px;
+
+                        &:nth-of-type(1) {
+                            margin-top: 10px;
+                        }
+
+                        p {
+                            width: 100%;
+                            line-height: 18px;
+                            position: absolute;
+                            left: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: 12px;
+                            color: #f1f1f1;
+
+                            span {
+                                font-weight: bold;
+                                color: #feb300;
+
+                                .situation {
+                                    font-weight: normal;
+                                    float: right;
+                                    margin-right: 20px;
+                                    color: #bcbcbc;
+
+                                    &.onLive {
+                                        position: absolute;
+                                        color: transparent;
+                                        user-select: none;
+                                        top: -8px;
+                                        right: -10px;
+                                        width: 0px;
+                                        height: 0px;
+                                        border-radius: 0px 5px 0px 0px;                                    
+                                        border-style: solid;
+                                        border-width: 10px;
+                                        border-color: #109037 #109037 transparent transparent;
+                                    }
+                                }
+                            }
+
+                            button {
+                                position: absolute;
+                                right: 20px;
+                                bottom: 0px;
+                                width: 70px;
+                                height: 30px;
+                                background: #ffffff;
+                                border-radius: 3px;
+                                color: #2e3f57;
+
+                                &:hover,&:active {
+                                    background: #feb300;
+                                    color: #2e3f57;
+                                }
+
+                                &.active {
+                                    background: #19202a;
+                                    color: #feb300;
+                                    
+                                    &:hover,&:active {
+                                        border: solid 1px #feb300;
+                                        background: #212832;
+                                        color: #ffffff;
+                                    }
+                                }
+
+                                &.disable {
+                                    background: #909090 !important;
+                                    color: #cccccc !important;
+                                    user-select: none;
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //即時注單 
+        .bettingStatus {
+            display: none;
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            background: #181818;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+        
+            &::-webkit-scrollbar-track {
+                background: #3c5260;
+                border-radius: 10px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: linear-gradient(to bottom,#feb300 0%,#c98000 100%);
+                border-radius: 10px;
+            }
+
+            &.open {
+                display: block;
+            }
+        }
+    }
+}

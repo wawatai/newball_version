@@ -1,0 +1,422 @@
+//header
+header {
+    width: 100%;
+    min-width: 1480px;
+    height: 110px;
+    background: #356bf7;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    &.mine {
+        min-width: 1200px;
+    }
+    
+    //上列
+    .top {
+        width: 100%;
+        height: 25px;
+        background: #efefef;
+
+        //盤口對照表+設定
+        .conversionBtn,.controlBtn {
+            float: left;
+            width: auto;
+            height: 100%;
+            color: #595959 ;
+            background: transparent;
+            margin-left: 15px;
+            font-size: 13px;
+        }
+
+        //跑馬燈
+        .marqueeBox {
+            float: left;
+            width: 60%;
+            height: 100%;
+            position: relative;
+            margin-left: 185px;
+
+            .fa-volume-up {
+                position: absolute;
+                left: -23px;
+                top: 4px;
+                color: #356bf7;
+            }
+
+            marquee {
+                line-height: 25px;
+                font-size: 12px;
+                color: #356bf7;
+                overflow: visible;
+            }
+        }
+
+        //時間
+        span {
+            float: right;
+            font-size: 12px;
+            color: #595959;
+            line-height: 25px;
+            margin-right: 15px;
+        }
+
+        .threeCircle {
+            font-size: 0px;
+            float: right;
+            width: auto;
+            height: 100%;
+            line-height: 25px;
+
+            button {
+                width: 15px;
+                height: 15px;
+                border-radius: 30px;
+                margin: 5px 8px 0px 0px;
+                border: solid 2px transparent;
+                background: #31a20b;
+
+                &:hover,&:active,&.active {
+                    border-color: #31a20b;
+                    background: #131313;
+                }
+
+                &:last-child {
+                    margin-right: 10px;
+                }
+
+                &:nth-of-type(2) {
+                    background: #505050;
+
+                    &:hover,&:active,&.active {
+                        border-color: #bcbcbc;
+                        background: #505050;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    background: #1856bd;
+
+                    &:hover,&:active,&.active {
+                        border-color: #1856bd;
+                        background: #ffffff;
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    background: #d31c1c;
+
+                    &:hover,&:active,&.active {
+                        border-color: #c8dfed;
+                        background: #d31c1c;
+                    }
+                }
+
+                &:nth-of-type(5) {
+                    background: #ffffff;
+
+                    &:hover,&:active,&.active {
+                        border-color: #de1e30;
+                        background: #ffffff;
+                    }
+                }
+
+                &:nth-of-type(6) {
+                    background: #181818;
+
+                    &:hover,&:active,&.active {
+                        border-color: #ffc13c;
+                        background: #181818;
+                    }
+                }
+
+                &:nth-of-type(7) {
+                    background: #feb300;
+
+                    &:hover,&:active,&.active {
+                        border-color: #212832;
+                        background: #feb300;
+                    }
+                }
+            }
+        }
+    }
+
+    //置中外包
+    article {
+        width: 100%;
+        height: 85px;
+
+        //LOGO
+        .logo {
+            width: 180px;
+            height: 100%;
+            float: left;
+            font-size: 50px;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 85px;
+            color: #ffffff
+        }
+
+        //上列表
+        ul {
+            float: left;
+            position: relative;
+            z-index: 2;
+
+            li {
+                float: left;
+                text-align: center;
+
+                a {
+                    display: block;
+                    padding: 0px 10px;
+                    height: 76px;
+                    line-height: 85px;
+                    color: #ffffff;
+                    border-bottom: solid 5px transparent;
+                    font-size: 14px;
+
+                    &:hover,&:active,&.active {
+                        border-color: #ffffff;
+                        color: #ffffff;
+                    }
+
+                    .fa-user {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+        .logged {
+            display: none;
+            width: auto;
+            height: 100%;
+            text-align: right;
+            position: absolute;
+            right: 20px;
+
+            &.display {
+                display: block;
+            }
+
+            .inputBox {
+                width: auto;
+                height: auto;
+                display: inline-block;
+                margin: 10px 6px 0px 0px;
+                position: relative;
+
+                input {
+                    width: 130px;
+                    height: 25px;
+                    font-size: 14px;
+                    padding-left: 5px;
+                    border-radius: 3px;
+                    border: solid 1px #356bf7;
+                    background: #ffffff;
+                    color: #000000;
+
+                    &::placeholder {
+                        color: #8d8d8d;
+                    }
+                }
+
+                .forget {
+                    position: absolute;
+                    left: 0px;
+                    bottom: -28px;
+                    font-size: 14px;
+                    color: #ffffff;
+                }
+
+                .remember {
+                    position: absolute;
+                    left: 18px;
+                    bottom: -28px;
+                    font-size: 14px;
+                    color: #ffffff;
+
+                    .cube {
+                        left: -18px;
+                        top: -1px;
+                        background: transparent;
+                        border-color: #e3e3e3;
+
+                        &.active {
+
+                            &::before {
+                                background: url('../images/forCss_2/cubeArrow2_2.png') no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .loginBtn {
+                background: #ffffff;
+                padding: 5px 14px;
+                border-radius: 3px;
+                color: #454545;
+                font-size: 14px;
+                font-weight: bold;
+                margin-right: 8px;
+
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to right,#ffab00 0%, #ff4802 100%);
+                    color: #ffffff;
+                }
+            }
+
+            .signupBtn {
+                background: #ffffff;
+                border-radius: 3px;
+                color: #454545;
+                padding: 5px 14px;
+                font-size: 14px;
+                font-weight: bold;
+
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to right,#ffab00 0%, #ff4802 100%);
+                    color: #ffffff;
+                }
+            }
+
+            .selectBox {
+                float: right;
+                width: 25%;
+                position: relative;
+                margin-top: 10px;
+
+                .fa-globe {
+                    float: left;
+                    margin: 3px 6px 0px 0px;
+                    color: #ffffff;
+                }
+
+                //下箭頭
+                &::after {
+                    content: "";
+                    position: absolute;
+                    pointer-events: none;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 10px 8px 0px 8px;
+                    border-color: #ffffff transparent;
+                    top: 7px;
+                    right: 10px;
+                }
+
+                select {
+                    width: 110px;
+                    padding: 3px 0px 3px 5px;
+                    background: #356bf7;
+                    border: solid 1px #ffffff;
+                    border-radius: 3px;
+                    color: #ffffff;
+                    font-size: 12px;
+                    appearance:none;   
+                    -moz-appearance:none;   
+                    -webkit-appearance:none;
+                }
+            }
+        }
+
+        //登入後樣式
+        .loggedIn {
+            display: none;
+            width: auto;
+            height: 100%;
+            text-align: right;
+            position: absolute;
+            right: 20px;
+
+            &.display {
+                display: block;
+            }
+
+            //字體
+            p {
+                display: inline-block;
+                color: #ffffff;
+                font-size: 13px;
+                margin: 10px 5px 0px 0px;
+
+                //信用額度
+                &.quota {
+                    padding: 7px 7px 5px;
+                    border-radius: 3px;
+                    background: #ffffff;
+                    color: #595959;
+                    
+                    span {
+                        color: #356bf7;
+                    }
+                }
+
+                span {
+                    color: #ffffff;
+                    padding-left: 8px;
+                }
+            }
+
+            //登出按鈕
+            button {
+                border-radius: 3px;
+                padding: 4px 15px;
+                background: #ffffff;
+                color: #454545;
+                font-size: 14px;
+
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to right,#ffab00 0%, #ff4802 100%);
+                    color: #ffffff;
+                }
+            }
+
+            .selectBox {
+                float: right;
+                width: 21%;
+                position: relative;
+                margin-top: 10px;
+
+                .fa-globe {
+                    float: left;
+                    margin: 3px 6px 0px 0px;
+                    color: #ffffff;
+                }
+
+                //下箭頭
+                &::after {
+                    content: "";
+                    position: absolute;
+                    pointer-events: none;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 10px 8px 0px 8px;
+                    border-color: #ffffff transparent;
+                    top: 7px;
+                    right:10px;
+                }
+
+                select {
+                    width: 110px;
+                    padding: 3px 0px 3px 5px;
+                    background: transparent;
+                    background: #356bf7;
+                    border: solid 1px #ffffff;
+                    border-radius: 3px;
+                    color: #ffffff;
+                    font-size: 12px;
+                    appearance:none;   
+                    -moz-appearance:none;   
+                    -webkit-appearance:none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1418 @@
+//我的頁面
+.myself {
+    width: 1170px;
+    height: 850px;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    text-align: center;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #121212;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #606360;
+        border-radius: 10px;
+    }
+
+    .mineMainBox {
+        padding: 140px 0px 10px;
+        float: left;
+
+        &.record {
+            padding-top: 175px;
+        }
+
+        &.app {
+            width: calc(100% - 10px);
+        }
+    }
+
+    //投注紀錄
+    .recordbar {
+        width: 1150px;
+        height: 35px;
+        background: linear-gradient(to top,#343434 0%,#404040 100%);
+        border-radius: 3px;
+        margin: 0px 0px 15px 10px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+
+        &.open {
+            border: solid 1px #30800e;
+            background: linear-gradient(to bottom, #1d1d1d 16%, #303030 100%);
+
+            div {
+                color: #3abc0d;
+            }
+        }
+
+        div {
+            float: left;
+            width: 25%;
+            text-align: center;
+            color: #dddddd;
+            font-size: 15px;
+            line-height: 37px;
+            cursor: pointer;
+
+            //線段
+            .line {
+                width: 1px;
+                height: 15px;
+                background: #747474;
+                margin: 10px 0px 0px 0px;
+                float: right;
+            }
+            
+            span {
+                color: #3abc0d;
+
+                &.remind {
+                    position: absolute;
+                    width: 20px;
+                    height: 18px;
+                    background: linear-gradient(to right,#a1ea22 0%,#34da14 100%);
+                    left: 35px;
+                    top: 48%;
+                    transform: translateY(-50%);
+                    line-height: 20px;
+                    color: #161616;
+                    border-radius: 5px;
+                    padding-left: 2px;
+                }
+            }
+        }
+    }
+    .recordbox {
+        display: none;
+        width: 1150px;
+        height: auto;
+        margin: 0px 0px 15px 10px;
+        border-top: none;
+        background: #1a1a1a;
+        padding-top: 20px;
+        border-radius: 0px 0px 3px 3px;
+        box-sizing: border-box;
+        overflow: hidden;
+        transform: translateY(-20px);
+
+        &.display {
+            display: block;
+        }
+    }
+
+    //幫助中心/消息中心
+    .helpbar {
+        width: 1150px;
+        height: 45px;
+        background: linear-gradient(to top,#343434 0%,#404040 100%);
+        border-radius: 3px;
+        position: relative;
+        z-index: 1;
+        margin: 0px 0px 15px 10px;
+        cursor: pointer;
+        box-sizing: border-box;
+        border: solid 1px transparent;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 10px;
+            background: url('../images/forCss/arrow_w.png') no-repeat;
+            right: 20px;
+            top: 18px;
+            transform: rotate(-90deg);
+        }
+
+        &.open {
+            background: linear-gradient(to bottom, #1d1d1d 16%, #303030 100%);
+            border: solid 1px #30800e;
+            box-shadow: 0px 0px 10px 2px #2c561d;
+
+            &::before {
+                width: 6px;
+                height: 10px;
+                background: url('../images/forCss/arrow_w.png') no-repeat;
+                background-size: 100%;
+                transform: rotate(90deg);
+            }
+        }
+
+        //編輯中
+        &.edit {
+            background: linear-gradient(to top,#404040 0%,#4e4e4e 100%);
+
+            label {
+                display: block;
+            }
+        }
+
+        //聯繫我們-我的反饋
+        &.feeback {
+            pointer-events: none;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        p {
+            float: left;
+            line-height: 45px;
+            padding-left: 15px;
+            font-size: 15px;
+            color: #ffffff;
+        }
+
+        span {
+            float: right;
+            line-height: 45px;
+            padding-right: 50px;
+            color: #ffffff;
+            font-size: 15px;
+        }
+
+        label {
+            display: none;
+            width: 16px;
+            height: 16px;
+            float: left;
+            margin: 13px 0px 0px 20px;
+            position: relative;
+            z-index: 1;
+            background: #393939;
+            border-radius: 30px;
+            box-shadow: 0px 2px 2px 0px #1a1a1a inset;
+            border-bottom: solid 1px #686868;
+
+            &.active {
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    background: linear-gradient(to right,#a1ea22 0%,#34da14 100%);
+                    border-radius: 30px;
+                }
+            }
+
+            input {
+                display: none;
+            }
+        }
+    }
+    .helpbox {
+        display: none;
+        width: 1150px;
+        height: auto;
+        margin: -20px 0px 15px 10px;
+        background: #212121;
+        padding-top: 20px;
+        border-radius: 0px 0px 3px 3px;
+        text-align: left;
+        border-bottom: solid 1px #cecece;
+
+        &.display {
+            display: block;
+        }
+
+        //消息中心用
+        &.mes {
+            padding-bottom: 40px;
+        }
+
+        //編輯中
+        &.edit {
+            display: none;
+        }
+        
+        p {
+            display: block;
+            width: 97%;
+            font-size: 14px;
+            line-height: 24px;
+            color: #d4d4d4;
+            padding: 0px 15px 15px 15px;
+        }
+
+        .innerbox {
+            width: 92%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #747474;
+            margin: 0px auto 20px;
+            padding: 15px;
+
+            p {
+                padding: 5px 15px;
+                font-size: 16px;
+            }
+        }
+
+        //視窗右下灰色字
+        .remind {
+            color: #d4d4d4;
+            font-size: 14px;
+            margin: 0px 20px 20px 0px;
+            float: right;
+            position: relative;
+            font-weight: bold;
+
+            &::before {
+                content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                background: url('../images/forCss/infor2.png') no-repeat;
+                top: -2px;
+                left: -18px;
+            }
+        }
+    }
+    .depositP,.transP,.withP,.betP,.sportP,.skillP {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+    }
+    .notice,.announcement,.activity,.competition {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+    }
+
+    //連絡我們
+    .callusBox,.problemBox,.feebackBox,.onlineCilentBox {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+    }
+    .onlineCilent {
+        width: 1150px;
+        height: 100%;
+        margin: -15px 0px 0px 10px;
+        background: #2c2c2c;
+        border-radius: 0px 0px 3px 3px;
+        overflow: hidden;
+
+        //聊天窗
+        .chatwindow {
+            width: 100%;
+            height: 75%;
+            background: #242424;
+            border-bottom: solid 1px #5d5d5d;
+            overflow-x: hidden;
+            overflow-y: auto;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+        
+            &::-webkit-scrollbar-track {
+                background: #121212;
+                border-radius: 10px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: #606360;
+                border-radius: 10px;
+            }
+
+            //時間列
+            .time {
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                color: #32980e;
+                float: left;
+            }
+            
+            //對話欄
+            .chat {
+                width: 100%;
+                height: auto;
+                margin: 10px 0px;
+                float: left;
+
+                span {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    margin: 0px 15px;
+
+                    &.gm {
+                        background: url('../images/forCss/avatar_s.png') no-repeat;
+                        background-size: 100%;
+                        float: left;
+                    }
+
+                    &.user {
+                        height: 41px;
+                        background: url('../images/forCss/avatar_big.png') no-repeat;
+                        background-size: 100%;
+                        float: right;
+                    }
+                }
+                
+                .gmchat {
+                    float: left;
+                    border: 1px solid #636363;
+                    background: #1c1c1c;
+                    border-radius: 0px 8px 8px 8px;
+                    font-size: 14px;
+                    padding: 12px;
+                    text-align: left;
+                    color: #c2c2c2;
+
+                    a {
+                        display: block;
+                        width: 60%;
+                        padding: 5px 10px 4px;
+                        color: #34ac0d;
+                        &:hover,&:active,&.active {
+                            background: #40dc15;
+                            color: #1c1c1c;
+                        }
+                    }
+                }
+
+                .userchat {
+                    float: right;
+                    background: #1c1c1c;
+                    color: #c2c2c2;
+                    border: solid 1px #636363;
+                    border-radius: 8px 0px 8px 8px;
+                    font-size: 14px;
+                    padding: 12px;
+                }
+            }
+        }
+        
+        //打字窗
+        .onlineroom {
+            width: 100%;
+            height: 25%;
+            text-align: right;
+            overflow-x: hidden;
+            overflow-y: auto;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+        
+            &::-webkit-scrollbar-track {
+                background: #121212;
+                border-radius: 10px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: #606360;
+                border-radius: 10px;
+            }
+
+            .chatStyle {
+                width: 100%;
+                height: 40px;
+                box-sizing: border-box;
+                padding: 10px 15px;
+
+                button {
+                    width: 16px;
+                    height: 16px;
+                    background: url('../images/forCss/windowface2.png') no-repeat;
+                    background-size: 200%;
+                    float: left;
+                    margin-right: 10px;
+                    
+                    &.font {
+                        background-position-x: 100%;
+                    }
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 80px;
+                padding: 0px 15px;
+                border: none;
+                outline: none;
+                resize: none;
+                box-sizing: border-box;
+                font-size: 15px;
+                background: transparent;
+                color: #c2c2c2;
+
+                &::placeholder {
+                    color: #8f8f8f;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+
+            .send {
+                width: 90px;
+                height: 36px;
+                margin: 0px 20px 20px 0px;
+                background: linear-gradient(to right, #a1ea22 0%, #34da14 100%);
+                border-radius: 5px;
+                color: #232323;
+                border: solid 1px #7af537;
+                font-size: 15px;
+                &:hover,&:active,&.active {
+                    border-color: #87d620;
+                    color: #ffffff;
+                    background: linear-gradient(to left, #4daa03 0%, #24700c 100%);
+                }
+            }
+        }
+    }
+
+    //關於我們
+    .aboutBox,.linkBox {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+    }
+    .linkBox {
+        
+        div {
+            width: 1080px;
+            height: auto;
+            margin-left: 45px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a {
+                width: 200px;
+                height: 120px;
+                border-radius: 5px;
+                overflow: hidden;
+                text-align: left;
+                margin: 0px 0px 20px 0px;
+
+                &:nth-of-type(5n) {
+                    margin-right: 0px;
+                }
+                
+                &:hover,&:active,&.active {
+                    text-decoration: underline;
+                }
+
+                &.nmar {
+                    margin-right: 0px;
+                }
+                
+                span {
+                    display: block;
+                    width: 200px;
+                    height: 88px;
+                    background: url('../images/forCss/about_link.png') no-repeat;
+                    &.mlb {
+                        background-position-x: 0px;
+                    }
+                    &.npb {
+                        background-position-x: -200px;
+                    }
+                    &.cpbl {
+                        background-position-x: -400px;
+                    }
+                    &.nba {
+                        background-position-x: -600px;
+                    }
+                    &.donbest {
+                        background-position-x: -800px;
+                    }
+                    &.kbl {
+                        background-position-x: -1000px;
+                    }
+                    &.ncaa {
+                        background-position-x: -1200px;
+                    }
+                    &.nfl {
+                        background-position-x: -1400px;
+                    }
+                }
+                
+                p {
+                    height: 32px;
+                    background: #fff;
+                    line-height: 32px;
+                    padding-left: 15px;
+                    font-size: 15px;
+                    color: #4d515d;
+                }
+            }
+        }
+    }
+}
+
+//懸浮列
+.minetopfix {
+    width: 1150px;
+    height: 125px;
+    background: #3d3d3d;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+    text-align: center;
+    z-index: 6;
+    left: 280px;
+    top: 0px;
+
+    //懸浮列假bar
+    .fixbar {
+        position: absolute;
+        width: 100%;
+        height: 45px;
+        border-radius: 5px;
+        background: #313131;
+        bottom: 0px;
+        z-index: 2;
+        color: #fff;
+        border: solid 1px #242424;
+        box-sizing: border-box;
+
+        .editbut,.cancelbut,.delbut {
+            display: none;
+            float: right;
+            padding: 4px 6px;
+            color: #dddddd;
+            background: #2b2b2b;
+            border: solid 1px #707070;
+            border-radius: 3px;
+            font-size: 15px;
+            margin: 8px 10px 0px 0px;
+
+            &.display {
+                display: block;
+            }
+
+            &:hover,&:active,&.active {
+                border-color: #aef156;
+                background: linear-gradient(to right, #92e820 0%, #46dd16 100%);
+                color: #272727;
+            }
+        }
+        .rowbutMes {
+            display: none;
+            float: right;
+            position: relative;
+            background: #353535;
+            margin: 7px 20px 0px 0px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            border: solid 1px #5b5b5b;
+
+            &.display {
+                display: block;
+            }
+
+            &.lside {
+
+                span {
+                    &:last-child {
+                            color: #ababab;
+                    }
+                }
+
+                .innbut {
+                    animation: rowbut 0.3s ease-out 0s;
+                }
+            }
+
+            &.rside {
+                span {
+                    &:nth-of-type(1) {
+                            color: #ababab;
+                    }
+                }
+                
+                .innbut {
+                    left: 53%;
+                    animation: rowbut2 0.3s ease-out 0s;
+                }
+            }
+
+            span {
+                margin-right: 20px;
+                font-size: 14px;
+                position: relative;
+                color: #2cbd0d;
+
+                &:last-child {
+                    margin: 0px;
+                }
+            }
+
+            .innbut {
+                width: 44%;
+                height: 80%;
+                background: #2d2d2d;
+                position: absolute;
+                left: 3%;
+                top: 10%;
+                border-radius: 20px;
+                box-sizing: border-box;
+                border: solid 1px #2cbd0d;
+            }
+        }
+
+        //線段
+        .line {
+            display: none;
+            width: 1px;
+            height: 25px;
+            background: #313131;
+            float: left;
+            margin: 10px 10px 0px 10px;
+        }
+
+        //日期搜尋列
+        .timeSearch {
+            width: 380px;
+            height: 45px;
+            margin-left: 20px;
+            float: left;
+
+            //交易紀錄用
+            &.deal {
+                float: right;
+                width: 335px;
+
+                .timesearchbut {
+                    margin-right: 0px;
+                }
+            }
+
+            button {
+
+                &.date {
+                    width: 19px;
+                    height: 19px;
+                    background: url('../images/forCss/date_icon2.png') no-repeat;
+                    float: left;
+                    margin: 13px 0px 0px 0px;
+                    border: none;
+                }
+
+                &.timesearchbut {
+                    margin: 8px 24px 0px 0px;
+                    border: solid 1px #707070;
+                    background: #2b2b2b;
+                    padding: 5px 8px;
+                    border-radius: 3px;
+                    color: #dddddd;
+
+                    &:hover,&:active,&.active {
+                        border-color: #aef156;
+                        background: linear-gradient(to right, #92e820 0%, #46dd16 100%);
+                        color: #272727;
+                    }
+                }
+            }
+
+            span {
+                float: left;
+                line-height: 45px;
+                font-weight: bold;
+                padding: 0px 10px;
+            }
+
+            label {
+                float: left;
+                width: auto;
+                height: auto;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 6px 5px 0px 5px;
+                    border-color: #747474 transparent;
+                    top: 21px;
+                    right: 5px;
+                }
+
+                select {
+                    margin: 11px 0px 0px 10px;
+                    border: 1px solid #707070;
+                    outline: none;
+                    border-radius: 5px;
+                    width: 95px;
+                    height: 24px;
+                    font-family: "my_font";
+                    background: #2b2b2b;
+                    color: #dddddd;
+                    appearance: none;
+                    padding-left: 5px;
+                }
+            }
+        }
+        .smallTimeBtn {
+            margin: 8px 12px 0px 0px;
+            border: solid 1px #6a8e2a;
+            background: #212121;
+            padding: 5px 8px;
+            border-radius: 3px;
+            color: #bfbfbf;
+            float: right;
+
+            &:hover,&:active,&.active {
+                background: linear-gradient(to bottom,#141414 0%,#434343 100%);
+                color: #33ba04;
+                border-color: #32980e;
+            }
+        }
+
+        //修改密碼按鈕
+        .changePassword {
+            float: right;
+            padding: 3px 5px;
+            color: #dddddd;
+            background: #2b2b2b;
+            border: solid 1px #707070;
+            border-radius: 5px;
+            font-size: 15px;
+            margin: 8px 10px 0px 0px;
+
+            /*for IE 9*/
+            @media all and (min-width:0\0) and (min-resolution:.001dpcm){
+                padding: 6px 5px;
+            }
+
+            /*for IE*/
+            @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none){
+                padding: 6px 5px;
+            }
+
+            &:hover,&:active,&.active {
+                border-color: #aef156;
+                background: linear-gradient(to right, #92e820 0%, #46dd16 100%);
+                color: #272727;
+            }
+
+            &.none {
+                display: none;
+            }
+        }
+
+        ul {
+
+            li {
+                float: left;
+                width: 80px;
+                font-size: 15px;
+                height: 43px;
+                line-height: 45px;
+                color: #bfbfbf;
+                box-sizing: border-box;
+                border: solid 1px #7b7b7b;
+                background: linear-gradient(to top,#323232 0%,#434343 100%);
+                cursor: pointer;
+                border-radius: 3px;
+
+                &:hover,&:active,&.active {
+                    color: #33ba04;
+                    border-color: #32980e;
+                    background: linear-gradient(to bottom,#141414 0%,#434343 100%);
+                }
+
+                &.only {
+                    width: auto;
+                    border: none;
+                    background: none;
+                    color: #33ba04;
+                    pointer-events: none;
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        p {
+            line-height: 45px;
+            font-size: 15px;
+            float: left;
+            padding-right: 10px;
+
+            &:first-child {
+                padding-left: 20px;
+            }
+
+            span {
+                color: #6ad237;
+            }
+        }
+    }
+    //懸浮下標題字
+    .floatName {
+        width: 100%;
+        height: 35px;
+        background: #1f1f1f;
+        border-bottom: solid 1px #3abc0d;
+
+        //投注紀錄用
+        &.betting {
+            
+            div {
+                float: left;
+                width: 25%;
+                text-align: center;
+                color: #37ad10;
+                font-size: 15px;
+                padding-top: 12px;
+
+                .line {
+                    width: 1px;
+                    height: 10px;
+                    background: #747474;
+                    margin: -5px 0px 0px 0px;
+                    float: right;
+                }
+            }
+        }
+
+        //交易紀錄用
+        &.deal {
+
+            div {
+                float: left;
+                text-align: center;
+                color: #37ad10;
+                font-size: 15px;
+                padding-top: 12px;
+
+                &:nth-child(1) {
+                    width: 18%;
+                }
+
+                &:nth-child(2) {
+                    width: 12%;
+                }
+
+                &:nth-child(3) {
+                    width: 16%;
+                }
+
+                &:nth-child(4) {
+                    width: 20%;
+                }
+
+                &:nth-child(5) {
+                    width: 19%;
+
+                    .line {
+                        
+                        &.record {
+                            margin-right: -1px;
+                        }
+                    }
+                }
+
+                &:nth-child(6) {
+                    width: 15%;
+                }
+
+                .line {
+                    width: 1px;
+                    height: 10px;
+                    background: #747474;
+                    margin: -5px 0px 0px 0px;
+                    float: right;
+
+                    &.record {
+                        margin-right: -2px;
+                    }
+                }
+            }
+        }
+    }
+    //左段字
+    .leftword {
+        font-weight: bold;
+        color: #ffffff;
+        float: left;
+        margin: 30px 0px 0px 20px;
+    }
+
+    //中間字
+    .midword {
+        width: 500px;
+        height: 100%;
+        margin: 0px auto;
+        text-align: center;
+
+        p {
+            display: inline-block;
+            font-weight: bold;
+            margin: 20px 10px 0px;
+            font-size: 17px;
+            color: #ffffff;
+            span {
+                display: block;
+                padding-top: 13px;
+                font-size: 17px;
+            }
+        }
+
+        //線段
+        .topline {
+            display: inline-block;
+            width: 1px;
+            height: 45px;
+            background: #bcbcbc;
+            margin: 0px 10px 0px 10px;
+        }
+    }
+}
+
+//隱藏版
+.mineHideBoard {
+    width: 1155px;
+    height: 125px;
+    background: #131313;
+    position: absolute;
+    z-index: 5;
+    left: 270px;
+    top: 0px;
+
+    //投注記錄用
+    &.recordboard {
+        height: 160px;
+    }
+
+    //體育規則用
+    &.sportBoard {
+        height: 250px;
+    }
+}
+
+//彈窗
+
+//修改密碼
+.changePasswordWindow {
+    display: none;
+    position: fixed;
+    width: 390px;
+    height: auto;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+    box-shadow: 0px 0px 10px 2px #517b09;
+
+    &.display {
+        display: block;
+    }
+
+    //上字
+    .topbar {
+        width: 100%;
+        height: 50px;
+        background: #242424;
+        border-radius: 3px 3px 0px 0px;
+        position: relative;
+        border: solid 1px #3aad1b;
+
+        span {
+            font-size: 14px;
+            color: #4be119;
+            line-height: 50px;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+
+        //上XX
+        button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: #404040;
+            border: solid 3px #4be119;
+            right: -50px;
+            top: -50px;
+            box-shadow: 0px 0px 0px 5px #404040;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                right: 16px;
+                top: 8px;
+                background: #4be119;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                left: 16px;
+                top: 8px;
+                background: #4be119;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    //主內容
+    .box {
+        width: 100%;
+        height: 160px;
+        background: #242424;
+        border-radius: 0px 0px 3px 3px;
+        padding: 30px 0px;
+        border: solid 1px #3e8a13;
+        border-top: none;
+
+        div {
+            width: 81%;
+            height: 50px;
+            margin: 0px auto;
+            position: relative;
+
+            &:last-child {
+                width: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            input {
+                width: 205px;
+                height: 28px;
+                font-size: 17px;
+                padding: 3px 0px 3px 10px;
+                float: right;
+                border-style: solid;
+                border-width: 1px;
+                border-color: transparent #3c3c3c #6c6c6c #3c3c3c;
+                border-radius: 5px;
+                background: linear-gradient(to bottom,#0f0f0f 21%,#303030 100%);
+                box-shadow: 0px 1px 0px 0px #3c3c3c;
+                color: #fff;
+            }
+            
+            span {
+                line-height: 40px;
+                color: #c8c8c8;
+            }
+
+            button {
+                width: 152px;
+                height: 36px;
+                margin-right: 10px;
+                background: #2d2d2d;
+                border: 1px solid #d9d9d9;
+                color: #b2b2b2;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: bold;
+
+                &:last-child {
+                    margin: 0px;
+                    background: linear-gradient(to right,#57b21a 0%,#349a14 100%);
+                    color: #191919;
+                    border-color: #aef156;
+
+                    &:hover,&:active,&.active {
+                        background: linear-gradient(to left, #2d2d2d 0%, #1a1a1a 99%);
+                        color: #46d317;
+                        border-color: #2b7d16;
+                    }
+                }
+
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to left, #2d2d2d 0%, #1a1a1a 99%);
+                    border-color: #2b7d16;
+                    color: #46d317;
+                }
+            }
+        }
+    }
+}
+
+//無註冊信用卡提醒
+.cardremind {
+    display: none;
+    position: fixed;
+    width: 500px;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    z-index: 20;
+    border: solid 1px #3aad1b;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 2px #517b09;
+
+    &.display {
+        display: block;
+    }
+
+    //上字
+    .topbar {
+        width: 100%;
+        height: 50px;
+        background: #242424;
+        border-radius: 3px 3px 0px 0px;
+        position: relative;
+        border-bottom: solid 1px #3aad1b;
+
+        span {
+            font-size: 14px;
+            color: #4be119;
+            line-height: 50px;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+
+        //上XX
+        button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: #404040;
+            border: solid 3px #4be119;
+            right: -50px;
+            top: -50px;
+            box-shadow: 0px 0px 0px 5px #404040;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                right: 16px;
+                top: 8px;
+                background: #4be119;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                left: 16px;
+                top: 8px;
+                background: #4be119;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    //主內容
+    .box {
+        width: 100%;
+        height: 105px;
+        background: #242424;
+        border-radius: 0px 0px 3px 3px;
+        padding: 20px 0px;
+        text-align: center;
+
+        p {
+            font-size: 14px;
+            padding-bottom: 20px;
+            color: #bdbdbd;
+
+            &.remind {
+                color: #ffffff;
+            }
+        }
+
+        button {
+            width: 160px;
+            height: 36px;
+            background: linear-gradient(to right,#57b21a 0%,#349a14 100%);
+            border: 1px solid #aef156;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #191919;
+            &:hover,&:active,&.active {
+                background: linear-gradient(to left, #2d2d2d 0%, #1a1a1a 99%);
+                color: #46d317;
+                border-color: #2b7d16;
+            }
+        }
+    }
+}
+
+//添加銀行卡
+.cardAdd  {
+    display: none;
+    position: absolute;
+    width: 800px;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110px;
+    z-index: 20;
+    box-shadow: 0px 0px 10px 5px #3f8a1385;
+    border: solid 1px #3e8a13;
+
+    //顯示
+    &.display {
+        display: block;
+    }
+
+    //上字
+    .topbar {
+        width: 100%;
+        height: 40px;
+        background: #242424;
+        border-radius: 3px 3px 0px 0px;
+        position: relative;
+        text-align: center;
+        border-bottom: solid 1px #3aad1b;
+
+        span {
+            font-size: 14px;
+            color: #4be119;
+            line-height: 42px;
+            font-weight: bold;
+        }
+
+        //上XX
+        button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: #404040;
+            border: solid 3px #4be119;
+            right: -50px;
+            top: -50px;
+            box-shadow: 0px 0px 0px 5px #404040;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                right: 16px;
+                top: 8px;
+                background: #4be119;
+                transform: rotate(45deg);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                left: 16px;
+                top: 8px;
+                background: #4be119;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    //主內容
+    .box {
+        width: 100%;
+        height: 315px;
+        background: #242424;
+        border-radius: 0px 0px 3px 3px;
+        padding: 20px 0px;
+
+        .inputBox {
+            width: 50%;
+            height: 50px;
+            float: left;
+            position: relative;
+            box-sizing: border-box;
+
+            &:nth-of-type(2n) {
+                padding-right: 30px;
+            }
+
+            input,select {
+                background: linear-gradient(to top, #333333 0%, #272727 100%);
+                color: #d2d2d2;
+                width: 245px;
+                height: 36px;
+                box-sizing: border-box;
+                padding: 3px 0px 3px 10px;
+                float: right;
+                outline: none;
+                border: solid 1px #858585;
+                border-radius: 3px;
+                font-size: 15px;
+                margin: 7px 0px 0px 0px;
+                box-shadow: 0px 2px 5px 0px #1c1c1c;
+
+                &.short {
+                    width: 105px;
+                    margin-right: 30px;
+
+                    &:nth-of-type(1) {
+                        margin-right: 0px;
+                    }
+                }
+            }
+
+            span {
+                line-height: 50px;
+                color: #cacaca;
+                padding-left: 30px;
+                font-weight: bold;
+            }
+        }
+
+        button {
+            width: 220px;
+            height: 36px;
+            background: #51ae19;
+            border: solid 1px #aef156;
+            color: #191919;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 7%;
+            &:hover,&:active,&.active {
+                background: linear-gradient(to left, #2d2d2d 0%, #1a1a1a 99%);
+                color: #46d317;
+                border-color: #2b7d16;
+            }
+        }
+    }
+}

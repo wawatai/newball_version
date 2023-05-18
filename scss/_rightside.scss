@@ -1,0 +1,463 @@
+//右列
+.right {
+    width: 300px;
+    height: 850px;
+    margin-left: 10px;
+    float: left;
+    overflow: auto;
+    position: relative;
+    z-index: 6;
+    scrollbar-width: thin;
+    background: #242424;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #121212;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #606360;
+        border-radius: 10px;
+    }
+    
+    //上段字樣
+    .statusWindow {
+        width: 100%;
+        height: 113px;
+        background: #242424;
+        position: relative;
+        
+        p {
+            background: linear-gradient(to top,#323232 0%,#434343 100%);
+            color: #e5e5e5;
+            padding: 7px 15px;
+            font-size: 12px;
+        }
+
+        ul {
+            position: absolute;
+            width: 95%;
+            height: auto;
+            left: 50%;
+            bottom: 1%;
+            transform: translateX(-50%);
+
+            li {
+                padding: 5px 15px 3px;
+                font-size: 14px;
+                border: solid 1px #494949;
+                position: relative;
+                background: #393939;
+                color: #cbcbcb;
+                margin-bottom: 3px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: calc(100% + 2px);
+                    left: -1px;
+                    top: -1px;
+                    background: #30a009;
+                }
+
+                span {
+                    float: right;
+                    font-size: 12px;
+                    padding-top: 2px;
+                    color: #37bb18;
+
+                    &.onWait {
+                        color: #c7c7c7;
+                    }
+
+                    &.fail {
+                        color: #f42a2a;
+                    }
+                }
+
+                button {
+                    float: right;
+                    width: 15px;
+                    height: 15px;
+                    background: transparent;
+                    border: solid 1px #a0a0a0;
+                    border-radius: 15px;
+                    margin-left: 15px;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 7px;
+                        background: #a0a0a0;
+                        transform: rotate(45deg);
+                        top: 3px;
+                        right: 6px;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 7px;
+                        background: #a0a0a0;
+                        transform: rotate(-45deg);
+                        top: 3px;
+                        left: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    //直播小框
+    .liveWindow {
+        width: 100%;
+        height: auto;
+        background: #292929;
+        text-align: center;
+
+        .title {
+            background: linear-gradient(to top,#323232 0%,#434343 100%);
+            box-shadow: 0px 2px 1px 0px #171717;
+            color: #fff;
+            padding: 7px 15px;
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .teamWindow {
+            width: 100%;
+            height: auto;
+            position: relative;
+
+            .leftTeam,.rightTeam {
+                display: inline-block;
+                width: 35%;
+                height: auto;
+                position: relative;
+    
+                &.leftTeam {
+    
+                    p {
+                        text-align: right;
+                        padding: 5px 0px 5px 5px;
+                    }
+                }
+    
+                &.rightTeam {
+    
+                    p {
+                        text-align: left;
+                        padding: 5px 5px 5px 0px;
+                    }
+                }
+    
+                p {
+                    font-size: 12px;
+                    color: #ababab;
+                    line-height: 20px;
+                }
+            }
+            
+            .score {
+                display: inline-block;
+                width: 25%;
+                height: auto;
+    
+                p {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color: #ababab;
+    
+                    span {
+                        color: #37bb18;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .liveShow {
+            width: 100%;
+            height: 195px;
+            background: url('../images/forCss/live.png') no-repeat;
+            background-size: cover;
+        }
+    }
+    //下大框
+    .room {
+        width: 100%;
+        height: auto;
+
+        //切換按鈕
+        .twobut {
+            width: 100%;
+            height: 27px;
+
+            .line {
+                display: none;
+                float: left;
+                width: 1%;
+                height: 100%;
+                background: #ababab;
+            }
+
+            button {
+                width: 49.5%;
+                height: 100%;
+                background: #3e3e3e;
+                color: #ababab;
+                font-size: 14px;
+                float: left;
+                margin-right: 1%;
+                border-radius: 3px 3px 0px 0px;
+                border: solid 1px #686868;
+                border-bottom: none;
+
+                &:last-child {
+                    margin: 0px;
+                }
+
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to top,#262626 0%,#3c3c3c 100%);
+                    color: #49dd16;
+                }
+            }
+        }
+        .onebut {
+            width: 100%;
+            height: 27px;
+
+            button {
+                width: 100%;
+                height: 100%;
+                background: #3e3e3e;
+                color: #ababab;
+                font-size: 14px;
+                border-radius: 3px 3px 0px 0px;
+                border: solid 1px #686868;
+                border-bottom: none;
+
+                &:hover,&:active,&.active {
+                    background: linear-gradient(to top,#262626 0%,#3c3c3c 100%);
+                    color: #49dd16;
+                }
+            }
+        }
+
+        //直播賽事
+        .livelist {
+            display: none;
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+        
+            &::-webkit-scrollbar-track {
+                background: #121212;
+                border-radius: 10px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: #606360;
+                border-radius: 10px;
+            }
+
+            &.open {
+                display: block;
+            }
+
+            ul {
+
+                //選單
+                li {
+                    width: 100%;
+                    height: 30px;
+                    line-height: 30px;
+                    border-bottom: solid 1px #6a6a6a;
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+                    background: linear-gradient(to top,#323232 0%,#434343 100%);
+
+                    &:hover,&:active {
+                        background: linear-gradient(to bottom,#1d1d1d 16%,#303030 100%);
+                        border: solid 1px #29650f;
+
+                        &::before {
+                            transform: rotate(90deg);
+                        }
+
+                        .gameName,.games {
+                            color: #57ed22;
+                        }
+                    }
+
+                    &.active {
+                        height: auto;
+                        background: linear-gradient(to bottom,#1d1d1d 16%,#303030 100%);
+                        border: solid 1px #29650f;
+                        color: #57ed22;
+
+                        &::before {
+                            transform: rotate(90deg);
+                        }
+
+                        .gameName,.games {
+                            color: #57ed22;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 0px;
+                        height: 0px;
+                        border-style: solid;
+                        border-width: 7px 0px 7px 8px;
+                        border-color: transparent #57ed22;
+                        right: 25px;
+                        top: 8px;
+                        transition: 0.3s all;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 30px;
+                    }
+
+                    .gameName {
+                        color: #e4e4e4;
+                        font-size: 13px;
+                        margin-left: 30px;
+                    }
+
+                    .games {
+                        float: right;
+                        font-size: 13px;
+                        font-weight: bold;
+                        color: #57ed22;
+                        margin: 2px 60px 0px 0px;
+                    }
+
+                    .innerList {
+                        width: 100%;
+                        height: 70px;
+                        background: #2d2d2d;
+                        position: relative;
+                        cursor: default;
+                        border-top: solid 1px #505050;
+                        
+                        &:nth-of-type(1) {
+                            border-color: #29650f;
+                        }
+
+                        p {
+                            width: 100%;
+                            line-height: 18px;
+                            position: absolute;
+                            left: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: 12px;
+                            color: #b6b6b6;
+
+                            span {
+                                font-weight: bold;
+                                color: #ececec;
+
+                                .situation {
+                                    font-weight: normal;
+                                    float: right;
+                                    margin-right: 20px;
+
+                                    &.onLive {
+                                        position: relative;
+                                        color: #57ed22;
+                                        
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            width: 6px;
+                                            height: 6px;
+                                            border-radius: 12px;
+                                            top: 6px;
+                                            left: -12px;
+                                            background: #57ed22;
+                                        }
+                                    }
+                                }
+                            }
+
+                            button {
+                                position: absolute;
+                                right: 20px;
+                                bottom: 0px;
+                                width: 70px;
+                                height: 30px;
+                                background: #252525;
+                                border-radius: 3px;
+                                border: solid 1px #317f0f;
+                                color: #aeaeae;
+
+                                &:hover,&:active,&.active {
+                                    background: linear-gradient(to right,#92e820 0%,#46dd16 90%);
+                                    border-color: #aef156;
+                                    color: #252525;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //聊天室
+        .bettingStatus {
+            display: none;
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            background: #505050;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+        
+            &::-webkit-scrollbar-track {
+                background: #121212;
+                border-radius: 10px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: #606360;
+                border-radius: 10px;
+            }
+
+            &.open {
+                display: block;
+            }
+        }
+    }
+}
