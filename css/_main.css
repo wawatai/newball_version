@@ -1,0 +1,247 @@
+main {
+  width: 100%;
+  height: auto; }
+  main article .rulebar {
+    width: 100%;
+    height: 40px;
+    background: #7b8bd7;
+    color: #fff;
+    border-radius: 12px 12px 0px 0px; }
+    main article .rulebar p {
+      line-height: 40px;
+      padding-left: 30px;
+      font-size: 15px; }
+    main article .rulebar .rwdbtn {
+      display: none;
+      width: 40px;
+      height: 70%;
+      float: left;
+      background: transparent;
+      margin: 5px 0px 0px 10px; }
+      main article .rulebar .rwdbtn span {
+        display: block;
+        width: 80%;
+        height: 3px;
+        background: #e4e4e4;
+        margin: 0px auto;
+        border-radius: 30px; }
+        main article .rulebar .rwdbtn span:first-child {
+          margin-bottom: 4px; }
+        main article .rulebar .rwdbtn span:last-child {
+          margin-top: 4px; }
+  main article .rulebox {
+    width: 100%;
+    height: 710px;
+    background: #fff;
+    border-radius: 0px 0px 12px 12px;
+    overflow-x: hidden;
+    overflow-y: auto; }
+    main article .rulebox::-webkit-scrollbar {
+      width: 8px; }
+    main article .rulebox::-webkit-scrollbar-thumb {
+      background: #b68c67;
+      border-radius: 100px; }
+    main article .rulebox::-webkit-scrollbar-track {
+      background: transparent;
+      background: #d6d6d6; }
+    main article .rulebox.gamerule p {
+      padding: 30px; }
+      main article .rulebox.gamerule p:nth-child(even) {
+        background: #efefef; }
+    main article .rulebox.convert div {
+      width: 93%;
+      border: solid 1px #7b8bd7;
+      margin: 30px auto 0px;
+      border-radius: 10px;
+      overflow-y: hidden;
+      overflow-x: auto; }
+      main article .rulebox.convert div::-webkit-scrollbar {
+        height: 12px; }
+      main article .rulebox.convert div::-webkit-scrollbar-thumb {
+        background: #556de7;
+        border-radius: 30px; }
+      main article .rulebox.convert div::-webkit-scrollbar-track {
+        background: transparent;
+        background: #d6d6d6;
+        border-radius: 0px 0px 15px 15px; }
+      main article .rulebox.convert div table {
+        width: 1202px;
+        border-radius: 10px;
+        border-collapse: collapse; }
+        main article .rulebox.convert div table tr {
+          text-align: center; }
+          main article .rulebox.convert div table tr:nth-child(odd) {
+            background: #ededed; }
+          main article .rulebox.convert div table tr td {
+            border-right: solid 1px #e0e3f3;
+            padding: 15px 10px;
+            color: #4d515d;
+            font-size: 14px; }
+            main article .rulebox.convert div table tr td:last-child {
+              border: none; }
+    main article .rulebox.balls .box {
+      width: 94%;
+      height: auto;
+      margin: 0px auto;
+      padding-bottom: 50px; }
+      main article .rulebox.balls .box .btnbar {
+        width: 100%;
+        border-bottom: solid 1px #d2d2d2; }
+        main article .rulebox.balls .box .btnbar.longlen button {
+          width: 101px; }
+        main article .rulebox.balls .box .btnbar button {
+          margin: 25px 5px 15px 0px;
+          width: 105px;
+          height: 32px;
+          background: transparent;
+          border: solid 1px #556de7;
+          border-radius: 5px;
+          color: #556de7;
+          font-size: 14px; }
+          main article .rulebox.balls .box .btnbar button:hover, main article .rulebox.balls .box .btnbar button:active, main article .rulebox.balls .box .btnbar button.active {
+            background: #556de7;
+            color: #fff; }
+          main article .rulebox.balls .box .btnbar button.nmar {
+            margin-right: 0px; }
+          main article .rulebox.balls .box .btnbar button.longword {
+            width: auto; }
+      main article .rulebox.balls .box .ballsrule {
+        width: 95%;
+        height: auto;
+        margin: 0px auto; }
+        main article .rulebox.balls .box .ballsrule h2 {
+          font-size: 14px;
+          color: #4d515d;
+          font-weight: bold;
+          margin: 15px 0px;
+          line-height: 24px; }
+        main article .rulebox.balls .box .ballsrule h3 {
+          font-size: 14px;
+          color: #4d515d;
+          font-weight: bold;
+          position: relative;
+          margin: 25px 0px 5px 10px; }
+          main article .rulebox.balls .box .ballsrule h3:nth-of-type(1) {
+            margin-top: 0px; }
+          main article .rulebox.balls .box .ballsrule h3::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: -10px;
+            width: 7px;
+            height: 7px;
+            background: url("../images/rule_ic.png") no-repeat; }
+        main article .rulebox.balls .box .ballsrule ul {
+          margin: 10px 0px 0px 12px; }
+          main article .rulebox.balls .box .ballsrule ul li {
+            list-style: decimal;
+            line-height: 24px;
+            margin-top: 15px;
+            font-size: 14px; }
+            main article .rulebox.balls .box .ballsrule ul li.lastLi {
+              padding-bottom: 40px; }
+        main article .rulebox.balls .box .ballsrule a {
+          color: #337ab7; }
+        main article .rulebox.balls .box .ballsrule .rtable {
+          width: 100%;
+          height: auto;
+          overflow-y: hidden;
+          overflow-x: auto;
+          border-radius: 12px;
+          margin-bottom: 15px; }
+          main article .rulebox.balls .box .ballsrule .rtable::-webkit-scrollbar {
+            height: 12px; }
+          main article .rulebox.balls .box .ballsrule .rtable::-webkit-scrollbar-thumb {
+            background: #556de7;
+            border-radius: 30px; }
+          main article .rulebox.balls .box .ballsrule .rtable::-webkit-scrollbar-track {
+            background: transparent;
+            background: #d6d6d6;
+            border-radius: 0px 0px 15px 15px; }
+          main article .rulebox.balls .box .ballsrule .rtable table {
+            width: 1205px;
+            height: auto;
+            border-radius: 10px 10px 0px 0px;
+            font-size: 15px;
+            overflow: hidden; }
+            main article .rulebox.balls .box .ballsrule .rtable table tr th, main article .rulebox.balls .box .ballsrule .rtable table tr td {
+              vertical-align: middle;
+              word-break: break-all; }
+            main article .rulebox.balls .box .ballsrule .rtable table.normal tr {
+              text-align: center; }
+              main article .rulebox.balls .box .ballsrule .rtable table.normal tr th {
+                padding: 8px 0px;
+                position: relative; }
+                main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted {
+                  width: 100px;
+                  height: 40px;
+                  padding: 0px;
+                  position: relative; }
+                  main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted span.fr {
+                    float: right;
+                    margin-right: 10px; }
+                  main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted span.fl {
+                    float: left;
+                    margin: 16px 0px 0px 10px;
+                    position: relative; }
+                  main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted div {
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px; }
+                    main article .rulebox.balls .box .ballsrule .rtable table.normal tr th.tilted div::before {
+                      content: "";
+                      position: absolute;
+                      border-style: solid;
+                      border-color: transparent transparent #756d6d transparent;
+                      border-width: 0px 100px 40px 0px;
+                      top: 0px;
+                      left: 0px; }
+              main article .rulebox.balls .box .ballsrule .rtable table.normal tr td {
+                line-height: 20px;
+                padding: 20px 0px;
+                border: solid 1px #e0e3f3; }
+            main article .rulebox.balls .box .ballsrule .rtable table.normal.pad10 tr td {
+              padding: 10px 0px; }
+            main article .rulebox.balls .box .ballsrule .rtable table.demo {
+              width: 100%; }
+              main article .rulebox.balls .box .ballsrule .rtable table.demo tr th {
+                text-align: left;
+                padding: 8px 0px 8px 50px;
+                position: relative;
+                background: #f0b37d;
+                color: #fff;
+                border-radius: 12px 12px 0px 0px; }
+                main article .rulebox.balls .box .ballsrule .rtable table.demo tr th::before {
+                  content: "";
+                  position: absolute;
+                  top: 7px;
+                  left: 20px;
+                  width: 15px;
+                  height: 15px;
+                  background: #fff;
+                  border-radius: 15px; }
+              main article .rulebox.balls .box .ballsrule .rtable table.demo tr td {
+                padding: 15px;
+                background: #ffedcd;
+                color: #4d515d;
+                line-height: 24px; }
+        main article .rulebox.balls .box .ballsrule .deal-rule, main article .rulebox.balls .box .ballsrule .single-rule, main article .rulebox.balls .box .ballsrule .half-rule, main article .rulebox.balls .box .ballsrule .ground-rule, main article .rulebox.balls .box .ballsrule .complex-rule,
+        main article .rulebox.balls .box .ballsrule .score-rule, main article .rulebox.balls .box .ballsrule .let-rule, main article .rulebox.balls .box .ballsrule .touch-rule, main article .rulebox.balls .box .ballsrule .roll-rule, main article .rulebox.balls .box .ballsrule .correct-rule,
+        main article .rulebox.balls .box .ballsrule .half-all-rule, main article .rulebox.balls .box .ballsrule .all-in-rule, main article .rulebox.balls .box .ballsrule .standard-rule, main article .rulebox.balls .box .ballsrule .champion-rule, main article .rulebox.balls .box .ballsrule .SC-rule,
+        main article .rulebox.balls .box .ballsrule .CS-rule, main article .rulebox.balls .box .ballsrule .LOL-rule, main article .rulebox.balls .box .ballsrule .DOTA-rule, main article .rulebox.balls .box .ballsrule .FIFA-rule {
+          display: none; }
+          main article .rulebox.balls .box .ballsrule .deal-rule.display, main article .rulebox.balls .box .ballsrule .single-rule.display, main article .rulebox.balls .box .ballsrule .half-rule.display, main article .rulebox.balls .box .ballsrule .ground-rule.display, main article .rulebox.balls .box .ballsrule .complex-rule.display,
+          main article .rulebox.balls .box .ballsrule .score-rule.display, main article .rulebox.balls .box .ballsrule .let-rule.display, main article .rulebox.balls .box .ballsrule .touch-rule.display, main article .rulebox.balls .box .ballsrule .roll-rule.display, main article .rulebox.balls .box .ballsrule .correct-rule.display,
+          main article .rulebox.balls .box .ballsrule .half-all-rule.display, main article .rulebox.balls .box .ballsrule .all-in-rule.display, main article .rulebox.balls .box .ballsrule .standard-rule.display, main article .rulebox.balls .box .ballsrule .champion-rule.display, main article .rulebox.balls .box .ballsrule .SC-rule.display,
+          main article .rulebox.balls .box .ballsrule .CS-rule.display, main article .rulebox.balls .box .ballsrule .LOL-rule.display, main article .rulebox.balls .box .ballsrule .DOTA-rule.display, main article .rulebox.balls .box .ballsrule .FIFA-rule.display {
+            display: block; }
+    main article .rulebox p {
+      font-size: 14px;
+      color: #4d515d;
+      line-height: 24px; }
+      main article .rulebox p.lastP {
+        padding-bottom: 15px; }
+      main article .rulebox p.wd_red {
+        color: #ff0000; }

@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相關規則</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body ontouchstart="">
+    <!--header-->
+    <header>
+        <!--置中外包-->
+        <article>
+            <!--標題-->
+            <h1>相關規則</h1>
+            <!--按鈕-->
+            <div class="rulebtn">
+                <a href="../index.html">遊戲說明</a>
+                <a href="./convert.html">球頭換算法</a>
+                <a href="./basketball.html">籃球</a>
+                <a href="./baseball.html">棒球</a>
+                <a href="./soccer.html" class="active">足球</a>
+                <a href="./football.html">美式足球</a>
+                <a href="./lotto.html">彩球</a>
+                <a href="./stock.html">指數</a>
+                <a href="./golf.html">高爾夫</a>
+                <a href="./iceball.html">冰球</a>
+                <a href="./tennis.html" class="nmar">網球</a>
+                <a href="./boxing.html">拳擊</a>
+                <a href="./race.html">賽馬賽狗</a>
+                <a href="./esp.html">電競</a>
+                <a href="./world.html">世界盃</a>
+                <a href="./else.html">其他籃球</a>
+            </div>
+            <!--返回按鈕-->
+            <a href="../" class="backbtn">返回頁面</a>
+        </article>
+    </header>
+    <!--main-->
+    <main>
+        <!--置中外包-->
+        <article>
+            <!--上bar-->
+            <div class="rulebar">
+                <button class="rwdbtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <p>足球相關規則</p>
+            </div>
+            <!--主區塊-->
+            <div class="rulebox balls">
+                <div class="box">
+                    <!--按鈕-->
+                    <div class="btnbar longlen soc">
+                        <button class="active">交易規則</button>
+                        <button>單式</button>
+                        <button>上半場</button>
+                        <button>滾球</button>
+                        <button>波膽</button>
+                        <button>半全場</button>
+                        <button>總入球</button>
+                        <button>標準過關</button>
+                        <button>讓分過關</button>
+                        <button>綜合過關</button>
+                        <button class="nmar">冠軍</button>
+                    </div>
+                    <!--主體-->
+                    <div class="ballsrule">
+                        <!--交易規則-->
+                        <div class="deal-rule display">
+                            <h2>玩法介紹</h2>
+                            <ul>
+                                <li>所有足球交易皆以九十分鐘的比賽結果為準，加時及以十二碼為決勝之比賽，或其後由任何體育紀律委員會重新裁決，而更改之賽果均不予計算。</li>
+                                <li>交易所有種類之足球比賽在不足九十分鐘法定時間內被終止、或較原定比賽時間延遲超過12小時或被取消，則該場比賽的交易視為無效，交易金額可獲全數退回。</li>
+                                <li>【90分鐘加傷停補時計算】</li>
+                                <li>某些青少年賽事（如隊伍後方有註明U13-U23或有包含青年隊、後備隊等字樣者）其正規比賽時間（含傷停補時）為60~80分鐘不等，若無腰斬或氣候等突發因素影響導致比賽未滿正規時間，本公司仍視所有注單為“有效注單”，敬請會員注意。</li>
+                            </ul>
+                        </div>
+                        <!--單式-->
+                        <div class="single-rule">
+                            <h2>單式交易-玩法介紹</h2>
+                            <p class="lastP">在指定比賽中，其中一隊球隊提供讓球作為比賽條件，賽果以九十分鐘之法定時間比賽結果為準。讓球分以下二種讓分方式：</p>
+                            <h3>讓分</h3>
+                            <ul>
+                                <li>在一場比賽中，其中一球隊開出「一個」讓球。如讓<span class="wd_red">"一球"</span>。（交易的金額將全數被交易在讓<span>"一球"</span>的球上）</li>
+                                <li>在一場比賽中，其中一球隊開出「二個」讓球。如讓<span class="wd_red">"半球 / 一球"</span>。（交易的金額將被平分為兩份，一半金額交易在讓<span class="wd_red">"半球"</span>的球上而另一半金額則交易在讓<span class="wd_red">"一球"</span>的球上。）</li>
+                                <li>在一場比賽中，若比賽結果為平手時，系統判斷<span class="wd_red">"被讓隊伍"</span>為贏</li>
+                            </ul>
+                            <h3>大/小</h3>
+                            <ul>
+                                <li>大 / 小(全場總入球數)：在指定比賽中當交易該場比賽的大 / 小(全場總入球數)時，若總入球數高於該場比賽的大 / 小球數則為大，若總入球數低於該場比賽的大 / 小球數則為小。</li>
+                                <li>如賽事結果之總入球數恰好等於「大 / 小球數」，則該交易金額將獲全數退回。</li>
+                                <li>賽果以九十分鐘之法定時間比賽結果為準。</li>
+                            </ul>
+                            <h3>單雙</h3>
+                            <p class="lastP">若比分為 0:0 時，系統判斷"雙"為贏。</p>
+                            <!--範例1-->
+                            <h2>單式交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr>
+                                        <th class="bg_lightblue" colspan="7">單式</th>
+                                    </tr>
+                                    <tr class="bg_purple wd_white">
+                                        <th>比賽時間</th>
+                                        <th>聯盟</th>
+                                        <th>主客隊</th>
+                                        <th>獨贏</th>
+                                        <th>讓球</th>
+                                        <th>大小</th>
+                                        <th>單雙</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>10:00a</td>
+                                        <td>西甲聯賽</td>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td>
+                                            1.970
+                                            <br>
+                                            1.910
+                                            <br>
+                                            和局&ensp;<span class="wd_red">1.900</span>
+                                        </td>
+                                        <td>
+                                            1球半/2球&ensp;<span class="wd_red">0.960</span>
+                                            <br>
+                                            <span class="wd_red">0.960</span>
+                                        </td>
+                                        <td>
+                                            大&ensp;2.5&ensp;<span class="wd_red">0.960</span>
+                                            <br>
+                                            小&ensp;2.5&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">1.910</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">1.960</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>10:00a</td>
+                                        <td>英超聯賽</td>
+                                        <td>
+                                            曼聯(主)
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>
+                                            1.950
+                                            <br>
+                                            1.820
+                                            <br>
+                                            和局&ensp;<span class="wd_red">1.900</span>
+                                        </td>
+                                        <td>
+                                            1球&ensp;<span class="wd_red">0.910</span>
+                                            <br>
+                                            <span class="wd_red">0.970</span>
+                                        </td>
+                                        <td>
+                                            大&ensp;2.5&ensp;<span class="wd_red">0.960</span>
+                                            <br>
+                                            小&ensp;2.5&ensp;<span class="wd_red">0.840</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">1.930</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">1.970</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>讓分交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一段第一行-->
+                                    <tr>
+                                        <td rowspan="4">
+                                            皇家馬德里(主)<span class="wd_red">vs</span>巴塞隆納
+                                        </td>
+                                        <td rowspan="4">全輸/全贏</td>
+                                        <td rowspan="2">3(主):0</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;0.920&nbsp;)&ensp;=&ensp;920&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第一段第二行-->
+                                    <tr>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">0.960</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第一段第三行-->
+                                    <tr>
+                                        <td rowspan="2">0(主):1</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第一段第四行-->
+                                    <tr>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">0.960</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;0.960&nbsp;)&ensp;=&ensp;960&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二段第一行-->
+                                    <tr class="bg_wdgray">
+                                        <td rowspan="2">皇家馬德里(主)<span class="wd_red">vs</span>巴塞隆納</td>
+                                        <td>贏一半</td>
+                                        <td rowspan="2">2(主):0</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;50%&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.92&nbsp;)&nbsp;-&nbsp;1000&nbsp;*&nbsp;50%&ensp;=&ensp;460&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二段第二行--->
+                                    <tr class="bg_wdgray">
+                                        <td>輸一半</td>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">0.960</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;(&nbsp;1000&nbsp;*&nbsp;50%&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;-500</td>
+                                    </tr>
+                                    <!--第三段第一行-->
+                                    <tr>
+                                        <td rowspan="2">曼聯(主)<span class="wd_red">vs</span>阿仙奴</td>
+                                        <td rowspan="2">和局</td>
+                                        <td rowspan="2">1(主):0</td>
+                                        <td>曼聯(主)&ensp;<span class="wd_red">0.910</span></td>
+                                        <td><span class="wd_red">退回本金</span></td>
+                                    </tr>
+                                    <!--第三段第二行-->
+                                    <tr>
+                                        <td>阿仙奴&ensp;<span class="wd_red">0.970</span></td>
+                                        <td><span class="wd_red">退回本金</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例3-->
+                            <h2>大小交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td rowspan="2">皇家馬德里(主)&ensp;<span class="wd_red">vs</span>&ensp;巴塞隆納</td>
+                                        <td>贏</td>
+                                        <td rowspan="2">1(主):2</td>
+                                        <td>大&ensp;2.5&ensp;<span class="wd_red">0.960</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;0.960&nbsp;)&ensp;=&ensp;960&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>小&ensp;2.5&ensp;<span class="wd_red">0.880</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例4-->
+                            <h2>單雙交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td rowspan="2">皇家馬德里(主)&ensp;<span class="wd_red">vs</span>&ensp;巴塞隆納</td>
+                                        <td>贏</td>
+                                        <td rowspan="2">1(主):2</td>
+                                        <td>單&ensp;<span class="wd_red">1.910</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1.910&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;910&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>雙&ensp;<span class="wd_red">1.960</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例5-->
+                            <h2>獨贏交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易球隊/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--上半第一行-->
+                                    <tr>
+                                        <td rowspan="3">皇家馬德里(主)&ensp;<span class="wd_red">vs</span>&ensp;巴塞隆納</td>
+                                        <td>輸</td>
+                                        <td rowspan="3">1(主):2</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">1.970</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    <!--上半第二行-->
+                                    <tr>
+                                        <td>贏</td>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">1.910</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1.910&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;910&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--上半第三行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>和局&ensp;<span class="wd_red">1.900</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--下半第一行-->
+                                    <tr>
+                                        <td rowspan="3">曼聯(主)&ensp;<span class="wd_red">vs</span>&ensp;阿仙奴</td>
+                                        <td>輸</td>
+                                        <td rowspan="3">0(主):0</td>
+                                        <td>曼聯(主)&ensp;<span class="wd_red">1.950</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>阿仙奴&ensp;<span class="wd_red">1.820</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>贏</td>
+                                        <td>和局&ensp;<span class="wd_red">1.900</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1.900&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;900&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--上半場-->
+                        <div class="half-rule">
+                            <h2>上半場交易</h2>
+                            <p>交易<span class="wd_red">上半場</span>所有種類交易，皆以<span class="wd_red">上半場</span>比賽結果為準。</p>
+                            <p class="lastP">如<span class="wd_red">上半場</span>比賽取消或賽程中斷，交易<span class="wd_red">上半場</span>所有交易一律取消。</p>
+                            <h3>上半場獨贏</h3>
+                            <p>在指定比賽中，兩隊以平手的方式(不計算讓球在內)選擇其中一對球隊勝出或和局，賽果以該比賽結果前<span class="wd_red">四十五分鐘</span>之法定時間比賽結果為準。</p>
+                            <h3>上半場讓球</h3>
+                            <p>在指定比賽中，其中一球隊提供讓球作為比賽條件，賽果以該比賽 前四十五分鐘之法定時間比賽結果為準。讓球比賽分以下兩種讓球方式：</p>
+                            <ul>
+                                <li>在一場比賽中，其中一球隊開出「一個」讓球。如讓<span class="wd_red">"一球"</span>。（交易的金額將全數被交易在讓<span class="wd_red">"一球"</span>的球上）</li>
+                                <li>在一場比賽中，其中一球隊開出「二個」讓球。如讓<span class="wd_red">"半球 / 一球"</span>。（交易的金額將被平分為兩份，一半金額交易在讓<span class="wd_red">"半球"</span>的球上而另一半金額則交易在讓<span class="wd_red">"一球"</span>的球上。）</li>
+                            </ul>
+                            <h3>上半場大/小</h3>
+                            <ul>
+                                <li>大/小(上半場總入球數)：在指定比賽中當交易該場比賽的大/小(上半場總入球數)時，若上半場總入球數高於該場比賽上半場的大/小球數則為大，若上半場總入球數低於該場比賽上半場的大/小球數則為小。</li>
+                                <li>如賽事結果之上半場總入球數恰好等於「大/小球數」，則該交易金額將獲全數退回。</li>
+                                <li>賽果以該比賽前<span class="wd_red">四十五分鐘</span>之法定時間比賽結果為準。</li>
+                            </ul>
+                            <!--範例1-->
+                            <h2>上半場交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主客隊</th>
+                                        <th>獨贏</th>
+                                        <th>讓球</th>
+                                        <th>大小</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            04:00a
+                                            <br>
+                                            西甲聯賽
+                                        </td>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.960</span>
+                                            <br>
+                                            <span class="wd_red">1.880</span>
+                                            <br>
+                                            和局&ensp;<span class="wd_red">1.900</span>
+                                        </td>
+                                        <td>
+                                            1球半/2球&ensp;<span class="wd_red">0.920</span>
+                                            <br>
+                                            <span class="wd_red">0.960</span>
+                                        </td>
+                                        <td>
+                                            大&nbsp;2.5&ensp;<span class="wd_red">0.960</span>
+                                            <br>
+                                            小&nbsp;2.5&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            04:00a
+                                            <br>
+                                            英超聯賽
+                                        </td>
+                                        <td>
+                                            曼聯(主)
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.950</span>
+                                            <br>
+                                            <span class="wd_red">1.820</span>
+                                            <br>
+                                            和局&ensp;<span class="wd_red">1.900</span>
+                                        </td>
+                                        <td>
+                                            1&ensp;<span class="wd_red">0.950</span>
+                                            <br>
+                                            <span class="wd_red">0.890</span>
+                                        </td>
+                                        <td>
+                                            大&nbsp;2.5&ensp;<span class="wd_red">0.950</span>
+                                            <br>
+                                            小&nbsp;2.5&ensp;<span class="wd_red">0.840</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>上半場讓球交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>上半場比分</th>
+                                        <th>交易單/雙/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一段第一行-->
+                                    <tr>
+                                        <td rowspan="4">皇家馬德里(主)<span class="wd_red">vs</span>巴塞隆納</td>
+                                        <td rowspan="4">全贏/全輸</td>
+                                        <td rowspan="2">4(主):1</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;0.920&nbsp;)&nbsp;-&nbsp;920&ensp;=&ensp;920&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第一段第二行-->
+                                    <tr>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">0.960</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第一段第三行-->
+                                    <tr>
+                                        <td rowspan="2">4(主):1</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第一段第四行-->
+                                    <tr>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">0.960</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;0.960&nbsp;)&ensp;=&ensp;960&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二段第一行-->
+                                    <tr class="bg_wdgray">
+                                        <td rowspan="2">皇家馬德里(主)<span class="wd_red">vs</span>巴塞隆納</td>
+                                        <td>贏一半</td>
+                                        <td rowspan="2">2(主):0</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;50%&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.92&nbsp;)&nbsp;-&nbsp;1000&nbsp;*&nbsp;50%&nbsp;-&nbsp;1000&ensp;=&ensp;460&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二段第二行-->
+                                    <tr class="bg_wdgray">
+                                        <td>輸一半</td>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">0.960</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;(&nbsp;1000&nbsp;*&nbsp;50%&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;-500</td>
+                                    </tr>
+                                    <!--第三段第一行-->
+                                    <tr>
+                                        <td rowspan="2">曼聯(主)<span class="wd_red">vs</span>阿仙奴</td>
+                                        <td rowspan="2">和局</td>
+                                        <td rowspan="2">1(主):0</td>
+                                        <td>曼聯(主)&ensp;<span class="wd_red">0.950</span></td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                    <!--第三段第二行-->
+                                    <tr>
+                                        <td>阿仙奴&ensp;<span class="wd_red">0.890</span></td>
+                                        <td>退回本金</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例3-->
+                            <h2>上半場大小交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易大/小/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td rowspan="2">皇家馬德里(主)<span class="wd_red">vs</span>巴塞隆納</td>
+                                        <td>贏</td>
+                                        <td rowspan="2">1(主):3</td>
+                                        <td>大&nbsp;2.5&ensp;<span class="wd_red">0.960</span>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;0.960&nbsp;)&ensp;=&ensp;960&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>小&nbsp;2.5&ensp;<span class="wd_red">0.880</span>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例4-->
+                            <h2>上半場獨贏交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易大/小/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--上半第一行-->
+                                    <tr>
+                                        <td rowspan="3">皇家馬德里(主)<span class="wd_red">vs</span>巴塞隆納</td>
+                                        <td>輸</td>
+                                        <td rowspan="3">1(主):2</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">1.960</span>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--上半第二行-->
+                                    <tr>
+                                        <td>贏</td>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">1.880</span>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1.880&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;880&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--上半第三行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>和局&ensp;<span class="wd_red">1.900</span>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--下半第一行-->
+                                    <tr>
+                                        <td rowspan="3">曼聯(主)<span class="wd_red">vs</span>阿仙奴</td>
+                                        <td>輸</td>
+                                        <td rowspan="3">0(主):0</td>
+                                        <td>曼聯(主)&ensp;<span class="wd_red">1.950</span>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--下半第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>阿仙奴&ensp;<span class="wd_red">1.820</td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--下半第三行-->
+                                    <tr>
+                                        <td>贏</td>
+                                        <td>和局&ensp;<span class="wd_red">1.900</td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1.900&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;900&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--滾球交易-->
+                        <div class="roll-rule">
+                            <h2>滾球交易-玩法介紹</h2>
+                            <p>在指定比賽中，比賽開始後的所有交易行為將稱為滾球交易。滾球交易將分別為兩種：<span class="wd_red">滾球讓球</span>及<span class="wd_red">滾球大小</span>。 交易時間是以比賽開始後，開放滾球滾球交易至系統終止交易時間為標準。</p>
+                            <p class="wd_red lastP">在指定比賽進行中危險球"未確認"的注單，公司有權視為"入球註銷"注單。</p>
+                            <h3>滾球讓分</h3>
+                            <ul>
+                                <li>在指定比賽中，其中一對球隊提供讓球條件，賽果以90分鐘之法定時間比賽結果為準。(直到裁判員吹哨子為準)</li>
+                                <li>勝出：滾球讓球是以基礎分制 (比賽結果) (交易當時的比賽分數)與交易當時的獲利率比對，作為勝出條件。</li>
+                                <li>交易結果：滾球讓球交易結果是以符合勝出條件的獲利率作為計算交易結果的基準。</li>
+                            </ul>
+                            <h3>滾球大小</h3>
+                            <ul>
+                                <li>在指定比賽中當交易該場比賽的大小(全場總入球數)時，若總入球數高於該場比賽的大小球數則為大，若總入數低於該場比賽的大小球數則為小。</li>
+                                <li>勝出：滾球大小是以(比賽結果總入球數)與交易常時大/小的獲利率比對，作為勝出條件。</li>
+                                <li>交易結果：滾球大小交易結果是以符合勝出條件的獲利率作為計算交易結果的基準。</li>
+                            </ul>
+                            <!--範例1-->
+                            <h2>滾球交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>聯盟</th>
+                                        <th>主客隊</th>
+                                        <th>讓球</th>
+                                        <th>大小</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>05:31a</td>
+                                        <td>西甲聯賽</td>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td>
+                                            半球&ensp;<span class="wd_red">0.920</span>
+                                            <br>
+                                            <span class="wd_red">0.960</span>
+                                        </td>
+                                        <td>
+                                            大&ensp;2.5&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            小&ensp;2.5&ensp;<span class="wd_red">0.840</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>滾球交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>當時比分</th>
+                                        <th>最終比賽結果</th>
+                                        <th>交易種類/內容</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--上半第一行-->
+                                    <tr>
+                                        <td rowspan="4">
+                                            皇家馬德里(主)
+                                            <br>
+                                            vs
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td rowspan="4">全輸/全贏</td>
+                                        <td rowspan="4">1(主):0</td>
+                                        <td rowspan="2">4(主):1</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;0.920&nbsp;)&ensp;=&ensp;920&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--上半第二行-->
+                                    <tr>
+                                        <td>巴塞隆納&ensp;<span class="wd_red">0.960</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--下半第一行-->
+                                    <tr class="bg_wdgray">
+                                        <td rowspan="2">1(主):2</td>
+                                        <td>皇家馬德里(主)&ensp;<span class="wd_red">0.920</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <!--第二行下半-->
+                                    <tr class="bg_wdgray">
+                                        <td>巴塞隆納&ensp;<span class="wd_red">0.960</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;0.960&nbsp;)&ensp;=&ensp;960&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--波膽-->
+                        <div class="correct-rule">
+                            <!--範例1-->
+                            <h2>波膽交易-玩法介紹</h2>
+                            <p>在指定比賽中，選定兩對勝負比數的交易，賽果以90分鐘之法定時間比賽結果為準。</p>
+                            <h2>波膽交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主客隊</th>
+                                        <th>1:0</th>
+                                        <th>2:0</th>
+                                        <th>2:1</th>
+                                        <th>3:0</th>
+                                        <th>3:1</th>
+                                        <th>3:2</th>
+                                        <th>4:0</th>
+                                        <th>4:1</th>
+                                        <th>4:2</th>
+                                        <th>4:3</th>
+                                        <th>0:0</th>
+                                        <th>1:1</th>
+                                        <th>2:2</th>
+                                        <th>3:3</th>
+                                        <th>4:4</th>
+                                        <th>5up</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            10:00a
+                                            <br>
+                                            西甲聯賽
+                                        </td>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">8</span>
+                                            <br>
+                                            <span class="wd_red">8</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">9</span>
+                                            <br>
+                                            <span class="wd_red">12</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">8</span>
+                                            <br>
+                                            <span class="wd_red">11</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">21</span>
+                                            <br>
+                                            <span class="wd_red">28</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">19</span>
+                                            <br>
+                                            <span class="wd_red">29</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">26</span>
+                                            <br>
+                                            <span class="wd_red">26</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">51</span>
+                                            <br>
+                                            <span class="wd_red">81</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">33</span>
+                                            <br>
+                                            <span class="wd_red">81</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">51</span>
+                                            <br>
+                                            <span class="wd_red">81</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">81</span>
+                                            <br>
+                                            <span class="wd_red">81</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">8</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">6.5</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">15</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">51</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">101</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">51</span>
+                                            <br>
+                                            <span class="wd_red">101</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            10:00a
+                                            <br>
+                                            英超聯賽
+                                        </td>
+                                        <td>
+                                            曼聯(主)
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">7</span>
+                                            <br>
+                                            <span class="wd_red">10</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">7</span>
+                                            <br>
+                                            <span class="wd_red">19</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">7.5</span>
+                                            <br>
+                                            <span class="wd_red">15</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">11</span>
+                                            <br>
+                                            <span class="wd_red">51</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">11</span>
+                                            <br>
+                                            <span class="wd_red">67</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">26</span>
+                                            <br>
+                                            <span class="wd_red">43</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">26</span>
+                                            <br>
+                                            <span class="wd_red">101</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">26</span>
+                                            <br>
+                                            <span class="wd_red">101</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">43</span>
+                                            <br>
+                                            <span class="wd_red">101</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">81</span>
+                                            <br>
+                                            <span class="wd_red">101</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">11</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">7</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">15</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">51</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">101</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">35</span>
+                                            <br>
+                                            <span class="wd_red">101</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>波膽交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易波膽/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--上半第一行-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            皇家馬德里(主)&ensp;<span class="wd_red">vs</span>&ensp;巴塞隆納
+                                        </td>
+                                        <td>全贏</td>
+                                        <td rowspan="2">1(主):3</td>
+                                        <td>1:3&ensp;<span class="wd_red">29</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;29&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;28000&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--上半第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>2:1&ensp;<span class="wd_red">8</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--半全場-->
+                        <div class="half-all-rule">
+                            <h2>半全場交易-玩法介紹</h2>
+                            <p>交易指定一場比賽的上半場及全場賽果。</p>
+                            <!--範例1-->
+                            <h2>半全場交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主客隊</th>
+                                        <th>主/主</th>
+                                        <th>主/和</th>
+                                        <th>主/客</th>
+                                        <th>和/主</th>
+                                        <th>和/和</th>
+                                        <th>和/客</th>
+                                        <th>客/主</th>
+                                        <th>客/和</th>
+                                        <th>客/客</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            04:00a
+                                            <br>
+                                            西甲聯賽
+                                        </td>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">3.3</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">15</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">40</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">4.6</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">6</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">9</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">26</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">15</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">5.3</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>半全場交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>上半場賽果</th>
+                                        <th>全場賽果</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一行-->
+                                    <tr>
+                                        <td rowspan="2">皇家馬德里(主)<span class="wd_red">vs</span>巴塞隆納</td>
+                                        <td>主/主&ensp;贏</td>
+                                        <td rowspan="2">2(主):1</td>
+                                        <td rowspan="2">3(主):1</td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;3.3&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;2300&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr>
+                                        <td>主/和&ensp;輸</td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--總入球-->
+                        <div class="all-in-rule">
+                            <h2>總入球交易-玩法介紹</h2>
+                            <p>總入球數：在指定比賽中，兩隊在全場九十分鐘法定時間內入球之總數。</p>
+                            <p>交易選擇：0～1球，2～3球，4～6球，7球或以上。</p>
+                            <!--範例1-->
+                            <h2>總入球交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主客隊</th>
+                                        <th>0~1</th>
+                                        <th>2~3</th>
+                                        <th>4~6</th>
+                                        <th>7up</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            10:00a
+                                            <br>
+                                            西甲聯賽
+                                        </td>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">5.1</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.8</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">3.3</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">25</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>總入球交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>比賽結果</th>
+                                        <th>交易總入球數/獲利率</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一行-->
+                                    <tr>
+                                        <td rowspan="2">皇家馬德里(主)<span class="wd_red">vs</span>巴塞隆納</td>
+                                        <td>贏</td>
+                                        <td rowspan="2">1(主):3</td>
+                                        <td>4~6&ensp;<span class="wd_red">3.3</span></td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;3.3&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;2300&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr>
+                                        <td>輸</td>
+                                        <td>2~3&ensp;<span class="wd_red">1.8</span></td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--標準過關-->
+                        <div class="standard-rule">
+                            <h2>標準過關-玩法介紹</h2>
+                            <p>標準過關是指在一場比賽中，二隊球隊以平手情況下比賽，賽果以90分鐘之法定時間比賽結果為準。</p>
+                            <p>在「標準過關」開放的每一場賽事中，客戶可交易其中一隊勝出或和局。</p>
+                            <p>所有在「標準過關」中公佈之獲利率都可作過關交易。（包括二關、三關、四關等）。</p>
+                            <p>每注的最高派彩金額上限為新台幣100萬元整。</p>
+                            <!--範例1-->
+                            <h2>標準過關交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主隊</th>
+                                        <th></th>
+                                        <th>和局</th>
+                                        <th></th>
+                                        <th>客隊</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td rowspan="2">
+                                            04:00a
+                                            <br>
+                                            西甲聯賽
+                                        </td>
+                                        <td>
+                                            皇家馬德里(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.880</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.860</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.880</span>
+                                        </td>
+                                        <td>巴塞隆納</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            曼聯(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.930</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.900</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.930</span>
+                                        </td>
+                                        <td>阿仙奴</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>標準過關交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>對戰組合</th>
+                                        <th>結果類型</th>
+                                        <th>交易種類/內容</th>
+                                        <th>交易結果(交易金額&ensp;1000)</th>
+                                    </tr>
+                                    <!--第一行-->
+                                    <tr>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            <span class="wd_red">3:1</span>
+                                            巴塞隆納
+                                            <br>
+                                            <br>
+                                            曼聯(主)
+                                            <span class="wd_red">1:0</span>
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>全贏</td>
+                                        <td>
+                                            <span class="wd_red">(足球2串一)</span>
+                                            <br>
+                                            皇家馬德里(主)&ensp;<span class="wd_red">3</span>&ensp;vs&ensp;巴塞隆納&ensp;<span class="wd_red">1</span>
+                                            <br>
+                                            <span class="wd_red">皇家馬德里(主)&ensp;@&ensp;1.880</span>
+                                            <br>
+                                            <br>
+                                            曼聯(主)&ensp;<span class="wd_red">1</span>&ensp;vs&ensp;阿仙奴&ensp;<span class="wd_red">0</span>
+                                            <br>
+                                            <span class="wd_red">曼聯(主)&ensp;@&ensp;1.930</span>
+                                        </td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1.880&nbsp;)&nbsp;*&nbsp;(&nbsp;1.930&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;2628.4&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            <span class="wd_red">0:1</span>
+                                            巴塞隆納
+                                            <br>
+                                            <br>
+                                            曼聯(主)
+                                            <span class="wd_red">0:1</span>
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>全輸</td>
+                                        <td>
+                                            <span class="wd_red">(足球2串一)</span>
+                                            <br>
+                                            皇家馬德里(主)&ensp;<span class="wd_red">0</span>&ensp;vs&ensp;巴塞隆納&ensp;<span class="wd_red">1</span>
+                                            <br>
+                                            <span class="wd_red">皇家馬德里(主)&ensp;@&ensp;1.880</span>
+                                            <br>
+                                            <br>
+                                            曼聯(主)&ensp;<span class="wd_red">0</span>&ensp;vs&ensp;阿仙奴&ensp;<span class="wd_red">1</span>
+                                            <br>
+                                            <span class="wd_red">曼聯(主)&ensp;@&ensp;1.930</span>
+                                        </td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--讓分過關-->
+                        <div class="let-rule">
+                            <h2>讓分過關交易</h2>
+                            <ul>
+                                <li>讓分過關是指在一場球賽中，其中一隊球隊提供讓分作為讓賽條件，賽果均以開賽五局之後至最終完場的比數為準。</li>
+                                <li>每注的最高派彩金額上限為新台幣100萬元整。</li>
+                            </ul>
+                            <!--範例1-->
+                            <h2>讓分過關交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主客隊</th>
+                                        <th>讓球</th>
+                                        <th>大小</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            10:00a
+                                            <br>
+                                            西甲聯賽
+                                        </td>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td>
+                                            半球&ensp;<span class="wd_red">0.880</span>
+                                            <br>
+                                            <span class="wd_red">0.960</span>
+                                        </td>
+                                        <td>
+                                            大&ensp;2.5&ensp;<span class="wd_red">0.910</span>
+                                            <br>
+                                            小&ensp;2.5&ensp;<span class="wd_red">0.950</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            10:00a
+                                            <br>
+                                            英超聯賽
+                                        </td>
+                                        <td>
+                                            曼聯(主)
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>
+                                            1球&ensp;<span class="wd_red">0.930</span>
+                                            <br>
+                                            <span class="wd_red">0.910</span>
+                                        </td>
+                                        <td>
+                                            大&ensp;1.5&ensp;<span class="wd_red">0.940</span>
+                                            <br>
+                                            小&ensp;1.5&ensp;<span class="wd_red">0.920</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>讓分過關交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>比賽結果</th>
+                                        <th>結果類型</th>
+                                        <th>交易種類/內容</th>
+                                        <th>交易結果(交易金額&nbsp;1000)</th>
+                                    </tr>
+                                    <!--第一行-->
+                                    <tr>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            <span class="wd_red">1:0</span>
+                                            <br>
+                                            巴塞隆納
+                                            <br>
+                                            <br>
+                                            曼聯(主)
+                                            <br>
+                                            <span class="wd_red">2:0</span>
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>全贏</td>
+                                        <td>
+                                            <span class="wd_red">(足球2串一)</span>
+                                            <br>
+                                            皇家馬德里(主)&ensp;<span class="wd_red">1</span>&ensp;vs&ensp;巴塞隆納&ensp;<span class="wd_red">0</span>
+                                            <br>
+                                            <span class="wd_red">皇家馬德里(主)&ensp;@&ensp;0.880</span>
+                                            <br>
+                                            <br>
+                                            曼聯(主)&ensp;<span class="wd_red">2</span>&ensp;vs&ensp;阿仙奴&ensp;<span class="wd_red">0</span>
+                                            <br>
+                                            <span class="wd_red">曼聯(主)&ensp;@&ensp;0.930</span>
+                                        </td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.880&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.930&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;2628.4&nbsp;(&nbsp;不含本金&nbsp;)</td>
+                                    </tr>
+                                    <!--第二行-->
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            <span class="wd_red">0:1</span>
+                                            <br>
+                                            巴塞隆納
+                                            <br>
+                                            <br>
+                                            曼聯(主)
+                                            <br>
+                                            <span class="wd_red">0:1</span>
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>全輸</td>
+                                        <td>
+                                            <span class="wd_red">(足球2串一)</span>
+                                            <br>
+                                            皇家馬德里(主)&ensp;<span class="wd_red">0</span>&ensp;vs&ensp;巴塞隆納&ensp;<span class="wd_red">1</span>
+                                            <br>
+                                            <span class="wd_red">皇家馬德里(主)&ensp;@&ensp;0.880</span>
+                                            <br>
+                                            <br>
+                                            曼聯(主)&ensp;<span class="wd_red">0</span>&ensp;vs&ensp;阿仙奴&ensp;<span class="wd_red">1</span>
+                                            <br>
+                                            <span class="wd_red">曼聯(主)&ensp;@&ensp;0.930</span>
+                                        </td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--綜合過關-->
+                        <div class="complex-rule">
+                            <h2>綜合過關交易</h2>
+                            <ul>
+                                <li>綜合過關是指在一場球賽中，其中提供各種玩法作為過關交易條件 。</li>
+                                <li>在「綜合過關」開放的每一場賽事中，客戶僅能交易其中一種玩法勝出。賽果及結果計算均以各種玩法交易規則為準則 。</li>
+                                <li>所有在「綜合過關」中公佈之各種玩法條件及獲利率都可作過關交易（包括二關、三關、四關等） 。</li>
+                                <li>每注的最高派彩金額上限為新台幣100萬元整。</li>
+                            </ul>
+                            <!--範例1-->
+                            <h2>綜合過關交易</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_lightblue">
+                                        <th colspan="8">2005-04-20</th>
+                                    </tr>
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主客隊</th>
+                                        <th>讓球</th>
+                                        <th>大小</th>
+                                        <th>單雙</th>
+                                        <th>獨贏</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            04:00a
+                                            <br>
+                                            西甲聯賽
+                                        </td>
+                                        <td>
+                                            皇家馬德里(主)
+                                            <br>
+                                            巴塞隆納
+                                        </td>
+                                        <td>
+                                            半球&ensp;<span class="wd_red">0.920</span>
+                                            <br>
+                                            <span class="wd_red">0.960</span>
+                                        </td>
+                                        <td>
+                                            大&nbsp;2.5&ensp;<span class="wd_red">0.850</span>
+                                            <br>
+                                            小&nbsp;2.5&ensp;<span class="wd_red">0.950</span>
+                                        </td>
+                                        <td>
+                                            單&nbsp;<span class="wd_red">1.960</span>
+                                            <br>
+                                            雙&nbsp;<span class="wd_red">1.920</span>
+                                        </td>
+                                        <td>
+                                            2.65
+                                            <br>
+                                            4.00
+                                            <br>
+                                            2.00
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            波膽
+                                            <br>
+                                            總入球
+                                            <br>
+                                            半全場
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            04:00a
+                                            <br>
+                                            英超聯賽
+                                        </td>
+                                        <td>
+                                            曼聯(主)
+                                            <br>
+                                            阿仙奴
+                                        </td>
+                                        <td>
+                                            平手&ensp;<span class="wd_red">0.950</span>
+                                            <br>
+                                            <span class="wd_red">0.890</span>
+                                        </td>
+                                        <td>
+                                            大&nbsp;2.5&ensp;<span class="wd_red">0.940</span>
+                                            <br>
+                                            小&nbsp;2.5&ensp;<span class="wd_red">0.930</span>
+                                        </td>
+                                        <td>
+                                            單&nbsp;<span class="wd_red">1.950</span>
+                                            <br>
+                                            雙&nbsp;<span class="wd_red">1.930</span>
+                                        </td>
+                                        <td>
+                                            3.57
+                                            <br>
+                                            4.50
+                                            <br>
+                                            2.10
+                                        </td>
+                                        <td>上半場</td>
+                                        <td>
+                                            波膽
+                                            <br>
+                                            總入球
+                                            <br>
+                                            半全場
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--冠軍-->
+                        <div class="champion-rule">
+                            <h2>冠軍賽-玩法介紹</h2>
+                            <p>交易指定聯賽最終的冠軍球隊、或分組賽最終的冠軍球隊。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!--RWD按鈕-->
+    <nav class="rwd slide">
+        <div class="title"><div><a href="../"></a><p>相關規則</p></div></div>
+        <a href="../index.html#"><span></span><p>遊戲說明</p></a>
+        <a href="./convert.html"><span class="convert"></span><p>球頭換算法</p></a>
+        <a href="./basketball.html"><span class="bask"></span><p>籃球</p></a>
+        <a href="./baseball.html"><span class="base"></span><p>棒球</p></a>
+        <a href="./soccer.html"><span class="soc"></span><p>足球</p></a>
+        <a href="./football.html"><span class="ftb"></span><p>美式足球</p></a>
+        <a href="./lotto.html"><span class="lot"></span><p>彩球</p></a>
+        <a href="./stock.html"><span class="stk"></span><p>指數</p></a>
+        <a href="./golf.html"><span class="golf"></span><p>高爾夫</p></a>
+        <a href="./iceball.html"><span class="iceb"></span><p>冰球</p></a>
+        <a href="./tennis.html"><span class="ten"></span><p>網球</p></a>
+        <a href="./boxing.html"><span class="boxing"></span><p>拳擊</p></a>
+        <a href="./race.html"><span class="race"></span><p>賽馬賽狗</p></a>
+        <a href="./esp.html"><span class="esp"></span><p>電競</p></a>
+        <a href="./world.html"><span class="world"></span><p>世界盃</p></a>
+        <a href="./else.html"><span class="else"></span><p>其他籃球</p></a>
+    </nav>
+    <!--背景-->
+    <div class="bg"></div>
+</body>
+</html>

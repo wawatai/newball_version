@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相關規則</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body ontouchstart="">
+    <!--header-->
+    <header>
+        <!--置中外包-->
+        <article>
+            <!--標題-->
+            <h1>相關規則</h1>
+            <!--按鈕-->
+            <div class="rulebtn">
+                <a href="../index.html">遊戲說明</a>
+                <a href="./convert.html">球頭換算法</a>
+                <a href="./basketball.html">籃球</a>
+                <a href="./baseball.html">棒球</a>
+                <a href="./soccer.html">足球</a>
+                <a href="./football.html">美式足球</a>
+                <a href="./lotto.html">彩球</a>
+                <a href="./stock.html">指數</a>
+                <a href="./golf.html">高爾夫</a>
+                <a href="./iceball.html">冰球</a>
+                <a href="./tennis.html" class="nmar">網球</a>
+                <a href="./boxing.html">拳擊</a>
+                <a href="./race.html">賽馬賽狗</a>
+                <a href="./esp.html">電競</a>
+                <a href="./world.html">世界盃</a>
+                <a href="./else.html" class="active">其他籃球</a>
+            </div>
+            <!--返回按鈕-->
+            <a href="../" class="backbtn">返回頁面</a>
+        </article>
+    </header>
+    <!--main-->
+    <main>
+        <!--置中外包-->
+        <article>
+            <!--上bar-->
+            <div class="rulebar">
+                <button class="rwdbtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <p>其他籃球相關規則</p>
+            </div>
+            <!--主區塊-->
+            <div class="rulebox balls">
+                <div class="box">
+                    <!--按鈕-->
+                    <div class="btnbar else">
+                        <button class="active">交易規則</button>
+                        <button>單式</button>
+                        <button>綜合過關</button>
+                    </div>
+                    <!--主體-->
+                    <div class="ballsrule">
+                        <!--交易規則-->
+                        <div class="deal-rule display">
+                            <h2>玩法介紹</h2>
+                            <ul>
+                                <li>所有籃球投注之賽果認定皆以本公司所訂定之規則為準。</li>
+                                <li>籃球投注之賽果依照各聯盟之裁定為最終賽果與賽事完賽認定。</li>
+                                <li>籃球所有比賽如遇主客場異動不影響比賽結果，所有注單視為<span class="wd_red">“有效注單”</span>。</li>
+                                <li>籃球在特定國家因聯盟賽制，採取積分制，以平手完場賽事或 於正規時間結束後同場隊伍再加時積分賽，以上所有注單均視 為<span class="wd_red">“有效注單”</span>。</li>
+                                <li>如果比賽開始，但在原定時間的<span class="wd_red">十二小時內</span>暫停或終止，若所剩餘的比賽時間不多於5分鐘，則全場所有注單視為<span class="wd_red">“有效注單”</span>。</li>
+                            </ul>
+                        </div>
+                        <!--單式-->
+                        <div class="single-rule">
+                            <h2>單式交易-玩法介紹</h2>
+                            <h3>讓分</h3>
+                            <p>在指定比賽中，預測兩隊經"讓分調整"後，選擇主隊勝出或客隊勝出。</p>
+                            <h3>大/小</h3>
+                            <p>在指定比賽中，預測兩隊比分<span class="wd_red">總合</span>的大小。</p>
+                            <h3>獨贏</h3>
+                            <p>在指定比賽中，預測主隊勝出或客隊勝出。</p>
+                            <h3>先得分</h3>
+                            <p>在指定比賽中，預測比賽開始後主隊或客隊第一個得分(含罰球)的投注方式。</p>
+                            <h3>單/雙</h3>
+                            <p>在指定比賽中，預測兩隊比分<span class="wd_red">總合</span>的單雙。</p>
+                            <h3>半場</h3>
+                            <p>上半場以指定比賽兩隊的<span class="wd_red">第一、二節之比分總合</span>為派彩基準。</p>
+                            <p>下半場以指定比賽兩隊的<span class="wd_red">第三、四節(含延長加時)之比分總合</span>為派彩基準。</p>
+                            <h3>走地</h3>
+                            <p>在指定比賽進行中接受投注，一律<span class="wd_red">不計算基礎分</span>，以兩隊最終比分為派彩基準。</p>
+                            <p>過關注單中的同一場比賽不得互碰（在同一張注單中投注2次以上），否則一律視為<span class="wd_red">無效</span>注單。</p>
+                            <h3>過關</h3>
+                            <p>過關注單中的任何一場比賽，如果聯盟裁定比賽延期或取消，此過關注單仍視為<span class="wd_red">有效</span>，但是該場比賽不予計算，所下之關數將遞減（4關降為3關，3關降為2關，2關降為單式）。</p>
+                            <!--範例1-->
+                            <h2>
+                                讓分/大小/單雙/獨贏/半場/走地
+                                <br>
+                                投注與派彩範例
+                            </h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>比賽時間</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                        <th>大小</th>
+                                        <th>獨贏</th>
+                                        <th>單雙</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            01/09
+                                            <br>
+                                            08:00
+                                        </td>
+                                        <td>
+                                            底特律活塞
+                                            <br>
+                                            聖安東尼奧馬刺&ensp;(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.940</span>
+                                            <br>
+                                            2+50&ensp;<span class="wd_red">0.940</span>
+                                        </td>
+                                        <td>
+                                            186.5大&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            小&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.900</span>
+                                            <br>
+                                            <span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            01/09
+                                            <br>
+                                            08:00
+                                        </td>
+                                        <td>
+                                            西雅圖超音速
+                                            <br>
+                                            邁阿密熱火&ensp;(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.940</span>
+                                            <br>
+                                            平手&ensp;<span class="wd_red">0.940</span>
+                                        </td>
+                                        <td>
+                                            192平大&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            小&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.900</span>
+                                            <br>
+                                            <span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            01/09
+                                            <br>
+                                            08:00
+                                        </td>
+                                        <td>
+                                            印地安納溜馬
+                                            <br>
+                                            達拉斯小牛&ensp;(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.940</span>
+                                            <br>
+                                            平手&ensp;<span class="wd_red">0.940</span>
+                                        </td>
+                                        <td>
+                                            192平大&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            小&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.900</span>
+                                            <br>
+                                            <span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p>假設比賽結果：</p>
+                            <p>馬刺(主)&ensp;vs&ensp;活塞：<span class="wd_red">95</span>&nbsp;比&nbsp;<span class="wd_red">93</span></p>
+                            <p>熱火(主)&ensp;vs&ensp;超音速：<span class="wd_red">103</span>&nbsp;比&nbsp;<span class="wd_red">89</span></p>
+                            <p class="lastP">小牛(主)&ensp;vs&ensp;溜馬：<span class="wd_red">85</span>&nbsp;比&nbsp;<span class="wd_red">89</span></p>
+                            <div class="rtable bor_lightbrown">
+                                <table class="demo">
+                                    <tr>
+                                        <th>讓分投注與派彩範例</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            投注&ensp;馬刺&ensp;1000元&nbsp;→&nbsp;贏分洞&ensp;1000&nbsp;*&nbsp;0.94&nbsp;*&nbsp;50%&ensp;=&ensp;470元
+                                            <br>
+                                            投注&ensp;活塞&ensp;1000元&nbsp;→&nbsp;輸分洞&ensp;1000&nbsp;*&nbsp;-1&nbsp;*&nbsp;50%&ensp;=&ensp;-500元
+                                            <br>
+                                            投注&ensp;熱火&ensp;1000元&nbsp;→&nbsp;贏&ensp;1000&nbsp;*&nbsp;0.94&ensp;=&ensp;940元
+                                            <br>
+                                            投注&ensp;超音速&ensp;1000元&nbsp;→&nbsp;輸&ensp;1000&nbsp;*&nbsp;-1&ensp;=&ensp;-1000元
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="rtable bor_lightbrown">
+                                <table class="demo">
+                                    <tr>
+                                        <th>大小投注與派彩範例</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            投注&ensp;馬刺&ensp;vs&ensp;活塞，186.5&nbsp;大，1000元&nbsp;→&nbsp;贏&ensp;1000&nbsp;*&nbsp;0.9&ensp;=&ensp;900元
+                                            <br>
+                                            投注&ensp;馬刺&ensp;vs&ensp;活塞，186.5&nbsp;小，1000元&nbsp;→&nbsp;輸&ensp;1000&nbsp;*&nbsp;-1&ensp;=&ensp;-1000元
+                                            <br>
+                                            投注&ensp;熱火&ensp;vs&ensp;超音速，192平&nbsp;大，1000元&nbsp;→&nbsp;退回注金
+                                            <br>
+                                            投注&ensp;熱火&ensp;vs&ensp;超音速，192平&nbsp;小，1000元&nbsp;→&nbsp;退回注金
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="rtable bor_lightbrown">
+                                <table class="demo">
+                                    <tr>
+                                        <th>獨贏投注與派彩範例</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            投注&ensp;馬刺&ensp;1000元&nbsp;→&nbsp;贏&ensp;1000&nbsp;*&nbsp;0.9&ensp;=&ensp;900元
+                                            <br>
+                                            投注&ensp;活塞&ensp;1000元&nbsp;→&nbsp;輸&ensp;1000&nbsp;*&nbsp;-1&ensp;=&ensp;-1000元
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="rtable bor_lightbrown">
+                                <table class="demo">
+                                    <tr>
+                                        <th>大小投注與派彩範例</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            投注&ensp;馬刺&ensp;vs&ensp;活塞，單，1000元&nbsp;→&nbsp;輸&ensp;1000&nbsp;*&nbsp;-1&ensp;=&ensp;-1000元
+                                            <br>
+                                            投注&ensp;馬刺&ensp;vs&ensp;活塞，雙，1000元&nbsp;→&nbsp;贏&ensp;1000&nbsp;*&nbsp;0.9&ensp;=&ensp;900元
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>過關投注與派彩範例</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>比賽時間</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                        <th>大小</th>
+                                        <th>獨贏</th>
+                                        <th>單雙</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            01/09
+                                            <br>
+                                            08:00
+                                        </td>
+                                        <td>
+                                            底特律活塞
+                                            <br>
+                                            聖安東尼奧馬刺&ensp;(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.880</span>
+                                            <br>
+                                            2+50&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            186.5大&ensp;<span class="wd_red">0.880</span>
+                                            <br>
+                                            小&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.880</span>
+                                            <br>
+                                            <span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.880</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            01/09
+                                            <br>
+                                            08:00
+                                        </td>
+                                        <td>
+                                            西雅圖超音速
+                                            <br>
+                                            邁阿密熱火&ensp;(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.880</span>
+                                            <br>
+                                            平手&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            192平大&ensp;<span class="wd_red">0.880</span>
+                                            <br>
+                                            小&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.880</span>
+                                            <br>
+                                            <span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.880</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            01/09
+                                            <br>
+                                            08:00
+                                        </td>
+                                        <td>
+                                            印地安納溜馬
+                                            <br>
+                                            達拉斯小牛&ensp;(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.880</span>
+                                            <br>
+                                            平手&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            190平大&ensp;<span class="wd_red">0.880</span>
+                                            <br>
+                                            小&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.880</span>
+                                            <br>
+                                            <span class="wd_red">0.880</span>
+                                        </td>
+                                        <td>
+                                            單&ensp;<span class="wd_red">0.880</span>
+                                            <br>
+                                            雙&ensp;<span class="wd_red">0.880</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p>假設比賽結果：</p>
+                            <p>馬刺(主)&ensp;vs&ensp;活塞：<span class="wd_red">95</span>&nbsp;比&nbsp;<span class="wd_red">93</span></p>
+                            <p>熱火(主)&ensp;vs&ensp;超音速：<span class="wd_red">103</span>&nbsp;比&nbsp;<span class="wd_red">89</span></p>
+                            <p class="lastP">小牛(主)&ensp;vs&ensp;溜馬：<span class="wd_red">85</span>&nbsp;比&nbsp;<span class="wd_red">89</span></p>
+                            <div class="rtable bor_lightbrown">
+                                <table class="demo">
+                                    <tr>
+                                        <th>讓分投注與派彩範例</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            投注&ensp;馬刺(讓分)&nbsp;+&nbsp;熱火(讓分)&nbsp;+&nbsp;溜馬(讓分)，1000元&nbsp;→&nbsp;贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;(&nbsp;0.9&nbsp;*&nbsp;50%&nbsp;)&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.9&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.9&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;4234元
+                                            <br>
+                                            投注&ensp;活塞(讓分)&nbsp;+&nbsp;熱火(讓分)&nbsp;+&nbsp;溜馬(讓分)，1000元&nbsp;→&nbsp;贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;(&nbsp;-1&nbsp;*&nbsp;50%&nbsp;)&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.9&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.9&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;805元
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--綜合過關-->
+                        <div class="complex-rule">
+                            <h2>綜合過關-玩法介紹</h2>
+                            <ul>
+                                <li>綜合過關是指在一場球賽中，其中提供各種玩法作為過關交易條件 。</li>
+                                <li>在「綜合過關」開放的每一場賽事中，客戶僅能交易其中一種玩法勝出。賽果及結果計算均以各種玩法交易規則為準則 。</li>
+                                <li>所有在「綜合過關」中公佈之各種玩法條件及獲利率都可作過關交易（包括二關、三關、四關等） 。</li>
+                                <li>每注的最高派彩金額上限為新台幣100萬元整。</li>
+                            </ul>
+                            <!--範例1-->
+                            <h2>綜合過關-玩法介紹</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal">
+                                    <!--標題-->
+                                    <tr class="bg_lightblue">
+                                        <th colspan="8">綜合過關</th>
+                                    </tr>
+                                    <tr class="bg_purple wd_white">
+                                        <th>時間</th>
+                                        <th>主客隊</th>
+                                        <th>讓分</th>
+                                        <th>大小</th>
+                                        <th>單雙</th>
+                                        <th>獨贏</th>
+                                        <th>先得分</th>
+                                        <th>最後得分</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td>
+                                            12:00a
+                                            <br>
+                                            NBA
+                                        </td>
+                                        <td>
+                                            芝加哥公牛
+                                            <br>
+                                            奧蘭多魔術(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.900</span>
+                                            <br>
+                                            2+50&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            大&nbsp;187.5&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            小&nbsp;187.5&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            單&nbsp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            雙&nbsp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.500</span>
+                                            <br>
+                                            <span class="wd_red">0.400</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.920</span>
+                                            <br>
+                                            <span class="wd_red">0.920</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.900</span>
+                                            <br>
+                                            <span class="wd_red">0.940</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>
+                                            12:00a
+                                            <br>
+                                            NBA
+                                        </td>
+                                        <td>上半場</td>
+                                        <td>
+                                            <span class="wd_red">0.900</span>
+                                            <br>
+                                            2+50&ensp;<span class="wd_aqua">0.900</span>
+                                        </td>
+                                        <td>
+                                            大&nbsp;187.5&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            小&nbsp;187.5&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            單&nbsp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            雙&nbsp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12:00a
+                                            <br>
+                                            NBA
+                                        </td>
+                                        <td>
+                                            猶他爵士
+                                            <br>
+                                            丹佛金磚(主)
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.900</span>
+                                            <br>
+                                            4-50&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            大&nbsp;196&ensp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            小&nbsp;196&ensp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            單&nbsp;<span class="wd_red">0.900</span>
+                                            <br>
+                                            雙&nbsp;<span class="wd_red">0.900</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">1.800</span>
+                                            <br>
+                                            <span class="wd_red">0.100</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.930</span>
+                                            <br>
+                                            <span class="wd_red">0.910</span>
+                                        </td>
+                                        <td>
+                                            <span class="wd_red">0.890</span>
+                                            <br>
+                                            <span class="wd_red">0.950</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--範例2-->
+                            <h2>綜合過關交易結果</h2>
+                            <div class="rtable bor_purple">
+                                <table class="normal pad10">
+                                    <!--標題-->
+                                    <tr class="bg_purple wd_white">
+                                        <th>比賽結果</th>
+                                        <th>結果類型</th>
+                                        <th>交易種類/內容</th>
+                                        <th>交易結果(交易金額&nbsp;1000)</th>
+                                    </tr>
+                                    <!--內容-->
+                                    <tr>
+                                        <td rowspan="3">
+                                            芝加哥公牛
+                                            <br>
+                                            <span class="wd_red">86:92</span>
+                                            <br>
+                                            奧蘭多魔術(主)
+                                            <br>
+                                            <br>
+                                            <span class="wd_aqua">猶他爵士</span>
+                                            <br>
+                                            <span class="wd_red">88:94</span>
+                                            <br>
+                                            <span class="wd_aqua">丹佛金磚(主)</span>
+                                        </td>
+                                        <td>全輸</td>
+                                        <td>
+                                            <span class="wd_red">(籃球2串一)</span>
+                                            <br>
+                                            獨贏&ensp;-&ensp;<span class="wd_aqua">丹佛金磚(主)&ensp;vs&ensp;猶他爵士</span>
+                                            <br>
+                                            <span class="wd_red">猶他爵士&ensp;@&nbsp;1.800</span>
+                                            <br>
+                                            上半大小&ensp;-&ensp;<span class="wd_aqua">奧蘭多魔術(主)&ensp;vs&ensp;芝加哥公牛</span>
+                                            <br>
+                                            <span class="wd_red">大&ensp;87.5&ensp;@&nbsp;0.900</span>
+                                        </td>
+                                        <td><span class="wd_red">輸</span>&ensp;本金&ensp;1000</td>
+                                    </tr>
+                                    <tr class="bg_wdgray">
+                                        <td>中分洞</td>
+                                        <td>
+                                            <span class="wd_red">(籃球2串一)</span>
+                                            <br>
+                                            讓分&ensp;-&ensp;<span class="wd_aqua">奧蘭多魔術(主)&ensp;<span class="wd_red">6&nbsp;+&nbsp;50</span>&ensp;芝加哥公牛</span>
+                                            <br>
+                                            <span class="wd_red">芝加哥公牛&ensp;@&nbsp;0.900</span>
+                                            <br>
+                                            上半大小&ensp;-&ensp;<span class="wd_aqua">丹佛金磚(主)&ensp;<span class="wd_red">7&nbsp;-&nbsp;50</span>&ensp;猶他爵士</span>
+                                            <br>
+                                            <span class="wd_red">猶他爵士(主)&ensp;@&nbsp;0.900</span>
+                                        </td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;-&nbsp;0.5&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.90&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;-50&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>全贏</td>   
+                                        <td>
+                                            <span class="wd_red">(籃球2串一)</span>
+                                            <br>
+                                            獨贏&ensp;-&ensp;<span class="wd_aqua">丹佛金磚(主)&ensp;vs&ensp;猶他爵士</span>
+                                            <br>
+                                            <span class="wd_red">猶他爵士&ensp;@&nbsp;0.900</span>
+                                            <br>
+                                            上半大小&ensp;-&ensp;<span class="wd_aqua">奧蘭多魔術(主)&ensp;vs&ensp;芝加哥公牛</span>
+                                            <br>
+                                            <span class="wd_red">大&ensp;87.5&ensp;@&nbsp;0.900</span>
+                                        </td>
+                                        <td>贏&ensp;1000&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.9&nbsp;)&nbsp;*&nbsp;(&nbsp;1&nbsp;+&nbsp;0.9&nbsp;)&nbsp;-&nbsp;1000&ensp;=&ensp;2610&nbsp;(&nbsp;已扣除本金&nbsp;)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!--RWD按鈕-->
+    <nav class="rwd slide">
+        <div class="title"><div><a href="../"></a><p>相關規則</p></div></div>
+        <a href="../index.html#"><span></span><p>遊戲說明</p></a>
+        <a href="./convert.html"><span class="convert"></span><p>球頭換算法</p></a>
+        <a href="./basketball.html"><span class="bask"></span><p>籃球</p></a>
+        <a href="./baseball.html"><span class="base"></span><p>棒球</p></a>
+        <a href="./soccer.html"><span class="soc"></span><p>足球</p></a>
+        <a href="./football.html"><span class="ftb"></span><p>美式足球</p></a>
+        <a href="./lotto.html"><span class="lot"></span><p>彩球</p></a>
+        <a href="./stock.html"><span class="stk"></span><p>指數</p></a>
+        <a href="./golf.html"><span class="golf"></span><p>高爾夫</p></a>
+        <a href="./iceball.html"><span class="iceb"></span><p>冰球</p></a>
+        <a href="./tennis.html"><span class="ten"></span><p>網球</p></a>
+        <a href="./boxing.html"><span class="boxing"></span><p>拳擊</p></a>
+        <a href="./race.html"><span class="race"></span><p>賽馬賽狗</p></a>
+        <a href="./esp.html"><span class="esp"></span><p>電競</p></a>
+        <a href="./world.html"><span class="world"></span><p>世界盃</p></a>
+        <a href="./else.html"><span class="else"></span><p>其他籃球</p></a>
+    </nav>
+    <!--背景-->
+    <div class="bg"></div>
+</body>
+</html>

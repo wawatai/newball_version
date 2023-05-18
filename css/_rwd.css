@@ -1,0 +1,66 @@
+@media only screen and (max-width: 1349px) {
+  main article .rulebox.convert div::-webkit-scrollbar {
+    height: 12px; }
+  main article .rulebox.balls .box .ballsrule .rtable::-webkit-scrollbar {
+    height: 12px; }
+  main article .rulebox.balls .box .btnbar {
+    padding: 12px 0px 5px; }
+    main article .rulebox.balls .box .btnbar.longlen button {
+      width: 90px;
+      margin: 0px 4px 10px 4px; }
+    main article .rulebox.balls .box .btnbar button {
+      width: 90px;
+      margin: 0px 4px 10px 4px;
+      font-size: 12px; } }
+
+@media only screen and (max-width: 1115px) {
+  header article .rulebtn {
+    text-align: center; } }
+
+@media only screen and (max-width: 1023px) {
+  header article .rulebtn {
+    width: 96%;
+    margin: 0px auto; }
+    header article .rulebtn a {
+      width: 97px;
+      margin-right: 2px; } }
+
+@media only screen and (max-width: 935px) {
+  header article .rulebtn {
+    width: 100%; }
+    header article .rulebtn a {
+      width: 11%;
+      font-size: 12px; } }
+
+@media only screen and (max-width: 640px) {
+  header {
+    display: none; }
+  main {
+    position: absolute; }
+    main article .rulebar {
+      border-radius: 0px; }
+      main article .rulebar p {
+        float: left;
+        padding-left: 5px; }
+      main article .rulebar .rwdbtn {
+        display: block; }
+    main article .rulebox {
+      border-radius: 0px; }
+      main article .rulebox.balls .box {
+        width: 94%; }
+        main article .rulebox.balls .box .ballsrule {
+          width: 90%;
+          margin: 0px auto; }
+          main article .rulebox.balls .box .ballsrule .rtable table {
+            width: 900px; }
+        main article .rulebox.balls .box .btnbar {
+          display: inline-block;
+          width: 100%;
+          margin: 0px auto; }
+          main article .rulebox.balls .box .btnbar.longlen button {
+            width: 30%; }
+          main article .rulebox.balls .box .btnbar button {
+            float: left;
+            width: 30%; }
+  nav.rwd {
+    display: block; } }
