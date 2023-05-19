@@ -1,0 +1,91 @@
+footer {
+    width: 100%;
+    height: auto;
+    background: $footer_BG;
+
+    nav {
+        ul {
+            width: 100%;
+            height: 45px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding: 0 90px;
+
+            li {
+                width: 135px;
+                height: 43px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: transparent;
+                border-radius: 30px 30px 0 0;
+                color: $sub_font;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin-right: 3px;
+                position: relative;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    width: 112px;
+                    height: 3px;
+                    background: transparent;
+                    position: absolute;
+                    bottom: 3px;
+                    left: 12px;
+                }
+                
+
+                i {
+                    width: 17px;
+                    height: 17px;
+                    margin-right: 8px;
+                    background-position-y: 0%;
+                }
+
+                &:hover,&:active,&.active {
+                    background: $main_color;
+                    border-radius: 30px 30px 0 0;
+                    color: $light_font;
+
+                    i {
+                        background-position-y: 100%;
+                    }
+
+                    p {
+                        box-shadow: 0px 0px 15px $shadow02;
+                    }
+
+                    &::before {
+                        animation: line 1s ease-in-out;
+                        background: $deco_color;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            color: $light_font;
+        }
+    }
+}
+
+@keyframes line {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
