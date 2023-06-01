@@ -156,22 +156,6 @@ $center_onTimeBG_basketball: #d37245;
         color: #212832;
     }
 }
-@mixin tableBtnStyle_2 {
-    background: #efe993;
-    border: none;
-    color: #be4008;
-    font-size: 13px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    &:hover,&:active,&.active {
-        background: #ffec14 !important;
-        color: #000000;
-    }
-}
 $tableBtn_ActiveBG: #5c6d79;
 $tableBtn_ActiveColor: #2f3f58;
 $tableBtn_disableBG: #2a323d;
@@ -363,7 +347,7 @@ $mainShadow_2: #00000080;
         }
     }
 }
-@mixin cube_2 {
+@mixin cube {
     display: block;
     width: 14px;
     height: 14px;

@@ -123,12 +123,12 @@ header .logo {
 }
 
 .mixpass .title .arrow {
-  background: url("../images/cal_arrow.png") no-repeat;
+  background: url("../images/cal_arrow_light.png") no-repeat;
   background-size: 100%;
 }
 
 .mixpass .title button {
-  background: url("../images/calculator.png") no-repeat center;
+  background: url("../images/calculator_light.png") no-repeat center;
   background-size: 100%;
 }
 
@@ -148,12 +148,12 @@ header .logo {
 }
 
 .mine .fixbar i {
-  background: url("../images/date.png") no-repeat;
+  background: url("../images/date_light.png") no-repeat;
   background-size: 100%;
 }
 
 .contact .btnBox .remind {
-  background: url("../images/remind.png") no-repeat center;
+  background: url("../images/remind_light.png") no-repeat center;
   background-size: contain;
 }
 
@@ -251,7 +251,7 @@ html body header .top .endBox {
           align-items: center;
 }
 html body header .top .endBox i {
-  color: #3d87b3;
+  color: #ffffff;
   font-size: 12px;
   padding: 4px;
   cursor: pointer;
@@ -271,7 +271,7 @@ html body header .top .endBox i:hover::after, html body header .top .endBox i:ac
   background: #ffffff;
 }
 html body header .top .endBox i:hover:nth-of-type(2), html body header .top .endBox i:active:nth-of-type(2), html body header .top .endBox i.active:nth-of-type(2) {
-  color: #feb300;
+  color: #ffffff;
 }
 html body header .top .endBox i:hover:nth-of-type(2)::after, html body header .top .endBox i:active:nth-of-type(2)::after, html body header .top .endBox i.active:nth-of-type(2)::after {
   background: #044e7b;
@@ -355,7 +355,7 @@ html body header article .loginBox .inputBox input {
   height: 30px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -397,6 +397,7 @@ html body header article .loginBox .inputBox .remember .cube {
   width: 14px;
   height: 14px;
   background: #ffffff;
+  border: solid 1px #bbbbbb;
   border-radius: 3px;
   position: relative;
   cursor: pointer;
@@ -662,7 +663,7 @@ html body .left ul:not(.mine) li .smallList span {
 html body .left .mine {
   width: 100%;
   height: 100%;
-  background: #3d87b3;
+  background: #d5d5d5;
 }
 html body .left .mine .profile {
   width: 100%;
@@ -698,17 +699,13 @@ html body .left .mine .profile p.account {
 html body .left .mine li {
   width: 100%;
   height: 45px;
-  background: #2474a2;
+  border-top: solid 1px #bbbbbb;
+}
+html body .left .mine li:last-child {
+  border-bottom: solid 1px #bbbbbb;
 }
 html body .left .mine li:hover, html body .left .mine li:active, html body .left .mine li.active {
-  background: #feb300;
-}
-html body .left .mine li:hover a, html body .left .mine li:active a, html body .left .mine li.active a {
-  color: #044e7b;
-}
-html body .left .mine li:nth-of-type(6) {
-  border: solid 1px #888888;
-  border-width: 1px 0;
+  background: #ffffff;
 }
 html body .left .mine li a {
   width: 100%;
@@ -726,8 +723,10 @@ html body .left .mine li a {
 html body .left .mine li a .live {
   min-width: 20px;
   height: 22px;
-  background: #ffffff;
+  background: #c90202;
   border-radius: 3px;
+  color: #ffffff;
+  font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,11 +736,6 @@ html body .left .mine li a .live {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #000000;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 4px 0 5px;
-  font-size: 12px;
   padding: 0 5px;
   margin-left: 10px;
 }
@@ -763,6 +757,13 @@ html body .right {
   width: 300px;
   height: auto;
   background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-left: 5px;
@@ -770,6 +771,8 @@ html body .right {
 html body .right .statusWindow {
   width: 100%;
   height: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 html body .right .statusWindow .ST_Window {
   width: 100%;
@@ -841,6 +844,8 @@ html body .right .liveWindow {
   width: 100%;
   height: auto;
   font-size: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 html body .right .liveWindow .teamWindow {
   display: none;
@@ -868,13 +873,25 @@ html body .right .liveWindow .teamWindow .score {
 html body .right .liveWindow .teamWindow .score span {
   color: #888888;
 }
+html body .right .liveWindow .teamWindow .leftTeam,
+html body .right .liveWindow .teamWindow .rightTeam {
+  max-width: 120px;
+}
 html body .right .liveWindow video {
   width: 100%;
   height: 187px;
 }
 html body .right .room {
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
 }
 html body .right .room .twobut {
   width: 100%;
@@ -909,7 +926,7 @@ html body .right .room .twobut button:hover, html body .right .room .twobut butt
 html body .right .room .liveListBox {
   display: none;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow-y: auto;
 }
 html body .right .room .liveListBox::-webkit-scrollbar {
@@ -1054,8 +1071,9 @@ html body .right .room .liveListBox .livelist.display .liveTitle p .arrow {
 html body .right .room .bettingStatus {
   display: none;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow-y: auto;
+  padding-bottom: 20px;
 }
 html body .right .room .bettingStatus::-webkit-scrollbar {
   width: 5px;
@@ -1522,7 +1540,7 @@ html body .center .topfix ul ol.leftSide .search .inputBox {
   height: 28px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -1656,7 +1674,7 @@ html body .center .chleague {
   width: 100%;
   height: auto;
   display: none;
-  background: #50606d;
+  background: #eeeeee;
   border-radius: 0 0 3px 3px;
   -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4);
@@ -1699,6 +1717,7 @@ html body .center .chleague ul li .cube {
   width: 14px;
   height: 14px;
   background: #ffffff;
+  border: solid 1px #bbbbbb;
   border-radius: 3px;
   position: relative;
   cursor: pointer;
@@ -1720,22 +1739,23 @@ html body .center .chleague ul li p {
 html body .center .chleague button {
   width: 160px;
   height: 36px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#feb300), to(#c98000));
-  background: linear-gradient(to bottom, #feb300 0%, #c98000 100%);
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
-          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+  background: #c90202;
+  border-radius: 3px;
   border: none;
-  color: #212832;
-  font-size: 17px;
+  color: #ffffff;
+  font-size: 14px;
   font-weight: bold;
+  padding: 0 10px 2px;
   display: block;
   margin: 15px auto 0;
 }
 html body .center .chleague button:hover, html body .center .chleague button:active, html body .center .chleague button.active {
-  background: #feb300;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: #ffe400;
+  color: #000000;
+}
+html body .center .chleague button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
 }
 html body .center .middle {
   width: 100%;
@@ -1821,7 +1841,7 @@ html body .center .middle .mainBox table tr:nth-of-type(2) th:last-child p {
   border: none;
 }
 html body .center .middle .mainBox table tr:nth-of-type(2) th p {
-  border-right: solid 1px #eeeeee;
+  border-right: solid 1px #ececec;
   color: #044e7b;
 }
 html body .center .middle .mainBox table tr:hover td, html body .center .middle .mainBox table tr:active td, html body .center .middle .mainBox table tr.active td {
@@ -1876,7 +1896,7 @@ html body .center .middle .mainBox table tr td:last-child p {
 }
 html body .center .middle .mainBox table tr td p {
   width: 100%;
-  border: solid 1px #eeeeee;
+  border: solid 1px #ececec;
   border-width: 1px 1px 0 0;
   color: #000000;
   font-size: 13px;
@@ -2104,7 +2124,7 @@ html body .center .middle .market table tr td:last-child div {
 html body .center .middle .market table tr td div {
   width: 100%;
   height: 95px;
-  border: solid 1px #eeeeee;
+  border: solid 1px #ececec;
   border-width: 1px 1px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2158,7 +2178,7 @@ html body .center .middle .market table tr td div button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: solid 1px #eeeeee;
+  border-bottom: solid 1px #ececec;
 }
 html body .center .middle .market table tr td div button:hover, html body .center .middle .market table tr td div button:active, html body .center .middle .market table tr td div button.active {
   background: #3d87b3;
@@ -2179,7 +2199,7 @@ html body .center .middle .market table tr td div button:hover span, html body .
   color: #ffffff;
 }
 html body .center .middle .market table tr td div button.mixStyle.active {
-  background: #39547f;
+  background: #3d87b3;
   color: #ffffff;
 }
 html body .center .middle .market table tr td div button.mixStyle.active span {
@@ -2377,7 +2397,7 @@ html body .center .middle .score table tr th:last-child p {
 html body .center .middle .score table tr th p {
   width: 100%;
   color: #044e7b;
-  border-right: solid 1px #eeeeee;
+  border-right: solid 1px #ececec;
   font-size: 13px;
   font-weight: bold;
   white-space: nowrap;
@@ -2400,7 +2420,7 @@ html body .center .middle .score table tr td:last-child p {
 html body .center .middle .score table tr td p {
   width: 100%;
   height: 55px;
-  border: solid 1px #eeeeee;
+  border: solid 1px #ececec;
   border-width: 1px 1px 0 0;
   color: #000000;
   font-size: 13px;
@@ -2669,7 +2689,7 @@ html body .center .middle .result table tr:nth-of-type(2) th:last-child p {
 }
 html body .center .middle .result table tr:nth-of-type(2) th p {
   color: #000000;
-  border-right: solid 1px #eeeeee;
+  border-right: solid 1px #ececec;
 }
 html body .center .middle .result table tr th {
   width: auto;
@@ -2702,7 +2722,7 @@ html body .center .middle .result table tr td:last-child p {
 html body .center .middle .result table tr td p {
   width: 100%;
   height: 55px;
-  border: solid 1px #eeeeee;
+  border: solid 1px #ececec;
   border-width: 1px 1px 0 0;
   color: #000000;
   font-size: 13px;
@@ -2766,7 +2786,6 @@ html body .center .middle .liveStream table {
   height: auto;
   background: #ffffff;
   position: relative;
-  margin-bottom: 5px;
 }
 html body .center .middle .liveStream table tr:hover td, html body .center .middle .liveStream table tr:active td, html body .center .middle .liveStream table tr.active td {
   background: #fff5e1;
@@ -2828,7 +2847,7 @@ html body .center .middle .liveStream table tr td:last-child div, html body .cen
 html body .center .middle .liveStream table tr td div {
   width: 100%;
   height: 95px;
-  border: solid 1px #eeeeee;
+  border: solid 1px #ececec;
   border-width: 1px 1px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2846,7 +2865,7 @@ html body .center .middle .liveStream table tr td div {
 }
 html body .center .middle .liveStream table tr td div p {
   width: 100%;
-  color: #ffffff;
+  color: #000000;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
@@ -2883,7 +2902,7 @@ html body .center .middle .liveStream table tr td div button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: solid 1px #eeeeee;
+  border-bottom: solid 1px #ececec;
 }
 html body .center .middle .liveStream table tr td div button:hover, html body .center .middle .liveStream table tr td div button:active, html body .center .middle .liveStream table tr td div button.active {
   background: #3d87b3;
@@ -2919,19 +2938,15 @@ html body .center .middle .liveStream table tr td div button i {
 html body .center .middle .liveStream ul {
   width: 100%;
   height: auto;
-  background: #2474a2;
-  border: solid 1px #ffffff;
+  background: #eff6fb;
+  border-top: solid 1px #ececec;
 }
 html body .center .middle .liveStream ul li {
   height: 40px;
-  border-bottom: solid 1px #ffffff;
+  border-bottom: solid 1px #ececec;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-html body .center .middle .liveStream ul li:first-child {
-  height: 28px;
-  background: #2e3f57;
 }
 html body .center .middle .liveStream ul li:last-child {
   border: none;
@@ -2939,7 +2954,7 @@ html body .center .middle .liveStream ul li:last-child {
 html body .center .middle .liveStream ul li div {
   width: 36px;
   height: 100%;
-  border-right: solid 1px #ffffff;
+  border-right: solid 1px #ececec;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2966,11 +2981,12 @@ html body .center .middle .liveStream ul li div:last-child {
   border: none;
 }
 html body .center .middle .liveStream ul li div p {
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
 }
 html body .center .middle .liveStream ul li div p span {
   display: inline-block;
+  color: #ffffff;
   background: #c90202;
   border-radius: 3px;
   padding: 3px 3px 4px;
@@ -3002,8 +3018,10 @@ html body .center .mixpass {
   display: none;
   width: 580px;
   height: auto;
+  border: solid 2px #c90202;
+  border-bottom: none;
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   right: 30px;
   z-index: 10;
 }
@@ -3026,18 +3044,17 @@ html body .center .mixpass .title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #feb300;
-  border-radius: 10px 10px 0 0;
+  background: #2474a2;
   padding: 0 30px;
   position: relative;
   cursor: pointer;
 }
 html body .center .mixpass .title p {
-  color: #044e7b;
+  color: #ffffff;
   font-size: 16px;
 }
 html body .center .mixpass .title p span {
-  background: #2e3f57;
+  background: #c90202;
   border-radius: 3px;
   color: #ffffff;
   font-size: 17px;
@@ -3063,9 +3080,7 @@ html body .center .mixpass .title .arrow {
 html body .center .mixpass .content {
   width: 100%;
   height: 0;
-  background: #3d87b3;
-  border: solid 2px #000000;
-  border-width: 0 2px;
+  background: #d5d5d5;
   overflow: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -3090,20 +3105,20 @@ html body .center .mixpass .content .countingBox::-webkit-scrollbar-track {
 }
 html body .center .mixpass .content .countingBox table {
   width: 100%;
-  -webkit-box-shadow: 0 0 0 1px #000000;
-          box-shadow: 0 0 0 1px #000000;
-  border-radius: 5px;
+  height: auto;
+  background: #ffffff;
 }
 html body .center .mixpass .content .countingBox table:not(:first-child) {
   margin-top: 10px;
 }
 html body .center .mixpass .content .countingBox table tr th {
   max-width: 0;
+  background: #eff6fb;
   height: auto;
   padding: 8px 10px 9px;
 }
 html body .center .mixpass .content .countingBox table tr th p {
-  color: #ffffff;
+  color: #000000;
   font-size: 12px;
   text-align: left;
   white-space: nowrap;
@@ -3119,18 +3134,17 @@ html body .center .mixpass .content .countingBox table tr td:nth-of-type(1) {
   width: 10%;
 }
 html body .center .mixpass .content .countingBox table tr td:nth-of-type(1) p {
-  color: #ffffff;
+  color: #044e7b;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
 html body .center .mixpass .content .countingBox table tr td:nth-of-type(1) p span {
-  color: #ffffff;
   margin-left: 5px;
 }
 html body .center .mixpass .content .countingBox table tr td:nth-of-type(2) {
   width: 45%;
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #ececec;
 }
 html body .center .mixpass .content .countingBox table tr td:nth-of-type(2) p {
   color: #000000;
@@ -3138,7 +3152,7 @@ html body .center .mixpass .content .countingBox table tr td:nth-of-type(2) p {
   text-align: center;
 }
 html body .center .mixpass .content .countingBox table tr td:nth-of-type(2) p span.point {
-  color: #ffffff;
+  color: #ff4800;
   font-size: 12px;
   font-weight: bold;
 }
@@ -3155,12 +3169,12 @@ html body .center .mixpass .content .countingBox table tr td:nth-of-type(3) p {
   overflow: hidden;
 }
 html body .center .mixpass .content .countingBox table tr td:nth-of-type(3) p.vs {
-  color: #ffffff;
+  color: #888888;
   font-size: 12px;
   font-weight: bold;
 }
 html body .center .mixpass .content .countingBox table tr td:nth-of-type(3) p span {
-  color: #ffffff;
+  color: #ff4800;
   font-size: 12px;
   font-weight: bold;
   margin-left: 10px;
@@ -3171,25 +3185,27 @@ html body .center .mixpass .content .moneyBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #2e3f57;
+  background: #e8e8e8;
+  border: solid 1px #bbbbbb;
+  border-width: 1px 0;
   margin-top: 5px;
 }
 html body .center .mixpass .content .moneyBox div {
   width: 33.3333333333%;
   height: 100%;
   padding: 0 10px;
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #bbbbbb;
 }
 html body .center .mixpass .content .moneyBox div:last-child {
   border: none;
 }
 html body .center .mixpass .content .moneyBox div p {
-  color: #ffffff;
+  color: #000000;
   font-size: 13px;
   line-height: 45px;
 }
 html body .center .mixpass .content .moneyBox div p span {
-  color: #000000;
+  color: #044e7b;
   font-weight: bold;
   margin-left: 5px;
 }
@@ -3206,9 +3222,9 @@ html body .center .mixpass .content .betbox {
   padding: 10px;
 }
 html body .center .mixpass .content .betbox .tit {
-  color: #000000;
+  color: #044e7b;
   font-size: 14px;
-  border-left: 3px solid #000000;
+  border-left: 3px solid #044e7b;
   padding-left: 5px;
 }
 html body .center .mixpass .content .betbox .tit span.num {
@@ -3248,24 +3264,40 @@ html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) {
 html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button {
   width: 100%;
   height: 30px;
-  background: #2e3f57;
+  background: #ffffff;
   border-radius: 3px;
-  color: #ffffff;
+  color: #0e6092;
   font-size: 18px;
   font-weight: bold;
 }
 html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:hover, html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:active, html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button.active {
-  background: #feb300;
+  background: #3d87b3;
+  color: #ffffff;
 }
 html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:disabled {
   background: #5c6d79;
   color: #d2d2d2;
 }
 html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:last-child {
+  background: #c90202;
+  border-radius: 3px;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 2px;
   -ms-grid-column: 2;
       grid-column-start: 2;
   -ms-grid-column-span: 2;
   grid-column-end: 4;
+}
+html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:last-child:hover, html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:last-child:active, html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:last-child.active {
+  background: #ffe400;
+  color: #000000;
+}
+html body .center .mixpass .content .betbox .calculate div:nth-of-type(2) button:last-child:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
 }
 html body .center .mixpass .content .betbox .calculate div label {
   width: 100%;
@@ -3294,7 +3326,7 @@ html body .center .mixpass .content .betbox .calculate div label input {
   height: 30px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -3304,6 +3336,7 @@ html body .center .mixpass .content .betbox .calculate div label input {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0 2px 5px;
+  border: solid 1px transparent;
 }
 html body .center .mixpass .content .betbox .calculate div label input::-webkit-input-placeholder {
   color: #808080;
@@ -3319,6 +3352,9 @@ html body .center .mixpass .content .betbox .calculate div label input::-ms-inpu
 }
 html body .center .mixpass .content .betbox .calculate div label input::placeholder {
   color: #808080;
+}
+html body .center .mixpass .content .betbox .calculate div label input:hover, html body .center .mixpass .content .betbox .calculate div label input:active, html body .center .mixpass .content .betbox .calculate div label input.active {
+  border-color: #1b79cd;
 }
 @media only screen and (max-width: 1260px) {
   html body .center .topfix ul ol.leftSide .search {
@@ -3575,7 +3611,7 @@ html body .innerPage .innerBox .innerBetBox ul li button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-right: solid 1px #eeeeee;
+  border-right: solid 1px #ececec;
   -ms-flex-direction: row;
       flex-direction: row;
 }
@@ -3615,27 +3651,26 @@ html body .mine {
 html body .mine .topfix {
   width: 100%;
   height: 125px;
-  background: #2474a2;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
-  border-radius: 3px;
+  background: #3d87b3;
   position: relative;
-  margin-bottom: 5px;
   z-index: 20;
 }
 html body .mine .topfix .topbar {
-  width: 100%;
+  width: 98%;
   height: 80px;
+  border-bottom: solid 1px #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 20px;
   position: relative;
+  margin: 0 auto;
 }
 html body .mine .topfix .topbar p {
+  color: #ffffff;
+  font-size: 16px;
   font-weight: bold;
 }
 html body .mine .topfix .topbar .midword {
@@ -3652,6 +3687,7 @@ html body .mine .topfix .topbar .midword {
 }
 html body .mine .topfix .topbar .midword p {
   min-width: 45px;
+  color: #ffffff;
   text-align: center;
   margin: 0 15px;
 }
@@ -3662,7 +3698,7 @@ html body .mine .topfix .topbar .midword p span {
   margin-top: 10px;
 }
 html body .mine .topfix .fixbar {
-  width: 100%;
+  width: 98%;
   height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3673,8 +3709,7 @@ html body .mine .topfix .fixbar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 20px;
-  background: #2e3f57;
+  margin: 0 auto;
 }
 html body .mine .topfix .fixbar div {
   width: auto;
@@ -3690,11 +3725,12 @@ html body .mine .topfix .fixbar div {
           justify-content: space-between;
 }
 html body .mine .topfix .fixbar div p {
+  color: #ffffff;
   font-size: 15px;
   margin-right: 15px;
 }
 html body .mine .topfix .fixbar div p span {
-  color: #ffffff;
+  color: #ffdf1b;
   font-weight: bold;
   font-family: "微軟正黑體";
   margin-left: 3px;
@@ -3718,17 +3754,18 @@ html body .mine .topfix .fixbar div .date {
   cursor: pointer;
 }
 html body .mine .topfix .fixbar div .dash {
-  color: #000000;
+  color: #ffffff;
   font-size: 16px;
   font-family: fantasy;
   margin: 0 10px;
 }
 html body .mine .topfix .fixbar button {
   height: 30px;
-  background: #f5f5f5;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d7d7d7), color-stop(70%, #ffffff));
+  background: linear-gradient(to top, #d7d7d7 0%, #ffffff 70%);
   border-radius: 3px;
   border: none;
-  color: #1b1b1b;
+  color: #10558b;
   font-size: 14px;
   font-weight: bold;
   padding-bottom: 2px;
@@ -3736,9 +3773,28 @@ html body .mine .topfix .fixbar button {
   margin-right: 10px;
 }
 html body .mine .topfix .fixbar button:hover, html body .mine .topfix .fixbar button:active, html body .mine .topfix .fixbar button.active {
-  background: #feb300;
+  background: #13435f;
+  border: solid 1px #ffffff;
+  color: #ffffff;
 }
 html body .mine .topfix .fixbar button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
+}
+html body .mine .topfix .fixbar button.timesearchbut {
+  background: #c90202;
+  border-radius: 3px;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 2px;
+}
+html body .mine .topfix .fixbar button.timesearchbut:hover, html body .mine .topfix .fixbar button.timesearchbut:active, html body .mine .topfix .fixbar button.timesearchbut.active {
+  background: #ffe400;
+  color: #000000;
+}
+html body .mine .topfix .fixbar button.timesearchbut:disabled {
   background: #5c6d79;
   color: #d2d2d2;
 }
@@ -3760,23 +3816,24 @@ html body .mine .topfix ul.fixbar li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #000000;
+  color: #ffffff;
   font-size: 15px;
   padding: 0 40px;
   border-bottom: 3px solid transparent;
   cursor: pointer;
 }
 html body .mine .topfix ul.fixbar li:hover, html body .mine .topfix ul.fixbar li:active, html body .mine .topfix ul.fixbar li.active {
-  border-color: #000000;
+  border-color: #ffffff;
 }
 html body .mine .topfix p {
-  color: #000000;
+  color: #ffffff;
 }
 html body .mine .middle {
   width: 100%;
   height: auto;
   overflow-x: hidden;
   overflow-y: overlay;
+  background: #f5f5f5;
 }
 html body .mine .middle::-webkit-scrollbar {
   width: 5px;
@@ -3804,20 +3861,20 @@ html body .mine .middle .mineHome table {
   height: auto;
 }
 html body .mine .middle .mineHome table tr {
-  background: #2e3f57;
-}
-html body .mine .middle .mineHome table tr:nth-of-type(odd) {
-  background: #3d87b3;
+  background: #ffffff;
 }
 html body .mine .middle .mineHome table tr:nth-of-type(1) th {
-  background: #2e3f57;
+  background: #e8e8e8;
 }
 html body .mine .middle .mineHome table tr:nth-of-type(1) th p {
-  color: #ffffff;
+  color: #044e7b;
 }
 html body .mine .middle .mineHome table tr:nth-of-type(2) th {
-  background: #feb300;
+  background: #eff6fb;
   top: 28px;
+}
+html body .mine .middle .mineHome table tr:last-child td {
+  border-bottom: none;
 }
 html body .mine .middle .mineHome table tr th {
   height: 28px;
@@ -3828,15 +3885,20 @@ html body .mine .middle .mineHome table tr th {
   z-index: 10;
 }
 html body .mine .middle .mineHome table tr th p {
-  color: #044e7b;
+  color: #000000;
   font-size: 13px;
 }
 html body .mine .middle .mineHome table tr td {
   width: 33.3%;
+  border: solid 1px #ececec;
+  border-width: 0 1px 1px 0;
   padding: 10px 0px;
 }
+html body .mine .middle .mineHome table tr td:last-child {
+  border-right: none;
+}
 html body .mine .middle .mineHome table tr td p {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   font-size: 14px;
 }
@@ -3847,10 +3909,13 @@ html body .mine .middle .instantBet {
 html body .mine .middle .instantBet table {
   width: 100%;
   height: auto;
-  background: #2e3f57;
-  border: 1px solid #000000;
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
   margin-bottom: 10px;
   cursor: pointer;
+}
+html body .mine .middle .instantBet table:first-child {
+  margin-top: 10px;
 }
 html body .mine .middle .instantBet table.active tr {
   display: table-row;
@@ -3865,7 +3930,7 @@ html body .mine .middle .instantBet table.active tr th .arrow {
 }
 html body .mine .middle .instantBet table tr {
   display: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #bbbbbb;
 }
 html body .mine .middle .instantBet table tr:first-child, html body .mine .middle .instantBet table tr:last-child {
   display: table-row;
@@ -3884,12 +3949,13 @@ html body .mine .middle .instantBet table tr:nth-of-type(5) td:nth-of-type(4), h
 }
 html body .mine .middle .instantBet table tr th {
   width: 100%;
+  background: #eff6fb;
   text-align: left;
   position: relative;
 }
 html body .mine .middle .instantBet table tr th p {
   display: inline-block;
-  color: #ffffff;
+  color: #000000;
   font-size: 13px;
   padding: 8px 12px;
   position: relative;
@@ -3898,7 +3964,7 @@ html body .mine .middle .instantBet table tr th p::after {
   content: "";
   width: 1px;
   height: 45%;
-  background: #000000;
+  background: #bbbbbb;
   position: absolute;
   top: 50%;
   right: 0;
@@ -3916,30 +3982,29 @@ html body .mine .middle .instantBet table tr th .arrow {
   right: 20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  background-position-y: 100%;
 }
 html body .mine .middle .instantBet table tr td {
   max-width: 0;
   height: 100%;
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #bbbbbb;
   padding: 7px 10px 8px;
   vertical-align: middle;
 }
 html body .mine .middle .instantBet table tr td p {
-  color: #ffffff;
+  color: #000000;
   font-size: 13px;
   text-align: left;
 }
 html body .mine .middle .instantBet table tr td p span.point {
-  color: #000000;
+  color: #ff4800;
   font-weight: bold;
 }
 html body .mine .middle .instantBet table tr td p span.vs {
-  color: #ff4800;
   font-weight: bold;
   margin: 0 10px;
 }
 html body .mine .middle .instantBet table tr td:nth-of-type(odd) p {
-  color: #ffcc41;
   font-size: 14px;
   text-align: center;
 }
@@ -3957,7 +4022,7 @@ html body .mine .middle .contact.display {
 html body .mine .middle .contact > .title {
   width: 100%;
   height: 28px;
-  background: #2474a2;
+  background: #e8e8e8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3967,19 +4032,18 @@ html body .mine .middle .contact > .title {
   padding: 0 10px 2px;
 }
 html body .mine .middle .contact > .title p {
-  color: #000000;
+  color: #044e7b;
   font-size: 13px;
 }
 html body .mine .middle .contact .content {
   width: 100%;
   height: auto;
-  background: #2e3f57;
   padding: 10px;
 }
 html body .mine .middle .contact .content .contactWay {
   width: 100%;
   height: auto;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #bbbbbb;
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
@@ -3990,7 +4054,7 @@ html body .mine .middle .contact .content .contactWay textArea {
   border: none;
   resize: none;
   outline: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
   line-height: 28px;
   display: -webkit-box;
@@ -4003,17 +4067,17 @@ html body .mine .middle .contact .content .contactWay textArea {
 html body .mine .middle .contact .content .textBox {
   width: 100%;
   height: auto;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #bbbbbb;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 html body .mine .middle .contact .content .textBox textarea {
   width: 100%;
   height: 200px;
-  background: #bbbbbb;
-  border: solid 1px #000000;
+  background: #ffffff;
+  border: none;
   border-radius: 3px;
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
   padding: 10px;
   -webkit-box-sizing: border-box;
@@ -4053,20 +4117,21 @@ html body .mine .middle .contact .content .btnBox p i {
 html body .mine .middle .contact .content .btnBox button {
   width: 220px;
   height: 36px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#feb300), to(#c98000));
-  background: linear-gradient(to bottom, #feb300 0%, #c98000 100%);
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
-          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+  background: #c90202;
+  border-radius: 3px;
   border: none;
-  color: #212832;
-  font-size: 17px;
+  color: #ffffff;
+  font-size: 14px;
   font-weight: bold;
+  padding: 0 10px 2px;
 }
 html body .mine .middle .contact .content .btnBox button:hover, html body .mine .middle .contact .content .btnBox button:active, html body .mine .middle .contact .content .btnBox button.active {
-  background: #feb300;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: #ffe400;
+  color: #000000;
+}
+html body .mine .middle .contact .content .btnBox button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
 }
 html body .mine .middle .contact .content .smallTitle {
   width: 100%;
@@ -4075,22 +4140,21 @@ html body .mine .middle .contact .content .smallTitle {
   margin-bottom: 10px;
 }
 html body .mine .middle .contact .content .smallTitle span {
-  color: #888888;
   font-size: 13px;
   margin-left: 5px;
 }
 html body .mine .middle .contact .questionBox {
   width: 100%;
   height: auto;
-  margin-bottom: 5px;
+  border-bottom: solid 1px #bbbbbb;
+}
+html body .mine .middle .contact .questionBox:first-child {
+  margin-top: 10px;
 }
 html body .mine .middle .contact .questionBox .title {
   width: 100%;
   height: 45px;
-  background: #2474a2;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+  background: #3d87b3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4105,33 +4169,23 @@ html body .mine .middle .contact .questionBox .title {
   z-index: 1;
 }
 html body .mine .middle .contact .questionBox .title.reply {
-  background: #feb300;
-}
-html body .mine .middle .contact .questionBox .title.reply p {
-  color: #044e7b;
-}
-html body .mine .middle .contact .questionBox .title.reply p.time {
-  color: #044e7b;
+  background: #2474a2;
 }
 html body .mine .middle .contact .questionBox .title p {
-  color: #000000;
+  color: #ffffff;
   font-size: 15px;
 }
 html body .mine .middle .contact .questionBox .title p.time {
-  color: #ffffff;
   font-weight: bold;
 }
 html body .mine .middle .contact .questionBox .textBox {
   width: 100%;
   height: auto;
-  background: #2e3f57;
-  border-radius: 5px;
-  border: solid 1px #000000;
-  padding-top: 25px;
-  margin-top: -5px;
+  background: #e8e8e8;
+  padding-top: 15px;
 }
 html body .mine .middle .contact .questionBox .textBox p {
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
   padding: 0 15px 15px;
 }
@@ -4155,15 +4209,13 @@ html body .mine .middle .message::-webkit-scrollbar-track {
 html body .mine .middle .message .questionBox {
   width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  border-bottom: solid 1px #bbbbbb;
+  margin-bottom: 1px;
 }
 html body .mine .middle .message .questionBox .title {
   width: 100%;
   height: 45px;
-  background: #2474a2;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4179,24 +4231,19 @@ html body .mine .middle .message .questionBox .title {
   z-index: 1;
 }
 html body .mine .middle .message .questionBox .title:hover, html body .mine .middle .message .questionBox .title:active {
-  background: #feb300;
-}
-html body .mine .middle .message .questionBox .title:hover p, html body .mine .middle .message .questionBox .title:active p {
-  color: #044e7b;
-}
-html body .mine .middle .message .questionBox .title:hover p i, html body .mine .middle .message .questionBox .title:active p i {
-  background-position-y: 100%;
+  background: #fff5e1;
 }
 html body .mine .middle .message .questionBox .title.active {
-  background: #feb300;
+  background: #2474a2;
 }
 html body .mine .middle .message .questionBox .title.active p {
-  color: #044e7b;
+  color: #ffffff;
 }
 html body .mine .middle .message .questionBox .title.active p i {
-  background-position-y: 100%;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg) scaleY(-1);
+          transform: rotate(-90deg) scaleY(-1);
+  -webkit-filter: grayscale(1) brightness(10);
+          filter: grayscale(1) brightness(10);
 }
 html body .mine .middle .message .questionBox .title p {
   color: #000000;
@@ -4213,7 +4260,8 @@ html body .mine .middle .message .questionBox .title p {
 }
 html body .mine .middle .message .questionBox .title p i {
   width: 6px;
-  height: 8px;
+  height: 10px;
+  background-position-y: 100%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   margin-left: 10px;
@@ -4226,19 +4274,16 @@ html body .mine .middle .message .questionBox .title p.time {
 html body .mine .middle .message .questionBox .textBox {
   width: 100%;
   height: 0;
-  background: #2e3f57;
-  border-radius: 5px;
-  border: solid 1px #000000;
+  background: #e8e8e8;
   padding-top: 0;
-  margin-top: -5px;
   overflow: hidden;
 }
 html body .mine .middle .message .questionBox .textBox.active {
   height: auto;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 html body .mine .middle .message .questionBox .textBox p {
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
   padding: 0 15px 15px;
 }
@@ -4249,27 +4294,18 @@ html body .mine .middle .betRecord {
 html body .mine .middle .betRecord .detaBox {
   width: 100%;
   height: auto;
-  background: #2e3f57;
-  border: 1px solid transparent;
+  background: #f5f5f5;
   cursor: pointer;
-  margin-bottom: 3px;
-}
-html body .mine .middle .betRecord .detaBox:hover, html body .mine .middle .betRecord .detaBox:active {
-  border-color: #000000;
+  border-bottom: solid 1px #ececec;
 }
 html body .mine .middle .betRecord .detaBox:hover .firstLine, html body .mine .middle .betRecord .detaBox:active .firstLine {
-  background: #3d87b3;
+  background: #fff5e1;
 }
 html body .mine .middle .betRecord .detaBox.active .firstLine {
-  background: #feb300;
+  background: #3d87b3;
 }
 html body .mine .middle .betRecord .detaBox.active .firstLine p {
-  color: #044e7b;
-  border-color: #044e7b;
-}
-html body .mine .middle .betRecord .detaBox.active .firstLine .remind {
-  background: #3d87b3;
-  color: #000000;
+  color: #ffffff;
 }
 html body .mine .middle .betRecord .detaBox.active .recordbox {
   display: block;
@@ -4283,8 +4319,8 @@ html body .mine .middle .betRecord .detaBox .recordbox {
 html body .mine .middle .betRecord .detaBox .recordbox table {
   width: 100%;
   height: auto;
-  background: #2e3f57;
-  border: 1px solid #5c6d79;
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -4304,8 +4340,7 @@ html body .mine .middle .betRecord .detaBox .recordbox table.active tr th .arrow
 }
 html body .mine .middle .betRecord .detaBox .recordbox table tr {
   display: none;
-  background: #3d87b3;
-  border-bottom: 1px solid #5c6d79;
+  border-bottom: 1px solid #bbbbbb;
 }
 html body .mine .middle .betRecord .detaBox .recordbox table tr:first-child, html body .mine .middle .betRecord .detaBox .recordbox table tr:last-child {
   display: table-row;
@@ -4327,13 +4362,13 @@ html body .mine .middle .betRecord .detaBox .recordbox table tr:nth-of-type(5) t
 }
 html body .mine .middle .betRecord .detaBox .recordbox table tr th {
   width: 100%;
-  background: #2e3f57;
+  background: #eff6fb;
   text-align: left;
   position: relative;
 }
 html body .mine .middle .betRecord .detaBox .recordbox table tr th p {
   display: inline-block;
-  color: #ffffff;
+  color: #000000;
   font-size: 13px;
   padding: 8px 12px;
   position: relative;
@@ -4342,7 +4377,7 @@ html body .mine .middle .betRecord .detaBox .recordbox table tr th p::after {
   content: "";
   width: 1px;
   height: 45%;
-  background: #ffffff;
+  background: #bbbbbb;
   position: absolute;
   top: 50%;
   right: 0;
@@ -4364,26 +4399,24 @@ html body .mine .middle .betRecord .detaBox .recordbox table tr th .arrow {
 html body .mine .middle .betRecord .detaBox .recordbox table tr td {
   max-width: 0;
   height: 100%;
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #bbbbbb;
   padding: 7px 10px 8px;
   vertical-align: middle;
 }
 html body .mine .middle .betRecord .detaBox .recordbox table tr td p {
-  color: #ffffff;
+  color: #000000;
   font-size: 13px;
   text-align: left;
 }
 html body .mine .middle .betRecord .detaBox .recordbox table tr td p span.point {
-  color: #000000;
+  color: #ff4800;
   font-weight: bold;
 }
 html body .mine .middle .betRecord .detaBox .recordbox table tr td p span.vs {
-  color: #ff4800;
   font-weight: bold;
   margin: 0 10px;
 }
 html body .mine .middle .betRecord .detaBox .recordbox table tr td:nth-of-type(odd) p {
-  color: #ffcc41;
   font-size: 14px;
   text-align: center;
 }
@@ -4393,8 +4426,7 @@ html body .mine .middle .betRecord .detaBox .recordbox table tr td:last-child {
 html body .mine .middle .betRecord .detaBox .recordbox .underList {
   width: 100%;
   height: 36px;
-  background: #feb300;
-  border-radius: 5px;
+  background: #dccfcf;
 }
 html body .mine .middle .betRecord .detaBox .recordbox .underList ul {
   width: 100%;
@@ -4408,12 +4440,12 @@ html body .mine .middle .betRecord .detaBox .recordbox .underList ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(1), html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(3), html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(5) {
   width: 10%;
+}
+html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(1) p, html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(3) p, html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(5) p {
+  color: #000000;
 }
 html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:nth-of-type(2) {
   width: 40%;
@@ -4426,15 +4458,24 @@ html body .mine .middle .betRecord .detaBox .recordbox .underList ul li:last-chi
 }
 html body .mine .middle .betRecord .detaBox .recordbox .underList ul li p {
   width: 100%;
-  border-right: solid 1px #044e7b;
-  color: #044e7b;
+  height: 100%;
+  border-right: solid 1px #ececec;
+  color: #ff4800;
   font-size: 15px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 html body .mine .middle .betRecord .detaBox .firstLine {
   width: 100%;
-  height: auto;
-  background: #2474a2;
+  height: 32px;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4442,6 +4483,8 @@ html body .mine .middle .betRecord .detaBox .firstLine {
 }
 html body .mine .middle .betRecord .detaBox .firstLine div {
   width: 25%;
+  height: 100%;
+  border-right: solid 1px #ececec;
   margin: 0;
   position: relative;
 }
@@ -4453,7 +4496,6 @@ html body .mine .middle .betRecord .detaBox .firstLine div p {
   font-size: 15px;
   font-weight: bold;
   text-align: center;
-  border-right: 1px solid #ffffff;
 }
 html body .mine .middle .betRecord .detaBox .firstLine div p.win {
   color: #28b208;
@@ -4477,11 +4519,10 @@ html body .mine .middle .betRecord .detaBox .firstLine div .remind {
 html body .mine .middle .betRecord .itemName {
   width: 100%;
   height: auto;
-  background: #2474a2;
+  background: #e8e8e8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 3px;
 }
 html body .mine .middle .betRecord .itemName div {
   width: 25%;
@@ -4492,9 +4533,9 @@ html body .mine .middle .betRecord .itemName div:nth-last-of-type(1) p {
   border: none;
 }
 html body .mine .middle .betRecord .itemName div p {
-  color: #ffffff;
+  color: #044e7b;
   font-size: 16px;
-  border-right: 1px solid #044e7b;
+  font-weight: bold;
   text-align: center;
 }
 html body .teach {
@@ -4505,10 +4546,7 @@ html body .teach {
 html body .teach .topfix {
   width: 100%;
   height: 50px;
-  background: #2474a2;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2862745098);
-  border-radius: 3px;
+  background: #3d87b3;
   position: relative;
   margin-bottom: 5px;
   z-index: 20;
@@ -5059,7 +5097,7 @@ html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox inpu
   height: 32px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -5069,6 +5107,7 @@ html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox inpu
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0 2px 5px;
+  border: solid 1px transparent;
   margin-right: 5px;
 }
 html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input::-webkit-input-placeholder {
@@ -5086,6 +5125,9 @@ html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox inpu
 html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input::placeholder {
   color: #808080;
 }
+html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input:hover, html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input:active, html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input.active {
+  border-color: #1b79cd;
+}
 html body .filter .jumpWindow.controlWindow .content .box .innerBox .betBox input:last-child {
   margin: 0;
 }
@@ -5101,8 +5143,9 @@ html body .filter .jumpWindow.controlWindow .content .box .versionBox {
   padding: 15px 30px;
 }
 html body .filter .jumpWindow.controlWindow .content .box .versionBox > p {
-  color: #000000;
+  color: #044e7b;
   font-size: 14px;
+  font-weight: bold;
   margin-right: 40px;
 }
 html body .filter .jumpWindow.controlWindow .content .box .versionBox div {
@@ -5110,12 +5153,12 @@ html body .filter .jumpWindow.controlWindow .content .box .versionBox div {
   height: auto;
 }
 html body .filter .jumpWindow.controlWindow .content .box .versionBox div p {
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
   font-weight: bold;
 }
 html body .filter .jumpWindow.controlWindow .content .box .versionBox div p span {
-  color: #000000;
+  color: #044e7b;
   font-size: 12px;
   margin-left: 10px;
 }
@@ -5131,12 +5174,13 @@ html body .filter .jumpWindow.betWindow .content .topWindow, html body .filter .
   height: auto;
 }
 html body .filter .jumpWindow.betWindow .content .topWindow:not(:first-child) .smallTitle, html body .filter .jumpWindow.checkWindow .content .topWindow:not(:first-child) .smallTitle, html body .filter .jumpWindow.checkMixWindow .content .topWindow:not(:first-child) .smallTitle {
-  border-top: solid 1px #465a79;
+  border-top: solid 1px #bbbbbb;
 }
 html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle, html body .filter .jumpWindow.checkWindow .content .topWindow .smallTitle, html body .filter .jumpWindow.checkMixWindow .content .topWindow .smallTitle {
   width: 100%;
   height: 28px;
-  border-bottom: solid 1px #465a79;
+  background: #eff6fb;
+  border-bottom: solid 1px #bbbbbb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5152,6 +5196,7 @@ html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle p, html 
 html body .filter .jumpWindow.betWindow .content .topWindow .textBox, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox {
   width: 100%;
   height: auto;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5159,7 +5204,7 @@ html body .filter .jumpWindow.betWindow .content .topWindow .textBox, html body 
 html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide {
   width: 45%;
   height: auto;
-  border-right: solid 1px #465a79;
+  border-right: solid 1px #bbbbbb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5186,7 +5231,7 @@ html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide p
       flex-shrink: 0;
 }
 html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide p:not(.team) span, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide p:not(.team) span, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide p:not(.team) span {
-  color: #ffffff;
+  color: #ff4800;
 }
 html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide {
   width: 60%;
@@ -5195,13 +5240,14 @@ html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide,
 }
 html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p {
   color: #000000;
-  font-size: 1px;
+  font-size: 14px;
 }
 html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p:last-child, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p:last-child, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p:last-child {
   margin-top: 8px;
 }
 html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p span, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p span, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p span {
-  color: #ffffff;
+  color: #ff4800;
+  font-weight: bold;
 }
 html body .filter .jumpWindow.betWindow .content .mixBox, html body .filter .jumpWindow.checkWindow .content .mixBox, html body .filter .jumpWindow.checkMixWindow .content .mixBox {
   width: 100%;
@@ -5231,8 +5277,8 @@ html body .filter .jumpWindow.betWindow .content .moneyBox, html body .filter .j
 html body .filter .jumpWindow.betWindow .content .moneyBox div, html body .filter .jumpWindow.checkWindow .content .moneyBox div, html body .filter .jumpWindow.checkMixWindow .content .moneyBox div {
   width: 34%;
   height: auto;
-  background: #2e3f57;
-  border: solid 1px #465a79;
+  background: #e8e8e8;
+  border: solid 1px #bbbbbb;
   border-left: none;
   padding: 15px 10px;
 }
@@ -5240,7 +5286,7 @@ html body .filter .jumpWindow.betWindow .content .moneyBox div:last-child, html 
   border-right: none;
 }
 html body .filter .jumpWindow.betWindow .content .moneyBox div p, html body .filter .jumpWindow.checkWindow .content .moneyBox div p, html body .filter .jumpWindow.checkMixWindow .content .moneyBox div p {
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
 }
 html body .filter .jumpWindow.betWindow .content .betBox, html body .filter .jumpWindow.checkWindow .content .betBox, html body .filter .jumpWindow.checkMixWindow .content .betBox {
@@ -5282,7 +5328,7 @@ html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox inp
   height: 35px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -5332,6 +5378,7 @@ html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube,
   width: 14px;
   height: 14px;
   background: #ffffff;
+  border: solid 1px #bbbbbb;
   border-radius: 3px;
   position: relative;
   cursor: pointer;
@@ -5361,27 +5408,41 @@ html body .filter .jumpWindow.betWindow .content .betBox .rightSide, html body .
 html body .filter .jumpWindow.betWindow .content .betBox .rightSide button, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button {
   width: auto;
   height: 35px;
-  background: #f5f5f5;
+  background: #ffffff;
   border-radius: 3px;
-  border: none;
-  color: #1b1b1b;
-  font-size: 14px;
+  color: #0e6092;
+  font-size: 18px;
   font-weight: bold;
-  padding-bottom: 2px;
   font-size: 18px;
 }
 html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button.active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button.active, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button.active {
-  background: #feb300;
+  background: #3d87b3;
+  color: #ffffff;
 }
 html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:disabled, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:disabled, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:disabled {
   background: #5c6d79;
   color: #d2d2d2;
 }
 html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:last-child, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:last-child, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:last-child {
+  background: #c90202;
+  border-radius: 3px;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 2px;
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: 2;
   grid-column-end: 3;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:last-child:hover, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:last-child:active, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:last-child.active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:last-child:hover, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:last-child:active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:last-child.active, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:last-child:hover, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:last-child:active, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:last-child.active {
+  background: #ffe400;
+  color: #000000;
+}
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:last-child:disabled, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:last-child:disabled, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:last-child:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
 }
 html body .filter .jumpWindow.betWindow .content .checkBox, html body .filter .jumpWindow.checkWindow .content .checkBox, html body .filter .jumpWindow.checkMixWindow .content .checkBox {
   width: 100%;
@@ -5394,7 +5455,7 @@ html body .filter .jumpWindow.betWindow .content .checkBox, html body .filter .j
 html body .filter .jumpWindow.betWindow .content .checkBox .leftSide, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide {
   width: 50%;
   height: auto;
-  border-right: solid 1px #465a79;
+  border-right: solid 1px #bbbbbb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5432,7 +5493,7 @@ html body .filter .jumpWindow.betWindow .content .checkBox .rightSide, html body
   padding: 0 10px;
 }
 html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide p {
-  color: #ffffff;
+  color: #000000;
   font-size: 13px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -5441,7 +5502,7 @@ html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p:last-chi
   margin: 0;
 }
 html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p span, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p span, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide p span {
-  color: #000000;
+  color: #c90202;
   margin-left: 10px;
 }
 html body .filter .jumpWindow.changePwWindow {
@@ -5474,7 +5535,7 @@ html body .filter .jumpWindow.changePwWindow .content .inputBox input {
   height: 36px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -5516,36 +5577,40 @@ html body .filter .jumpWindow.changePwWindow .content .btnBox button {
   height: 36px;
 }
 html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child {
-  background: #f5f5f5;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d7d7d7), color-stop(70%, #ffffff));
+  background: linear-gradient(to top, #d7d7d7 0%, #ffffff 70%);
   border-radius: 3px;
   border: none;
-  color: #1b1b1b;
+  color: #10558b;
   font-size: 14px;
   font-weight: bold;
   padding-bottom: 2px;
 }
 html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child:hover, html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child:active, html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child.active {
-  background: #feb300;
+  background: #13435f;
+  border: solid 1px #ffffff;
+  color: #ffffff;
 }
 html body .filter .jumpWindow.changePwWindow .content .btnBox button:first-child:disabled {
   background: #5c6d79;
   color: #d2d2d2;
 }
 html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child {
-  background: -webkit-gradient(linear, left top, left bottom, from(#feb300), to(#c98000));
-  background: linear-gradient(to bottom, #feb300 0%, #c98000 100%);
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
-          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+  background: #c90202;
+  border-radius: 3px;
   border: none;
-  color: #212832;
-  font-size: 17px;
+  color: #ffffff;
+  font-size: 14px;
   font-weight: bold;
+  padding: 0 10px 2px;
 }
 html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child:hover, html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child:active, html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child.active {
-  background: #feb300;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: #ffe400;
+  color: #000000;
+}
+html body .filter .jumpWindow.changePwWindow .content .btnBox button:last-child:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
 }
 html body .filter .jumpWindow.calcWindow {
   width: 715px;
@@ -5578,16 +5643,16 @@ html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox {
   margin-right: 10px;
 }
 html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox p {
-  color: #ffffff;
+  color: #000000;
   font-size: 16px;
   margin-right: 5px;
 }
 html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input {
-  width: 80px;
+  width: 100px;
   height: 30px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -5597,6 +5662,7 @@ html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0 2px 5px;
+  border-radius: none;
 }
 html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input::-webkit-input-placeholder {
   color: #808080;
@@ -5616,17 +5682,21 @@ html body .filter .jumpWindow.calcWindow .content .inputTitle .inputBox input::p
 html body .filter .jumpWindow.calcWindow .content .inputTitle button {
   width: 60px;
   height: 28px;
-  background: #f5f5f5;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d7d7d7), color-stop(70%, #ffffff));
+  background: linear-gradient(to top, #d7d7d7 0%, #ffffff 70%);
   border-radius: 3px;
   border: none;
-  color: #1b1b1b;
+  color: #10558b;
   font-size: 14px;
   font-weight: bold;
   padding-bottom: 2px;
+  background: #ffffff;
   padding: 0;
 }
 html body .filter .jumpWindow.calcWindow .content .inputTitle button:hover, html body .filter .jumpWindow.calcWindow .content .inputTitle button:active, html body .filter .jumpWindow.calcWindow .content .inputTitle button.active {
-  background: #feb300;
+  background: #13435f;
+  border: solid 1px #ffffff;
+  color: #ffffff;
 }
 html body .filter .jumpWindow.calcWindow .content .inputTitle button:disabled {
   background: #5c6d79;
@@ -5635,8 +5705,8 @@ html body .filter .jumpWindow.calcWindow .content .inputTitle button:disabled {
 html body .filter .jumpWindow.calcWindow .content ul {
   width: 100%;
   height: auto;
-  border: solid 1px #000000;
-  border-radius: 5px;
+  background: #f5f5f5;
+  border: solid 1px #bbbbbb;
   overflow: hidden;
 }
 html body .filter .jumpWindow.calcWindow .content ul li {
@@ -5646,14 +5716,8 @@ html body .filter .jumpWindow.calcWindow .content ul li {
   display: -ms-flexbox;
   display: flex;
 }
-html body .filter .jumpWindow.calcWindow .content ul li:nth-of-type(even) {
-  background: #2e3f57;
-}
-html body .filter .jumpWindow.calcWindow .content ul li.smallTitle {
-  background: #feb300;
-}
-html body .filter .jumpWindow.calcWindow .content ul li.smallTitle div {
-  border: none;
+html body .filter .jumpWindow.calcWindow .content ul li:nth-of-type(odd) {
+  background: #e8e8e8;
 }
 html body .filter .jumpWindow.calcWindow .content ul li.smallTitle div p {
   color: #044e7b;
@@ -5664,7 +5728,7 @@ html body .filter .jumpWindow.calcWindow .content ul li div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-right: solid 1px #465a79;
+  border-right: solid 1px #bbbbbb;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -5684,7 +5748,7 @@ html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input
   height: 22px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -5712,6 +5776,9 @@ html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input
 html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input::placeholder, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input::placeholder {
   color: #808080;
 }
+html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input:hover, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input:active, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(2) input.active, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input:hover, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input:active, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(5) input.active {
+  border-color: #1b79cd;
+}
 html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3), html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) {
   width: 30%;
 }
@@ -5719,6 +5786,7 @@ html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) .sele
   width: auto;
   height: 22px;
   background: #ffffff;
+  border: solid 1px #bbbbbb;
   border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5741,9 +5809,8 @@ html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) .sele
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 8px 5px 0 5px;
-  border-color: #ffffff transparent;
   border-width: 5px 4px 0 4px;
+  border-color: #1b79cd transparent;
   margin-left: 5px;
 }
 html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input, html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(6) input {
@@ -5751,7 +5818,7 @@ html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input
   height: 22px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -5761,7 +5828,6 @@ html body .filter .jumpWindow.calcWindow .content ul li div:nth-of-type(3) input
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0 2px 5px;
-  border: none;
   text-align: center;
   padding: 0;
   margin: 0 5px;
@@ -5825,7 +5891,7 @@ html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox input {
   height: 32px;
   background: #ffffff;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #bbbbbb;
   color: #000000;
   font-size: 14px;
   display: -webkit-box;
@@ -5854,43 +5920,42 @@ html body .filter .jumpWindow.calcWindow .content .calcBox .inputBox input::plac
 html body .filter .jumpWindow.calcWindow .content .calcBox button {
   width: 260px;
   height: 40px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#feb300), to(#c98000));
-  background: linear-gradient(to bottom, #feb300 0%, #c98000 100%);
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
-          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2862745098);
+  background: #c90202;
+  border-radius: 3px;
   border: none;
-  color: #212832;
-  font-size: 17px;
+  color: #ffffff;
+  font-size: 14px;
   font-weight: bold;
+  padding: 0 10px 2px;
 }
 html body .filter .jumpWindow.calcWindow .content .calcBox button:hover, html body .filter .jumpWindow.calcWindow .content .calcBox button:active, html body .filter .jumpWindow.calcWindow .content .calcBox button.active {
-  background: #feb300;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: #ffe400;
+  color: #000000;
+}
+html body .filter .jumpWindow.calcWindow .content .calcBox button:disabled {
+  background: #5c6d79;
+  color: #d2d2d2;
 }
 html body .filter .jumpWindow.calcWindow .content .remindBox {
   width: 100%;
   height: auto;
-  background: #2e3f57;
-  border: solid 1px #000000;
-  padding: 0 10px;
+  background: #c7c7c7;
 }
 html body .filter .jumpWindow.calcWindow .content .remindBox .smallTitle {
   width: 100%;
   height: auto;
-  border-bottom: solid 1px #000000;
+  background: #afafaf;
   padding: 10px 0;
 }
 html body .filter .jumpWindow.calcWindow .content .remindBox .smallTitle p {
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
   text-align: center;
 }
 html body .filter .jumpWindow.calcWindow .content .remindBox .textBox {
   width: 100%;
   height: auto;
-  padding: 10px 0;
+  padding: 10px;
 }
 html body .filter .jumpWindow.calcWindow .content .remindBox .textBox p {
   color: #000000;

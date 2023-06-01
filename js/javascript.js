@@ -50,7 +50,6 @@ $(document).on("click","header .top .endBox i",function(){
         $(".cssStyle")
         .attr("href","../css/style.css");
     }
-    
 })
 
 //chleague
@@ -70,20 +69,18 @@ $(function(){
 $(function(){
     var h = $(window).innerHeight();
     $(".left").css("height",""+ (h - 105) +"px");
-    $(".middle").css("height",""+ (h - 160) +"px");
-    $(".middle.inner").css("height",""+ (h - 235) +"px");
+    $(".middle").css("height",""+ (h - 155) +"px");
+    $(".middle.inner").css("height",""+ (h - 230) +"px");
     $(".innerBetBox").css("height",""+ (h - 300) +"px");
-    $(".right .liveListBox").css("height",""+ (h - 453) +"px");
-    $(".right .bettingStatus").css("height",""+ (h - 453) +"px");
+    $(".right").css("height",""+ (h - 105) +"px");
 
     $(window).resize(function(){
         var h = $(window).innerHeight();
         $(".left").css("height",""+ (h - 105) +"px");
-        $(".middle").css("height",""+ (h - 160) +"px");
-        $(".middle.inner").css("height",""+ (h - 235) +"px");
+        $(".middle").css("height",""+ (h - 155) +"px");
+        $(".middle.inner").css("height",""+ (h - 230) +"px");
         $(".innerBetBox").css("height",""+ (h - 300) +"px");
-        $(".right .liveListBox").css("height",""+ (h - 453) +"px");
-        $(".right .bettingStatus").css("height",""+ (h - 453) +"px");
+        $(".right").css("height",""+ (h - 105) +"px");
     })
 })
 

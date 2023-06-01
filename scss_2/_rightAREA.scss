@@ -1,7 +1,9 @@
 .right {
     width: 300px;
     height: auto;
-    background: $mainBG_5;
+    background: $mainBG_3;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     margin-left: 5px;
 
@@ -9,6 +11,7 @@
     .statusWindow {
         width: 100%;
         height: auto;
+        flex-shrink: 0;
         
         .ST_Window {
             width: 100%;
@@ -72,12 +75,13 @@
         width: 100%;
         height: auto;
         font-size: 0;
+        flex-shrink: 0;
 
         .teamWindow {
             display: none;
             width: 100%;
             height: auto;
-            background: $mainBG_5;
+            background: $mainBG_3;
             color: $mainColor_1;
             font-size: 12px;
             align-items: center;
@@ -95,6 +99,11 @@
                     color: $subColor_1;
                 }
             }
+
+            .leftTeam,
+            .rightTeam {
+                max-width: 120px;
+            }
         }
 
         video {
@@ -106,7 +115,10 @@
     //下半
     .room {
         width: 100%;
-        height: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
 
         .twobut {
             width: 100%;
@@ -124,7 +136,7 @@
         .liveListBox {
             display: none;
             width: 100%;
-            height: auto;
+            height: 100%;
             overflow-y: auto;
             @include scrollBarStyle_1;
 
@@ -135,7 +147,7 @@
             .livelist {
                 width: 100%;
                 height: 32px;
-                background: $mainBG_5;
+                background: $mainBG_3;
                 overflow: hidden;
     
                 .liveTitle {
@@ -234,9 +246,10 @@
         .bettingStatus {
             display: none;
             width: 100%;
-            height: auto;
+            height: 100%;
             overflow-y: auto;
             @include scrollBarStyle_1;
+            padding-bottom: 20px;
 
             &.display {
                 display: block;
@@ -269,7 +282,7 @@
 
                         &.failRemind {
                             display: none;
-                            background: $mainBG_5;
+                            background: $mainBG_3;
                             text-align: center;
                             padding: 10px 0px;
                             position: absolute;

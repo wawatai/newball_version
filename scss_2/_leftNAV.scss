@@ -84,7 +84,7 @@
     .mine {
         width: 100%;
         height: 100%;
-        background: $mainBG_2;
+        background: $subBG_4;
 
         .profile {
             width: 100%;
@@ -115,19 +115,14 @@
         li {
             width: 100%;
             height: 45px;
-            background: $mainBG_1;
+            border-top: solid 1px $mainBorder_1;
 
-            &:hover,&:active,&.active {
-                background: $mainBG_4;
-                
-                a {
-                    color: $mainColor_3;
-                }
+            &:last-child {
+                border-bottom: solid 1px $mainBorder_1;
             }
 
-            &:nth-of-type(6){
-                border: solid 1px $subColor_1;
-                border-width: 1px 0;
+            &:hover,&:active,&.active {
+                background: $mainBG_3;
             }
 
             a {
@@ -142,8 +137,13 @@
                 .live {
                     min-width: 20px;
                     height: 22px;
-                    @include timeSelect_time;
+                    background: $otherColor_1;
+                    border-radius: 3px;
+                    color: $mainColor_2;
                     font-size: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     padding: 0 5px;
                     margin-left: 10px;
                 }

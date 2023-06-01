@@ -187,7 +187,12 @@
                                 width: 80px;
                                 height: 32px;
                                 @include inputStyle_1;
+                                border: solid 1px transparent;
                                 margin-right: 5px;
+
+                                &:hover,&:active,&.active {
+                                    border-color: $inputStyle_1_otherBorder;
+                                }
 
                                 &:last-child {
                                     margin: 0;
@@ -204,8 +209,9 @@
                         padding: 15px 30px;
 
                         &>p {
-                            color: $mainColor_1;
+                            color: $mainColor_3;
                             font-size: 14px;
+                            font-weight: bold;
                             margin-right: 40px;
                         }
 
@@ -214,12 +220,12 @@
                             height: auto;
 
                             p {
-                                color: $mainColor_2;
+                                color: $mainColor_1;
                                 font-size: 14px;
                                 font-weight: bold;
 
                                 span {
-                                    color: $mainColor_1;
+                                    color: $mainColor_3;
                                     font-size: 12px;
                                     margin-left: 10px;
                                 }
@@ -246,14 +252,15 @@
                     &:not(:first-child) {
 
                         .smallTitle {
-                            border-top: solid 1px $mainColor_4;
+                            border-top: solid 1px $mainBorder_1;
                         }
                     }
     
                     .smallTitle {
                         width: 100%;
                         height: 28px;
-                        border-bottom: solid 1px $mainColor_4;
+                        background: $subBG_3;
+                        border-bottom: solid 1px $mainBorder_1;
                         display: flex;
                         align-items: center;
                         padding: 0 10px 2px;
@@ -267,12 +274,13 @@
                     .textBox {
                         width: 100%;
                         height: auto;
+                        background: $mainBG_3;
                         display: flex;
 
                         .leftSide {
                             width: 45%;
                             height: auto;
-                            border-right: solid 1px $mainColor_4;
+                            border-right: solid 1px $mainBorder_1;
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
@@ -291,7 +299,7 @@
                                 flex-shrink: 0;
 
                                 span {
-                                    color: $mainColor_2;
+                                    color: $otherColor_3;
                                 }
                             }
                         }
@@ -303,14 +311,15 @@
 
                             p {
                                 color: $mainColor_1;
-                                font-size: 1px;
+                                font-size: 14px;
 
                                 &:last-child {
                                     margin-top: 8px;
                                 }
 
                                 span {
-                                    color: $mainColor_2;
+                                    color: $otherColor_3;
+                                    font-weight: bold;
                                 }
                             }
                         }
@@ -333,8 +342,8 @@
                     div {
                         width: 34%;
                         height: auto;
-                        background: $mainBG_3;
-                        border: solid 1px $mainColor_4;
+                        background: $subBG_1;
+                        border: solid 1px $mainBorder_1;
                         border-left: none;
                         padding: 15px 10px;
 
@@ -343,7 +352,7 @@
                         }
 
                         p {
-                            color: $mainColor_2;
+                            color: $mainColor_1;
                             font-size: 14px;
                         }
                     }
@@ -396,7 +405,7 @@
                             justify-content: flex-end;
 
                             .cube {
-                                @include cube_2;
+                                @include cube;
                                 margin-right: 10px;
                             }
 
@@ -417,10 +426,11 @@
                         button {
                             width: auto;
                             height: 35px;
-                            @include mainBtn_1;
+                            @include mixpassBtn;
                             font-size: 18px;
 
                             &:last-child {
+                                @include mainBtn_2;
                                 grid-column-start: 1;
                                 grid-column-end: 3;
                             }
@@ -437,7 +447,7 @@
                     .leftSide {
                         width: 50%;
                         height: auto;
-                        border-right: solid 1px $mainColor_4;
+                        border-right: solid 1px $mainBorder_1;
                         display: flex;
                         align-items: center;
 
@@ -454,7 +464,7 @@
                                 position: absolute;
                                 width: 4px;
                                 height: 8px;
-                                border: solid 3px $mainColor_2;
+                                border: solid 3px $mainBorder_3;
                                 border-width: 0px 2px 2px 0px;
                                 transform: translate(-50%,-50%) rotate(45deg);
                                 top: 48%;
@@ -474,7 +484,7 @@
                         padding: 0 10px;
 
                         p {
-                            color: $mainColor_2;
+                            color: $mainColor_1;
                             font-size: 13px;
                             font-weight: bold;
                             margin-bottom: 10px;
@@ -484,7 +494,7 @@
                             }
 
                             span {
-                                color: $mainColor_1;
+                                color: $otherColor_1;
                                 margin-left: 10px;
                             }
                         }
@@ -566,15 +576,16 @@
                         margin-right: 10px;
 
                         p {
-                            color: $mainColor_2;
+                            color: $mainColor_1;
                             font-size: 16px;
                             margin-right: 5px;
                         }
 
                         input {
-                            width: 80px;
+                            width: 100px;
                             height: 30px;
                             @include inputStyle_1;
+                            border-radius: none;
                         }
                     }
 
@@ -582,6 +593,7 @@
                         width: 60px;
                         height: 28px;
                         @include mainBtn_1;
+                        background: $mainBG_3;
                         padding: 0;
                     }
                 }
@@ -589,8 +601,8 @@
                 ul {
                     width: 100%;
                     height: auto;
-                    border: solid 1px $mainColor_1;
-                    border-radius: 5px;
+                    background: $subBG_6;
+                    border: solid 1px $mainBorder_1;
                     overflow: hidden;
 
                     li {
@@ -598,15 +610,13 @@
                         height: auto;
                         display: flex;
 
-                        &:nth-of-type(even) {
-                            background: $mainBG_3;
+                        &:nth-of-type(odd) {
+                            background: $subBG_1;
                         }
 
                         &.smallTitle {
-                            background: $mainBG_4;
 
                             div {
-                                border: none;
 
                                 p {
                                     color: $mainColor_3;
@@ -618,7 +628,7 @@
                         div {
                             height: auto;
                             display: flex;
-                            border-right: solid 1px $mainColor_4;
+                            border-right: solid 1px $mainBorder_1;
                             align-items: center;
                             justify-content: center;
                             padding: 8px 0;
@@ -637,6 +647,10 @@
                                     @include inputStyle_1;
                                     text-align: center;
                                     padding: 0;
+
+                                    &:hover,&:active,&.active {
+                                        border-color: $inputStyle_1_otherBorder;
+                                    }
                                 }
                             }
                             &:nth-of-type(3),
@@ -646,7 +660,8 @@
                                 .selectBox {
                                     width: auto;
                                     height: 22px;
-                                    background: $mainBG_5;
+                                    background: $mainBG_3;
+                                    border: solid 1px $mainBorder_1;
                                     border-radius: 3px;
                                     display: flex;
                                     align-items: center;
@@ -663,8 +678,11 @@
                                     }
 
                                     i {
-                                        @include topfix_reweb_arrow;
+                                        width: 0;
+                                        height: 0;
+                                        border-style: solid;
                                         border-width: 5px 4px 0 4px;
+                                        border-color: $inputStyle_1_otherBorder transparent;
                                         margin-left: 5px;
                                     }
                                 }
@@ -673,7 +691,6 @@
                                     width: 42px;
                                     height: 22px;
                                     @include inputStyle_1;
-                                    border: none;
                                     text-align: center;
                                     padding: 0;
                                     margin: 0 5px;
@@ -732,18 +749,16 @@
                 .remindBox {
                     width: 100%;
                     height: auto;
-                    background: $mainBG_3;
-                    border: solid 1px $mainColor_1;
-                    padding: 0 10px;
+                    background: $subBG_7;
 
                     .smallTitle {
                         width: 100%;
                         height: auto;
-                        border-bottom: solid 1px $mainColor_1;
+                        background: $subBG_8;
                         padding: 10px 0;
 
                         p {
-                            color: $mainColor_2;
+                            color: $mainColor_1;
                             font-size: 14px;
                             text-align: center;
                         }
@@ -752,7 +767,7 @@
                     .textBox {
                         width: 100%;
                         height: auto;
-                        padding: 10px 0;
+                        padding: 10px;
 
                         p {
                             color: $mainColor_1;

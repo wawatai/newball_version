@@ -370,7 +370,7 @@
                             justify-content: flex-end;
 
                             .cube {
-                                @include cube_2;
+                                @include cube;
                                 margin-right: 10px;
                             }
 

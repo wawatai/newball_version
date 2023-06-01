@@ -6,9 +6,7 @@
     .topfix {
         width: 100%;
         height: 50px;
-        background: $mainBG_1;
-        box-shadow: 0 2px 5px 0 $mainShadow_1;
-        border-radius: 3px;
+        background: $mainBG_2;
         position: relative;
         margin-bottom: 5px;
         z-index: 20;
@@ -47,7 +45,7 @@
                 }
 
                 &:hover,&:active,&.active {
-                    border-color: $mainColor_2;
+                    border-color: $mainBorder_3;
                 }
     
                 p {
@@ -254,7 +252,7 @@
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
-                            background: $mainBG_5;
+                            background: $mainBG_3;
                             border-radius: 50%;
                             box-shadow: 1px 1px 15px $mainShadow_1;
                             position: absolute;

@@ -309,7 +309,7 @@
                 }
 
                 .cube {
-                    @include cube_2;
+                    @include cube;
                     margin: 2px 10px 0 0;
                 }
 

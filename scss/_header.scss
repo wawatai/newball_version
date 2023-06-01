@@ -38,7 +38,7 @@ header {
             height: auto;
 
             i {
-                color: $mainBG_2;
+                color: $mainColor_2;
                 font-size: 12px;
                 padding: 4px;
                 cursor: pointer;
@@ -78,6 +78,17 @@ header {
                     transform: translate(-50%,-50%);
                     z-index: -1;
                 }
+            }
+        }
+
+        //time
+        span {
+
+            &.time {
+                color: $mainColor_2;
+                font-size: 12px;
+                font-weight: bold;
+                margin: 0 15px 0 5px;
             }
         }
 

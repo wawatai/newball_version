@@ -41,7 +41,7 @@ header {
             align-items: center;
 
             i {
-                color: $mainBG_2;
+                color: $mainColor_2;
                 font-size: 12px;
                 padding: 4px;
                 cursor: pointer;
@@ -62,7 +62,7 @@ header {
                     }
 
                     &:nth-of-type(2) {
-                        color: $mainBG_4;
+                        color: $mainColor_2;
 
                         &::after {
                             background: $mainColor_3;
@@ -166,7 +166,7 @@ header {
                     margin-top: 10px;
 
                     .cube {
-                        @include cube_2;
+                        @include cube;
                         margin-right: 6px;
                     }
                 }
@@ -175,7 +175,7 @@ header {
             button {
                 width: auto;
                 height: 30px;
-                @include mainBtn_3;
+                @include mainBtn_2;
             }
         }
 
@@ -195,7 +195,7 @@ header {
                 margin-right: 10px;
 
                 &.quota {
-                    background: $mainBG_5;
+                    background: $mainBG_3;
                     color: $mainColor_1;
                     padding: 5px 8px 6px;
 
@@ -214,7 +214,7 @@ header {
             button {
                 width: auto;
                 height: 30px;
-                @include mainBtn_3;
+                @include mainBtn_2;
             }
         }
 
