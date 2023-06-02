@@ -41,14 +41,29 @@ $(document).on("click","header .top .endBox i",function(){
     .addClass("active")
     .siblings().removeClass("active");
 
-    if(n == 0) {
-        $(".cssStyle")
-        .attr("href","../css_2/style.css");
+    if($(".cssStyle").hasClass("index"))
+    {
+        if(n == 0) {
+            $(".cssStyle")
+            .attr("href","../css_2/style.css");
+        }
+        
+        if(n == 1) {
+            $(".cssStyle")
+            .attr("href","../css/style.css");
+        }
     }
-    
-    if(n == 1) {
-        $(".cssStyle")
-        .attr("href","../css/style.css");
+    else
+    {
+        if(n == 0) {
+            $(".cssStyle")
+            .attr("href","../css_2/style.css");
+        }
+        
+        if(n == 1) {
+            $(".cssStyle")
+            .attr("href","../css/style.css");
+        }
     }
 })
 
