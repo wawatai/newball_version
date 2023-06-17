@@ -1,0 +1,20 @@
+html {
+    width: 100%;
+    height: auto;
+    background: $BG;
+
+    body {
+        width: 100%;
+        height: auto;
+        @include scrollBarStyle_1;
+
+        @import "./header";
+        @import "./leftNAV";
+        @import "./rightAREA";
+        @import './mainArea';
+        @import "./center";
+        @import "./mine";
+        @import "./teach";
+        @import './jumpWindow';
+    }
+}

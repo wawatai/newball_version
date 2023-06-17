@@ -1,0 +1,501 @@
+$BG: #bbbbbb;
+
+    //header
+$header_marquee_iconColor: #a5deff;
+$header_headerList_Color: #ceedff;
+$header_Border: #5090b5;
+
+    //leftNAV
+$leftNav_ActiveBG: #f0f0f0;
+@mixin leftNAV_outter {
+    background: #d5d5d5;
+    color: #000000;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    &:hover,&:active,&.active {
+        background: #f0f0f0;
+    }
+}
+@mixin leftNAV_inner {
+    background: #ffffff;
+    color: #000000;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 20px 0 30px;
+
+    &:hover,&:active,&.active {
+        background: #3d87b3;
+        color: #ffffff;
+    }
+}
+@mixin leftNAV_Live {
+    display: none;
+    background: #27bd04;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 4px 2px;
+
+    &.display {
+        display: flex;
+    }
+}
+
+    //center
+@mixin timeSelect_Arrow {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 13px 10px 0px;
+    border-color: transparent #ffffff;
+    transform-origin: 10px 32px;
+    cursor: pointer;
+}
+@mixin timeSelect_time {
+    background: #ffffff;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px 0 5px;
+}
+@mixin topfix_SelectStyle_2 {
+    background: #1774ab;
+    border: solid 1px #ffffff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px 5px 5px;
+}
+@mixin topfix_reweb_arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #ffffff transparent;
+}
+@mixin topfix_reweb_reBtn {
+    background: linear-gradient(to top,#d7d7d7 0%,#ffffff 70%);
+    border: none;
+    border-radius: 50%;
+    color: #0e6092;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin topfix_rightList_arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #ffffff transparent;
+}
+@mixin topfix_innerPage_arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 8px 7px 0;
+    border-color: transparent #0e6092;
+}
+$selectStyle_BG: #1774ab;
+
+@mixin chleague {
+    display: none;
+    background: #eeeeee;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 3px 8px 0 #00000066;
+    padding-bottom: 20px;
+
+    &.display {
+        display: block;
+    }
+}
+
+$center_table_Color_unReady: #ff0101;
+$center_table_Color_finish: #009300;
+$center_table_Color_all: #ff4800;
+$center_table_Color_half: #0b7800;
+
+$center_onTimeBG_soccer: #3361d6;
+$center_onTimeBG_basketball: #d37245;
+$center_onTimeBG_baseball: #e26565;
+$center_onTimeBG_football: #ab5328;
+$center_onTimeBG_esport: #8f6dc9;
+$center_onTimeBG_ticket: #d2a919;
+$center_onTimeBG_golf: #41af50;
+$center_onTimeBG_hockey: #0076b9;
+$center_onTimeBG_boxing: #c73b59;
+$center_onTimeBG_tennis: #23adb9;
+$center_onTimeBG_volleyball: #6e63dc;
+$center_onTimeBG_tableTennis: #92bc65;
+$center_onTimeBG_cricket: #a39645;
+$center_onTimeBG_pool: #e46bbb;
+$center_onTimeBG_handBall: #db9038;
+
+@mixin tableBtnStyle_1 {
+    background: transparent;
+    border: none;
+    color: #ff4800;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,&:active,&.active {
+        background: #3d87b3;
+        color: #ffffff;
+    }
+}
+$table_hoverBG: #fff5e1;
+$tableBtn_disableBG: #fafafa;
+$tableBtn_disableBG_Active: #ebe4d5;
+$tableBtn_disableColor: #92b6cc;
+$tableBtn_disableColor_Active: #aa9c7f;
+
+$score_cardIcon_redBG: #d51717;
+$score_cardIcon_yellowBG: #ffca14;
+
+    //rightAREA
+@mixin rightArea_title {
+    background: #d5d5d5;
+    color: #044e7b;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px 2px;
+}
+@mixin rightArea_twoBtn {
+    background: #d5d5d5;
+    border: none;
+    color: #044e7b;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+
+    &:hover,&:active,&.active {
+        background: #ffffff;
+        color: #000000;
+    }
+}
+@mixin liveList_Arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0px 7px 8px;
+    border-color: transparent #2474a2;
+    transition: 0.3s all;
+}
+@mixin liveList_listTitle {
+    background: #f0f0f0;
+    border-bottom: solid 1px #bbbbbb;
+    color: #000000;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 25px;
+}
+@mixin liveList_liveBtn {
+    background: linear-gradient(to top,#1e9a01 0%,#29d402 100%);
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to top,#1e9a01 0%,#0c7d00 100%);
+    }
+
+    &:disabled {
+        background: #cacaca;
+        color: #676767;
+    }
+}
+$liveList_liveBtn_ActiveBG: linear-gradient(to top,#1e9a01 0%,#0c7d00 100%);
+
+    //mixpass
+@mixin mixpassBtn {
+    background: #ffffff;
+    border-radius: 3px;
+    color: #0e6092;
+    font-size: 18px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: #3d87b3;
+        color: #ffffff;
+    }
+
+    &:disabled {
+        background: #5c6d79;
+        color: #d2d2d2;
+    }
+}
+$mixpass_ActiveBG: #3d87b3; 
+
+    //jumpWindow
+@mixin closeBtn {
+    background: #eeeeee;
+    border-radius: 50%;
+    border: solid 3px #575757;
+    box-shadow: 0 0 0 5px #eeeeee;
+    position: absolute;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 20px;
+        background: #575757;
+        left: 50%;
+        top: 50%;
+    }
+    &::before {
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &::after {
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
+}
+
+    //mainColor
+$mainColor_1: #000000;
+$mainColor_2: #ffffff;
+$mainColor_3: #044e7b;
+
+$subColor_1: #888888;
+
+$otherColor_1: #c90202;
+$otherColor_2: #28b208;
+$otherColor_3: #ff4800;
+$otherColor_4: #1e62c5;
+$otherColor_5: #ffdf1b;
+$otherColor_6: #3067ac;
+
+$mainBorder_1: #bbbbbb;
+$mainBorder_2: #ececec;
+$mainBorder_3: #ffffff;
+
+    //mainBG
+$mainBG_1: #2474a2;
+$mainBG_2: #3d87b3;
+$mainBG_3: #ffffff;
+
+$subBG_1: #e8e8e8;
+$subBG_2: #f0f0f0;
+$subBG_3: #eff6fb;
+$subBG_4: #d5d5d5;
+$subBG_5: #ff7200;
+$subBG_6: #f5f5f5;
+$subBG_7: #c7c7c7;
+$subBG_8: #afafaf;
+$subBG_9: #dccfcf;
+
+    //shadow
+$mainShadow_1: #00000049;
+$mainShadow_2: #00000080;
+
+    //mainBtn
+@mixin mainBtn_1 {
+    background: linear-gradient(to top,#d7d7d7 0%,#ffffff 70%);
+    border-radius: 3px;
+    border: none;
+    color: #10558b;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 2px;
+
+    &:hover,&:active,&.active {
+        background: #13435f;
+        border: solid 1px #ffffff;
+        color: #ffffff;
+    }
+
+    &:disabled {
+        background: #5c6d79;
+        color: #d2d2d2;
+    }
+}
+@mixin mainBtn_2 {
+    background: #c90202;
+    border-radius: 3px;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px 2px;
+
+    &:hover,&:active,&.active {
+        background: #ffe400;
+        color: #000000;
+    }
+
+    &:disabled {
+        background: #5c6d79;
+        color: #d2d2d2;
+    }
+}
+
+@mixin subBtn_1 {
+    background: linear-gradient(to top,#d7d7d7 0%,#ffffff 70%);
+    border-radius: 3px;
+    border: solid 1px transparent;
+    border-bottom-width: 0;
+    color: #10558b;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: #13435f;
+        border-color: #ffffff;
+        border-bottom-width: 1px;
+        color: #ffffff;
+    }
+}
+
+    //input
+@mixin inputStyle_1 {
+    background: #ffffff;
+    border-radius: 3px;
+    border: solid 1px #bbbbbb;
+    color: #000000;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 2px 5px;
+
+    &::placeholder {
+        color: #808080;
+    }
+}
+$inputStyle_1_otherBorder: #1b79cd;
+
+    //共用
+
+@mixin cube {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border: solid 1px #bbbbbb;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+
+    &.active {
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: 0px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+@mixin scrollBarStyle_1 {
+    
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #10558b;
+        border-radius: 30px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 30px;
+    }
+}
+
+@mixin textHidden {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin rowBtn {
+    background: #c5c5c5;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+
+    p {
+        width: 50%;
+        height: 100%;
+        color: #5b5b5b;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: 0.3s all;
+        z-index: 1;
+
+        &:first-child {
+            color: #f5f5f5;
+        }
+    }
+
+    .cnt {
+        width: 50%;
+        height: 100%;
+        background: #c90202;
+        border-radius: 30px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.3s all;
+    }
+
+    &.turn {
+
+        p {
+
+            &:first-child {
+                color: #5b5b5b;
+            }
+
+            &:nth-of-type(2) {
+                color: #f5f5f5;
+            }
+        }
+
+        .cnt {
+            left: 50%;
+        }
+    }
+}

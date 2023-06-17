@@ -1,0 +1,182 @@
+.left {
+    width: 270px;
+    height: auto;
+    flex-shrink: 0;
+    overflow-y: auto;
+    @include scrollBarStyle_1;
+    margin-right: 5px;
+    
+    ul:not(.mine) {
+        width: 100%;
+        height: auto;
+        border: 1px solid $mainColor_1;
+
+        li {
+            width: 100%;
+            height: 45px;
+            border-bottom: solid 1px $mainColor_1;
+            overflow: hidden;
+
+            &:last-child {
+                border: none;
+            }
+
+            &.active {
+                height: auto;
+
+                a {
+                    background: $mainBG_4;
+                    color: $mainColor_3;
+
+                    div {
+
+                        .total {
+                            color: $mainColor_3;
+                        }
+                    }
+                }
+            }
+
+            a {
+                width: 100%;
+                height: 45px;
+                @include leftNAV_outter;
+                padding: 0 20px;
+
+                &:hover,&:active,&.active {
+
+                    div {
+
+                        .total {
+                            color: $mainColor_3;
+                        }
+                    }
+                }
+
+                div {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        font-size: 18px;
+                        margin-right: 10px;
+                    }
+
+                    .live {
+                        height: 18px;
+                        @include leftNAV_Live;
+                        margin-right: 10px;
+                    }
+
+                    .total {
+                        color: $subColor_2;
+                        font-size: 13px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .smallList {
+                width: 100%;
+                height: 30px;
+                @include leftNAV_inner;
+                
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    //'我的'左側
+    .mine {
+        width: 100%;
+        height: 100%;
+        background: $mainBG_2;
+
+        .profile {
+            width: 100%;
+            height: 210px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .sticker {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: $mainColor_1;
+                font-size: 15px;
+                font-weight: bold;
+
+                &.account {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        li {
+            width: 100%;
+            height: 45px;
+            background: $mainBG_1;
+
+            &:hover,&:active,&.active {
+                background: $mainBG_4;
+                
+                a {
+                    color: $mainColor_3;
+                }
+            }
+
+            &:nth-of-type(6){
+                border: solid 1px $subColor_1;
+                border-width: 1px 0;
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+                color: $mainColor_1;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+
+                .live {
+                    min-width: 20px;
+                    height: 22px;
+                    @include timeSelect_time;
+                    font-size: 12px;
+                    padding: 0 5px;
+                    margin-left: 10px;
+                }
+
+                i {
+                    font-size: 22px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1480px) {
+        
+        &.inner {
+            width: 18%;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        
+        &.inner {
+            width: 214px;
+        }
+    }
+}
